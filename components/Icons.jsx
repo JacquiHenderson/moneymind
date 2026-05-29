@@ -1,0 +1,107 @@
+export const Icon = ({ children, size = 20, stroke = 1.6, ...props }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={stroke}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {children}
+  </svg>
+);
+
+export const IconArrowRight = (p) => (
+  <Icon {...p}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></Icon>
+);
+export const IconChevronDown = (p) => (
+  <Icon {...p}><path d="m6 9 6 6 6-6"/></Icon>
+);
+export const IconChevronRight = (p) => (
+  <Icon {...p}><path d="m9 6 6 6-6 6"/></Icon>
+);
+export const IconCheck = (p) => (
+  <Icon {...p}><path d="M20 6 9 17l-5-5"/></Icon>
+);
+export const IconSparkle = (p) => (
+  <Icon {...p}>
+    <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/>
+  </Icon>
+);
+export const IconSend = (p) => (
+  <Icon {...p}><path d="m22 2-11 11"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></Icon>
+);
+export const IconScan = (p) => (
+  <Icon {...p}>
+    <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/>
+    <path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
+    <circle cx="12" cy="12" r="3"/>
+  </Icon>
+);
+export const IconCompass = (p) => (
+  <Icon {...p}><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.5 5.5-5.5 2.5 2.5-5.5 5.5-2.5Z"/></Icon>
+);
+export const IconShield = (p) => (
+  <Icon {...p}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></Icon>
+);
+export const IconLock = (p) => (
+  <Icon {...p}>
+    <rect x="3" y="11" width="18" height="11" rx="2"/>
+    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+  </Icon>
+);
+export const IconAudit = (p) => (
+  <Icon {...p}>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/>
+  </Icon>
+);
+export const IconGlobe = (p) => (
+  <Icon {...p}><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></Icon>
+);
+export const IconBrain = (p) => (
+  <Icon {...p}>
+    <path d="M12 5a3 3 0 1 0-5.99.13A3.5 3.5 0 0 0 4 11a3.5 3.5 0 0 0 2 6 3 3 0 0 0 6 0V5Z"/>
+    <path d="M12 5a3 3 0 1 1 5.99.13A3.5 3.5 0 0 1 20 11a3.5 3.5 0 0 1-2 6 3 3 0 0 1-6 0V5Z"/>
+  </Icon>
+);
+export const IconChart = (p) => (
+  <Icon {...p}><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-7"/></Icon>
+);
+export const IconUsers = (p) => (
+  <Icon {...p}>
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+  </Icon>
+);
+export const IconLink = (p) => (
+  <Icon {...p}>
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  </Icon>
+);
+export const IconRecord = (p) => (
+  <Icon {...p}><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="9"/></Icon>
+);
+export const IconLinkedIn = (p) => (
+  <Icon {...p} stroke={0} fill="currentColor">
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43A2.06 2.06 0 1 1 5.34 3.3a2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
+  </Icon>
+);
+export const IconInstagram = (p) => (
+  <Icon {...p} stroke={0} fill="currentColor">
+    <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.14 0-3.51.01-4.75.07-.86.04-1.32.18-1.63.3-.41.16-.7.35-1.01.66-.31.31-.5.6-.66 1.01-.12.31-.26.77-.3 1.63-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.04.86.18 1.32.3 1.63.16.41.35.7.66 1.01.31.31.6.5 1.01.66.31.12.77.26 1.63.3 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.86-.04 1.32-.18 1.63-.3.41-.16.7-.35 1.01-.66.31-.31.5-.6.66-1.01.12-.31.26-.77.3-1.63.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.86-.18-1.32-.3-1.63a2.72 2.72 0 0 0-.66-1.01 2.72 2.72 0 0 0-1.01-.66c-.31-.12-.77-.26-1.63-.3-1.24-.06-1.61-.07-4.75-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 7.4a2.91 2.91 0 1 0 0-5.82 2.91 2.91 0 0 0 0 5.82Zm5.72-7.6a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"/>
+  </Icon>
+);
+export const IconFacebook = (p) => (
+  <Icon {...p} stroke={0} fill="currentColor">
+    <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z"/>
+  </Icon>
+);
+export const IconX = (p) => (
+  <Icon {...p}><path d="M18 6 6 18"/><path d="m6 6 12 12"/></Icon>
+);
