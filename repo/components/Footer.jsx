@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="mm-footer-col">
             <h5>Follow us</h5>
             <div className="mm-footer-socials">
-              <a href="https://www.linkedin.com/in/jacqui-henderson1" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on LinkedIn"><IconLinkedIn size={26} /></a>
+              <a href="https://au.linkedin.com/company/moneymindprofile1" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on LinkedIn"><IconLinkedIn size={26} /></a>
               <a href="https://www.instagram.com/moneymind_profile/" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on Instagram"><IconInstagram size={26} /></a>
               <a href="https://www.facebook.com/people/MoneyMind/61577449349777/" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on Facebook"><IconFacebook size={26} /></a>
             </div>
