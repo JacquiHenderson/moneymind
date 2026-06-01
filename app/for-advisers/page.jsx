@@ -188,13 +188,13 @@ function AdvisersDecodePatterns() {
     <section className="mm-section mm-split mm-split-reverse" data-screen-label="Decode patterns">
       <div className="mm-container">
         <div className="mm-split-grid">
-          <PatternsVisual />
           <div className="mm-split-copy">
             <span className="eyebrow">Decode hidden patterns</span>
             <h2>Decode hidden patterns behind client decisions.</h2>
             <p>Anticipate how your clients will react, what actions they&apos;ll take, and whether they&apos;ll abandon their financial plan.</p>
             <p>Identify their Superpowers, Roadblocks, and how to Optimize your strategies. Identify all the emotions that override rational plans and protect your AUM.</p>
           </div>
+          <PatternsVisual />
         </div>
       </div>
     </section>
