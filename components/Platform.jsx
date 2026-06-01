@@ -45,15 +45,6 @@ export default function Platform({
         </div>
 
         <div className="mm-platform-stage">
-          <div className="mm-platform-badge">
-            <span className="mm-platform-badge-icon">
-              <IconSparkle size={14} stroke={2} style={{ color: '#fff' }} />
-            </span>
-            <span className="mm-platform-badge-text">
-              <span className="t">Behavioural confidence</span>
-              <span className="s">98% accuracy across 58k profiles</span>
-            </span>
-          </div>
 
           <div className="mm-platform-window">
             <div className="mm-platform-chrome">
