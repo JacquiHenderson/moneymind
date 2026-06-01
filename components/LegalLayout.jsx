@@ -10,7 +10,7 @@ export default function LegalLayout({ title, meta, children }) {
           </Link>
           <nav className="lp-nav" aria-label="Primary">
             <Link href="/">Home</Link>
-            <Link href="/for-advisers">Financial Advisors</Link>
+            <Link href="/for-advisors">Financial Advisors</Link>
             <Link href="/for-fund-providers">Fund Providers</Link>
             <Link href="/#security">Security</Link>
           </nav>
