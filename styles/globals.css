@@ -434,7 +434,8 @@ a:hover { color: var(--mm-blue-light); }
 .mm-cta-card { position: relative; padding: 96px 80px; border-radius: var(--radius-xl); background: radial-gradient(40% 80% at 0% 0%, rgba(82, 152, 191, 0.18), transparent 60%), radial-gradient(40% 80% at 100% 100%, rgba(60, 122, 168, 0.22), transparent 60%), var(--mm-blue-deep); border: 1px solid var(--border-soft); text-align: center; overflow: hidden; }
 .mm-cta-card h2 { font-family: var(--font-display); font-size: 56px; font-weight: 700; letter-spacing: -0.025em; color: #ffffff; line-height: 1.05; margin: 0 auto 24px; max-width: 800px; text-wrap: balance; }
 .mm-cta-card .lead { font-size: 19px; color: rgba(255,255,255,0.78); max-width: 620px; margin: 0 auto 36px; text-wrap: pretty; }
-.mm-cta-card .mm-hero-actions { display: inline-flex; gap: 14px; justify-content: center; }
+.mm-cta-card .mm-hero-actions { display: inline-flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 640px) { .mm-cta-band { padding: 60px 0; } .mm-cta-card { padding: 48px 28px; } .mm-cta-card h2 { font-size: 32px; } .mm-cta-card .lead { font-size: 16px; } .mm-cta-card .mm-hero-actions { flex-direction: column; align-items: stretch; } .mm-cta-card .mm-btn { text-align: center; justify-content: center; } }
 .mm-cta-trial { margin-top: 22px; font-size: 13px; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-transform: uppercase; }
 
 /* ============================================================
