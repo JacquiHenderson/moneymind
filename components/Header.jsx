@@ -30,7 +30,7 @@ export default function Header({ currentPage = 'home' }) {
           </Link>
           <nav className="mm-nav" aria-label="Primary">
             <Link href="/" className={currentPage === 'home' ? 'is-current' : ''} aria-current={currentPage === 'home' ? 'page' : undefined}>Home</Link>
-            <Link href="/for-advisers" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
+            <Link href="/for-advisors" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
             <Link href="/for-fund-providers" className={currentPage === 'fund-providers' ? 'is-current' : ''} aria-current={currentPage === 'fund-providers' ? 'page' : undefined}>Fund Providers</Link>
             <a href={homeAnchor('#security')}>Security</a>
           </nav>
