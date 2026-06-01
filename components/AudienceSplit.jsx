@@ -29,7 +29,7 @@ export default function AudienceSplit() {
                 accelerates client trust.
               </p>
             </div>
-            <Link href="/for-advisers" className="mm-cta-pill mm-cta-pill-light" aria-label="Financial advisor — learn more">
+            <Link href="/for-advisors" className="mm-cta-pill mm-cta-pill-light" aria-label="Financial advisor — learn more">
               <span>Financial Advisor</span>
               <svg width="40" height="14" viewBox="0 0 40 14" fill="none" aria-hidden="true">
                 <path d="M1 7h36M30 1l7 6-7 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
