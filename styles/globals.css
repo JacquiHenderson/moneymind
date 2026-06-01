@@ -838,9 +838,10 @@ a:hover { color: var(--mm-blue-light); }
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 12px;
   z-index: 1001;
   position: relative;
+  flex-shrink: 0;
 }
 .mm-hamburger span {
   display: block;
@@ -871,9 +872,7 @@ a:hover { color: var(--mm-blue-light); }
   transform: translateY(-100%);
   transition: transform 0.3s ease;
 }
-.mm-mobile-nav.is-open {
-  transform: translateY(0);
-}
+.mm-mobile-nav.is-open { transform: translateY(0); }
 .mm-mobile-nav a {
   font-size: 20px;
   font-weight: 500;
@@ -883,7 +882,6 @@ a:hover { color: var(--mm-blue-light); }
   border-bottom: 1px solid var(--border-hairline);
   transition: color 0.15s ease;
 }
-.mm-mobile-nav a:last-of-type { border-bottom: none; }
 .mm-mobile-nav a:hover, .mm-mobile-nav a.is-current { color: var(--fg-1); }
 .mm-mobile-nav-actions {
   display: flex;
@@ -904,6 +902,16 @@ a:hover { color: var(--mm-blue-light); }
 }
 
 @media (max-width: 1100px) {
+  .mm-container, .mm-header-inner, .mm-hero-inner { padding-left: 40px; padding-right: 40px; }
+  .mm-sub-hero-inner { padding-left: 40px; padding-right: 40px; }
+  .mm-hero h1 { font-size: 64px; }
+  .mm-sub-hero h1 { font-size: 54px; }
+  .mm-section-head h2, .mm-security h2 { font-size: 48px; }
+  .mm-features { grid-template-columns: 1fr; }
+  .mm-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 48px 36px; }
+  .mm-steps, .mm-security-grid { grid-template-columns: 1fr; }
+  .mm-nav { display: none; }
+  .mm-hamburger { display: flex; }
   .mm-mobile-nav { display: flex; }
   .mm-mobile-overlay { display: block; }
 }
