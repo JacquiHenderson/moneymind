@@ -13,7 +13,7 @@ import {
 // ---- Hero ----
 function AdvisersHero() {
   return (
-    <section className="mm-sub-hero" data-screen-label="Advisers hero">
+    <section className="mm-sub-hero" data-screen-label="Advisors hero">
       <HeroCurves />
       <div className="mm-sub-hero-inner">
         <span className="eyebrow mm-sub-hero-eyebrow">Built for financial advisors</span>
