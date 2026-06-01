@@ -46,12 +46,12 @@ function AdvisersStatRow() {
       <div className="mm-container">
         <div className="mm-stat-row">
           <div className="mm-stat-row-item">
-            <div className="mm-stat-row-num">73<span className="x">%</span></div>
+            <div className="mm-stat-row-num">64<span className="x">%</span></div>
             <p>of clients say they don&apos;t feel fully understood by their financial advisor.</p>
           </div>
           <div className="mm-stat-row-item">
             <div className="mm-stat-row-num">4<span className="x">×</span></div>
-            <p>more likely to stay long-term with an advisor who demonstrates deep understanding.</p>
+            <p>of financial advice conversations resonate with clients.</p>
           </div>
           <div className="mm-stat-row-item">
             <div className="mm-stat-row-num">68<span className="x">%</span></div>
