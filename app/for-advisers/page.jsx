@@ -7,8 +7,7 @@ import Steps from '../../components/Steps';
 import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
 import {
-  IconChart, IconLink, IconBrain, IconCheck, IconShield, IconSparkle,
-  IconUsers, IconCompass, IconChevronDown
+  IconChart, IconLink, IconBrain, IconCheck, IconShield, IconChevronDown
 } from '../../components/Icons';
 
 // ---- Hero ----
@@ -258,43 +257,6 @@ function AdvisersRisk() {
   );
 }
 
-// ---- Features ----
-const adviserFeatures = [
-  { icon: IconBrain,   eyebrow: 'Behavioural Profiling', title: "Unlock your client's financial mindset.", body: 'Move beyond surface answers. Profile each client across five MoneyMind dimensions in under 10 minutes.' },
-  { icon: IconLink,    eyebrow: 'Lead Generation',       title: 'Funnel engaged prospects into your business.', body: 'One embed link, dropped anywhere. Every touchpoint becomes an entry point for warm, qualified leads.' },
-  { icon: IconShield,  eyebrow: 'Risk Profiling',        title: 'Capture a complete risk picture.', body: 'Tolerance, capacity, loss response, and comfort — together. Replace the outdated questionnaire entirely.' },
-  { icon: IconSparkle, eyebrow: 'AI Behavioural Intel',  title: "Leverage AI to decode your client's MoneyMind.", body: 'Behavioural intelligence woven through your workflow — talking points before every meeting, not after.' },
-  { icon: IconUsers,   eyebrow: 'Personas',              title: 'Identify cohorts using AI-driven personas.', body: 'See your book by MoneyMind, not just by demographic. Tailor service models to behavioural cohorts.' },
-  { icon: IconCompass, eyebrow: 'Digital Journeys',      title: 'Integrate MoneyMind into every digital journey.', body: 'Embed the profile in your website, portal, emails, or onboarding flow. APIs ready for the rest.' },
-];
-
-function AdvisersFeatures() {
-  return (
-    <section className="mm-section" data-screen-label="Adviser features">
-      <div className="mm-container">
-        <div className="mm-section-head">
-          <span className="eyebrow">The platform</span>
-          <h2>Everything you need to lead with insight.</h2>
-          <p className="lead">Six capabilities, one platform. Built around how Australian financial advisors actually run a practice.</p>
-        </div>
-        <div className="mm-feature-tiles">
-          {adviserFeatures.map((f, i) => {
-            const Ic = f.icon;
-            return (
-              <article className="mm-feature-tile" key={i}>
-                <div className="mm-feature-tile-icon"><Ic size={22} /></div>
-                <span className="eyebrow">{f.eyebrow}</span>
-                <h4>{f.title}</h4>
-                <p>{f.body}</p>
-              </article>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ---- Pricing ----
 const pricingBullets = [
   'No lock-in contracts',
@@ -372,7 +334,6 @@ export default function ForAdvisersPage() {
       <Header currentPage="advisers" />
       <AdvisersHero />
       <Logos />
-      <AdvisersStatRow />
       <AdvisersImpactTrio />
       <AdvisersSharedOutcomes />
       <KahnemanQuote />
@@ -383,7 +344,6 @@ export default function ForAdvisersPage() {
         heading="MoneyMind's unique features are designed to elevate your client experience."
         lead="Insights that transform every client connection."
       />
-      <AdvisersFeatures />
       <AdvisersPricing />
       <AdvisersCtaBand />
       <Footer />
