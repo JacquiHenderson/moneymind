@@ -815,20 +815,6 @@ a:hover { color: var(--mm-blue-light); }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1100px) {
-  .mm-container, .mm-header-inner, .mm-hero-inner { padding-left: 40px; padding-right: 40px; }
-  .mm-sub-hero-inner { padding-left: 40px; padding-right: 40px; }
-  .mm-hero h1 { font-size: 64px; }
-  .mm-sub-hero h1 { font-size: 54px; }
-  .mm-section-head h2, .mm-security h2 { font-size: 48px; }
-  .mm-features { grid-template-columns: 1fr; }
-  .mm-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 48px 36px; }
-  .mm-steps, .mm-security-grid { grid-template-columns: 1fr; }
-  .mm-nav { display: none; }
-  .mm-nav-actions { display: none; }
-  .mm-hamburger { display: flex; }
-}
-
 /* Hamburger button */
 .mm-hamburger {
   display: none;
