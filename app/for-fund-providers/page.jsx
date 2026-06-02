@@ -191,7 +191,6 @@ function FundProvidersPersonaCohorts() {
     <section className="mm-section mm-split mm-split-reverse" data-screen-label="Persona cohorts">
       <div className="mm-container">
         <div className="mm-split-grid">
-          <PersonaCohortsVisual />
           <div className="mm-split-copy">
             <span className="eyebrow">Persona cohorts</span>
             <h2>Build Persona Cohorts That Predict Client Lifetime Value.</h2>
@@ -206,6 +205,7 @@ function FundProvidersPersonaCohorts() {
               communications that increase retention and engagement.
             </p>
           </div>
+          <PersonaCohortsVisual />
         </div>
       </div>
     </section>
@@ -329,7 +329,6 @@ function FundProvidersOmni() {
     <section className="mm-section mm-split mm-split-reverse" data-screen-label="Omni-channel">
       <div className="mm-container">
         <div className="mm-split-grid">
-          <OmniChannelVisual />
           <div className="mm-split-copy">
             <span className="eyebrow">Distribution</span>
             <h2>Omni-channel Distribution.</h2>
@@ -344,6 +343,7 @@ function FundProvidersOmni() {
               not a data collection exercise.
             </p>
           </div>
+          <OmniChannelVisual />
         </div>
       </div>
     </section>
