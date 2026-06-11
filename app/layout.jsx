@@ -14,6 +14,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W0F630LT9L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-W0F630LT9L');
+        `}</Script>
         <Script id="meta-pixel" strategy="afterInteractive">{`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
