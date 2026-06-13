@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Watch the Demo — MoneyMind</title>
+  <meta name="description" content="Demo it. Trial it. Transform it. Watch a short walkthrough of MoneyMind's AI behavioural intelligence, then start your free 14-day trial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM TOKENS
+       ============================================================ */
+    :root {
+      --mm-blue-light: #5298BF;
+      --mm-blue-mid:   #3C7AA8;
+      --mm-blue-deep:  #1D4A75;
+      --mm-blue-navy:  #050524;
+      --fg-1: #f4f6fb;
+      --fg-2: #c7cde0;
+      --fg-3: #9099b8;
+      --fg-4: #5f6688;
+      --bg-page: #050524;
+      --bg-raised: rgba(255,255,255,0.06);
+      --border-hairline: rgba(244,246,251,0.08);
+      --border-soft: rgba(244,246,251,0.16);
+      --border-strong: rgba(244,246,251,0.32);
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --elev-3: 0 1px 0 rgba(244,246,251,0.08) inset, 0 24px 60px rgba(0,0,0,0.55);
+      --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --ease-out: cubic-bezier(0.22,1,0.36,1);
+      --dur-fast: 120ms;
+      --dur-med: 220ms;
+    }
+
+    /* ============================================================
+       BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg-page);
+      color: var(--fg-2);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: var(--fg-1); text-decoration: none; transition: color var(--dur-fast) var(--ease-out); }
+    a:hover { color: var(--mm-blue-light); }
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--fg-1);
+      letter-spacing: -0.018em;
+      text-wrap: balance;
+      margin: 0;
+    }
+    p { margin: 0; }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mm-blue-light);
+    }
+    ::selection { background: var(--mm-blue-mid); color: #ffffff; }
+
+    /* ============================================================
+       LAYOUT
+       ============================================================ */
+    .mm-page { display: flex; flex-direction: column; min-height: 100vh; }
+    .mm-container { max-width: 1440px; margin: 0 auto; padding: 0 80px; }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .mm-header {
+      position: sticky; top: 0; z-index: 50;
+      width: 100%;
+      background: rgba(5,5,36,0.72);
+      backdrop-filter: blur(20px) saturate(120%);
+      -webkit-backdrop-filter: blur(20px) saturate(120%);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-med) var(--ease-out),
+                  background var(--dur-med) var(--ease-out);
+    }
+    .mm-header.scrolled {
+      border-bottom-color: var(--border-hairline);
+      background: rgba(5,5,36,0.88);
+    }
+    .mm-header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 80px;
+      max-width: 1440px; margin: 0 auto;
+    }
+    .mm-logo { display: flex; align-items: center; text-decoration: none; color: #ffffff; }
+    .mm-logo svg { height: 72px; width: auto; display: block; }
+    .mm-nav { display: flex; align-items: center; gap: 36px; }
+    .mm-nav a {
+      font-size: 15px; color: var(--fg-2);
+      display: inline-flex; align-items: center; gap: 4px;
+      font-weight: 400;
+    }
+    .mm-nav a:hover { color: var(--fg-1); }
+    .mm-nav-actions { display: flex; align-items: center; gap: 10px; }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .mm-btn {
+      font-family: var(--font-body);
+      font-size: 15px; font-weight: 500;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: background var(--dur-fast) var(--ease-out),
+                  color var(--dur-fast) var(--ease-out),
+                  border-color var(--dur-fast) var(--ease-out);
+      white-space: nowrap;
+    }
+    .mm-btn-primary { background: var(--mm-blue-mid); color: #ffffff; }
+    .mm-btn-primary:hover { background: var(--mm-blue-light); color: #ffffff; }
+    .mm-btn-primary:active { background: var(--mm-blue-deep); }
+    .mm-btn-ghost {
+      background: rgba(244,246,251,0.04);
+      color: var(--fg-1);
+      border-color: var(--border-soft);
+    }
+    .mm-btn-ghost:hover {
+      background: rgba(244,246,251,0.08);
+      border-color: var(--border-strong);
+      color: var(--fg-1);
+    }
+    .mm-btn-lg { font-size: 16px; padding: 14px 32px; }
+
+    /* ============================================================
+       DEMO HERO
+       ============================================================ */
+    .mm-demo-hero {
+      position: relative;
+      padding: 132px 0 100px;
+      text-align: center;
+      overflow: hidden;
+      flex: 1;
+    }
+    .mm-curves {
+      position: absolute; inset: 0;
+      pointer-events: none; z-index: 1; overflow: hidden;
+    }
+    .mm-curves svg {
+      position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+    }
+    .mm-demo-inner {
+      position: relative; z-index: 2;
+      max-width: 1040px; margin: 0 auto;
+      padding: 0 80px;
+    }
+    .mm-demo-eyebrow { display: block; margin-bottom: 24px; }
+    .mm-demo-hero h1 {
+      font-size: 68px;
+      line-height: 1.02;
+      letter-spacing: -0.032em;
+      font-weight: 700;
+      color: var(--fg-1);
+      margin: 0 0 28px;
+      text-wrap: balance;
+    }
+    .mm-demo-hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--mm-blue-light);
+    }
+    .mm-demo-lead {
+      font-size: 19px; line-height: 1.55;
+      color: var(--fg-3);
+      max-width: 720px; margin: 0 auto;
+      text-wrap: pretty;
+    }
+
+    /* ============================================================
+       VIDEO EMBED
+       ============================================================ */
+    .mm-demo-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 48px auto 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-raised);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--elev-3);
+    }
+    .mm-demo-video iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0; display: block;
+    }
+
+    /* ============================================================
+       CTA
+       ============================================================ */
+    .mm-demo-actions {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .mm-demo-trial {
+      margin-top: 22px;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: var(--fg-4);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .mm-footer {
+      border-top: 1px solid var(--border-hairline);
+      padding: 72px 0 36px;
+      margin-top: 80px;
+    }
+    .mm-footer-grid {
+      display: grid;
+      grid-template-columns: 2.4fr 1fr 1fr;
+      gap: 24px;
+    }
+    .mm-footer-brand svg { height: 64px; width: auto; display: block; }
+    .mm-footer-brand p {
+      font-size: 13px; color: var(--fg-4);
+      margin: 16px 0 0; max-width: 320px; line-height: 1.55;
+    }
+    .mm-footer-col h5 {
+      font-size: 12px; font-weight: 500;
+      color: var(--fg-3); letter-spacing: 0.14em;
+      text-transform: uppercase; margin: 0 0 20px;
+    }
+    .mm-footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .mm-footer-col a { font-size: 14px; color: var(--fg-2); }
+    .mm-footer-col a:hover { color: var(--mm-blue-light); }
+    .mm-footer-socials { display: flex; align-items: center; gap: 18px; }
+    .mm-footer-socials a {
+      display: inline-flex; color: var(--fg-3);
+      transition: color var(--dur-fast) var(--ease-out);
+    }
+    .mm-footer-socials a:hover { color: var(--mm-blue-light); }
+    .mm-footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border-hairline);
+      margin-top: 64px; padding-top: 24px;
+      font-size: 13px; color: var(--fg-4);
+    }
+    .mm-footer-bottom .legal { display: flex; gap: 24px; }
+    .mm-footer-bottom .legal a { color: var(--fg-4); font-size: 13px; }
+    .mm-footer-bottom .legal a:hover { color: var(--fg-2); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1100px) {
+      .mm-header-inner, .mm-container, .mm-demo-inner { padding-left: 40px; padding-right: 40px; }
+      .mm-nav { display: none; }
+      .mm-demo-hero { padding-top: 96px; }
+      .mm-demo-hero h1 { font-size: 48px; }
+      .mm-demo-video { margin-top: 36px; }
+      .mm-footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 680px) {
+      .mm-header-inner, .mm-demo-inner { padding-left: 24px; padding-right: 24px; }
+      .mm-demo-hero h1 { font-size: 36px; }
+      .mm-footer { padding: 48px 0 24px; margin-top: 48px; }
+      .mm-footer-grid { grid-template-columns: 1fr; }
+      .mm-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mm-page">
+
+    <!-- HEADER -->
+    <header class="mm-header" id="mm-header">
+      <div class="mm-header-inner">
+        <a href="../" class="mm-logo" aria-label="MoneyMind home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1174.59 310.87" aria-hidden="true">
+            <path fill="#ffffff" d="M251.5,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,23.66-11.99s18.15,4.7,22.36,13.77h.65c5.02-8.26,14.91-13.77,26.09-13.77,15.88,0,26.57,10.86,26.57,30.3v48.29h-16.2v-43.1c0-14.91-5.51-21.07-15.07-21.07-10.86,0-18.31,7.94-18.31,22.36v41.81h-16.2v-43.1c0-15.07-5.35-21.07-14.91-21.07-10.86,0-18.63,7.78-18.63,22.36v41.81h-16.2Z"/>
+            <path fill="#ffffff" d="M420.58,115.12c-22.85,0-39.71,16.53-39.71,40.19s16.85,40.34,39.71,40.34,39.69-16.53,39.69-40.34-16.85-40.19-39.69-40.19ZM420.58,181.55c-13.46,0-23.18-10.37-23.18-26.25s9.72-26.09,23.18-26.09,23.17,10.38,23.17,26.09-9.72,26.25-23.17,26.25Z"/>
+            <path fill="#ffffff" d="M474.7,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,24.63-11.99,16.53,0,27.38,10.86,27.38,30.3v48.29h-16.2v-42.62c0-15.72-5.83-21.55-16.2-21.55-11.83,0-19.61,7.45-19.61,22.52v41.64h-16.2Z"/>
+            <path fill="#ffffff" d="M633.08,152.72c0-22.85-15.23-37.6-36.62-37.6-22.69,0-39.71,16.69-39.71,40.68s16.37,39.85,39.54,39.85c17.67,0,31.59-9.4,35.81-25.11h-15.39c-3.57,7.29-10.86,11.34-19.93,11.34-12.8,0-22.36-7.61-23.66-22.69h59.46c.33-2.27.49-4.21.49-6.47ZM573.78,147.36c2.59-12.31,11.18-18.95,22.69-18.95,10.85,0,18.63,5.99,20.41,18.95h-43.1Z"/>
+            <polygon fill="#ffffff" points="652.01 230 666.43 194.03 635.64 117.07 652.98 117.07 674.53 174.26 675.02 174.26 697.05 117.07 713.91 117.07 668.7 230 652.01 230"/>
+            <path fill="#ffffff" d="M722.8,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,23.66-11.99s18.15,4.7,22.36,13.77h.65c5.02-8.26,14.91-13.77,26.09-13.77,15.88,0,26.57,10.86,26.57,30.3v48.29h-16.2v-43.1c0-14.91-5.51-21.07-15.07-21.07-10.86,0-18.31,7.94-18.31,22.36v41.81h-16.2v-43.1c0-15.07-5.35-21.07-14.91-21.07-10.86,0-18.63,7.78-18.63,22.36v41.81h-16.2Z"/>
+            <rect fill="#ffffff" x="856.87" y="117.07" width="16.2" height="76.64"/>
+            <path fill="#ffffff" d="M854.28,93.41c0-6.16,4.86-10.69,10.69-10.69s10.86,4.54,10.86,10.69-4.86,10.69-10.86,10.69-10.69-4.54-10.69-10.69Z"/>
+            <path fill="#ffffff" d="M892.36,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,24.63-11.99,16.53,0,27.38,10.86,27.38,30.3v48.29h-16.2v-42.62c0-15.72-5.83-21.55-16.2-21.55-11.83,0-19.61,7.45-19.61,22.52v41.64h-16.2Z"/>
+            <path fill="#ffffff" d="M1035.83,80.28v46.5h-.48c-4.38-7.12-14.11-11.66-24.63-11.66-20.26,0-35.98,16.37-35.98,40.19s15.56,40.34,35.98,40.34c11.17,0,21.06-4.86,25.28-11.99h.48l.97,10.04h14.59v-113.43h-16.2ZM1013.79,181.4c-13.45,0-22.52-9.73-22.52-26.09s9.07-26.09,22.52-26.09,22.69,9.89,22.69,26.09-8.91,26.09-22.69,26.09Z"/>
+            <path fill="#3C7AA8" d="M177.61,102.92c11.1,0,20.11,9,20.11,20.11,0,1.31-.13,2.59-.37,3.83-1.99-.42-4.05-.64-6.16-.64-10.41,0-19.57,5.35-24.88,13.44-5.31-3.62-8.8-9.71-8.8-16.63,0-11.1,9-20.11,20.11-20.11"/>
+            <path fill="#3C7AA8" d="M133.2,102.92c-11.1,0-20.11,9-20.11,20.11,0,1.31.13,2.59.37,3.83,1.99-.42,4.05-.64,6.16-.64,10.41,0,19.57,5.35,24.89,13.44,5.31-3.62,8.8-9.71,8.8-16.63,0-11.1-9-20.11-20.11-20.11"/>
+            <path fill="#1D4A75" d="M177.61,205.75c11.1,0,20.11-9,20.11-20.11,0-4.65-1.58-8.93-4.23-12.33l-35.99-35.99v48.32c0,11.1,9,20.11,20.11,20.11"/>
+            <path fill="#1D4A75" d="M133.2,205.75c-11.1,0-20.11-9-20.11-20.11,0-4.65,1.58-8.93,4.23-12.33l35.99-35.99v48.32c0,11.1-9,20.11-20.11,20.11"/>
+            <path fill="#5298BF" d="M191.18,130.3c14.18,0,25.67,11.49,25.67,25.67,0,10.68-6.52,19.84-15.8,23.7-.83-3.27-2.33-6.28-4.34-8.87l-.16-.2-27.55-27.55c4.45-7.63,12.72-12.75,22.19-12.75"/>
+            <path fill="#5298BF" d="M119.62,130.3c-14.18,0-25.67,11.49-25.67,25.67,0,10.68,6.52,19.84,15.8,23.7.83-3.27,2.33-6.28,4.34-8.87l.16-.2,27.55-27.55c-4.45-7.63-12.72-12.75-22.19-12.75"/>
+          </svg>
+        </a>
+
+        <nav class="mm-nav" aria-label="Primary">
+          <a href="../">Home</a>
+          <a href="../for-advisers.html">Financial Advisors</a>
+          <a href="../for-fund-providers.html">Fund Providers</a>
+          <a href="../#security">Security</a>
+        </nav>
+
+        <div class="mm-nav-actions">
+          <a href="https://auth.moneymindprofile.com/" class="mm-btn mm-btn-ghost">Log in</a>
+          <a href="https://auth.moneymindprofile.com/#signup" class="mm-btn mm-btn-primary">Start 14-day trial</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEMO HERO -->
+    <section class="mm-demo-hero">
+      <div class="mm-curves" aria-hidden="true">
+        <svg viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="curve-a" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#5298BF" stop-opacity="0"/>
+              <stop offset="35%" stop-color="#5298BF" stop-opacity="0.55"/>
+              <stop offset="70%" stop-color="#3C7AA8" stop-opacity="0.75"/>
+              <stop offset="100%" stop-color="#1D4A75" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="curve-b" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1D4A75" stop-opacity="0"/>
+              <stop offset="55%" stop-color="#3C7AA8" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#5298BF" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="grain">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+              <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0"/>
+              <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+          </defs>
+          <path d="M 2200 -120 Q 1500 350 600 480 T -200 1100" fill="none" stroke="url(#curve-a)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M 2200 -120 Q 1500 350 600 480 T -200 1100" fill="none" stroke="url(#curve-a)" stroke-width="6" stroke-linecap="round" opacity="0.18"/>
+          <path d="M -200 1100 Q 450 700 1000 880 T 2200 1100" fill="none" stroke="url(#curve-b)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          <rect x="0" y="0" width="1920" height="900" fill="#5298BF" filter="url(#grain)" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <div class="mm-demo-inner">
+        <span class="eyebrow mm-demo-eyebrow">Demo it · Trial it · Transform it</span>
+
+        <h1>
+          See MoneyMind<br/>
+          in <em>action.</em>
+        </h1>
+
+        <p class="mm-demo-lead">
+          Watch a short walkthrough of how MoneyMind turns every client
+          conversation into a behavioral blueprint — then start your free
+          14-day trial.
+        </p>
+
+        <div class="mm-demo-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/EVCVjWLilpA?rel=0&modestbranding=1"
+            title="MoneyMind product demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="mm-demo-actions">
+          <a href="https://auth.moneymindprofile.com/#signup" class="mm-btn mm-btn-primary mm-btn-lg">
+            Start 14-day trial
+          </a>
+        </div>
+        <div class="mm-demo-trial">Demo it &middot; Trial it &middot; Transform it &middot; 14 days on us</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mm-footer">
+      <div class="mm-container">
+        <div class="mm-footer-grid">
+
+          <div class="mm-footer-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1174.59 310.87" aria-label="MoneyMind">
+              <path fill="#ffffff" d="M251.5,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,23.66-11.99s18.15,4.7,22.36,13.77h.65c5.02-8.26,14.91-13.77,26.09-13.77,15.88,0,26.57,10.86,26.57,30.3v48.29h-16.2v-43.1c0-14.91-5.51-21.07-15.07-21.07-10.86,0-18.31,7.94-18.31,22.36v41.81h-16.2v-43.1c0-15.07-5.35-21.07-14.91-21.07-10.86,0-18.63,7.78-18.63,22.36v41.81h-16.2Z"/>
+              <path fill="#ffffff" d="M420.58,115.12c-22.85,0-39.71,16.53-39.71,40.19s16.85,40.34,39.71,40.34,39.69-16.53,39.69-40.34-16.85-40.19-39.69-40.19ZM420.58,181.55c-13.46,0-23.18-10.37-23.18-26.25s9.72-26.09,23.18-26.09,23.17,10.38,23.17,26.09-9.72,26.25-23.17,26.25Z"/>
+              <path fill="#ffffff" d="M474.7,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,24.63-11.99,16.53,0,27.38,10.86,27.38,30.3v48.29h-16.2v-42.62c0-15.72-5.83-21.55-16.2-21.55-11.83,0-19.61,7.45-19.61,22.52v41.64h-16.2Z"/>
+              <path fill="#ffffff" d="M633.08,152.72c0-22.85-15.23-37.6-36.62-37.6-22.69,0-39.71,16.69-39.71,40.68s16.37,39.85,39.54,39.85c17.67,0,31.59-9.4,35.81-25.11h-15.39c-3.57,7.29-10.86,11.34-19.93,11.34-12.8,0-22.36-7.61-23.66-22.69h59.46c.33-2.27.49-4.21.49-6.47ZM573.78,147.36c2.59-12.31,11.18-18.95,22.69-18.95,10.85,0,18.63,5.99,20.41,18.95h-43.1Z"/>
+              <polygon fill="#ffffff" points="652.01 230 666.43 194.03 635.64 117.07 652.98 117.07 674.53 174.26 675.02 174.26 697.05 117.07 713.91 117.07 668.7 230 652.01 230"/>
+              <path fill="#ffffff" d="M722.8,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,23.66-11.99s18.15,4.7,22.36,13.77h.65c5.02-8.26,14.91-13.77,26.09-13.77,15.88,0,26.57,10.86,26.57,30.3v48.29h-16.2v-43.1c0-14.91-5.51-21.07-15.07-21.07-10.86,0-18.31,7.94-18.31,22.36v41.81h-16.2v-43.1c0-15.07-5.35-21.07-14.91-21.07-10.86,0-18.63,7.78-18.63,22.36v41.81h-16.2Z"/>
+              <rect fill="#ffffff" x="856.87" y="117.07" width="16.2" height="76.64"/>
+              <path fill="#ffffff" d="M854.28,93.41c0-6.16,4.86-10.69,10.69-10.69s10.86,4.54,10.86,10.69-4.86,10.69-10.86,10.69-10.69-4.54-10.69-10.69Z"/>
+              <path fill="#ffffff" d="M892.36,193.71v-76.64h14.75l.97,10.05h.49c4.86-7.45,13.94-11.99,24.63-11.99,16.53,0,27.38,10.86,27.38,30.3v48.29h-16.2v-42.62c0-15.72-5.83-21.55-16.2-21.55-11.83,0-19.61,7.45-19.61,22.52v41.64h-16.2Z"/>
+              <path fill="#ffffff" d="M1035.83,80.28v46.5h-.48c-4.38-7.12-14.11-11.66-24.63-11.66-20.26,0-35.98,16.37-35.98,40.19s15.56,40.34,35.98,40.34c11.17,0,21.06-4.86,25.28-11.99h.48l.97,10.04h14.59v-113.43h-16.2ZM1013.79,181.4c-13.45,0-22.52-9.73-22.52-26.09s9.07-26.09,22.52-26.09,22.69,9.89,22.69,26.09-8.91,26.09-22.69,26.09Z"/>
+              <path fill="#3C7AA8" d="M177.61,102.92c11.1,0,20.11,9,20.11,20.11,0,1.31-.13,2.59-.37,3.83-1.99-.42-4.05-.64-6.16-.64-10.41,0-19.57,5.35-24.88,13.44-5.31-3.62-8.8-9.71-8.8-16.63,0-11.1,9-20.11,20.11-20.11"/>
+              <path fill="#3C7AA8" d="M133.2,102.92c-11.1,0-20.11,9-20.11,20.11,0,1.31.13,2.59.37,3.83,1.99-.42,4.05-.64,6.16-.64,10.41,0,19.57,5.35,24.89,13.44,5.31-3.62,8.8-9.71,8.8-16.63,0-11.1-9-20.11-20.11-20.11"/>
+              <path fill="#1D4A75" d="M177.61,205.75c11.1,0,20.11-9,20.11-20.11,0-4.65-1.58-8.93-4.23-12.33l-35.99-35.99v48.32c0,11.1,9,20.11,20.11,20.11"/>
+              <path fill="#1D4A75" d="M133.2,205.75c-11.1,0-20.11-9-20.11-20.11,0-4.65,1.58-8.93,4.23-12.33l35.99-35.99v48.32c0,11.1-9,20.11-20.11,20.11"/>
+              <path fill="#5298BF" d="M191.18,130.3c14.18,0,25.67,11.49,25.67,25.67,0,10.68-6.52,19.84-15.8,23.7-.83-3.27-2.33-6.28-4.34-8.87l-.16-.2-27.55-27.55c4.45-7.63,12.72-12.75,22.19-12.75"/>
+              <path fill="#5298BF" d="M119.62,130.3c-14.18,0-25.67,11.49-25.67,25.67,0,10.68,6.52,19.84,15.8,23.7.83-3.27,2.33-6.28,4.34-8.87l.16-.2,27.55-27.55c-4.45-7.63-12.72-12.75-22.19-12.75"/>
+            </svg>
+            <p>
+              AI behavioural intelligence for financial advisors and fund providers.
+              Decoding the psychology behind how clients actually make financial decisions.
+            </p>
+          </div>
+
+          <div class="mm-footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="../legal/terms-of-use.html">Terms of Use</a></li>
+              <li><a href="../legal/acceptable-use-policy.html">Acceptable Use Policy</a></li>
+              <li><a href="../legal/data-aggregation-deidentification-policy.html">Data Aggregation &amp; De-Identification</a></li>
+              <li><a href="../legal/data-processing-agreement.html">Data Processing Agreement</a></li>
+              <li><a href="../legal/subprocessors.html">Sub-processors List</a></li>
+              <li><a href="../legal/repeat-infringer-policy.html">Repeat Infringer Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="mm-footer-col">
+            <h5>Follow us</h5>
+            <div class="mm-footer-socials">
+              <a href="https://au.linkedin.com/company/moneymindprofile1" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on LinkedIn">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43A2.06 2.06 0 1 1 5.34 3.3a2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/moneymind_profile/" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on Instagram">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.14 0-3.51.01-4.75.07-.86.04-1.32.18-1.63.3-.41.16-.7.35-1.01.66-.31.31-.5.6-.66 1.01-.12.31-.26.77-.3 1.63-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.04.86.18 1.32.3 1.63.16.41.35.7.66 1.01.31.31.6.5 1.01.66.31.12.77.26 1.63.3 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.86-.04 1.32-.18 1.63-.3.41-.16.7-.35 1.01-.66.31-.31.5-.6.66-1.01.12-.31.26-.77.3-1.63.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.86-.18-1.32-.3-1.63a2.72 2.72 0 0 0-.66-1.01 2.72 2.72 0 0 0-1.01-.66c-.31-.12-.77-.26-1.63-.3-1.24-.06-1.61-.07-4.75-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 7.4a2.91 2.91 0 1 0 0-5.82 2.91 2.91 0 0 0 0 5.82Zm5.72-7.6a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/people/MoneyMind/61577449349777/" target="_blank" rel="noopener noreferrer" aria-label="MoneyMind on Facebook">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mm-footer-bottom">
+          <span>&copy; 2026 MoneyMind Profile &middot; ABN 33 672 152 073</span>
+          <div class="legal">
+            <a href="mailto:support@moneymindprofile.com">support@moneymindprofile.com</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const header = document.getElementById('mm-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
+</body>
+</html>
