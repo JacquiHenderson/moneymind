@@ -1,6 +1,5 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Watch the Demo — MoneyMind',
@@ -17,8 +16,9 @@ export default function DemoPage() {
           <p className="eyebrow">Product Demo</p>
           <h1>See MoneyMind in action</h1>
           <p className="mm-demo-sub">
-            Watch how financial advisors use MoneyMind&apos;s behavioural intelligence
-            to understand exactly how their clients make financial decisions.
+            Watch how MoneyMind decodes how each client really handles money — saving, spending,
+            retirement, investing, and market swings — so you design advice for the person,
+            earn trust faster, and keep clients through volatile moments.
           </p>
         </div>
       </section>
@@ -46,14 +46,10 @@ export default function DemoPage() {
       <section className="mm-demo-cta">
         <div className="mm-container">
           <h2>Ready to try it yourself?</h2>
-          <p>Start a 14-day free trial or request a guided walkthrough with our team.</p>
-          <div className="mm-demo-cta-actions">
+<div className="mm-demo-cta-actions">
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">
               Start 14-day trial
             </a>
-            <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">
-              Request a demo
-            </Link>
           </div>
         </div>
       </section>
