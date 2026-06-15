@@ -21,6 +21,26 @@ const COUNTRIES = [
   { code: 'OTHER', label: 'Other' },
 ];
 
+// Trial signup lives on the global-login page. We carry the demo form's details forward
+// in the hash (not the query string) so the email never reaches server access logs; the
+// signup page reads them and pre-fills, so the visitor doesn't have to re-type anything.
+const SIGNUP_BASE = 'https://auth.moneymindprofile.com/#signup';
+
+// The signup form only offers UK/US/AU. NZ is served by the AU deployment; OTHER has no
+// matching option, so we omit country and let them choose.
+const SIGNUP_COUNTRY = { AU: 'AU', NZ: 'AU', UK: 'UK', US: 'US' };
+
+function buildSignupUrl({ fullName, company, email, country }) {
+  const params = new URLSearchParams();
+  if (email && email.trim()) params.set('email', email.trim());
+  if (fullName && fullName.trim()) params.set('name', fullName.trim());
+  if (company && company.trim()) params.set('company', company.trim());
+  const mapped = SIGNUP_COUNTRY[country];
+  if (mapped) params.set('country', mapped);
+  const qs = params.toString();
+  return qs ? `${SIGNUP_BASE}?${qs}` : SIGNUP_BASE;
+}
+
 function CheckIcon() {
   return (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -89,8 +109,15 @@ export default function DemoRequestPage() {
               We&apos;ve received your demo request and will be in touch at{' '}
               <strong style={{ color: 'var(--fg-1)' }}>{fields.email}</strong> shortly.
             </p>
+            <p>
+              Don&apos;t want to wait? Start your free trial now — your details are already
+              filled in.
+            </p>
             <div className="ty-actions">
-              <Link href="/demo" className="mm-btn mm-btn-primary mm-btn-lg">Watch the demo</Link>
+              <a href={buildSignupUrl(fields)} className="mm-btn mm-btn-primary mm-btn-lg">
+                Start your free trial
+              </a>
+              <Link href="/demo" className="mm-btn mm-btn-ghost mm-btn-lg">Watch the demo</Link>
               <Link href="/" className="mm-btn mm-btn-ghost mm-btn-lg">Back to home</Link>
             </div>
             <div className="ty-meta">
@@ -242,7 +269,7 @@ export default function DemoRequestPage() {
 
               <div className="mm-dr-trial-note">
                 <p>Prefer to explore first?</p>
-                <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-ghost">
+                <a href={buildSignupUrl(fields)} className="mm-btn mm-btn-ghost">
                   Start free 14-day trial
                 </a>
               </div>
