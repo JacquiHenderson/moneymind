@@ -10,6 +10,7 @@ const REGION_API = {
   NZ: 'https://au-api.moneymindprofile.com',    // NZ served by the AU deployment
   UK: 'https://uk-api.moneymindprofile.com',
   US: 'https://us-api.moneymindprofile.com',
+  CA: 'https://us-api.moneymindprofile.com',    // CA served by the US deployment
   OTHER: 'https://au-api.moneymindprofile.com', // default → AU global host
 };
 
@@ -18,6 +19,7 @@ const COUNTRIES = [
   { code: 'NZ', label: 'New Zealand' },
   { code: 'UK', label: 'United Kingdom' },
   { code: 'US', label: 'United States' },
+  { code: 'CA', label: 'Canada' },
   { code: 'OTHER', label: 'Other' },
 ];
 
@@ -26,9 +28,9 @@ const COUNTRIES = [
 // signup page reads them and pre-fills, so the visitor doesn't have to re-type anything.
 const SIGNUP_BASE = 'https://auth.moneymindprofile.com/#signup';
 
-// The signup form only offers UK/US/AU. NZ is served by the AU deployment; OTHER has no
-// matching option, so we omit country and let them choose.
-const SIGNUP_COUNTRY = { AU: 'AU', NZ: 'AU', UK: 'UK', US: 'US' };
+// The signup form only offers UK/US/AU. NZ is served by the AU deployment and CA by the
+// US deployment; OTHER has no matching option, so we omit country and let them choose.
+const SIGNUP_COUNTRY = { AU: 'AU', NZ: 'AU', UK: 'UK', US: 'US', CA: 'US' };
 
 function buildSignupUrl({ fullName, company, email, country }) {
   const params = new URLSearchParams();
