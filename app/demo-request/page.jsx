@@ -4,7 +4,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+// Set NEXT_PUBLIC_FORMSPREE_ID in the deployment environment (Vercel/Cloudflare).
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 
 const COUNTRIES = [
   'Australia', 'New Zealand', 'United Kingdom', 'United States', 'Canada',

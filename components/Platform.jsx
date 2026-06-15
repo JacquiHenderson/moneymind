@@ -62,11 +62,19 @@ export default function Platform({
             ) : tab === 'embed' ? (
               <EmbedLink />
             ) : (
-              <img
-                className="mm-platform-img"
-                src="/assets/product/dashboard.png"
-                alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
-              />
+              <picture className="mm-platform-pic">
+                <source srcSet="/assets/opt/product/dashboard.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/dashboard.webp" type="image/webp" />
+                <img
+                  className="mm-platform-img"
+                  src="/assets/opt/product/dashboard.png"
+                  alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
+                  width="1600"
+                  height="1086"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             )}
           </div>
         </div>

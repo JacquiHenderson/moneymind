@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Terms of Use — MoneyMind',
   description: 'MoneyMind Profile Terms of Use — the legally binding agreement governing your use of our software and services.',
+  alternates: { canonical: '/legal/terms-of-use' },
 };
 
 export default function TermsOfUsePage() {

@@ -2,7 +2,7 @@
    moneymind — Colors & Type
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Fonts are self-hosted via next/font (see app/layout.jsx) — no render-blocking @import. */
 
 :root {
   --mm-blue-light: #5298BF;
@@ -69,9 +69,9 @@
   --light-border-soft:     rgba(11, 11, 69, 0.16);
   --light-border-accent:   var(--mm-blue-light);
 
-  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-mono:    "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+  --font-display: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-body:    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono:    var(--font-jetbrains), "SF Mono", ui-monospace, Menlo, monospace;
 
   --fs-display-1: 96px;
   --fs-display-2: 72px;
@@ -297,6 +297,7 @@ a:hover { color: var(--mm-blue-light); }
 .mm-platform-chrome { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border-hairline); background: rgba(0,0,0,0.2); }
 .mm-platform-dot { width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,0.15); }
 .mm-platform-url { margin-left: 14px; font-family: var(--font-mono); font-size: 12px; color: var(--fg-4); }
+.mm-platform-pic { display: block; }
 .mm-platform-img { width: 100%; height: auto; display: block; }
 .mm-platform-badge { position: absolute; top: 86px; right: 32px; display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; background: rgba(5, 5, 36, 0.78); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-soft); border-radius: var(--radius-md); box-shadow: var(--elev-2); z-index: 5; }
 .mm-platform-badge-icon { width: 28px; height: 28px; border-radius: 999px; background: linear-gradient(135deg, var(--mm-blue-light), var(--mm-blue-mid)); display: inline-flex; align-items: center; justify-content: center; }
@@ -406,6 +407,7 @@ a:hover { color: var(--mm-blue-light); }
 .mm-team-card { padding: 28px; padding-bottom: 60px; position: relative; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--bg-raised); display: flex; flex-direction: column; gap: 12px; transition: border-color var(--dur-fast) var(--ease-out); }
 .mm-team-card:hover { border-color: var(--border-soft); }
 .mm-team-thumb { width: 104px; height: 104px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-soft); background: var(--mm-blue-navy); margin-bottom: 4px; }
+.mm-team-thumb picture { display: block; width: 100%; height: 100%; }
 .mm-team-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .mm-team-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: -0.012em; color: var(--fg-1); margin: 0; }
 .mm-team-role { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mm-blue-light); margin: -6px 0 6px; }
@@ -1064,3 +1066,13 @@ a:hover { color: var(--mm-blue-light); }
 .mm-dr-trial-note .mm-btn { justify-content: center; }
 @media (max-width: 860px) { .mm-dr-form-wrap { grid-template-columns: 1fr; gap: 40px; } .mm-dr-aside { position: static; } }
 @media (max-width: 640px) { .mm-dr-hero { padding: 96px 0 40px; } .mm-dr-hero h1 { font-size: 40px; } .mm-dr-sub { font-size: 17px; } }
+
+/* ---- FAQ ---- */
+.mm-faq-list { max-width: 800px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.mm-faq-item { border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--bg-raised); transition: border-color var(--dur-fast) var(--ease-out); }
+.mm-faq-item:hover { border-color: var(--border-soft); }
+.mm-faq-item summary { cursor: pointer; list-style: none; padding: 22px 26px; font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: -0.012em; color: var(--fg-1); display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.mm-faq-item summary::-webkit-details-marker { display: none; }
+.mm-faq-item summary::after { content: "+"; font-size: 24px; font-weight: 400; line-height: 1; color: var(--mm-blue-light); flex-shrink: 0; }
+.mm-faq-item[open] summary::after { content: "\2212"; }
+.mm-faq-item p { padding: 0 26px 24px; margin: 0; color: var(--fg-2); line-height: 1.65; }

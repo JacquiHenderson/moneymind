@@ -7,13 +7,16 @@ import Features from '../components/Features';
 import Stats from '../components/Stats';
 import Team from '../components/Team';
 import Security from '../components/Security';
+import Faq from '../components/Faq';
 import CtaBand from '../components/CtaBand';
 import Footer from '../components/Footer';
+import { pageMeta } from '../lib/seo';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'MoneyMind — AI Behavioural Intelligence for Financial Advisors',
   description: "MoneyMind's AI behavioural intelligence gives financial advisory firms a psychological blueprint of how their clients make financial decisions.",
-};
+  path: '/',
+});
 
 export default function HomePage() {
   return (
@@ -27,6 +30,7 @@ export default function HomePage() {
       <Stats />
       <Team />
       <Security />
+      <Faq />
       <CtaBand />
       <Footer />
     </div>

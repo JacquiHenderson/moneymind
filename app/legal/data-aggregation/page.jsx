@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Data Aggregation & De-Identification Policy — MoneyMind',
   description: 'MoneyMind Profile Data Aggregation and De-Identification Policy — standards and safeguards for aggregated data.',
+  alternates: { canonical: '/legal/data-aggregation' },
 };
 
 export default function DataAggregationPage() {

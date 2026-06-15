@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Privacy Policy — MoneyMind',
   description: 'MoneyMind Profile Privacy Policy — how we collect, use, and protect your personal information.',
+  alternates: { canonical: '/legal/privacy-policy' },
 };
 
 export default function PrivacyPolicyPage() {

@@ -1,14 +1,34 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { pageMeta, SITE_URL } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'Watch the Demo — MoneyMind',
   description: "See MoneyMind's AI behavioural intelligence in action. Watch how we give financial advisors a psychological blueprint of how clients make financial decisions.",
+  path: '/demo',
+});
+
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'MoneyMind product demo',
+  description:
+    'See how MoneyMind decodes how each client really handles money — saving, spending, retirement, investing, and market swings.',
+  thumbnailUrl: 'https://i.ytimg.com/vi/EVCVjWLilpA/maxresdefault.jpg',
+  embedUrl: 'https://www.youtube-nocookie.com/embed/EVCVjWLilpA',
+  contentUrl: 'https://www.youtube.com/watch?v=EVCVjWLilpA',
+  // TODO: set to the video's real publish date.
+  uploadDate: '2025-01-01',
+  publisher: { '@type': 'Organization', name: 'MoneyMind', url: SITE_URL },
 };
 
 export default function DemoPage() {
   return (
     <div className="mm-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <Header currentPage="demo" />
 
       <section className="mm-demo-hero">
@@ -35,6 +55,7 @@ export default function DemoPage() {
               <iframe
                 src="https://www.youtube-nocookie.com/embed/EVCVjWLilpA?rel=0&modestbranding=1&color=white"
                 title="MoneyMind product demo"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />

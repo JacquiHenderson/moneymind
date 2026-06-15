@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Repeat Infringer Policy — MoneyMind',
   description: 'MoneyMind Profile Repeat Infringer Policy — our approach to addressing intellectual property infringement.',
+  alternates: { canonical: '/legal/repeat-infringer-policy' },
 };
 
 export default function RepeatInfringerPolicyPage() {

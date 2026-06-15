@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Data Processing Agreement — MoneyMind',
   description: 'MoneyMind Profile Data Processing Agreement — governing the processing of personal data on behalf of customers.',
+  alternates: { canonical: '/legal/data-processing-agreement' },
 };
 
 export default function DataProcessingAgreementPage() {

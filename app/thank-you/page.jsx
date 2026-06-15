@@ -1,9 +1,12 @@
 import Link from 'next/link';
+import { pageMeta } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'Thank you — MoneyMind',
   description: "Thanks for reaching out — we'll be in touch within the hour.",
-};
+  path: '/thank-you',
+  noindex: true,
+});
 
 export default function ThankYouPage() {
   return (

@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Acceptable Use Policy — MoneyMind',
   description: 'MoneyMind Profile Acceptable Use Policy — governing the permitted and prohibited uses of our services.',
+  alternates: { canonical: '/legal/acceptable-use-policy' },
 };
 
 export default function AcceptableUsePolicyPage() {

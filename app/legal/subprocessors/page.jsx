@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Sub-Processors List — MoneyMind',
   description: 'MoneyMind Profile Sub-Processors List — third-party processors engaged in handling personal data.',
+  alternates: { canonical: '/legal/subprocessors' },
 };
 
 export default function SubprocessorsPage() {

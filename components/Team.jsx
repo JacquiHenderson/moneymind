@@ -6,7 +6,8 @@ const TEAM = [
     name: 'Jacqui Henderson',
     role: 'CEO & Founder',
     bio: 'CEO and thought leader in fintech, with 20+ years across tech and wealth management. Her passion for behavioural science initiated MoneyMind.',
-    img: '/assets/team/jacqui-henderson.jpg',
+    img: '/assets/opt/team/jacqui-henderson',
+    imgExt: 'jpg',
     pos: '50% 18%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/jacqui-henderson1',
@@ -18,7 +19,8 @@ const TEAM = [
     name: 'Ash Crick',
     role: 'CTO',
     bio: 'A highly regarded fractional tech leader with three decades in enterprise platforms, AI, and startups — from major banks to pioneering enterprise AI.',
-    img: '/assets/team/ash-crick.png',
+    img: '/assets/opt/team/ash-crick',
+    imgExt: 'png',
     pos: '50% 25%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/ashcrick/',
@@ -28,7 +30,8 @@ const TEAM = [
     name: 'Dr Katherine Hunt',
     role: 'Chief of Research & Founder',
     bio: 'Combines academia and practice: Bachelor of Psychology, Bachelor of Commerce, PhD in Law & Economics, and Financial Planning. Her work initiated MoneyMind.',
-    img: '/assets/team/katherine-hunt.jpg',
+    img: '/assets/opt/team/katherine-hunt',
+    imgExt: 'jpg',
     pos: '50% 22%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/drkatherinehunt/',
@@ -67,7 +70,13 @@ export default function Team() {
           {TEAM.map((p, i) => (
             <article className="mm-team-card" key={i}>
               <div className="mm-team-thumb">
-                <img src={p.img} alt={`${p.name}, ${p.role}`} style={{ objectPosition: p.pos }} />
+                <picture>
+                  <source srcSet={`${p.img}.avif`} type="image/avif" />
+                  <source srcSet={`${p.img}.webp`} type="image/webp" />
+                  <img src={`${p.img}.${p.imgExt}`} alt={`${p.name}, ${p.role}`}
+                    width="104" height="104" loading="lazy" decoding="async"
+                    style={{ objectPosition: p.pos }} />
+                </picture>
               </div>
               <h4 className="mm-team-name">{p.name}</h4>
               <span className="mm-team-role">{p.role}</span>
