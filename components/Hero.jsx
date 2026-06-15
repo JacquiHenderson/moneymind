@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IconSparkle, IconChevronRight } from './Icons';
+import { IconSparkle } from './Icons';
 
 export function HeroCurves() {
   return (
@@ -60,7 +60,6 @@ export function Hero() {
         <a className="mm-pill" href="#money-pattern">
           <IconSparkle size={14} stroke={1.8} style={{ color: 'var(--mm-blue-light)' }} />
           <span>Introducing The MoneyPattern™</span>
-          <IconChevronRight size={13} className="chev" />
         </a>
 
         <h1>
