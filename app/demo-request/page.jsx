@@ -112,10 +112,6 @@ export default function DemoRequestPage() {
         <div className="mm-container">
           <p className="eyebrow">Get Started</p>
           <h1>Request a demo</h1>
-          <p className="mm-dr-sub">
-            See MoneyMind in action with a guided walkthrough from our team.
-            Fill in your details and we&apos;ll be in touch within the hour.
-          </p>
         </div>
       </section>
 
@@ -228,11 +224,10 @@ export default function DemoRequestPage() {
               <h3>What to expect</h3>
               <ul className="mm-dr-checklist">
                 {[
-                  'A personalised walkthrough with a MoneyMind specialist',
                   'See real client behavioural profiles in action',
                   'Learn how to integrate MoneyMind into your advisory process',
                   'Get answers to your specific use-case questions',
-                  '30–45 minutes, no obligation',
+                  '7 minutes, no obligation',
                 ].map((item) => (
                   <li key={item}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
