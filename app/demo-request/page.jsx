@@ -4,14 +4,21 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 
-// Set NEXT_PUBLIC_FORMSPREE_ID in the deployment environment (Vercel/Cloudflare).
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
+// Each region's backend API origin. The selected country code chooses the host.
+const REGION_API = {
+  AU: 'https://au-api.moneymindprofile.com',
+  NZ: 'https://au-api.moneymindprofile.com',    // NZ served by the AU deployment
+  UK: 'https://uk-api.moneymindprofile.com',
+  US: 'https://us-api.moneymindprofile.com',
+  OTHER: 'https://au-api.moneymindprofile.com', // default → AU global host
+};
 
 const COUNTRIES = [
-  'Australia', 'New Zealand', 'United Kingdom', 'United States', 'Canada',
-  'Singapore', 'Hong Kong', 'Ireland', 'South Africa', 'United Arab Emirates',
-  'Germany', 'France', 'Netherlands', 'Switzerland', 'Sweden', 'Norway',
-  'Denmark', 'Finland', 'Belgium', 'Austria', 'Spain', 'Italy', 'Portugal',
+  { code: 'AU', label: 'Australia' },
+  { code: 'NZ', label: 'New Zealand' },
+  { code: 'UK', label: 'United Kingdom' },
+  { code: 'US', label: 'United States' },
+  { code: 'OTHER', label: 'Other' },
 ];
 
 function CheckIcon() {
@@ -24,16 +31,15 @@ function CheckIcon() {
 }
 
 export default function DemoRequestPage() {
-  const [fields, setFields] = useState({ fullName: '', company: '', email: '', country: '' });
+  const [fields, setFields] = useState({ fullName: '', company: '', email: '', country: '', website: '' });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error | ratelimited
 
   const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
 
   const validate = () => {
     const e = {};
     if (!fields.fullName.trim()) e.fullName = 'Please enter your name.';
-    if (!fields.company.trim()) e.company = 'Please enter your company name.';
     if (!fields.email.trim()) e.email = 'Please enter your email.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) e.email = 'Please enter a valid email address.';
     if (!fields.country) e.country = 'Please select your country.';
@@ -46,20 +52,22 @@ export default function DemoRequestPage() {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
     setStatus('submitting');
+    const api = REGION_API[fields.country] || REGION_API.OTHER;
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(`${api}/api/public/demo-request`, {
         method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fullName: fields.fullName,
-          company: fields.company,
-          email: fields.email,
-          country: fields.country,
-          _subject: `New demo request — ${fields.fullName} (${fields.company})`,
-          _replyto: fields.email,
+          full_name:    fields.fullName.trim(),
+          company_name: fields.company.trim(),
+          email:        fields.email.trim(),
+          country:      fields.country,
+          website:      fields.website, // honeypot — stays empty for humans
         }),
       });
-      setStatus(res.ok ? 'success' : 'error');
+      if (res.ok)                  setStatus('success');
+      else if (res.status === 429) setStatus('ratelimited');
+      else                         setStatus('error');
     } catch {
       setStatus('error');
     }
@@ -129,7 +137,7 @@ export default function DemoRequestPage() {
               </div>
 
               <div className={`mm-dr-field${errors.company ? ' has-error' : ''}`}>
-                <label htmlFor="company">Company</label>
+                <label htmlFor="company">Company <span className="mm-dr-optional">(optional)</span></label>
                 <input
                   id="company"
                   type="text"
@@ -164,7 +172,7 @@ export default function DemoRequestPage() {
                   >
                     <option value="">Select your country</option>
                     {COUNTRIES.map((c) => (
-                      <option key={c} value={c}>{c}</option>
+                      <option key={c.code} value={c.code}>{c.label}</option>
                     ))}
                   </select>
                   <svg className="mm-dr-chevron" width="16" height="16" viewBox="0 0 24 24"
@@ -182,6 +190,23 @@ export default function DemoRequestPage() {
                   <a href="mailto:info@moneymindprofile.com">info@moneymindprofile.com</a>
                 </div>
               )}
+
+              {status === 'ratelimited' && (
+                <div className="mm-dr-api-error">
+                  Too many attempts. Please try again shortly.
+                </div>
+              )}
+
+              {/* Honeypot: hidden from humans, must stay empty */}
+              <input
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={fields.website}
+                onChange={set('website')}
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+              />
 
               <button
                 type="submit"

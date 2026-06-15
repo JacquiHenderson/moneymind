@@ -1041,6 +1041,7 @@ a:hover { color: var(--mm-blue-light); }
 .mm-dr-form { display: flex; flex-direction: column; gap: 24px; }
 .mm-dr-field { display: flex; flex-direction: column; gap: 8px; }
 .mm-dr-field label { font-size: 14px; font-weight: 500; color: var(--fg-2); letter-spacing: 0.01em; }
+.mm-dr-optional { font-weight: 400; color: var(--fg-4); }
 .mm-dr-field input, .mm-dr-field select { width: 100%; padding: 14px 16px; background: var(--bg-raised); border: 1px solid var(--border-soft); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 15px; color: var(--fg-1); outline: none; transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out); appearance: none; -webkit-appearance: none; }
 .mm-dr-field input::placeholder { color: var(--fg-4); }
 .mm-dr-field input:focus, .mm-dr-field select:focus { border-color: var(--mm-blue-light); box-shadow: 0 0 0 3px rgba(82,152,191,0.18); }
