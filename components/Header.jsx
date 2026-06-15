@@ -52,7 +52,7 @@ export default function Header({ currentPage = 'home' }) {
       {menuOpen && <div className="mm-mobile-overlay" onClick={close} aria-hidden="true" />}
       <nav className={`mm-mobile-nav${menuOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
         <Link href="/" onClick={close} className={currentPage === 'home' ? 'is-current' : ''}>Home</Link>
-        <Link href="/for-advisers" onClick={close} className={currentPage === 'advisers' ? 'is-current' : ''}>Financial Advisors</Link>
+        <Link href="/for-advisors" onClick={close} className={currentPage === 'advisers' ? 'is-current' : ''}>Financial Advisors</Link>
         <Link href="/for-fund-providers" onClick={close} className={currentPage === 'fund-providers' ? 'is-current' : ''}>Fund Providers</Link>
         <a href={homeAnchor('#security')} onClick={close}>Security</a>
         <div className="mm-mobile-nav-actions">

@@ -14,9 +14,6 @@ export const Icon = ({ children, size = 20, stroke = 1.6, ...props }) => (
   </svg>
 );
 
-export const IconArrowRight = (p) => (
-  <Icon {...p}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></Icon>
-);
 export const IconChevronDown = (p) => (
   <Icon {...p}><path d="m6 9 6 6 6-6"/></Icon>
 );
@@ -84,9 +81,6 @@ export const IconLink = (p) => (
     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
   </Icon>
 );
-export const IconRecord = (p) => (
-  <Icon {...p}><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="9"/></Icon>
-);
 export const IconLinkedIn = (p) => (
   <Icon {...p} stroke={0} fill="currentColor">
     <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43A2.06 2.06 0 1 1 5.34 3.3a2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
@@ -101,7 +95,4 @@ export const IconFacebook = (p) => (
   <Icon {...p} stroke={0} fill="currentColor">
     <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z"/>
   </Icon>
-);
-export const IconX = (p) => (
-  <Icon {...p}><path d="M18 6 6 18"/><path d="m6 6 12 12"/></Icon>
 );

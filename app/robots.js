@@ -13,7 +13,7 @@ const AI_CRAWLERS = [
 export default function robots() {
   return {
     rules: [
-      { userAgent: '*', allow: '/', disallow: ['/thank-you'] },
+      { userAgent: '*', allow: '/' },
       { userAgent: AI_CRAWLERS, allow: '/' },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

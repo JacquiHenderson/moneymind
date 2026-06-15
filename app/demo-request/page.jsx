@@ -90,7 +90,8 @@ export default function DemoRequestPage() {
               <strong style={{ color: 'var(--fg-1)' }}>{fields.email}</strong> shortly.
             </p>
             <div className="ty-actions">
-              <Link href="/" className="mm-btn mm-btn-primary mm-btn-lg">Back to home</Link>
+              <Link href="/demo" className="mm-btn mm-btn-primary mm-btn-lg">Watch the demo</Link>
+              <Link href="/" className="mm-btn mm-btn-ghost mm-btn-lg">Back to home</Link>
             </div>
             <div className="ty-meta">
               Need to reach us sooner?{' '}

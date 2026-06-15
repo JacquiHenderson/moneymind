@@ -8,7 +8,7 @@ import Steps from '../../components/Steps';
 import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
 import {
-  IconChart, IconLink, IconBrain, IconCheck, IconShield, IconChevronDown
+  IconChart, IconLink, IconBrain, IconCheck, IconChevronDown
 } from '../../components/Icons';
 
 // ---- Hero ----
