@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { IconSparkle, IconChevronRight } from './Icons';
 
 export function HeroCurves() {
@@ -77,7 +78,7 @@ export function Hero() {
 
         <div className="mm-hero-actions">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</a>
+          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
 
         <div className="mm-trial-line">Demo it. Trial it. Transform it. 14 days on us.</div>

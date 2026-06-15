@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import Header from '../../components/Header';
 import { HeroCurves } from '../../components/Hero';
 import Logos from '../../components/Logos';
@@ -31,7 +32,7 @@ function AdvisersHero() {
         </p>
         <div className="mm-hero-actions">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</a>
+          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
       </div>
     </section>
@@ -291,7 +292,7 @@ function AdvisersPricing() {
             </p>
             <div className="mm-pricing-actions">
               <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-              <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</a>
+              <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
             </div>
           </div>
           <ul className="mm-pricing-bullets">
@@ -318,7 +319,7 @@ function AdvisersCtaBand() {
           </p>
           <div className="mm-hero-actions">
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Try for free</a>
-            <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</a>
+            <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
           </div>
           <div className="mm-cta-trial">Demo it. Trial it. Transform it. 14 days on us.</div>
         </div>

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { IconSend, IconScan, IconCheck } from './Icons';
 
 const STEPS = [
@@ -72,7 +73,7 @@ export default function Steps() {
 
         <div className="mm-steps-cta">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</a>
+          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
       </div>
     </section>

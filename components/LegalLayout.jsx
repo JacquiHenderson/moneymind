@@ -14,7 +14,7 @@ export default function LegalLayout({ title, meta, children }) {
             <Link href="/for-fund-providers">Fund Providers</Link>
             <Link href="/#security">Security</Link>
           </nav>
-          <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="lp-cta">Request demo</a>
+          <Link href="/demo-request" className="lp-cta">Request demo</Link>
         </div>
       </header>
 
