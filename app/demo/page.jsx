@@ -17,8 +17,7 @@ const videoSchema = {
   thumbnailUrl: 'https://i.ytimg.com/vi/Lv0Air6GyKw/maxresdefault.jpg',
   embedUrl: 'https://www.youtube-nocookie.com/embed/Lv0Air6GyKw',
   contentUrl: 'https://www.youtube.com/watch?v=Lv0Air6GyKw',
-  // TODO: set to the video's real publish date.
-  uploadDate: '2025-01-01',
+  uploadDate: '2026-06-16',
   publisher: { '@type': 'Organization', name: 'MoneyMind', url: SITE_URL },
 };
 
