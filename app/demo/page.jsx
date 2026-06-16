@@ -14,9 +14,9 @@ const videoSchema = {
   name: 'MoneyMind product demo',
   description:
     'See how MoneyMind decodes how each client really handles money — saving, spending, retirement, investing, and market swings.',
-  thumbnailUrl: 'https://i.ytimg.com/vi/EVCVjWLilpA/maxresdefault.jpg',
-  embedUrl: 'https://www.youtube-nocookie.com/embed/EVCVjWLilpA',
-  contentUrl: 'https://www.youtube.com/watch?v=EVCVjWLilpA',
+  thumbnailUrl: 'https://i.ytimg.com/vi/Lv0Air6GyKw/maxresdefault.jpg',
+  embedUrl: 'https://www.youtube-nocookie.com/embed/Lv0Air6GyKw',
+  contentUrl: 'https://www.youtube.com/watch?v=Lv0Air6GyKw',
   // TODO: set to the video's real publish date.
   uploadDate: '2025-01-01',
   publisher: { '@type': 'Organization', name: 'MoneyMind', url: SITE_URL },
@@ -53,7 +53,7 @@ export default function DemoPage() {
             </div>
             <div className="mm-demo-embed">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/EVCVjWLilpA?rel=0&modestbranding=1&color=white"
+                src="https://www.youtube-nocookie.com/embed/Lv0Air6GyKw?rel=0&modestbranding=1&color=white"
                 title="MoneyMind product demo"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
