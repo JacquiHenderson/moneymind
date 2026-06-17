@@ -15,7 +15,7 @@ const JURISDICTIONS = [
     country: 'Australia',
     regulator: 'ASIC',
     summary:
-      "Best-interests-duty regime (Corporations Act Pt 7.7A). DBFO reforms are shifting toward principles and outcomes; the overarching BID is retained. Here, “Supports” means the tool is an input to the adviser's determination.",
+      'Best-interests-duty regime (Corporations Act Pt 7.7A). DBFO reforms are shifting toward principles and outcomes.',
     rows: [
       ['Risk tolerance', 'Corporations Act s961B BID; RG 175; RG 244'],
       ['Risk capacity', "s961B BID; client's relevant circumstances"],
@@ -23,10 +23,7 @@ const JURISDICTIONS = [
       ['Knowledge & experience', 'RG 175; RG 244'],
       ['Objectives & goals', 's961B BID; RG 175'],
       ['Vulnerability', 'ASIC vulnerability expectations; AFCA; (Consumer Duty equiv. n/a)'],
-      ['Best-interest determination', 's961B(1) BID; s961G appropriate advice'],
-      ['Design & Distribution (funds)', 'Pt 7.8A; RG 274 (TMD)'],
-      ['Suitability documentation', 's961B; record-keeping obligations'],
-      ['Ongoing review', 'Ongoing-fee / review arrangements'],
+      ['Ongoing review', 'Support ongoing reviews'],
     ],
   },
   {
@@ -35,19 +32,15 @@ const JURISDICTIONS = [
     country: 'United Kingdom',
     regulator: 'FCA',
     summary:
-      'COBS 9 / 9A suitability + Consumer Duty + FG21/1 vulnerability. FG11/05 speaks directly to risk-profiling tools. Strongest fit on knowledge & experience, vulnerability and triangulated tolerance; capacity-for-loss must be modelled.',
+      'COBS 9 / 9A suitability + Consumer Duty + FG21/1 vulnerability. FG11/05 speaks directly to risk-profiling tools. Strong fit on knowledge & experience, vulnerability, triangulated tolerance and capacity-for-loss.',
     rows: [
-      ['Attitude to risk', 'COBS 9/9A; FG11/05 (risk-tool guidance)'],
+      ['Attitude to risk', <>Assess the client&apos;s attitude to risk, separately from capacity.<br />COBS 9/9A; FG11/05 (risk-tool guidance).</>],
       ['Capacity for loss', 'COBS 9A; FG11/05'],
-      ['Overall risk profile', 'COBS 9A; FG11/05'],
+      ['Overall risk profile', <>Combine willingness and ability without conflating.<br />COBS 9A; FG11/05</>],
       ['Knowledge & experience', 'COBS 9A'],
       ['Objectives', 'COBS 9A'],
       ['Vulnerability', 'FG21/1 (in force, reaffirmed Mar 2025); Consumer Duty'],
       ['Consumer understanding', 'Consumer Duty (PRIN 2A) — understanding outcome'],
-      ['Foreseeable harm / fair value', 'Consumer Duty — products & value'],
-      ['Suitability report', 'COBS 9.4'],
-      ['Product governance', 'PROD; Consumer Duty'],
-      ['Ongoing suitability', 'COBS 9A (ongoing service)'],
     ],
   },
   {
@@ -56,18 +49,12 @@ const JURISDICTIONS = [
     country: 'United States',
     regulator: 'SEC / FINRA',
     summary:
-      "Reg BI (best interest) + FINRA 2111 suitability / 2090 KYC; IA Act fiduciary for RIAs. The “investment profile” is broad: the tool addresses several profile factors, but Reg BI's process obligations are firm-owned.",
+      'Reg BI (best interest) + FINRA 2111 suitability / 2090 KYC; IA Act fiduciary for RIAs.',
     rows: [
       ['Risk tolerance', 'FINRA Rule 2111; Reg BI (Care)'],
       ['Investment experience', 'FINRA 2111'],
       ['Investment objectives', 'FINRA 2111; Reg BI'],
-      ['Age / other investments', 'FINRA 2111'],
-      ['Vulnerability / senior investors', 'FINRA 2165; Reg BI care'],
-      ['Best-interest obligation', 'Reg BI (Care, Conflict, Disclosure, Compliance)'],
-      ['Disclosure / Form CRS', 'Reg BI — Disclosure; Form CRS'],
-      ['RIA fiduciary duty (if applicable)', 'Investment Advisers Act 1940; SEC fiduciary interpretation'],
-      ['Quantitative suitability', 'FINRA 2111(a)'],
-      ['Books & records', 'SEA Rules 17a-3 / 17a-4'],
+      ['Vulnerability', 'FINRA 2165; Reg BI care'],
     ],
   },
   {
@@ -76,19 +63,14 @@ const JURISDICTIONS = [
     country: 'Canada',
     regulator: 'CSA / CIRO',
     summary:
-      'Client Focused Reforms (NI 31-103) under CIRO; Joint CSA/CIRO Staff Notice 31-368 (Dec 2025). Risk profile = tolerance + capacity, assessed separately, defaulting to the lower of the two. The closest conceptual fit to the tool.',
+      'Client Focused Reforms (NI 31-103) under CIRO; Joint CSA/CIRO Staff Notice 31-368 (Dec 2025). Risk profile = tolerance + capacity, assessed separately.',
     rows: [
       ['Risk tolerance', 'NI 31-103 (CFRs); CIRO rules; SN 31-368'],
       ['Risk capacity', 'NI 31-103 (CFRs); SN 31-368'],
       ['Overall risk profile', 'NI 31-103 13.2; SN 31-368'],
       ['Investment knowledge', 'NI 31-103 KYC'],
       ['Investment objectives', 'NI 31-103 KYC'],
-      ['Personal circumstances', 'NI 31-103 KYC'],
-      ['Vulnerability / trusted contact', 'CIRO vulnerable-client guidance; SN 31-368 (temporary holds)'],
-      ['KYP', 'NI 31-103 KYP; SN 31-368'],
-      ['Suitability determination', 'NI 31-103 13.3 (CFRs)'],
-      ['KYC currency', 'NI 31-103 13.2(4.1); SN 31-368'],
-      ['Record-keeping', 'NI 31-103 11.5'],
+      ['Vulnerability', 'CIRO vulnerable-client guidance; SN 31-368 (temporary holds)'],
     ],
   },
 ];
@@ -106,26 +88,20 @@ export default function RegulatoryAlignmentPage() {
             <Link href="/for-advisors">Financial Advisors</Link>
             <Link href="/for-fund-providers">Fund Providers</Link>
             <Link href="/#security">Security</Link>
+            <Link href="/regulatory-alignment" aria-current="page">Compliance</Link>
           </nav>
           <Link href="/demo-request" className="lp-cta">Request demo</Link>
         </div>
       </header>
 
       <main className="ram-page">
-        <div className="lp-breadcrumbs">
-          <Link href="/">Home</Link>
-          <span>·</span>
-          <span>Regulatory Alignment Matrix</span>
-        </div>
-
         {/* Hero */}
         <section className="ram-hero">
-          <span className="lp-eyebrow">Compliance · Due Diligence</span>
-          <h1 className="ram-title">Regulatory Alignment Matrix</h1>
+          <span className="lp-eyebrow">Compliance</span>
+          <h1 className="ram-title">Regulatory Compliance</h1>
           <p className="ram-lede">
-            A map of how the MoneyMind&nbsp;Profile risk-profiling instrument and its
-            behavioural output align with the regulatory obligations in
-            each country jurisdiction — built for your compliance team.
+            MoneyMind&apos;s risk-profiling aligns with each
+            jurisdiction&apos;s regulatory obligations — mapped for your compliance team.
           </p>
           <div className="ram-hero-tags">
             <span className="ram-hero-tag"><b>AU</b> ASIC</span>
@@ -134,7 +110,7 @@ export default function RegulatoryAlignmentPage() {
             <span className="ram-hero-tag"><b>CA</b> CSA / CIRO</span>
           </div>
           <p className="ram-hero-meta">
-            <strong>Prepared 17 June 2026.</strong> Risk profiling &amp; behavioural assessment.
+            <strong>Prepared 11 May 2026.</strong> Risk profiling &amp; behavioural assessment.
           </p>
         </section>
 
@@ -192,7 +168,7 @@ export default function RegulatoryAlignmentPage() {
         {/* Currency note */}
         <section className="ram-currency">
           <p>
-            <strong>Frameworks current as at 17 June 2026.</strong> AU DBFO reforms in progress;
+            <strong>Frameworks current as at 11 May 2026.</strong> AU DBFO reforms in progress;
             UK Consumer Duty + FG21/1; US Reg&nbsp;BI / FINRA&nbsp;2111; Canada CFRs (NI&nbsp;31-103)
             under CIRO, Joint CSA/CIRO Staff Notice 31-368 (Dec&nbsp;2025).
           </p>
@@ -207,6 +183,7 @@ export default function RegulatoryAlignmentPage() {
             <span className="legal">© 2026 MoneyMind Profile · ABN 33 672 152 073</span>
           </div>
           <div className="lp-footer-links">
+            <Link href="/regulatory-alignment">Compliance</Link>
             <Link href="/legal/privacy-policy">Privacy Policy</Link>
             <Link href="/legal/terms-of-use">Terms of Use</Link>
             <Link href="/legal/acceptable-use-policy">Acceptable Use</Link>
