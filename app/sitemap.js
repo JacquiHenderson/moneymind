@@ -9,6 +9,7 @@ const ROUTES = [
   { path: '/for-fund-providers', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/demo', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/demo-request', priority: 0.6, changeFrequency: 'yearly' },
+  { path: '/regulatory-alignment', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/legal/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/legal/terms-of-use', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/legal/acceptable-use-policy', priority: 0.3, changeFrequency: 'yearly' },

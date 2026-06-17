@@ -17,6 +17,7 @@ export default function Footer() {
           <div className="mm-footer-col">
             <h5>Resources</h5>
             <ul>
+              <li><Link href="/regulatory-alignment">Regulatory Alignment Matrix</Link></li>
               <li><Link href="/legal/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/legal/terms-of-use">Terms of Use</Link></li>
               <li><Link href="/legal/acceptable-use-policy">Acceptable Use Policy</Link></li>

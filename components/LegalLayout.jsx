@@ -39,6 +39,7 @@ export default function LegalLayout({ title, meta, children }) {
             <span className="legal">© 2026 MoneyMind Profile · ABN 33 672 152 073</span>
           </div>
           <div className="lp-footer-links">
+            <Link href="/regulatory-alignment">Regulatory Alignment</Link>
             <Link href="/legal/privacy-policy">Privacy Policy</Link>
             <Link href="/legal/terms-of-use">Terms of Use</Link>
             <Link href="/legal/acceptable-use-policy">Acceptable Use</Link>
