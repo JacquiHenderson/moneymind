@@ -3,33 +3,33 @@ import { IconLock, IconShield, IconAudit, IconUsers, IconGlobe, IconCheck } from
 const POLICIES = [
   {
     icon: <IconLock size={18} />,
-    title: 'Bank-grade encryption',
-    body: 'Every profile is encrypted end-to-end between client and advisor.'
+    title: 'Secure cloud infrastructure',
+    body: 'AWS, Vercel, and Supabase security certifications — SOC 2 and ISO 27001. Audit logs, data processing and data residency compliance. Role-based permissions and single sign-on.'
   },
   {
     icon: <IconShield size={18} />,
-    title: 'Local data residency',
-    body: 'Client data stays on-shore in local regions (Australia, UK, and US), hosted with certified infrastructure.'
+    title: 'End-to-end encryption',
+    body: 'Every profile is encrypted end-to-end between client and advisor. Data is encrypted in transit and at rest using industry-standard TLS 1.2 and AES-256 key management.'
   },
   {
     icon: <IconAudit size={18} />,
-    title: 'Audit-ready by design',
-    body: 'Every action is logged, every consent is timestamped, every report is exportable. Built around the regulatory reality advisors actually live with.'
+    title: 'Local data residency',
+    body: "MoneyMind's platform is hosted by region — Australia, US, UK and Canada — so client data stays onshore and sovereign."
   },
   {
     icon: <IconUsers size={18} />,
-    title: 'Advisor-controlled access',
-    body: "Only your practice sees your clients' profiles. Role-based permissions, single sign-on, and per-client revocation in one click."
+    title: 'Privacy + GDPR aligned',
+    body: "Aligned to Global Privacy Principles and GDPR. Client data is yours to keep, we don't hold PCI data. PII redaction. We retain audit trails and application logging."
   },
   {
     icon: <IconGlobe size={18} />,
-    title: 'Privacy Act + GDPR aligned',
-    body: 'Aligned to Global Privacy Principles and GDPR. Subject access, right-to-erase and data-portability requests are handled inside the app.'
+    title: 'Data protection',
+    body: 'Sensitive client data is redacted before any aggregate analytics. Anonymised cohorts power the Personas layer — never identifiable people.'
   },
   {
     icon: <IconCheck size={18} />,
-    title: 'Data protection',
-    body: 'Sensitive client data is redacted before any aggregate analytics. Anonymised cohorts power the Personas layer — never identifiable people.'
+    title: 'Independently tested',
+    body: 'MoneyMind undergoes third-party penetration testing, so the platform stays secure as it scales.'
   },
 ];
 

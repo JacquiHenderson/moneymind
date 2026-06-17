@@ -7,11 +7,11 @@ const FAQS = [
   },
   {
     q: 'What is behavioural finance profiling?',
-    a: 'Behavioural finance profiling maps the psychological drivers and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
+    a: 'Behavioural finance profiling maps the psychology and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
   },
   {
     q: 'How does MoneyMind work?',
-    a: 'A client completes a five-minute profile (the MoneyQuiz). MoneyMind turns it into their MoneyPattern™ and a behavioural persona, surfacing their superpowers, roadblocks, and risk behaviours. Advisors access the insights through a dashboard, client-ready reports, and an embeddable profile link.',
+    a: 'A client completes a five-minute profile (Quiz). MoneyMind turns it into their MoneyPattern™ and persona archetype, surfacing their superpowers, roadblocks, and risk behaviours. Advisors and clients access the insights through a dashboard and report download.',
   },
   {
     q: 'How is MoneyMind different from a risk-profile questionnaire?',
@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: 'Is my client data secure?',
-    a: 'Yes. MoneyMind is built with data security and privacy as a foundation, with safeguards around how personal data is collected, processed, aggregated, and de-identified. See our Security section and legal documentation for details.',
+    a: 'Yes. MoneyMind is built with data security and privacy as a foundation, with safeguards around how personal data is collected, processed, aggregated, and de-identified. Refer to the Security section.',
   },
 ];
 
