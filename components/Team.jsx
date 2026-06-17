@@ -28,7 +28,7 @@ const TEAM = [
   },
   {
     name: 'Dr Katherine Hunt',
-    role: 'Chief of Research & Founder',
+    role: 'Research Advisory',
     bio: 'Combines academia and practice: Bachelor of Psychology, Bachelor of Commerce, PhD in Law & Economics, and Financial Planning. Her work initiated MoneyMind.',
     img: '/assets/opt/team/katherine-hunt',
     imgExt: 'jpg',
