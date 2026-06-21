@@ -27,6 +27,8 @@ const TARGETS = [
   { src: 'team/katherine-hunt.jpg',   width: 256, fallback: 'jpeg' },
   { src: 'team/ash-crick.png',        width: 256, fallback: 'png'  },
   { src: 'product/dashboard.png',     width: 1600, fallback: 'png' },
+  { src: 'product/quiz-moneypattern.jpg', width: 800, fallback: 'jpeg' },
+  { src: 'product/quiz-actionplan.jpg',   width: 800, fallback: 'jpeg' },
 ];
 
 function outBase(src) {
@@ -88,7 +90,7 @@ async function generateOg() {
     </defs>
     <rect width="1200" height="630" fill="url(#bg)"/>
     <text x="84" y="300" font-family="Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-4">MoneyMind</text>
-    <text x="88" y="372" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="600" fill="#5298BF">AI Behavioural Intelligence for Financial Advisors</text>
+    <text x="88" y="372" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="600" fill="#5298BF">AI Behavioral Intelligence for Financial Advisors</text>
     <text x="88" y="436" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#c7cde0">A psychological blueprint of how your clients make financial decisions.</text>
   </svg>`;
   await mkdir(OG_DIR, { recursive: true });
