@@ -13,8 +13,8 @@ import Footer from '../components/Footer';
 import { pageMeta } from '../lib/seo';
 
 export const metadata = pageMeta({
-  title: 'MoneyMind — AI Behavioural Intelligence for Financial Advisors',
-  description: "MoneyMind's AI behavioural intelligence gives financial advisory firms a psychological blueprint of how their clients make financial decisions.",
+  title: 'MoneyMind — AI Behavioral Intelligence for Financial Advisors',
+  description: "The behavioral layer your risk profile is missing — a psychological blueprint of how your clients save, spend, invest, and react when markets get messy.",
   path: '/',
 });
 

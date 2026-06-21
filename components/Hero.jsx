@@ -63,16 +63,15 @@ export function Hero() {
         </a>
 
         <h1>
-          Every client meeting<br />
-          without MoneyMind is<br />
-          a meeting <em>without</em><br />
-          the full picture.
+          Behavioral intelligence,<br />
+          built for <em>advice</em>.
         </h1>
 
         <p className="mm-hero-sub">
-          MoneyMind's AI behavioural intelligence gives financial advisory firms a
-          psychological blueprint of how their clients make financial decisions — how
-          they save, spend, plan for retirement, invest, and react when markets get messy.
+          A self-discovery for your client becomes the deepest understanding you&apos;ll
+          ever have of them: a psychological blueprint of how they save, spend, plan for
+          retirement, invest, and react when markets get messy. The behavioral layers your
+          risk profile is missing.
         </p>
 
         <div className="mm-hero-actions">

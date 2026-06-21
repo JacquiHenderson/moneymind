@@ -110,7 +110,7 @@ export default function RegulatoryAlignmentPage() {
             <span className="ram-hero-tag"><b>CA</b> CSA / CIRO</span>
           </div>
           <p className="ram-hero-meta">
-            <strong>Prepared 11 May 2026.</strong> Risk profiling &amp; behavioural assessment.
+            <strong>Prepared 11 May 2026.</strong> Risk profiling &amp; behavioral assessment.
           </p>
         </section>
 

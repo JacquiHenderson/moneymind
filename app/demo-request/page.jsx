@@ -253,7 +253,7 @@ export default function DemoRequestPage() {
               <h3>What to expect</h3>
               <ul className="mm-dr-checklist">
                 {[
-                  'See real client behavioural profiles in action',
+                  'See real client behavioral profiles in action',
                   'Learn how to integrate MoneyMind into your advisory process',
                   'Get answers to your specific use-case questions',
                   '7 minutes, no obligation',

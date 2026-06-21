@@ -1,6 +1,6 @@
 export default function manifest() {
   return {
-    name: 'MoneyMind — AI Behavioural Intelligence',
+    name: 'MoneyMind — AI Behavioral Intelligence',
     short_name: 'MoneyMind',
     description:
       'A psychological blueprint of how your clients make financial decisions, for financial advisors and fund providers.',

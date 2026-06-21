@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="mm-footer-brand">
             <img src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
             <p>
-              AI behavioural intelligence for financial advisors and fund providers.
+              AI behavioral intelligence for financial advisors and fund providers.
               Decoding the psychology behind how clients actually make financial decisions.
             </p>
           </div>

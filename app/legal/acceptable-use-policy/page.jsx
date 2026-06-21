@@ -21,7 +21,7 @@ export default function AcceptableUsePolicyPage() {
       <h2>2. Permitted Uses</h2>
       <p>The Services are designed exclusively for legitimate financial advisory purposes, including:</p>
       <ul>
-        <li>Conducting client behaviour profiling and risk profiling assessments</li>
+        <li>Conducting client behavior profiling and risk profiling assessments</li>
         <li>Servicing client relationships and advisory workflows</li>
         <li>Generating client profiling reports</li>
         <li>Maintaining records in compliance with applicable financial services regulations</li>
@@ -90,7 +90,7 @@ export default function AcceptableUsePolicyPage() {
 
       <h2>6. Disclaimers and Limitations</h2>
       <h3>6.1 No Professional Advice from Company</h3>
-      <p>The Services are tools to assist you in providing financial advice to your clients. We do not provide financial, legal, tax, or investment advice. You are solely responsible for the accuracy and appropriateness of advice provided to clients; ensuring advice is suitable for each client&apos;s individual circumstances; complying with all professional and regulatory obligations; and the interpretation and application of risk profiles and behaviour assessments.</p>
+      <p>The Services are tools to assist you in providing financial advice to your clients. We do not provide financial, legal, tax, or investment advice. You are solely responsible for the accuracy and appropriateness of advice provided to clients; ensuring advice is suitable for each client&apos;s individual circumstances; complying with all professional and regulatory obligations; and the interpretation and application of risk profiles and behavior assessments.</p>
       <h3>6.2 Third-Party Content and Services</h3>
       <p>The Services may contain or provide access to third-party data, content, tools, or services. We do not endorse, warrant, or guarantee the accuracy, reliability, or completeness of third-party content; the performance or availability of third-party services; the compliance of third-party services with applicable regulations; or the security or privacy practices of third-party providers.</p>
       <h3>6.3 Service Availability</h3>

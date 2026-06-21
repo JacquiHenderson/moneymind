@@ -14,13 +14,13 @@ const STEPS = [
     icon: <IconScan size={18} />,
     num: '02 · Analyze',
     title: 'Uncover patterns',
-    body: 'MoneyMind maps each client across key behavioural dimensions — financial life satisfaction, financial foundations, financial decision making, and risk.'
+    body: 'MoneyMind maps each client across key behavioral dimensions — financial life satisfaction, financial foundations, financial decision making, and risk.'
   },
   {
     icon: <IconCheck size={18} />,
     num: '03 · Advise',
     title: 'Walk in already knowing',
-    body: "The dashboard surfaces personalised insights and talking points — so your advice doesn't just make sense. It lands. It sticks. And it gets acted on."
+    body: "The dashboard surfaces personalized insights and talking points — so your advice doesn't just make sense. It lands. It sticks. And it gets acted on."
   },
 ];
 

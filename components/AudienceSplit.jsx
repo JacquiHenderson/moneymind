@@ -25,7 +25,7 @@ export default function AudienceSplit() {
               </p>
               <p>
                 Replace your outdated risk questionnaire for a tool that uncovers
-                deeper behavioural insights, works as a powerful lead magnet, and
+                deeper behavioral insights, works as a powerful lead magnet, and
                 accelerates client trust.
               </p>
             </div>
@@ -45,14 +45,14 @@ export default function AudienceSplit() {
             </header>
             <div className="mm-aud-body on-blue">
               <p>
-                MoneyMind is an AI behavioural intelligence platform that can predict
+                MoneyMind is an AI behavioral intelligence platform that can predict
                 investor financial patterns across cohorts. Unlock a new dimension of
                 investor data — go beyond demographics and account balances — capture
                 the psychological drivers behind your investors&apos; financial decisions.
               </p>
               <p>
-                Expand your data lake with behavioural insights across your entire
-                investor base — personalise products and services at scale, anticipate
+                Expand your data lake with behavioral insights across your entire
+                investor base — personalize products and services at scale, anticipate
                 churn, and protect AUM.
               </p>
             </div>

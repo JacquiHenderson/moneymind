@@ -4,7 +4,7 @@ import { pageMeta, SITE_URL } from '../../lib/seo';
 
 export const metadata = pageMeta({
   title: 'Watch the Demo — MoneyMind',
-  description: "See MoneyMind's AI behavioural intelligence in action. Watch how we give financial advisors a psychological blueprint of how clients make financial decisions.",
+  description: "See MoneyMind's AI behavioral intelligence in action. Watch how we give financial advisors a psychological blueprint of how clients make financial decisions.",
   path: '/demo',
 });
 

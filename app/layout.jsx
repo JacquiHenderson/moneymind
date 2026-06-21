@@ -17,11 +17,11 @@ const jetbrains = JetBrains_Mono({
 });
 
 const DESCRIPTION =
-  'MoneyMind gives financial advisory firms and fund providers a psychological blueprint of how their clients make financial decisions — how they save, spend, invest, and react when markets get messy.';
+  'The behavioral layer your risk profile is missing — a psychological blueprint of how clients save, spend, invest, and react when markets get messy. Built for financial advisory firms and fund providers.';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'MoneyMind — AI Behavioural Intelligence for Financial Advisors',
+  title: 'MoneyMind — AI Behavioral Intelligence for Financial Advisors',
   description: DESCRIPTION,
   applicationName: 'MoneyMind',
   alternates: { canonical: '/' },
@@ -29,13 +29,13 @@ export const metadata = {
     type: 'website',
     siteName: 'MoneyMind',
     url: SITE_URL,
-    title: 'MoneyMind — AI Behavioural Intelligence for Financial Advisors',
+    title: 'MoneyMind — AI Behavioral Intelligence for Financial Advisors',
     description: DESCRIPTION,
     images: [{ url: '/assets/og/og-image.png', width: 1200, height: 630, alt: 'MoneyMind' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MoneyMind — AI Behavioural Intelligence for Financial Advisors',
+    title: 'MoneyMind — AI Behavioral Intelligence for Financial Advisors',
     description: DESCRIPTION,
     images: ['/assets/og/og-image.png'],
   },

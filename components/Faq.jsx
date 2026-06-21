@@ -3,23 +3,23 @@
 const FAQS = [
   {
     q: 'What is MoneyMind?',
-    a: "MoneyMind is an AI behavioural intelligence platform that gives financial advisory firms and fund providers a psychological blueprint of how their clients make financial decisions — how they save, spend, plan for retirement, invest, and react when markets get volatile.",
+    a: "MoneyMind is an AI behavioral intelligence platform that gives financial advisory firms and fund providers a psychological blueprint of how their clients make financial decisions — how they save, spend, plan for retirement, invest, and react when markets get messy. It's the behavioral layer a traditional risk profile is missing.",
   },
   {
-    q: 'What is behavioural finance profiling?',
-    a: 'Behavioural finance profiling maps the psychology and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
+    q: 'What is behavioral finance profiling?',
+    a: 'Behavioral finance profiling maps the psychology and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
   },
   {
     q: 'How does MoneyMind work?',
-    a: 'A client completes a five-minute profile (Quiz). MoneyMind turns it into their MoneyPattern™ and persona archetype, surfacing their superpowers, roadblocks, and risk behaviours. Advisors and clients access the insights through a dashboard and report download.',
+    a: 'A client completes a five-minute profile (Quiz). MoneyMind turns it into their MoneyPattern™ and persona archetype, surfacing their superpowers, roadblocks, and risk behaviors. Advisors and clients access the insights through a dashboard and report download.',
   },
   {
     q: 'How is MoneyMind different from a risk-profile questionnaire?',
-    a: 'A traditional risk questionnaire produces a single risk score. MoneyMind maps the full behavioural picture — tolerance, confidence, adaptability, regret aversion, loss response and more — so you can anticipate how a client will actually behave under pressure, not just where they sit on a scale.',
+    a: 'A traditional risk questionnaire produces a single risk score. MoneyMind maps the full behavioral picture — tolerance, confidence, adaptability, regret aversion, loss response and more — so you can anticipate how a client will actually behave under pressure, not just where they sit on a scale.',
   },
   {
     q: 'Who is MoneyMind for?',
-    a: 'MoneyMind is built for financial advisors and advisory firms who want to understand client psychology, and for fund providers who want to predict investor behaviour, prevent churn, and personalise communications at scale.',
+    a: 'MoneyMind is built for financial advisors and advisory firms who want to understand client psychology, and for fund providers who want to predict investor behavior, prevent churn, and personalize communications at scale.',
   },
   {
     q: 'How much does MoneyMind cost?',

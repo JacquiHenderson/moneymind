@@ -55,7 +55,7 @@ export default function DataAggregationPage() {
       <p>Aggregated and de-identified data provides significant value to:</p>
       <ul>
         <li><strong>Our Business</strong> — Enabling product improvements, research, and innovation</li>
-        <li><strong>The Industry</strong> — Contributing to better understanding of financial behaviour and risk profiling</li>
+        <li><strong>The Industry</strong> — Contributing to better understanding of financial behavior and risk profiling</li>
         <li><strong>Society</strong> — Advancing financial literacy and evidence-based policy development</li>
         <li><strong>Our Customers</strong> — Providing benchmarking insights and industry comparisons</li>
       </ul>
@@ -156,7 +156,7 @@ export default function DataAggregationPage() {
       <p>When Subscribing Organizations use our Services to profile their clients, we act as a data processor (service provider) for End-User Personal Information. In this role, we may aggregate End-User data only as permitted by our <Link href="/legal/data-processing-agreement">Data Processing Agreement</Link>. Subscribing Organizations retain primary control over their clients&apos; data. Our Terms of Use (Section 12.1&ndash;12.3) provide contractual authorization to aggregate End-User data across multiple Subscribing Organizations, use de-identified aggregated data for service improvement, research, and product development, and share aggregated data with third parties (subject to this Policy&apos;s protections).</p>
 
       <h3>5.3 Source Data Categories</h3>
-      <p>We aggregate data from behaviour profile data (questionnaire responses, financial personality assessments, behavioral traits, decision-making patterns), risk profile data (risk capacity assessments, risk tolerance scores, financial goals), demographic data (age ranges, geographic regions, occupation categories, income and asset bands, life stage indicators), financial data (portfolio asset allocation data, asset class preferences), and usage and interaction data (feature utilization, questionnaire completion rates, report generation frequency).</p>
+      <p>We aggregate data from behavior profile data (questionnaire responses, financial personality assessments, behavioral traits, decision-making patterns), risk profile data (risk capacity assessments, risk tolerance scores, financial goals), demographic data (age ranges, geographic regions, occupation categories, income and asset bands, life stage indicators), financial data (portfolio asset allocation data, asset class preferences), and usage and interaction data (feature utilization, questionnaire completion rates, report generation frequency).</p>
       <div className="lp-callout">
         <strong>Important.</strong> We do NOT include in aggregated data: full names, email addresses, or contact information; specific account numbers or financial account identifiers; Social Security numbers or government identifiers; precise geolocation data; health information; or any data that would allow individual identification.<br /><br />
         In the Software we do NOT capture social security numbers, tax file numbers, national insurance numbers, driver&apos;s license numbers and passport numbers, financial account numbers (bank account, investment account, or credit card numbers), vehicle identification numbers (VINs).

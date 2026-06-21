@@ -74,7 +74,7 @@ export default function Features() {
               <h3>Connect, coach, and guide.</h3>
               <p>
                 While AI can handle the numbers and the plan, MoneyMind overlays
-                behavioural intelligence to help advisor do what no technology
+                behavioral intelligence to help advisor do what no technology
                 ever will.
               </p>
             </div>

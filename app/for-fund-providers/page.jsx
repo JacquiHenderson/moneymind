@@ -19,7 +19,7 @@ function FundProvidersHero() {
           understanding <em>investors.</em>
         </h1>
         <p className="mm-sub-hero-lead">
-          MoneyMind™ maps the behavioural intelligence layer that drives investor
+          MoneyMind™ maps the behavioral intelligence layer that drives investor
           decisions — across product, distribution, retention, and growth.
         </p>
         <p className="mm-sub-hero-reveal">
@@ -44,11 +44,11 @@ const FUND_IMPACT_CARDS = [
   {
     icon: <IconChart size={18} />,
     title: 'Predict and prevent churn',
-    body: 'Surface the behavioural signals that precede churn. Intervene with the right cohort, in the right language, before AUM moves.',
+    body: 'Surface the behavioral signals that precede churn. Intervene with the right cohort, in the right language, before AUM moves.',
   },
   {
     icon: <IconLink size={18} />,
-    title: 'Personalise at scale',
+    title: 'Personalize at scale',
     body: 'Match channel, framing, and nudges to the dominant MoneyPattern of each cohort archetype. Communications stop sounding generic.',
   },
 ];
@@ -377,8 +377,8 @@ function FundProvidersContact() {
                 <p>Our data insights anticipate member decisions, at an individual, persona, and cohort level.</p>
               </li>
               <li>
-                <div className="mm-ppp-head"><h6>Personalise</h6></div>
-                <p>We hyper-personalise your digital advice, product marketing, and nudges at scale.</p>
+                <div className="mm-ppp-head"><h6>Personalize</h6></div>
+                <p>We hyper-personalize your digital advice, product marketing, and nudges at scale.</p>
               </li>
               <li>
                 <div className="mm-ppp-head"><h6>Protect</h6></div>
@@ -426,7 +426,7 @@ export default function ForFundProvidersPage() {
       <FundProvidersOmni />
       <Platform
         heading="MoneyMind's unique features designed to elevate your investor experience."
-        lead="The behavioural intelligence layer for every investor record."
+        lead="The behavioral intelligence layer for every investor record."
       />
       <FundProvidersContact />
       <FundProvidersCtaBand />

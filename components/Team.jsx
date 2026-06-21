@@ -5,7 +5,7 @@ const TEAM = [
   {
     name: 'Jacqui Henderson',
     role: 'CEO & Founder',
-    bio: 'CEO and thought leader in fintech, with 20+ years across tech and wealth management. Her passion for behavioural science initiated MoneyMind.',
+    bio: 'CEO and thought leader in fintech, with 20+ years across tech and wealth management. Her passion for behavioral science initiated MoneyMind.',
     img: '/assets/opt/team/jacqui-henderson',
     imgExt: 'jpg',
     pos: '50% 18%',
