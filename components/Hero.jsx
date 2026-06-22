@@ -63,7 +63,7 @@ export function Hero() {
         </a>
 
         <h1>
-          Behavioral intelligence,<br />
+          AI behavioral intelligence,<br />
           built for <em>advice</em>.
         </h1>
 
