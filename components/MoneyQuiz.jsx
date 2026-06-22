@@ -27,7 +27,7 @@ export default function MoneyQuiz() {
   return (
     <div className="mm-mq">
       <div className="mm-mq-stage-row">
-        <PhoneFrame tone="dark" ratio="800 / 1566" label="MoneyMind app building a client's MoneyPattern">
+        <PhoneFrame tone="dark" ratio="800 / 1557" label="MoneyMind app building a client's MoneyPattern">
           <PhoneShot
             src="/assets/opt/product/quiz-moneypattern"
             alt="MoneyMind app building a client's MoneyPattern, showing progress through the four sections"
