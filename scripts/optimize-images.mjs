@@ -29,6 +29,7 @@ const TARGETS = [
   { src: 'product/dashboard.png',     width: 1600, fallback: 'png' },
   { src: 'product/quiz-moneypattern.jpg', width: 800, fallback: 'jpeg' },
   { src: 'product/quiz-actionplan.jpg',   width: 800, fallback: 'jpeg' },
+  { src: 'product/embed-link.png',        width: 1600, fallback: 'png' },
 ];
 
 function outBase(src) {

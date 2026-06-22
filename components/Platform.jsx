@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { IconBrain, IconUsers, IconCompass, IconLink, IconSparkle } from './Icons';
 import Personas from './Personas';
 import MoneyQuiz from './MoneyQuiz';
-import EmbedLink from './EmbedLink';
 
 const TABS = [
   { id: 'pattern',  label: 'MoneyPattern™', icon: <IconBrain size={16} /> },
@@ -60,7 +59,19 @@ export default function Platform({
             ) : tab === 'profile' ? (
               <MoneyQuiz />
             ) : tab === 'embed' ? (
-              <EmbedLink />
+              <picture className="mm-platform-pic">
+                <source srcSet="/assets/opt/product/embed-link.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/embed-link.webp" type="image/webp" />
+                <img
+                  className="mm-platform-img"
+                  src="/assets/opt/product/embed-link.png"
+                  alt="MoneyMind embed-link builder for creating a custom questionnaire profile link"
+                  width="1600"
+                  height="893"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             ) : (
               <picture className="mm-platform-pic">
                 <source srcSet="/assets/opt/product/dashboard.avif" type="image/avif" />
@@ -70,7 +81,7 @@ export default function Platform({
                   src="/assets/opt/product/dashboard.png"
                   alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
                   width="1600"
-                  height="1086"
+                  height="1064"
                   loading="lazy"
                   decoding="async"
                 />

@@ -33,7 +33,7 @@ export default function MoneyQuiz() {
             alt="MoneyMind app building a client's MoneyPattern, showing progress through the four sections"
           />
         </PhoneFrame>
-        <PhoneFrame tone="dark" ratio="800 / 1457" label="MoneyMind action plan screen">
+        <PhoneFrame tone="dark" ratio="800 / 1557" label="MoneyMind action plan screen">
           <PhoneShot
             src="/assets/opt/product/quiz-actionplan"
             alt="MoneyMind app showing a client's personalized action plan"
