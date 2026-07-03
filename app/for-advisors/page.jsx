@@ -75,6 +75,7 @@ function AdvisersImpactTrio() {
         <div className="mm-section-head">
           <span className="eyebrow">The impact</span>
           <h2>What changes when you use MoneyMind.</h2>
+          <p className="lead">No behavioral finance degree required — an expert&apos;s read on every client, on tap.</p>
         </div>
         <div className="mm-steps mm-steps-eyebrowless">
           {IMPACT_CARDS.map((c, i) => (
