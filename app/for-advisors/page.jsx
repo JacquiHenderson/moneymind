@@ -43,18 +43,27 @@ function AdvisersHero() {
 const IMPACT_CARDS = [
   {
     icon: <IconChart size={18} />,
-    title: '74% more trust',
-    body: 'Shorten your trust cycle by knowing how your clients think. Clients commit faster and stay longer when advice is built around what actually drives them.',
+    stat: '87%',
+    statLabel: 'of what really drives client decisions, a risk score misses',
+    title: 'Accelerate trust & differentiate at scale',
+    body: 'Know how each client saves, spends, invests, and reacts. Advice tailored to what drives clients emotionally earns trust faster — so they commit sooner and stay longer.',
+    source: 'Journal of Behavioral & Experimental Finance, 2024',
   },
   {
     icon: <IconLink size={18} />,
-    title: '4.6× more warm leads',
-    body: 'Turn every touchpoint into an entry point. One embed link dropped into your website, emails, portal, and socials — generating warm, engaged leads.',
+    stat: '7%',
+    statLabel: "of an advisor's time goes to organically winning new clients",
+    title: 'Turn top-of-funnel prospects into committed clients',
+    body: 'Ignite organic growth and turn every touchpoint into an entry point. One embed link across your website, portal, and socials — invites warm, engaged leads.',
+    source: 'Cerulli U.S. RIA Marketplace, 2025',
   },
   {
     icon: <IconBrain size={18} />,
-    title: 'Protect AUM',
-    body: (<><span className="mm-stat-inline">68%</span> of decisions influenced by emotion. Know how your clients make financial decisions, and the triggers that protect your AUM.</>),
+    stat: '27%',
+    statLabel: "of heirs keep their parents' advisor — the rest walk",
+    title: 'Keep clients across generations',
+    body: "The $84 trillion wealth transfer is a retention cliff. Understand the whole family's dynamics, so the relationship transfers before the wealth does.",
+    source: 'Cerulli, 2025',
   },
 ];
 
@@ -76,8 +85,12 @@ function AdvisersImpactTrio() {
               type="button"
             >
               <span className="mm-step-icon">{c.icon}</span>
+              {c.stat && (
+                <p className="mm-step-stat"><span className="mm-stat-inline">{c.stat}</span> {c.statLabel}</p>
+              )}
               <h4>{c.title}</h4>
               <p>{c.body}</p>
+              {c.source && <p className="mm-step-source">Source: {c.source}</p>}
             </button>
           ))}
         </div>

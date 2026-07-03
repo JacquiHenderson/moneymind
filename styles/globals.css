@@ -331,6 +331,10 @@ a:hover { color: var(--mm-blue-light); }
 .mm-step-num { font-family: var(--font-mono); font-size: 12px; color: var(--fg-4); letter-spacing: 0.14em; text-transform: uppercase; }
 .mm-step h4 { font-family: var(--font-display); font-size: 28px; line-height: 1.15; font-weight: 700; color: var(--fg-1); letter-spacing: -0.018em; margin: 0; }
 .mm-step p { font-size: 14px; line-height: 1.6; color: var(--fg-3); margin: 0; }
+.mm-step-stat { font-size: 14px; line-height: 1.45; color: var(--fg-2); margin: 0; }
+.mm-step p.mm-step-source { font-size: 10px; line-height: 1.4; color: var(--fg-4); margin: 2px 0 0; font-style: italic; opacity: 0.85; }
+.mm-step-source::before { display: none; }
+.mm-impact-trio .mm-step { text-align: left; align-items: flex-start; }
 .mm-steps-cta { margin-top: 40px; display: flex; gap: 14px; }
 .mm-steps-section { position: relative; overflow: hidden; }
 .mm-steps-curve { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
