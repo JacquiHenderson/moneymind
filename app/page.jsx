@@ -3,7 +3,6 @@ import { Hero } from '../components/Hero';
 import Logos from '../components/Logos';
 import Platform from '../components/Platform';
 import AudienceSplit from '../components/AudienceSplit';
-import Features from '../components/Features';
 import Stats from '../components/Stats';
 import Team from '../components/Team';
 import Security from '../components/Security';
@@ -26,7 +25,6 @@ export default function HomePage() {
       <Logos />
       <Platform />
       <AudienceSplit />
-      <Features />
       <Stats />
       <Team />
       <Security />
