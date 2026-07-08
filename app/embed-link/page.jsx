@@ -10,12 +10,22 @@ export const metadata = pageMeta({
 });
 
 const EMBED_STEPS = [
-  "To create embed links, as best practice, choose Financial Decision Making on its own as an embed link. This gives you a two-minute entry point into your advice process — a first iteration of your prospect's MoneyPattern.",
-  'If you want more of a diagnostic and a fuller MoneyPattern, add both Financial Foundations and Financial Decision Making to your embed link.',
+  "To create embed links, as best practice, choose Financial Decision Making on its own. This gives you a two-minute entry point into your advice process — a first iteration of your prospect's MoneyPattern.",
+  'If you want more of a diagnostic and a fuller MoneyPattern, add both Financial Foundations and Financial Decision Making to your embed link. These two sections together will take your prospect four minutes.',
   'You can also add tags to track where your top-of-funnel leads come from.',
   "Once you've copied your embed link, simply paste it into your email marketing, website, social media posts, or client portal. Create different links for different sources, using tags to track each one.",
   "If you want to capture a prospect's Financial Information, switch this on. This section captures high-level income, assets, and liability information to calculate Risk Capacity — we don't necessarily recommend it for initial engagement.",
 ];
+
+// Bold key section names wherever they appear in the guide copy.
+const BOLD_RE = /(Financial Decision Making|Financial Foundations)/g;
+function renderCopy(text) {
+  return text.split(BOLD_RE).map((part, i) =>
+    part === 'Financial Decision Making' || part === 'Financial Foundations'
+      ? <strong key={i}>{part}</strong>
+      : part
+  );
+}
 
 export default function EmbedLinkPage() {
   return (
@@ -65,7 +75,7 @@ export default function EmbedLinkPage() {
 
         <div className="sp-copy-block">
           {EMBED_STEPS.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i}>{renderCopy(p)}</p>
           ))}
         </div>
 

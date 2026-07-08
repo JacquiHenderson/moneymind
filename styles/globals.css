@@ -1449,6 +1449,7 @@ a:hover { color: var(--mm-blue-light); }
 .sp-copy-block { max-width: 74ch; margin: 40px 0 0; }
 .sp-copy-block p { font-size: 17px; line-height: 1.6; color: var(--fg-2); margin: 0; }
 .sp-copy-block p + p { margin-top: 16px; }
+.sp-copy-block strong { color: var(--fg-1); font-weight: 600; }
 .sp-figure img {
   width: 100%; height: auto; display: block;
   border-radius: var(--radius-lg); border: 1px solid var(--border-soft);
