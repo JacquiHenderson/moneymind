@@ -1439,3 +1439,107 @@ a:hover { color: var(--mm-blue-light); }
   .bd-controls { top: 56px; }
   .bd-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Send Profile (sp-*) — dashboard + Discovery Workflow popup
+   ============================================================ */
+.sp-step { margin-top: 40px; }
+.sp-step-label {
+  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--mm-blue-light);
+  border: 1px solid rgba(82, 152, 191, 0.4); background: rgba(82, 152, 191, 0.12);
+  border-radius: var(--radius-pill); padding: 5px 14px; margin-bottom: 16px;
+}
+.sp-step-copy { font-size: 17px; line-height: 1.6; color: var(--fg-2); max-width: 74ch; margin: 0; }
+.sp-step-copy--next { margin-top: 14px; }
+.sp-shot { display: flex; justify-content: center; margin-top: 28px; }
+.sp-shot-frame { position: relative; width: 100%; max-width: 420px; }
+.sp-shot-frame picture { display: block; }
+.sp-shot img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius-md); border: 1px solid var(--border-soft);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.75);
+}
+.sp-shot-hl {
+  position: absolute; left: 14%; top: 77%; width: 62%; height: 22.5%;
+  border: 2px solid var(--mm-blue-light); border-radius: 8px;
+  box-shadow: 0 0 0 3px rgba(82, 152, 191, 0.22), 0 0 22px rgba(82, 152, 191, 0.5);
+  pointer-events: none;
+}
+
+.sp-screen {
+  position: relative; max-width: 860px; margin: 28px auto 100px;
+  min-height: 480px; padding: 44px 24px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--border-soft);
+  background: #0a1626;
+  box-shadow: 0 44px 90px -34px rgba(0, 0, 0, 0.78);
+}
+.sp-screen-bg { position: absolute; inset: 0; z-index: 0; display: block; }
+.sp-screen-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block; }
+.sp-screen-scrim {
+  position: absolute; inset: 0; z-index: 1;
+  background: rgba(5, 8, 20, 0.82);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+
+/* ---- Discovery Workflow modal (dark) ---- */
+.sp-modal {
+  position: relative; z-index: 2; width: 100%; max-width: 560px;
+  background: #101f36; border: 1px solid rgba(141, 160, 188, 0.16);
+  border-radius: 16px; box-shadow: 0 40px 80px -24px rgba(0, 0, 0, 0.7);
+  color: #eaf0f8; overflow: hidden;
+  font-size: 13px; line-height: 1.5;
+}
+.sp-modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 20px 20px 16px; border-bottom: 1px solid rgba(141, 160, 188, 0.12); }
+.sp-modal-head h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 4px; color: #f4f8ff; }
+.sp-modal-head p { font-size: 12.5px; color: #8da0bc; margin: 0; line-height: 1.45; }
+.sp-modal-x { color: #8da0bc; flex: none; cursor: default; margin-top: 2px; }
+
+.sp-modal-body { padding: 16px 20px 6px; }
+.sp-note {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: rgba(82, 152, 191, 0.08); border: 1px solid rgba(82, 152, 191, 0.2);
+  border-radius: 9px; padding: 9px 12px; margin-bottom: 18px;
+}
+.sp-note-text { display: inline-flex; align-items: center; gap: 8px; color: #b6c4dc; font-size: 12px; }
+.sp-note-text svg { color: #5298bf; flex: none; }
+.sp-add { flex: none; font-size: 12px; font-weight: 600; color: #cfe0f4; background: #16335a; border: 1px solid rgba(141, 160, 188, 0.2); border-radius: 7px; padding: 6px 11px; white-space: nowrap; }
+
+.sp-phase { margin-bottom: 16px; }
+.sp-phase-name { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #9fb2cd; margin-bottom: 10px; }
+.sp-phase-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ec99a; flex: none; }
+.sp-phase-edit { color: #6c7f9c; display: inline-flex; }
+
+.sp-sched { display: flex; align-items: flex-end; gap: 8px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(141, 160, 188, 0.1); border-radius: 10px; padding: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.sp-field { display: flex; flex-direction: column; gap: 4px; }
+.sp-field label { font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #7284a1; }
+.sp-input { font-size: 12px; color: #dbe6f5; background: #0c1a30; border: 1px solid rgba(141, 160, 188, 0.16); border-radius: 6px; padding: 6px 9px; min-width: 80px; }
+.sp-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; border-radius: 7px; padding: 7px 11px; white-space: nowrap; border: 1px solid transparent; }
+.sp-sched .sp-btn--primary { margin-left: auto; }
+.sp-btn--primary { background: #2f6db0; color: #fff; border-color: #2f6db0; }
+.sp-btn--ghost { background: transparent; color: #b6c4dc; border-color: rgba(141, 160, 188, 0.28); }
+
+.sp-sec { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.025); border: 1px solid rgba(141, 160, 188, 0.12); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }
+.sp-sec-main { flex: 1; min-width: 0; }
+.sp-sec-title { font-size: 13.5px; font-weight: 600; color: #eef3fb; }
+.sp-sec-desc { font-size: 11.5px; color: #8093ae; line-height: 1.4; margin-top: 2px; }
+.sp-badge { flex: none; font-size: 10px; font-weight: 600; color: #a9c3dc; background: rgba(141, 160, 188, 0.12); border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+.sp-toggle { flex: none; width: 34px; height: 19px; border-radius: 999px; background: #35455f; position: relative; transition: background .15s; }
+.sp-toggle.is-on { background: #3fbf8e; }
+.sp-knob { position: absolute; top: 2px; left: 2px; width: 15px; height: 15px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.3); transition: left .15s; }
+.sp-toggle.is-on .sp-knob { left: 17px; }
+.sp-grip { flex: none; display: inline-flex; flex-direction: column; gap: 3px; padding: 2px; }
+.sp-grip span { width: 14px; height: 1.5px; border-radius: 2px; background: #5a6c88; }
+
+.sp-modal-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-top: 1px solid rgba(141, 160, 188, 0.12); }
+.sp-foot-note { font-size: 12px; color: #8da0bc; }
+.sp-foot-note b { color: #eaf0f8; }
+
+@media (max-width: 768px) {
+  .sp-screen { min-height: 0; margin: 32px auto 72px; padding: 22px 14px; }
+  .sp-screen-bg, .sp-screen-scrim { display: none; }
+  .sp-modal { max-width: 380px; transform: none; }
+  .sp-sched { gap: 6px; }
+}
