@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import { pageMeta } from '../../lib/seo';
-import BehaviouralDesk from '../../components/BehaviouralDesk';
+import HelpGuides from '../../components/HelpGuides';
 
 export const metadata = pageMeta({
-  title: 'The Behavioral Desk — MoneyMind',
+  title: "MoneyMind Help Guides",
   description:
-    'Every behavioral construct MoneyMind measures, on one page — the spectrum, the source instrument, and its plain-English meaning. A field guide for advisors to read the client behind the risk score.',
-  path: '/moneypattern-guide',
+    'MoneyMind help guides — how to send and schedule profiles, embed MoneyMind to grow your top of funnel, and read the MoneyPattern behavioural constructs.',
+  path: '/help',
   noindex: true,
 });
 
-export default function BehavioralDeskPage() {
+export default function HelpPage() {
   return (
     <div>
       <header className="lp-header">
@@ -29,20 +29,8 @@ export default function BehavioralDeskPage() {
         </div>
       </header>
 
-      <main className="bd-page">
-        <Link href="/help" className="bd-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
-          Back to help guides
-        </Link>
-        <section className="bd-hero">
-          <span className="lp-eyebrow">Behavioral field guide</span>
-          <h1 className="bd-title">Be your own <span className="bd-accent">Chief Behavioral&nbsp;Officer</span>.</h1>
-          <p className="bd-standfirst">
-            Learn every construct MoneyMind measures — the pattern, each domain, and their meaning.
-          </p>
-        </section>
-
-        <BehaviouralDesk />
+      <main className="hg-page">
+        <HelpGuides />
       </main>
 
       <footer className="lp-footer">
