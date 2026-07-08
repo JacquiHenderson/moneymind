@@ -1443,6 +1443,18 @@ a:hover { color: var(--mm-blue-light); }
 /* ============================================================
    Send Profile (sp-*) — dashboard + Discovery Workflow popup
    ============================================================ */
+.sp-figure { margin: 40px auto; max-width: 1000px; }
+.sp-figure--last { margin-bottom: 100px; }
+.sp-figure picture { display: block; }
+.sp-copy-block { max-width: 74ch; margin: 40px 0 0; }
+.sp-copy-block p { font-size: 17px; line-height: 1.6; color: var(--fg-2); margin: 0; }
+.sp-copy-block p + p { margin-top: 16px; }
+.sp-figure img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius-lg); border: 1px solid var(--border-soft);
+  box-shadow: 0 44px 90px -34px rgba(0, 0, 0, 0.78);
+}
+
 .sp-step { margin-top: 40px; }
 .sp-step-label {
   display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.14em;

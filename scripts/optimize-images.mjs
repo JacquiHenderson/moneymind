@@ -32,6 +32,8 @@ const TARGETS = [
   { src: 'product/embed-link.png',        width: 1600, fallback: 'png' },
   { src: 'product/send-profile-bg.png',    width: 1600, fallback: 'png' },
   { src: 'product/send-profile-step1.png', width: 900,  fallback: 'png' },
+  { src: 'product/embed-guide.png',        width: 1600, fallback: 'png' },
+  { src: 'product/embed-guide-2.png',      width: 1600, fallback: 'png' },
 ];
 
 function outBase(src) {
