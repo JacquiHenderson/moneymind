@@ -5,7 +5,7 @@ import HelpGuides from '../../components/HelpGuides';
 export const metadata = pageMeta({
   title: "MoneyMind Help Guides",
   description:
-    'MoneyMind help guides — how to send and schedule profiles, embed MoneyMind to grow your top of funnel, and read the MoneyPattern behavioural constructs.',
+    'MoneyMind help guides — how to send and schedule profiles, embed MoneyMind to grow your top of funnel, and read the MoneyPattern behavioral constructs.',
   path: '/help',
   noindex: true,
 });
@@ -25,7 +25,7 @@ export default function HelpPage() {
             <Link href="/#security">Security</Link>
             <Link href="/regulatory-alignment">Compliance</Link>
           </nav>
-          <Link href="/demo-request" className="lp-cta">Request demo</Link>
+          <Link href="/request-demo" className="lp-cta">Request demo</Link>
         </div>
       </header>
 

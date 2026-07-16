@@ -24,7 +24,7 @@ const GUIDES = [
   {
     href: '/moneypattern-guide',
     title: 'MoneyPattern Guide',
-    desc: 'Every behavioural construct MoneyMind measures — the spectrum, its source, and its plain-English meaning, by domain.',
+    desc: 'Every behavioral construct MoneyMind measures — the spectrum, its source, and its plain-English meaning, by domain.',
     icon: <IconPattern />,
   },
   {

@@ -19,7 +19,7 @@ const STEPS = [
   {
     icon: <IconCheck size={18} />,
     num: '03 · Advise',
-    title: 'Walk in already knowing',
+    title: 'Walk in knowing',
     body: "The dashboard surfaces personalized insights and talking points — so your advice doesn't just make sense. It lands. It sticks. And it gets acted on."
   },
 ];
@@ -73,7 +73,7 @@ export default function Steps() {
 
         <div className="mm-steps-cta">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+          <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
       </div>
     </section>

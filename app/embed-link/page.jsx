@@ -42,7 +42,7 @@ export default function EmbedLinkPage() {
             <Link href="/#security">Security</Link>
             <Link href="/regulatory-alignment">Compliance</Link>
           </nav>
-          <Link href="/demo-request" className="lp-cta">Request demo</Link>
+          <Link href="/request-demo" className="lp-cta">Request demo</Link>
         </div>
       </header>
 

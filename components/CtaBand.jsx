@@ -12,7 +12,7 @@ export default function CtaBand() {
           </p>
           <div className="mm-hero-actions">
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Try for free</a>
-            <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+            <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
           </div>
           <div className="mm-cta-trial">Demo it · Trial it · Transform it · 14 days on us</div>
         </div>

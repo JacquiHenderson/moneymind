@@ -76,7 +76,7 @@ export function Hero() {
 
         <div className="mm-hero-actions">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+          <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
 
         <div className="mm-trial-line">Demo it. Trial it. Transform it. 14 days on us.</div>

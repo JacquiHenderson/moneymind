@@ -7,6 +7,7 @@ import Logos from '../../components/Logos';
 import Steps from '../../components/Steps';
 import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
+import DemoTestimonials from '../../components/DemoTestimonials';
 import {
   IconChart, IconLink, IconBrain, IconCheck, IconChevronDown
 } from '../../components/Icons';
@@ -32,7 +33,7 @@ function AdvisersHero() {
         </p>
         <div className="mm-hero-actions">
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+          <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
         </div>
       </div>
     </section>
@@ -272,6 +273,17 @@ function AdvisersRisk() {
   );
 }
 
+// ---- Real results (testimonials) ----
+function AdvisersResults() {
+  return (
+    <section className="mm-section rd-testimonials" data-screen-label="Advisor results">
+      <div className="mm-container">
+        <DemoTestimonials />
+      </div>
+    </section>
+  );
+}
+
 // ---- Pricing ----
 const pricingBullets = [
   'No lock-in contracts',
@@ -306,7 +318,7 @@ function AdvisersPricing() {
             </p>
             <div className="mm-pricing-actions">
               <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-              <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+              <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
             </div>
           </div>
           <ul className="mm-pricing-bullets">
@@ -333,7 +345,7 @@ function AdvisersCtaBand() {
           </p>
           <div className="mm-hero-actions">
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Try for free</a>
-            <Link href="/demo-request" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+            <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
           </div>
           <div className="mm-cta-trial">Demo it. Trial it. Transform it. 14 days on us.</div>
         </div>
@@ -354,6 +366,7 @@ export default function ForAdvisersPage() {
       <KahnemanQuote />
       <AdvisersDecodePatterns />
       <AdvisersRisk />
+      <AdvisersResults />
       <Steps />
       <Platform
         heading="MoneyMind's unique features are designed to elevate your client experience."

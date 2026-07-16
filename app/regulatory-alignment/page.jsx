@@ -90,7 +90,7 @@ export default function RegulatoryAlignmentPage() {
             <Link href="/#security">Security</Link>
             <Link href="/regulatory-alignment" aria-current="page">Compliance</Link>
           </nav>
-          <Link href="/demo-request" className="lp-cta">Request demo</Link>
+          <Link href="/request-demo" className="lp-cta">Request demo</Link>
         </div>
       </header>
 
