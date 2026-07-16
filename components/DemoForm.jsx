@@ -24,20 +24,6 @@ const COUNTRIES = [
   { code: 'OTHER', label: 'Other' },
 ];
 
-const SIGNUP_BASE = 'https://auth.moneymindprofile.com/#signup';
-const SIGNUP_COUNTRY = { AU: 'AU', NZ: 'AU', UK: 'UK', US: 'US', CA: 'US' };
-
-function buildSignupUrl({ fullName, company, email, country }) {
-  const params = new URLSearchParams();
-  if (email && email.trim()) params.set('email', email.trim());
-  if (fullName && fullName.trim()) params.set('name', fullName.trim());
-  if (company && company.trim()) params.set('company', company.trim());
-  const mapped = SIGNUP_COUNTRY[country];
-  if (mapped) params.set('country', mapped);
-  const qs = params.toString();
-  return qs ? `${SIGNUP_BASE}?${qs}` : SIGNUP_BASE;
-}
-
 export default function DemoForm() {
   const [fields, setFields] = useState({ fullName: '', company: '', email: '', country: '', website: '' });
   const [errors, setErrors] = useState({});
@@ -48,6 +34,7 @@ export default function DemoForm() {
   const validate = () => {
     const e = {};
     if (!fields.fullName.trim()) e.fullName = 'Please enter your name.';
+    if (!fields.company.trim()) e.company = 'Please enter your company.';
     if (!fields.email.trim()) e.email = 'Please enter your email.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) e.email = 'Please enter a valid email address.';
     if (!fields.country) e.country = 'Please select your country.';
@@ -87,12 +74,12 @@ export default function DemoForm() {
         <span className="rd-success-icon" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L20 7" /></svg>
         </span>
-        <p className="eyebrow">Request received</p>
+        <p className="eyebrow">Your demo is ready!</p>
         <h3>Thanks, {fields.fullName.split(' ')[0]}.</h3>
-        <p>We&apos;ve received your demo request and will be in touch at <strong>{fields.email}</strong> shortly.</p>
-        <a href={buildSignupUrl(fields)} className="mm-btn mm-btn-primary mm-btn-lg rd-success-cta">
-          Or start your free trial now
-        </a>
+        <p>Hit the button below to see MoneyMind in action in just 7 minutes.</p>
+        <Link href="/demo" className="mm-btn mm-btn-primary mm-btn-lg rd-success-cta">
+          Watch the Demo
+        </Link>
       </div>
     );
   }
@@ -107,9 +94,10 @@ export default function DemoForm() {
       </div>
 
       <div className={`mm-dr-field${errors.company ? ' has-error' : ''}`}>
-        <label htmlFor="rd-company">Company <span className="mm-dr-optional">(optional)</span></label>
+        <label htmlFor="rd-company">Company</label>
         <input id="rd-company" type="text" autoComplete="organization" placeholder="Smith Financial Planning"
           value={fields.company} onChange={set('company')} />
+        {errors.company && <span className="mm-dr-error">{errors.company}</span>}
       </div>
 
       <div className={`mm-dr-field${errors.email ? ' has-error' : ''}`}>

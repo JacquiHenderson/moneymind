@@ -65,10 +65,14 @@ export default function DemoPage() {
 
       <section className="mm-demo-cta">
         <div className="mm-container">
-          <h2>Ready to try it yourself?</h2>
-<div className="mm-demo-cta-actions">
+          <h2>Ready to try it yourself? Or have more questions?</h2>
+          <p>Now that you&apos;ve seen it in action, there are two easy ways to take the next step. Start a free 14-day trial — set up in minutes, full access to try it with your own clients. Or book a quick call and we&apos;ll answer any questions about how MoneyMind fits your firm.</p>
+          <div className="mm-demo-cta-actions">
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">
               Start 14-day trial
+            </a>
+            <a href="https://calendly.com/jacqui-moneymindprofile/30min?back=1" target="_blank" rel="noopener noreferrer" className="mm-btn mm-btn-ghost mm-btn-lg">
+              Book a meeting
             </a>
           </div>
         </div>
