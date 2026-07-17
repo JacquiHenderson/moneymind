@@ -12,8 +12,10 @@ const TABS = [
 ];
 
 export default function Platform({
+  eyebrow = 'The platform',
   heading = 'Everything you need to know about your client, in one place.',
   lead = 'Turn a five-minute profile into insights that will transform every client connection.',
+  patternTab = null,
 }) {
   const [tab, setTab] = useState('pattern');
 
@@ -21,7 +23,7 @@ export default function Platform({
     <section className="mm-section" id="platform" data-screen-label="Platform">
       <div className="mm-container">
         <div className="mm-section-head center">
-          <span className="eyebrow">The platform</span>
+          <span className="eyebrow">{eyebrow}</span>
           <h2>{heading}</h2>
           <p className="lead">{lead}</p>
         </div>
@@ -72,6 +74,8 @@ export default function Platform({
                   decoding="async"
                 />
               </picture>
+            ) : patternTab ? (
+              patternTab
             ) : (
               <picture className="mm-platform-pic">
                 <source srcSet="/assets/opt/product/dashboard.avif" type="image/avif" />

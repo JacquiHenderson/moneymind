@@ -59,7 +59,7 @@ function Avatar({ img, name }) {
   );
 }
 
-export default function DemoTestimonials() {
+export default function DemoTestimonials({ subhead = null }) {
   const [active, setActive] = useState(null); // youtube id or null
   const trackRef = useRef(null);
   const [atStart, setAtStart] = useState(true);
@@ -102,6 +102,7 @@ export default function DemoTestimonials() {
         <div>
           <span className="eyebrow">What advisors say</span>
           <h2>Real results from real advisors.</h2>
+          {subhead && <p className="rd-tsub">{subhead}</p>}
         </div>
         <div className="rd-arrows">
           <button type="button" className="rd-arrow" onClick={() => scrollBy(-1)} disabled={atStart} aria-label="Previous testimonials">
