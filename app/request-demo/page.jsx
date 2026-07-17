@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import DemoForm from '../../components/DemoForm';
 import DemoTestimonials from '../../components/DemoTestimonials';
-import HowItWorksSteps from '../../components/HowItWorksSteps';
 
 export const metadata = pageMeta({
   title: 'Request a demo — MoneyMind',
@@ -129,17 +128,6 @@ export default function RequestDemoPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section className="rd-how">
-        <div className="mm-container">
-          <div className="rd-shead">
-            <span className="eyebrow">How it works</span>
-            <h2>From onboarding to insight in three steps.</h2>
-          </div>
-          <HowItWorksSteps />
         </div>
       </section>
 
