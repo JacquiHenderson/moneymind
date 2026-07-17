@@ -43,7 +43,7 @@ const StepsCurve = () => (
   </svg>
 );
 
-export default function Steps() {
+export default function Steps({ showCta = true }) {
   const [selected, setSelected] = useState(1);
 
   return (
@@ -71,10 +71,12 @@ export default function Steps() {
           ))}
         </div>
 
-        <div className="mm-steps-cta">
-          <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
-          <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
-        </div>
+        {showCta && (
+          <div className="mm-steps-cta">
+            <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg">Start 14-day trial</a>
+            <Link href="/request-demo" className="mm-btn mm-btn-ghost mm-btn-lg">Request demo</Link>
+          </div>
+        )}
       </div>
     </section>
   );
