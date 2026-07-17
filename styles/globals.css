@@ -1657,6 +1657,36 @@ a:hover { color: var(--mm-blue-light); }
 .rd-testimonials { padding: 72px 0 40px; }
 .rd-how { padding: 40px 0 100px; }
 
+/* How it works — client story (for-advisors) */
+.hiw .mm-section-head { margin-bottom: 48px; }
+.hiw-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 48px; align-items: start; }
+@media (max-width: 1000px) { .hiw-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.hiw-card { background: radial-gradient(90% 80% at 0% 0%, rgba(82, 152, 191, 0.08), transparent 60%), var(--mm-blue-navy); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 26px 26px 28px; box-shadow: var(--elev-2); }
+.hiw-id { display: flex; align-items: center; gap: 14px; }
+.hiw-avatar { width: 46px; height: 46px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 15px; color: #fff; background: linear-gradient(140deg, var(--mm-blue-light), var(--mm-blue-deep)); flex: none; }
+.hiw-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--fg-1); }
+.hiw-meta { font-size: 12.5px; color: var(--fg-4); margin-top: 2px; }
+
+.hiw-archetype { margin-top: 20px; padding: 14px 16px; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-hairline); }
+.hiw-archetype-label { display: block; font-family: var(--font-body); font-weight: 500; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-4); margin-bottom: 6px; }
+.hiw-archetype-name { font-family: var(--font-body); font-weight: 700; font-size: 20px; color: var(--mm-blue-light); }
+
+.hiw-mp { margin-top: 22px; }
+.hiw-mp-label { display: block; font-family: var(--font-body); font-weight: 500; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mm-blue-light); margin-bottom: 16px; }
+.hiw-mp-img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); }
+
+.hiw-steps { list-style: none; margin: 0; padding: 0; }
+.hiw-step { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid var(--border-hairline); }
+.hiw-step:first-child { border-top: none; padding-top: 0; }
+.hiw-step-num { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--mm-blue-light); border: 1px solid var(--border-soft); flex: none; }
+.hiw-step-num.is-done { color: var(--mm-success); border-color: rgba(78, 166, 118, 0.5); background: rgba(78, 166, 118, 0.12); }
+.hiw-step-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 7px; }
+.hiw-step-head h4 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--fg-1); margin: 0; }
+.hiw-step-tag { font-family: var(--font-body); font-weight: 500; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mm-blue-light); flex: none; white-space: nowrap; }
+.hiw-step p { font-size: 14px; line-height: 1.6; color: var(--fg-3); margin: 0; }
+@media (max-width: 560px) { .hiw-step-head { flex-direction: column; gap: 3px; } .hiw-mp-body { grid-template-columns: 120px 1fr; } }
+
 /* Testimonials carousel */
 .rd-tsection-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
 .rd-tsection-head .eyebrow { display: block; margin-bottom: 16px; }

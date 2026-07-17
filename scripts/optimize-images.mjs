@@ -34,6 +34,7 @@ const TARGETS = [
   { src: 'product/send-profile-step1.png', width: 900,  fallback: 'png' },
   { src: 'product/embed-guide.png',        width: 1600, fallback: 'png' },
   { src: 'product/embed-guide-2.png',      width: 1600, fallback: 'png' },
+  { src: 'product/moneypattern-card.png',  width: 800,  fallback: 'png' },
   { src: 'advisors/peita.png',    width: 240, fallback: 'jpeg' },
   { src: 'advisors/rachael.png',  width: 240, fallback: 'jpeg' },
   { src: 'advisors/james.png',    width: 240, fallback: 'jpeg' },

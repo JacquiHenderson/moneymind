@@ -29,7 +29,6 @@ export default function Header({ currentPage = 'home' }) {
             <img src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
           </Link>
           <nav className="mm-nav" aria-label="Primary">
-            <Link href="/" className={currentPage === 'home' ? 'is-current' : ''} aria-current={currentPage === 'home' ? 'page' : undefined}>Home</Link>
             <Link href="/for-advisors" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
             <Link href="/for-fund-providers" className={currentPage === 'fund-providers' ? 'is-current' : ''} aria-current={currentPage === 'fund-providers' ? 'page' : undefined}>Fund Providers</Link>
             <a href={homeAnchor('#security')}>Security</a>
@@ -52,7 +51,6 @@ export default function Header({ currentPage = 'home' }) {
 
       {menuOpen && <div className="mm-mobile-overlay" onClick={close} aria-hidden="true" />}
       <nav className={`mm-mobile-nav${menuOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
-        <Link href="/" onClick={close} className={currentPage === 'home' ? 'is-current' : ''}>Home</Link>
         <Link href="/for-advisors" onClick={close} className={currentPage === 'advisers' ? 'is-current' : ''}>Financial Advisors</Link>
         <Link href="/for-fund-providers" onClick={close} className={currentPage === 'fund-providers' ? 'is-current' : ''}>Fund Providers</Link>
         <a href={homeAnchor('#security')} onClick={close}>Security</a>
