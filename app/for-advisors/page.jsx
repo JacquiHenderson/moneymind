@@ -222,9 +222,6 @@ const riskRows = [
   { label: 'Risk Tolerance',       result: 'Very High',       tone: 'accent', level: 0.92, body: 'Well-calibrated, context-appropriate risk tolerance for investment decisions.' },
   { label: 'Financial Confidence', result: 'Steady',          tone: 'warn',   level: 0.62, body: 'Developing investment confidence but sometimes hesitant on pivotal decisions.' },
   { label: 'Adaptability',         result: 'Balanced',        tone: 'warn',   level: 0.70, body: 'Can adapt investment strategy with clear rationale but needs time to process changes.' },
-  { label: 'Motivation',           result: 'Balanced',        tone: 'accent', level: 0.66, body: 'Balanced promotion and prevention motivation in investment decisions.' },
-  { label: 'Regret Aversion',      result: 'Regret-Tolerant', tone: 'warn',   level: 0.78, body: 'Calibrated regret-weighting supports sound portfolio decisions.' },
-  { label: 'Ownership',            result: 'Steady',          tone: 'warn',   level: 0.58, body: 'Has some sense of investment ownership but reverts to external attribution when outcomes disappoint.' },
 ];
 
 function RiskVisual() {
@@ -276,7 +273,7 @@ function AdvisersRisk() {
 // ---- Real results (testimonials) ----
 function AdvisersResults() {
   return (
-    <section className="mm-section rd-testimonials" data-screen-label="Advisor results">
+    <section className="mm-section rd-testimonials rd-testimonials-fa" data-screen-label="Advisor results">
       <div className="mm-container">
         <DemoTestimonials />
       </div>

@@ -19,20 +19,20 @@ const TESTIMONIALS = [
     video: 'IQ2G8wmMIpg',
   },
   {
-    name: 'James Trethewie',
-    title: 'Financial Advisor',
-    company: 'LCI Partners',
-    img: '/assets/opt/advisors/james',
-    quote: "James shares how he's replaced his firm's traditional risk profile with MoneyMind's powerful insights, which have improved engagement, advice acceptance, and the conversations he has with clients.",
-    video: 'REPLACE_ME', // TODO: replace with James's YouTube video ID
-  },
-  {
     name: 'John Stallman',
     title: 'Founder & Advisor',
     company: 'PlanningIQ + SuperAdvice',
     img: '/assets/opt/advisors/john',
     quote: 'John shares how his firm embeds MoneyMind across their social media, website, and digital advice journey — as both a lead-gen and behavioral layer within their advice workflow.',
     video: 'tARAm1MCi_E',
+  },
+  {
+    name: 'James Trethewie',
+    title: 'Financial Advisor',
+    company: 'LCI Partners',
+    img: '/assets/opt/advisors/james',
+    quote: "James shares how he's replaced his firm's traditional risk profile with MoneyMind's powerful insights, which have improved engagement, advice acceptance, and the conversations he has with clients.",
+    video: 'REPLACE_ME', // TODO: replace with James's YouTube video ID
   },
   {
     name: 'Natallia Smith',
