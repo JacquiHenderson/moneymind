@@ -290,7 +290,7 @@ const HIW_SCENARIOS = [
   {
     done: true,
     title: 'Between meetings',
-    body: "The same insight powers Sarah's own MoneyPattern — coaches her habits between reviews, so progress compounds without waiting for the next appointment.",
+    body: "The same insight powers Sarah's own MoneyPattern — coaches her habits between reviews, so progress compounds.",
   },
 ];
 
