@@ -19,7 +19,6 @@ export default function SendProfilePage() {
             <img src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
           </Link>
           <nav className="lp-nav" aria-label="Primary">
-            <Link href="/">Home</Link>
             <Link href="/for-advisors">Financial Advisors</Link>
             <Link href="/for-fund-providers">Fund Providers</Link>
             <Link href="/#security">Security</Link>
