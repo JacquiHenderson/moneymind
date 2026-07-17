@@ -301,7 +301,7 @@ function AdvisersHowItWorks() {
         <div className="mm-section-head">
           <span className="eyebrow">How it works</span>
           <h2>MoneyPattern&trade; is your client story, the person behind the plan.</h2>
-          <p className="lead">MoneyPattern is the behavioral layer within your advice workflow — revealing the patterns behind client&apos;s financial decisions, so you advise the person, not just the portfolio.</p>
+          <p className="lead">MoneyPattern is the behavioral layer within your advice workflow — revealing the patterns behind your client&apos;s financial decisions, so you advise the person, not just the portfolio.</p>
         </div>
 
         <div className="hiw-grid">
