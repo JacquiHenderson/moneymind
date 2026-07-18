@@ -123,6 +123,10 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+/* Safety net: decorative glows use large negative insets that can bleed past
+   the viewport on narrow screens. clip (not hidden) avoids a scroll container,
+   so the sticky header keeps working. */
+html { overflow-x: clip; }
 
 body {
   background: var(--bg-page);
@@ -849,9 +853,32 @@ a:hover { color: var(--mm-blue-light); }
   .mm-features { grid-template-columns: 1fr; }
   .mm-steps, .mm-security-grid { grid-template-columns: 1fr; }
   .mm-nav { display: none; }
+  .mm-nav-actions { display: none; }
   .mm-hamburger { display: flex; }
   .mm-mobile-nav { display: flex; }
   .mm-mobile-overlay { display: block; }
+}
+
+/* Phones — scale core typography and layout down from the tablet tier. */
+@media (max-width: 640px) {
+  .mm-container, .mm-header-inner, .mm-hero-inner, .mm-sub-hero-inner { padding-left: 20px; padding-right: 20px; }
+  .mm-header-inner { padding-top: 12px; padding-bottom: 12px; }
+  .mm-logo img, .mm-logo svg { height: 44px; }
+  .mm-hero { padding: 88px 0 72px; }
+  .mm-hero-inner { padding-top: 0; }
+  .mm-hero h1 { font-size: 40px; letter-spacing: -0.02em; margin: 20px 0 20px; }
+  .mm-hero p { font-size: 16px; }
+  .mm-hero-actions { display: flex; flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
+  .mm-hero-actions .mm-btn { justify-content: center; text-align: center; width: 100%; }
+  .mm-sub-hero { padding: 56px 0 64px; }
+  .mm-sub-hero h1 { font-size: 38px; letter-spacing: -0.02em; }
+  .mm-section-head h2, .mm-security h2 { font-size: 32px; }
+  .mm-section-head .lead { font-size: 16px; }
+}
+
+@media (max-width: 400px) {
+  .mm-hero h1 { font-size: 35px; }
+  .mm-sub-hero h1 { font-size: 34px; }
 }
 
 /* ============================================================
@@ -959,6 +986,12 @@ a:hover { color: var(--mm-blue-light); }
 .lp-subproc-year { font-size: 13px; font-weight: 500; color: var(--mm-blue-light); letter-spacing: 0; margin-left: 6px; }
 .lp-subproc-list p { font-size: 15px; line-height: 1.55; color: var(--fg-3); margin: 0; }
 @media (max-width: 768px) { .lp-header-inner { padding: 16px 24px; } .lp-nav { display: none; } .lp-page { padding: 48px 20px 80px; } .lp-title { font-size: 40px; } .lp-toc ol { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .lp-header-inner { padding: 12px 20px; }
+  .lp-logo img { height: 44px; }
+  .lp-cta { padding: 10px 16px; font-size: 14px; }
+  .lp-title { font-size: 32px; }
+}
 
 /* ============================================================
    DEMO VIDEO PAGE
@@ -1314,6 +1347,11 @@ a:hover { color: var(--mm-blue-light); }
   .ram-table .ram-col-coverage { width: 96px; }
   .ram-stamp { font-size: 10px; padding: 5px 9px; letter-spacing: 0.08em; gap: 4px; }
   .ram-cta { padding: 36px 22px; }
+}
+@media (max-width: 640px) {
+  .ram-title { font-size: 32px; }
+  .ram-lede { font-size: 16px; }
+  .ram-jur-country { font-size: 21px; }
 }
 
 /* ============================================================
