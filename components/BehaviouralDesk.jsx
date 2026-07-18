@@ -169,7 +169,7 @@ export default function BehaviouralDesk() {
           <div className="bd-count"><b>{results.length}</b> {domain} construct{results.length === 1 ? '' : 's'}</div>
         </div>
         <div className="bd-chip-group">
-          <span className="bd-chip-label">Domain</span>
+          <span className="bd-chip-label">Click Domain</span>
           {DOMAINS.map((d) => (
             <button
               key={d}
