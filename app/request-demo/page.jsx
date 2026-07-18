@@ -49,9 +49,8 @@ export default function RequestDemoPage() {
             <p className="rd-lede">
               From understanding how your clients make financial decisions to compliant
               risk profiling, you&apos;ll have an expert read on every client — no
-              behavioral finance degree required.
+              behavioral finance degree required. Adapts to your advice workflow.
             </p>
-            <p className="rd-emph">Adapts to your own advice workflow.</p>
             <ul className="rd-checklist">
               {HERO_CHECKS.map((c) => (
                 <li key={c.lead}>
