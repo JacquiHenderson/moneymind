@@ -448,6 +448,11 @@ a:hover { color: var(--mm-blue-light); }
 .mm-footer-bottom .legal a { color: var(--fg-4); font-size: 13px; }
 .mm-footer-bottom .legal a:hover { color: var(--fg-2); }
 @media (max-width: 1100px) { .mm-footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+@media (max-width: 640px) {
+  .mm-footer { padding: 56px 0 32px; }
+  .mm-footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .mm-footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 48px; }
+}
 
 /* ============================================================
    EMBED LINK
