@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 
 // domain | name | source instrument | stops [left, mid, right] | type (dir/cal/pref) | target stop index (or null) | verbatim meaning
 const DATA = [
@@ -137,18 +137,62 @@ function Construct({ c }) {
 }
 
 export default function BehaviouralDesk() {
-  // Always show one domain at a time — the page never lands on the full set.
-  const [domain, setDomain] = useState(DOMAINS[0]);
   const [query, setQuery] = useState('');
+  const [activeDomain, setActiveDomain] = useState(DOMAINS[0]);
+  const sectionRefs = useRef({});
+  const lockRef = useRef(false);
+  const lockTimer = useRef(null);
 
-  const results = useMemo(() => {
+  // Every domain flows down the page; search narrows across all of them.
+  const groups = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return DATA.filter((c) => {
-      if (c.domain !== domain) return false;
-      if (q && !(`${c.name} ${c.meaning}`.toLowerCase().includes(q))) return false;
-      return true;
-    });
-  }, [domain, query]);
+    return DOMAINS.map((d) => ({
+      domain: d,
+      items: DATA.filter((c) => {
+        if (c.domain !== d) return false;
+        if (q && !(`${c.name} ${c.meaning}`.toLowerCase().includes(q))) return false;
+        return true;
+      }),
+    })).filter((g) => g.items.length);
+  }, [query]);
+
+  const total = groups.reduce((n, g) => n + g.items.length, 0);
+
+  // Scroll-spy: highlight the chip for whichever domain is currently in view.
+  useEffect(() => {
+    const sections = groups.map((g) => sectionRefs.current[g.domain]).filter(Boolean);
+    if (!sections.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (lockRef.current) return; // ignore while a jump is animating
+        // At the very bottom of the page the last (often short) section can't
+        // reach the active band — pin it explicitly.
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          setActiveDomain(groups[groups.length - 1].domain);
+          return;
+        }
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActiveDomain(visible[0].target.dataset.domain);
+      },
+      { rootMargin: '-200px 0px -60% 0px', threshold: [0, 0.2, 0.5] }
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [groups]);
+
+  const jumpTo = (d) => {
+    const el = sectionRefs.current[d];
+    if (!el) return;
+    // Lock the scroll-spy briefly so the smooth-scroll pass-through doesn't
+    // steal the highlight from the domain the user actually picked.
+    lockRef.current = true;
+    clearTimeout(lockTimer.current);
+    setActiveDomain(d);
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    lockTimer.current = setTimeout(() => { lockRef.current = false; }, 900);
+  };
 
   return (
     <div className="bd-desk">
@@ -166,16 +210,16 @@ export default function BehaviouralDesk() {
               aria-label="Search constructs"
             />
           </div>
-          <div className="bd-count"><b>{results.length}</b> {domain} construct{results.length === 1 ? '' : 's'}</div>
+          <div className="bd-count"><b>{total}</b> construct{total === 1 ? '' : 's'}</div>
         </div>
         <div className="bd-chip-group">
-          <span className="bd-chip-label">Click Domain</span>
+          <span className="bd-chip-label">Jump to</span>
           {DOMAINS.map((d) => (
             <button
               key={d}
               type="button"
-              className={`bd-chip${domain === d ? ' is-active' : ''}`}
-              onClick={() => setDomain(d)}
+              className={`bd-chip${activeDomain === d ? ' is-active' : ''}`}
+              onClick={() => jumpTo(d)}
             >
               {d}
             </button>
@@ -183,12 +227,25 @@ export default function BehaviouralDesk() {
         </div>
       </div>
 
-      {results.length ? (
-        <div className="bd-grid">
-          {results.map((c) => <Construct key={`${c.domain}-${c.name}`} c={c} />)}
-        </div>
+      {groups.length ? (
+        groups.map((g) => (
+          <section
+            key={g.domain}
+            className="bd-domain-section"
+            data-domain={g.domain}
+            ref={(el) => { sectionRefs.current[g.domain] = el; }}
+          >
+            <div className="bd-domain-head">
+              <h2 className="bd-domain-title">{g.domain}</h2>
+              <span className="bd-domain-count">{g.items.length} construct{g.items.length === 1 ? '' : 's'}</span>
+            </div>
+            <div className="bd-grid">
+              {g.items.map((c) => <Construct key={`${c.domain}-${c.name}`} c={c} />)}
+            </div>
+          </section>
+        ))
       ) : (
-        <div className="bd-empty">No constructs match — try clearing a filter or the search.</div>
+        <div className="bd-empty">No constructs match — try clearing the search.</div>
       )}
     </div>
   );

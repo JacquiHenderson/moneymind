@@ -1429,8 +1429,16 @@ a:hover { color: var(--mm-blue-light); }
 .bd-chip:hover { border-color: var(--mm-blue-light); color: var(--fg-1); }
 .bd-chip.is-active { background: rgba(82, 152, 191, 0.14); border-color: var(--mm-blue-light); color: var(--mm-blue-light); }
 
+/* Domain sections — every domain flows down the page */
+.bd-domain-section { scroll-margin-top: 200px; }
+.bd-domain-head { display: flex; align-items: baseline; gap: 12px; margin: 44px 0 0; padding-bottom: 14px; border-bottom: 1px solid var(--border-hairline); }
+.bd-domain-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--fg-1); margin: 0; }
+.bd-domain-count { font-family: var(--font-body); font-size: 12.5px; color: var(--fg-4); letter-spacing: 0.04em; white-space: nowrap; }
+.bd-domain-section:last-child { padding-bottom: 56px; }
+
 /* Grid + cards */
 .bd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; padding: 8px 0 64px; }
+.bd-domain-section .bd-grid { padding: 16px 0 8px; }
 .bd-card {
   background: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: var(--radius-md);
   padding: 20px 20px 8px; display: flex; flex-direction: column; transition: border-color var(--dur-fast) var(--ease-out);
@@ -1488,6 +1496,9 @@ a:hover { color: var(--mm-blue-light); }
   .bd-page { padding: 40px 20px 0; }
   .bd-controls { top: 56px; }
   .bd-grid { grid-template-columns: 1fr; }
+  .bd-domain-section { scroll-margin-top: 210px; }
+  .bd-domain-title { font-size: 22px; }
+  .bd-domain-head { margin-top: 32px; }
 }
 
 /* ============================================================
