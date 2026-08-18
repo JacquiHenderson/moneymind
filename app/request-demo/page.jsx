@@ -64,6 +64,16 @@ export default function RequestDemoPage() {
                 </li>
               ))}
             </ul>
+
+            <div className="rd-trial">
+              <div className="rd-trial-copy">
+                <strong>Want to jump straight in?</strong>
+                <span>Begin with a few profiles and up to 10 team members — upgrade any time.</span>
+              </div>
+              <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary rd-trial-btn">
+                Start your 14-day trial <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
 
           <div className="rd-form-card" id="rd-form">
