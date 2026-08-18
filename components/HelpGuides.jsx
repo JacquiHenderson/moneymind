@@ -19,6 +19,13 @@ const IconSend = () => (
     <path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z" />
   </svg>
 );
+const IconArchetypes = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="9" cy="8" r="3.2" />
+    <path d="M3.5 20a5.5 5.5 0 0 1 11 0" />
+    <path d="M16 5.2a3.2 3.2 0 0 1 0 5.8M17.5 20a5.5 5.5 0 0 0-3-4.9" />
+  </svg>
+);
 
 const GUIDES = [
   {
@@ -26,6 +33,12 @@ const GUIDES = [
     title: 'MoneyPattern Guide',
     desc: 'Every behavioral construct MoneyMind measures — the spectrum, its source, and its plain-English meaning, by domain.',
     icon: <IconPattern />,
+  },
+  {
+    href: '/persona-archetypes',
+    title: 'Persona Archetypes',
+    desc: 'The seven client archetypes — population coverage, behavioural pattern, how to optimise for each, and the dimensional signature behind the assignment.',
+    icon: <IconArchetypes />,
   },
   {
     href: '/send-profile',
