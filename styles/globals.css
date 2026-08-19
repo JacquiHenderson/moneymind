@@ -285,6 +285,7 @@ a:hover { color: var(--mm-blue-light); }
 .mm-platform-tab:hover { color: var(--fg-1); }
 .mm-platform-tab.active { background: var(--mm-blue-mid); color: #ffffff; }
 .mm-platform-tabs-row { text-align: center; margin: 36px 0 48px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mm-platform-desc { max-width: 760px; margin: -20px auto 40px; text-align: center; font-size: 19px; line-height: 1.55; color: var(--fg-3); text-wrap: pretty; }
 .mm-platform-stage { position: relative; border-radius: var(--radius-xl); border: 1px solid var(--border-hairline); background: radial-gradient(80% 60% at 50% 0%, rgba(82, 152, 191, 0.12) 0%, rgba(82, 152, 191, 0) 70%), var(--bg-raised); padding: 12px 12px 0; overflow: hidden; box-shadow: var(--elev-3); }
 .mm-platform-window { border-radius: 16px 16px 0 0; background: var(--mm-blue-navy); overflow: hidden; border: 1px solid var(--border-hairline); border-bottom: none; }
 .mm-platform-chrome { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border-hairline); background: rgba(0,0,0,0.2); }
