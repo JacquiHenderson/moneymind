@@ -24,7 +24,7 @@ function AdvisersHero() {
       <div className="mm-sub-hero-inner">
         <span className="eyebrow mm-sub-hero-eyebrow">Built for financial advisors</span>
         <h1>
-          The AI behavioural finance layer<br/>
+          The AI behavioral finance layer<br/>
           for <em>modern advice.</em>
         </h1>
         <p className="mm-sub-hero-lead">
@@ -383,14 +383,14 @@ export default function ForAdvisersPage() {
       <Platform
         eyebrow="What is MoneyPattern?"
         heading="MoneyPattern™ is your client's story, the person behind the plan."
-        lead="It is the behavioral layer within your advice workflow — revealing the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
+        lead="Reveal the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
         patternTab={<ClientStory />}
         preMeetingTab={
           <div className="mm-aiplan">
             <img
               className="mm-platform-img"
               src="/assets/opt/product/meeting-prep.webp"
-              alt="A MoneyMind pre-meeting prep overlay — the client-psychology brief an advisor sees before a meeting"
+              alt="A MoneyMind meeting prep overlay — the client-psychology brief an advisor sees before a meeting"
               width="1600"
               height="1027"
             />
@@ -404,7 +404,7 @@ export default function ForAdvisersPage() {
             <img
               className="mm-platform-img"
               src="/assets/opt/product/financial-plan.webp"
-              alt="A MoneyMind financial plan with behavioural insights woven through each section"
+              alt="A MoneyMind financial plan with behavioral insights woven through each section"
               width="1600"
               height="1027"
             />

@@ -87,7 +87,7 @@ export default function FinancialPlan() {
               Seven parts: where you are now, what you want, your cash flow, your debt and wealth
               strategy, your investments, your retirement, and your estate. Your MoneyMind profile
               runs through all of them — each section opens with the patterns and roadblocks it
-              found, and the behavioural actions that follow.
+              found, and the behavioral actions that follow.
             </p>
           </div>
           <div className="fp-toc">
@@ -351,7 +351,7 @@ export default function FinancialPlan() {
           The seed for your daughters' structure comes out of this figure, so we need to know what
           part of it can actually be moved, at what tax cost, and over what period. If a meaningful
           share is business interest or property, the three-tranche schedule in §5 stops being a
-          behavioural choice and becomes a practical necessity.
+          behavioral choice and becomes a practical necessity.
         </p>
         <p>
           One real caution: your home at $13,500,000 is 36% of your net position and produces no
@@ -649,7 +649,7 @@ export default function FinancialPlan() {
             financial plan. It is not personal financial advice and it is not a Statement of Advice.
           </p>
           <p style={{ marginTop: 12 }}>
-            The behavioural content comes from the MoneyMind Client Report dated 18 August 2026.
+            The behavioral content comes from the MoneyMind Client Report dated 18 August 2026.
             Income, home value, other assets, years to retirement, return expectations and the
             recorded goal are taken from that report. The client's name has been changed for
             anonymity. Spending, liabilities, the seed amount, the portfolio and all other figures

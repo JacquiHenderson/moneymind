@@ -1,4 +1,4 @@
-// Pre-Meeting Prep overlay — "Marcus Delaney" — reproduced as a page.
+// Meeting Prep overlay — "Marcus Delaney" — reproduced as a page.
 // A one-off document; content is inline.
 
 const MM = () => <span className="mp-src mp-src--mm">◈ MoneyMind</span>;
@@ -68,8 +68,8 @@ export default function MeetingPrep() {
         <span>Marcus Delaney — Initial Strategy Meeting</span>
       </div>
 
-      <p className="mp-crumb">Meet › Pre-Meeting Prep › Marcus Delaney — Initial Strategy Meeting</p>
-      <h1 className="mp-title">Pre-Meeting Prep — Marcus Delaney</h1>
+      <p className="mp-crumb">Meet › Meeting Prep › Marcus Delaney — Initial Strategy Meeting</p>
+      <h1 className="mp-title">Meeting Prep — Marcus Delaney</h1>
       <p className="mp-meta">
         Initial Strategy Meeting · Tue 25 Aug 2026, 10:00 CT · Advisor: Dana Whitfield ·
         7 blocks · 11 sources cited

@@ -5,7 +5,7 @@ import FinancialPlan from '../../components/FinancialPlan';
 export const metadata = pageMeta({
   title: 'Sample Financial Plan — MoneyMind',
   description:
-    'A sample financial plan showing how a MoneyMind behavioural profile is woven into a standard financial plan — cash flow, wealth, investments, retirement, and estate. Not personal financial advice.',
+    'A sample financial plan showing how a MoneyMind behavioral profile is woven into a standard financial plan — cash flow, wealth, investments, retirement, and estate. Not personal financial advice.',
   path: '/financial-plan',
   noindex: true,
 });

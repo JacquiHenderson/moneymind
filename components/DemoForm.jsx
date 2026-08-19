@@ -5,7 +5,7 @@ import Link from 'next/link';
 // NOTE: This form's submission wiring is duplicated verbatim from
 // app/demo-request/page.jsx so leads reach the MoneyMind platform exactly
 // the same way. Keep REGION_API, the POST endpoint, the field names and the
-// honeypot in sync with that file — do not change the behaviour here.
+// honeypot in sync with that file — do not change the behavior here.
 const REGION_API = {
   AU: 'https://au-api.moneymindprofile.com',
   NZ: 'https://au-api.moneymindprofile.com',

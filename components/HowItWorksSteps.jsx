@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { IconSend, IconScan, IconCheck } from './Icons';
 
 // Mirrors the home page Steps cards (same markup, icons and hover-select
-// behaviour), minus the section head / CTA which the page provides.
+// behavior), minus the section head / CTA which the page provides.
 const STEPS = [
   {
     icon: <IconSend size={18} />,

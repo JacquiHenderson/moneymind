@@ -5,7 +5,7 @@ import PersonaArchetypes from '../../components/PersonaArchetypes';
 export const metadata = pageMeta({
   title: 'Seven Client Archetypes — MoneyMind',
   description:
-    'The seven MoneyMind client archetypes — population coverage, behavioural pattern, how to optimise for each, communication keywords, and the dimensional signature behind every assignment. A complete methodology document for advisors.',
+    'The seven MoneyMind client archetypes — population coverage, behavioral pattern, how to optimise for each, communication keywords, and the dimensional signature behind every assignment. A complete methodology document for advisors.',
   path: '/persona-archetypes',
   noindex: true,
 });
@@ -37,7 +37,7 @@ export default function PersonaArchetypesPage() {
           <span className="lp-eyebrow">Advisor field guide</span>
           <h1 className="bd-title">The seven <span className="bd-accent">client&nbsp;archetypes</span>.</h1>
           <p className="bd-standfirst">
-            Each persona MoneyMind assigns — population coverage, behavioural pattern, how to
+            Each persona MoneyMind assigns — population coverage, behavioral pattern, how to
             optimise, and the dimensional signature behind the assignment.
           </p>
         </section>

@@ -42,7 +42,7 @@ const ARCHETYPES = [
       { term: 'Regret Aversion — Tier 3:', body: 'Kumar et al. (2024) meta-analysis, 31 studies, r=0.401. Drives disposition effect (holding losers too long, selling winners too early) and status quo bias.' },
       { term: 'Certainty Preference — Tier 4:', body: 'Duke et al. (2017); Lim et al. (2019); Donnelly et al. (2022). Stable preference for a certain outcome over a higher expected-value risky one. Primary driver of guaranteed income product preference.' },
     ],
-    behaviour: [
+    behavior: [
       'Security Seekers save consistently — motivation is fear of loss, not growth ambition. They systematically under-invest in equities, favouring cash, bonds, term deposits, and guaranteed income products. The disposition effect is active: holding losing positions too long while selling profitable ones prematurely. In market downturns, high risk of reactive selling that crystallises losses at the worst possible moment. The most significant long-term financial cost is insufficient equity participation — missing the primary driver of wealth accumulation over 20–30 year horizons.',
     ],
     primaryRisk:
@@ -83,7 +83,7 @@ const ARCHETYPES = [
       { term: 'Future Self-Connection — Tier 3–4:', body: 'Hershfield et al. VR studies — direct causal effect on retirement contribution rates. Marques et al. (2018). Saving feels like investing in themselves, not sacrifice.' },
       { term: 'Internal Locus of Control — Tier 2:', body: 'Rotter (1966); 70+ years cross-cultural replication. Internal LOC drives proactive financial engagement, independent research, and consistent plan execution.' },
     ],
-    behaviour: [
+    behavior: [
       'The Confident Grower is the profile all four frameworks’ highest-evidence constructs describe when operating optimally together. Saves consistently, invests broadly, holds through market volatility, engages proactively with retirement planning, rarely makes emotionally-driven portfolio changes. The advisor’s role shifts from motivator to co-strategist.',
     ],
     primaryRisk:
@@ -125,7 +125,7 @@ const ARCHETYPES = [
       { term: 'Present Bias — Tier 1:', body: 'Imai et al. (2019) — 220 estimates from 28 articles. Amplified by anxiety into complete avoidance of future-oriented financial thinking.' },
       { term: 'External Locus of Control — Tier 2:', body: 'Rotter (1966). External LOC reinforces avoidance: "what’s the point of planning when I can’t control what happens anyway?"' },
     ],
-    behaviour: [
+    behavior: [
       'The self-reinforcing loop: financial anxiety triggers avoidance → avoidance prevents the actions that would reduce anxiety → anxiety increases. Scarcity mindset narrows cognitive bandwidth to immediate threats, making retirement planning and investment decisions cognitively inaccessible precisely when anxiety is highest. This client defers decisions, avoids financial conversations, accepts unsuitable defaults rather than choosing, and chronically under-saves — not from disinterest but from overwhelm.',
       { note: true, body: 'Critical principle: This is a psychological state, not a financial one. A high-income, high-net-worth client can present with Archetype 3. Wealth and income do not determine this archetype. Anxiety and resilience level do.' },
     ],
@@ -165,7 +165,7 @@ const ARCHETYPES = [
       { term: 'Optimism Bias — Tier 3:', body: 'Scheier & Carver dispositional optimism. Return overestimation of 10–15%. Harmful when combined with impulsive execution.' },
       { term: 'Lifestyle Inflation:', body: 'de Ridder et al. (2011); Baumeister; Mischel. Impulsiveness is a strong predictor of irregular saving and salary-matched lifestyle inflation.' },
     ],
-    behaviour: [
+    behavior: [
       'Highly financially engaged — monitors markets actively, acts on opportunities quickly. Overconfidence combined with action orientation produces excess trading that underperforms passive strategies (Barber & Odean). Low loss aversion reverses sharply when actual losses materialise — producing panic selling at market lows. FOMO-driven investment decisions and salary-matched lifestyle inflation are characteristic.',
     ],
     primaryRisk:
@@ -201,13 +201,13 @@ const ARCHETYPES = [
       ['Big Picture Style', 'Detail-Oriented', 'MODIFIER'],
     ],
     science: [
-      { term: 'Internal Locus of Control — Tier 2:', body: 'Rotter (1966); 70+ years cross-cultural replication across 40+ countries. Internal LOC drives proactive financial engagement, research behaviour, and consistent plan execution. This is the root cause of deliberative behaviour — because they believe their choices determine outcomes, they invest heavily in getting those choices right.' },
+      { term: 'Internal Locus of Control — Tier 2:', body: 'Rotter (1966); 70+ years cross-cultural replication across 40+ countries. Internal LOC drives proactive financial engagement, research behavior, and consistent plan execution. This is the root cause of deliberative behavior — because they believe their choices determine outcomes, they invest heavily in getting those choices right.' },
       { term: 'Financial Acumen — Tier 2:', body: 'Lusardi & Mitchell — 40+ country research programme. Goyal et al. (2020, 791 citations) — 502-article systematic review. Financial knowledge predicts saving rates and retirement contributions. Strongest in composite with self-regulation and LOC.' },
       { term: 'Goal Specificity — Tier 3:', body: 'Gollwitzer implementation intentions (400+ studies); Locke & Latham goal-setting theory. Without implementation deadlines, deliberation converts to delay.' },
       { term: 'State Orientation — Tier 4:', body: 'Kuhl (1985) — state-oriented individuals excel at decision quality but are vulnerable to under-implementation.' },
       { term: 'Cognitive Reflection — Tier 4:', body: 'Frederick CRT (2005). Consistently engages System 2 (analytical) processing. Inverse relationship with impulsive risk-taking.' },
     ],
-    behaviour: [
+    behavior: [
       'The Informed Analyst brings genuine analytical depth. Researches thoroughly before committing, asks probing questions, scrutinises fees and product detail, rarely makes emotionally-driven portfolio changes. Internal LOC means they take personal responsibility for outcomes — producing both the strength (thorough preparation) and the vulnerability (analysis never feeling complete enough). Primary risk is under-implementation: time-sensitive decisions pass while information is still being gathered.',
     ],
     primaryRisk:
@@ -221,7 +221,7 @@ const ARCHETYPES = [
     pattern:
       'Not distressed by money, simply not thinking about the financial future with sufficient vividness or urgency. When the future self does not feel real, saving for retirement is neurologically similar to giving money to a stranger.',
     roadblocks:
-      'The compounding retirement gap. This client typically has adequate income, the gap is behavioural, not financial. Consistent lifestyle inflation captures salary increases before they reach the spending account. Wealth creation consistently lags income growth and insufficient retirement savings.',
+      'The compounding retirement gap. This client typically has adequate income, the gap is behavioral, not financial. Consistent lifestyle inflation captures salary increases before they reach the spending account. Wealth creation consistently lags income growth and insufficient retirement savings.',
     optimise: [
       { h: 'Future self visualisation', body: 'Describe retirement life vividly, not the finances, just the life. Brief future-self visualisation measurably increases saving intentions.' },
       { h: 'Fresh-start framing', body: 'Link contribution increases or automation to a personally meaningful upcoming date. New beginning framing rather than sacrifice framing.' },
@@ -248,11 +248,11 @@ const ARCHETYPES = [
       { term: 'Fresh-Start Effect — Tier 4:', body: 'Beshears et al. (2021, N=6,082 field experiment) — linking financial commitments to a personally meaningful upcoming date significantly increases uptake. Highest-efficacy direct intervention for present bias.' },
       { term: 'Implementation Intentions — Tier 3:', body: 'Gollwitzer (400+ studies). Good intentions without specific when/where/how plans fail to convert to action.' },
     ],
-    behaviour: [
+    behavior: [
       'Most prevalent profile in the general population. Not distressed by money — simply not thinking about the financial future with sufficient vividness or urgency. When the future self does not feel real, saving for retirement is neurologically similar to giving money to a stranger (Hershfield et al.). Consistent lifestyle inflation, deferred retirement contributions, and good intentions that do not convert to action without structural support. Moderate present bias sustained over decades produces materially insufficient retirement savings.',
     ],
     primaryRisk:
-      'The compounding retirement gap. This client typically has adequate income — the gap is behavioural, not financial. Without automation that captures salary increases before they reach the spending account, wealth creation consistently lags income growth regardless of earnings.',
+      'The compounding retirement gap. This client typically has adequate income — the gap is behavioral, not financial. Without automation that captures salary increases before they reach the spending account, wealth creation consistently lags income growth regardless of earnings.',
   },
   {
     num: '07',
@@ -265,7 +265,7 @@ const ARCHETYPES = [
       'The primary failure mode is under-optimisation across all dimensions. No single catastrophic decision, or something visibly wrong, but consistent small gaps in savings rates, insurance adequacy, retirement contributions, or investment diversification.',
     optimise: [
       { h: 'Make the invisible cost visible', body: 'Show the compounding gap between current trajectory and an optimised one, specifically in retirement dollars. Concrete numbers create urgency where general advice does not.' },
-      { h: 'Automate all foundational behaviours', body: 'Emergency fund to target level. Retirement contributions at recommended rate. Debt repayments. Strong response to automation because there is no dominant psychological resistance.' },
+      { h: 'Automate all foundational behaviors', body: 'Emergency fund to target level. Retirement contributions at recommended rate. Debt repayments. Strong response to automation because there is no dominant psychological resistance.' },
       { h: 'Goal specificity as the activation mechanism', body: 'Specific implementation intentions convert moderate intentions to action. Vague goals stay vague; concrete plans with dates and amounts get executed.' },
       { h: 'Dual framing', body: 'Present strategies with both positive framing and loss framing. Because neither motivation is dominant, dual framing captures both dimensions.' },
     ],
@@ -288,9 +288,9 @@ const ARCHETYPES = [
       { term: 'Balanced Regulatory Focus — Tier 3:', body: 'Higgins (1997); Crowe & Higgins (1997). Roughly 15–20% of the population shows genuinely balanced regulatory focus — neither growth ambition nor loss fear dominant.' },
       { term: 'Mixed Temporal Orientation — Tier 1–2:', body: 'Frederick et al. (2002) confirm mixed intertemporal preferences (score 1–2) are empirically distinct from both present bias and future bias. A stable profile, not a transitional state.' },
       { term: 'Moderate Self-Control — Tier 2:', body: 'de Ridder et al. (2011, N=32,648) — self-control distributes approximately normally. The modal outcome is moderate self-control.' },
-      { term: 'Mixed Locus of Control — Tier 2:', body: 'Rotter (1966). Mixed LOC (∼35–40% of population) is the modal outcome. Produces situationally variable engagement rather than consistent proactive or passive behaviour.' },
+      { term: 'Mixed Locus of Control — Tier 2:', body: 'Rotter (1966). Mixed LOC (∼35–40% of population) is the modal outcome. Produces situationally variable engagement rather than consistent proactive or passive behavior.' },
     ],
-    behaviour: [
+    behavior: [
       'The Pragmatic Moderate manages money adequately without being exceptional at it. Makes reasonable financial decisions at a moderate pace. Saves inconsistently. Has moderate retirement engagement — thinks about it but without urgency or specificity. Responds positively to professional advice when prompted but does not seek it proactively.',
       'The primary failure mode is chronic under-optimisation across all dimensions. No single catastrophic decision, but consistent small gaps in savings rates, insurance adequacy, retirement contributions, and investment diversification that compound over 30 years into a significant shortfall. Death by a thousand moderate choices.',
       { note: true, body: 'Critical insight: This is the most malleable archetype. With no dominant psychological resistance, the Pragmatic Moderate responds well to all standard interventions. The gap between their current trajectory and an optimised trajectory is large — and the interventions to close it are straightforward. This is the highest advisor value-add opportunity in the entire archetype system.' },
@@ -415,8 +415,8 @@ function Archetype({ a, refCb }) {
       </div>
 
       <div className="pa-block">
-        <h3 className="pa-h">Behavioural pattern</h3>
-        {a.behaviour.map((b, i) =>
+        <h3 className="pa-h">Behavioral pattern</h3>
+        {a.behavior.map((b, i) =>
           typeof b === 'string'
             ? <p className="pa-p" key={i}>{b}</p>
             : <p className="pa-note" key={i}>{b.body}</p>
@@ -437,7 +437,7 @@ function haystack(a) {
     a.name, a.pattern, a.roadblocks, a.primaryRisk,
     a.keywords.join(' '),
     a.optimise.map((o) => `${o.h} ${o.body}`).join(' '),
-    a.behaviour.map((b) => (typeof b === 'string' ? b : b.body)).join(' '),
+    a.behavior.map((b) => (typeof b === 'string' ? b : b.body)).join(' '),
     a.signature.map((s) => s.join(' ')).join(' '),
   ].join(' ').toLowerCase();
 }

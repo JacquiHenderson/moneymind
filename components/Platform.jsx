@@ -7,7 +7,17 @@ import MoneyQuiz from './MoneyQuiz';
 // Copy shown between the tabs and the screen, per active tab.
 const TAB_COPY = {
   pattern:
-    "The MoneyPattern™ dashboard turns 34 behavioural measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them. Everything a fact find can't tell you.",
+    "The MoneyPattern™ dashboard turns 34 behavioral measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them.",
+  profile:
+    "The MoneyPattern questionnaire takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
+  'pre-meeting':
+    "MoneyMind insights flow straight into the AI tools you already use. The numbers, the meeting notes, and your client's financial psychology land in one brief — so your agenda is built on the full picture, not just what they own. The whole client story, before you walk in.",
+  'ai-plans':
+    "MoneyMind insights also flow into your financial plans. The numbers, the strategies, and your client's behavioral patterns come together — so the plan is tailored to their psychology, not just what the projections assume. The human behind the plan.",
+  personas:
+    "MoneyMind maps every client to one of seven archetypes. Each cohort carries behavioral traits, how to optimise, the words that land, and how common it is. Segment your whole client base by how they think, not just what they're worth — then design your comms for each one.",
+  embed:
+    "Embed MoneyMind anywhere — your website, your marketing, social, or the client portal. Run the full questionnaire or a single section. Every touchpoint becomes top of funnel, and every lead arrives warm, engaged, and already telling you how they think.",
 };
 
 export default function Platform({
@@ -23,7 +33,7 @@ export default function Platform({
   const TABS = [
     { id: 'pattern',  label: 'MoneyPattern™', icon: <IconBrain size={16} /> },
     { id: 'profile',  label: 'Profile',       icon: <IconUsers size={16} /> },
-    ...(preMeetingTab ? [{ id: 'pre-meeting', label: 'AI Pre-Meeting', icon: <IconAudit size={16} /> }] : []),
+    ...(preMeetingTab ? [{ id: 'pre-meeting', label: 'AI Meeting Prep', icon: <IconAudit size={16} /> }] : []),
     ...(aiPlansTab ? [{ id: 'ai-plans', label: 'AI Plans', icon: <IconSparkle size={16} /> }] : []),
     { id: 'personas', label: 'Personas',      icon: <IconCompass size={16} /> },
     { id: 'embed',    label: 'Embed link',    icon: <IconLink size={16} /> },

@@ -37,7 +37,7 @@ const GUIDES = [
   {
     href: '/persona-archetypes',
     title: 'Persona Archetypes',
-    desc: 'The seven client archetypes — population coverage, behavioural pattern, how to optimise for each, and the dimensional signature behind the assignment.',
+    desc: 'The seven client archetypes — population coverage, behavioral pattern, how to optimise for each, and the dimensional signature behind the assignment.',
     icon: <IconArchetypes />,
   },
   {

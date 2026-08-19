@@ -3,9 +3,9 @@ import { pageMeta } from '../../lib/seo';
 import MeetingPrep from '../../components/MeetingPrep';
 
 export const metadata = pageMeta({
-  title: 'Pre-Meeting Prep — MoneyMind',
+  title: 'Meeting Prep — MoneyMind',
   description:
-    'A sample MoneyMind client-psychology overlay — the pre-meeting prep an advisor sees before a client meeting: executive brief, meeting approach, behavioural read, MoneyPattern pillars, risk profile, and flagged conflicts.',
+    'A sample MoneyMind client-psychology overlay — the pre-meeting prep an advisor sees before a client meeting: executive brief, meeting approach, behavioral read, MoneyPattern pillars, risk profile, and flagged conflicts.',
   path: '/meeting-prep',
   noindex: true,
 });
