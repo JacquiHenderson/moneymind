@@ -4,7 +4,9 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import { HeroCurves } from '../../components/Hero';
 import Logos from '../../components/Logos';
-import Steps from '../../components/Steps';
+import Team from '../../components/Team';
+import Security from '../../components/Security';
+import Faq from '../../components/Faq';
 import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
 import DemoTestimonials from '../../components/DemoTestimonials';
@@ -22,7 +24,7 @@ function AdvisersHero() {
       <div className="mm-sub-hero-inner">
         <span className="eyebrow mm-sub-hero-eyebrow">Built for financial advisors</span>
         <h1>
-          The behavioural layer<br/>
+          The AI behavioural layer<br/>
           for <em>modern advice.</em>
         </h1>
         <p className="mm-sub-hero-lead">
@@ -360,7 +362,7 @@ function AdvisersInsightFlow() {
       <div className="mm-container">
         <div className="mm-section-head center">
           <span className="eyebrow">Integrated insights</span>
-          <h2>Client insights flow into the AI tools you already use — and into the plans you write.</h2>
+          <h2>MoneyMind insights flow into the AI tools you already use — and into the plans you write.</h2>
           <p className="lead">Tell us what tools you use — we&apos;ll handle the connection.</p>
         </div>
         <div className="mm-insight mm-insight-full">
@@ -383,6 +385,20 @@ export default function ForAdvisersPage() {
         heading="MoneyPattern™ is your client's story, the person behind the plan."
         lead="It is the behavioral layer within your advice workflow — revealing the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
         patternTab={<ClientStory />}
+        preMeetingTab={
+          <div className="mm-aiplan">
+            <img
+              className="mm-platform-img"
+              src="/assets/opt/product/meeting-prep.webp"
+              alt="A MoneyMind pre-meeting prep overlay — the client-psychology brief an advisor sees before a meeting"
+              width="1600"
+              height="1027"
+            />
+            <Link href="/meeting-prep" className="mm-btn mm-btn-primary mm-aiplan-btn">
+              View a sample prep <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        }
         aiPlansTab={
           <div className="mm-aiplan">
             <img
@@ -406,7 +422,9 @@ export default function ForAdvisersPage() {
       <AdvisersDecodePatterns />
       <AdvisersRisk />
       <AdvisersPricing />
-      <Steps showCta={false} />
+      <Team />
+      <Security />
+      <Faq />
       <AdvisersCtaBand />
       <Footer />
     </div>

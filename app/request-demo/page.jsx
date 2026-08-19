@@ -2,6 +2,7 @@ import { pageMeta } from '../../lib/seo';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Logos from '../../components/Logos';
+import Steps from '../../components/Steps';
 import DemoForm from '../../components/DemoForm';
 import DemoTestimonials from '../../components/DemoTestimonials';
 
@@ -68,6 +69,15 @@ export default function RequestDemoPage() {
         </div>
       </section>
 
+      <Logos />
+
+      {/* Testimonials */}
+      <section className="rd-testimonials">
+        <div className="mm-container">
+          <DemoTestimonials />
+        </div>
+      </section>
+
       {/* Founder intro video */}
       <section className="rd-video">
         <div className="mm-container">
@@ -94,14 +104,7 @@ export default function RequestDemoPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="rd-testimonials">
-        <div className="mm-container">
-          <DemoTestimonials />
-        </div>
-      </section>
-
-      <Logos />
+      <Steps showCta={false} />
 
       <Footer />
     </div>

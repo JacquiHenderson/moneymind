@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { IconBrain, IconUsers, IconCompass, IconLink, IconSparkle } from './Icons';
+import { IconBrain, IconUsers, IconCompass, IconLink, IconSparkle, IconAudit } from './Icons';
 import Personas from './Personas';
 import MoneyQuiz from './MoneyQuiz';
 
@@ -9,6 +9,7 @@ export default function Platform({
   heading = 'Everything you need to know about your client, in one place.',
   lead = 'Turn a five-minute profile into insights that will transform every client connection.',
   patternTab = null,
+  preMeetingTab = null,
   aiPlansTab = null,
 }) {
   const [tab, setTab] = useState('pattern');
@@ -16,6 +17,7 @@ export default function Platform({
   const TABS = [
     { id: 'pattern',  label: 'MoneyPattern™', icon: <IconBrain size={16} /> },
     { id: 'profile',  label: 'Profile',       icon: <IconUsers size={16} /> },
+    ...(preMeetingTab ? [{ id: 'pre-meeting', label: 'AI Pre-Meeting', icon: <IconAudit size={16} /> }] : []),
     ...(aiPlansTab ? [{ id: 'ai-plans', label: 'AI Plans', icon: <IconSparkle size={16} /> }] : []),
     { id: 'personas', label: 'Personas',      icon: <IconCompass size={16} /> },
     { id: 'embed',    label: 'Embed link',    icon: <IconLink size={16} /> },
@@ -57,6 +59,8 @@ export default function Platform({
             </div>
             {tab === 'personas' ? (
               <Personas />
+            ) : tab === 'pre-meeting' ? (
+              preMeetingTab
             ) : tab === 'ai-plans' ? (
               aiPlansTab
             ) : tab === 'profile' ? (
