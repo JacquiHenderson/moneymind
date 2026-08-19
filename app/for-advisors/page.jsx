@@ -383,6 +383,20 @@ export default function ForAdvisersPage() {
         heading="MoneyPattern™ is your client's story, the person behind the plan."
         lead="It is the behavioral layer within your advice workflow — revealing the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
         patternTab={<ClientStory />}
+        aiPlansTab={
+          <div className="mm-aiplan">
+            <img
+              className="mm-platform-img"
+              src="/assets/opt/product/financial-plan.webp"
+              alt="A MoneyMind financial plan with behavioural insights woven through each section"
+              width="1600"
+              height="1027"
+            />
+            <Link href="/financial-plan" className="mm-btn mm-btn-primary mm-aiplan-btn">
+              View a sample plan <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        }
       />
       <AdvisersInsightFlow />
       <AdvisersImpactTrio />
