@@ -6,7 +6,7 @@ import MoneyQuiz from './MoneyQuiz';
 
 const TABS = [
   { id: 'pattern',  label: 'MoneyPattern™', icon: <IconBrain size={16} /> },
-  { id: 'profile',  label: 'MoneyQuiz',     icon: <IconUsers size={16} /> },
+  { id: 'profile',  label: 'Profile',       icon: <IconUsers size={16} /> },
   { id: 'personas', label: 'Personas',      icon: <IconCompass size={16} /> },
   { id: 'embed',    label: 'Embed link',    icon: <IconLink size={16} /> },
 ];
@@ -52,9 +52,6 @@ export default function Platform({
               <span className="mm-platform-dot"></span>
               <span className="mm-platform-dot"></span>
               <span className="mm-platform-dot"></span>
-              <span className="mm-platform-url">
-                app.moneymindprofile.com / {tab === 'personas' ? 'personas' : tab === 'profile' ? 'profile' : tab === 'embed' ? 'embed' : 'pattern'}
-              </span>
             </div>
             {tab === 'personas' ? (
               <Personas />
@@ -67,9 +64,9 @@ export default function Platform({
                 <img
                   className="mm-platform-img"
                   src="/assets/opt/product/embed-link.png"
-                  alt="MoneyMind embed-link builder for creating a custom questionnaire profile link"
+                  alt="MoneyMind embedded on an advisory firm's website with a Learn your MoneyMind profile call to action"
                   width="1600"
-                  height="893"
+                  height="1012"
                   loading="lazy"
                   decoding="async"
                 />

@@ -35,6 +35,7 @@ const HERO_CHECKS = [
   },
 ];
 
+
 export default function RequestDemoPage() {
   return (
     <div className="rd-page">
@@ -50,6 +51,7 @@ export default function RequestDemoPage() {
               From understanding how your clients make financial decisions to compliant
               risk profiling, you&apos;ll have an expert read on every client — no
               behavioral finance degree required. Adapts to your advice workflow.
+              Integrates with your AI tools, CRM, and planning software.
             </p>
             <ul className="rd-checklist">
               {HERO_CHECKS.map((c) => (

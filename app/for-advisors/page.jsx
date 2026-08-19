@@ -9,6 +9,7 @@ import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
 import DemoTestimonials from '../../components/DemoTestimonials';
 import ClientStory from '../../components/ClientStory';
+import IntegrationDiagram from '../../components/IntegrationDiagram';
 import {
   IconChart, IconLink, IconBrain, IconCheck, IconChevronDown
 } from '../../components/Icons';
@@ -21,8 +22,8 @@ function AdvisersHero() {
       <div className="mm-sub-hero-inner">
         <span className="eyebrow mm-sub-hero-eyebrow">Built for financial advisors</span>
         <h1>
-          The new standard of<br/>
-          profiling <em>clients.</em>
+          The behavioural layer<br/>
+          for <em>modern advice.</em>
         </h1>
         <p className="mm-sub-hero-lead">
           MoneyMind™ maps the financial behaviors behind — how your
@@ -352,6 +353,24 @@ function AdvisersCtaBand() {
   );
 }
 
+// ---- Integrations constellation ----
+function AdvisersInsightFlow() {
+  return (
+    <section className="mm-section mm-insight-section" data-screen-label="Integrations">
+      <div className="mm-container">
+        <div className="mm-section-head center">
+          <span className="eyebrow">Integrated insights</span>
+          <h2>Client insights flow into the AI tools you already use and into the plans you write.</h2>
+          <p className="lead">Tell us what you use — we&apos;ll handle the connection.</p>
+        </div>
+        <div className="mm-insight mm-insight-full">
+          <IntegrationDiagram />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ---- Page ----
 export default function ForAdvisersPage() {
   return (
@@ -359,18 +378,19 @@ export default function ForAdvisersPage() {
       <Header currentPage="advisers" />
       <AdvisersHero />
       <Logos />
+      <Platform
+        eyebrow="What is MoneyPattern?"
+        heading="MoneyPattern™ is your client's story, the person behind the plan."
+        lead="It is the behavioral layer within your advice workflow — revealing the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
+        patternTab={<ClientStory />}
+      />
+      <AdvisersInsightFlow />
       <AdvisersImpactTrio />
-      <AdvisersSharedOutcomes />
       <KahnemanQuote />
+      <AdvisersSharedOutcomes />
       <AdvisersDecodePatterns />
       <AdvisersRisk />
       <AdvisersResults />
-      <Platform
-        eyebrow="How it works"
-        heading="MoneyPattern™ is your client's story, the person behind the plan."
-        lead="MoneyPattern is the behavioral layer within your advice workflow — revealing the patterns behind your client's financial decisions, so you advise the person, not just the portfolio."
-        patternTab={<ClientStory />}
-      />
       <AdvisersPricing />
       <Steps showCta={false} />
       <AdvisersCtaBand />

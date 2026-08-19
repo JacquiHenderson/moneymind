@@ -593,6 +593,11 @@ a:hover { color: var(--mm-blue-light); }
 .mm-split-visual { position: relative; border-radius: var(--radius-lg); border: 1px solid var(--border-hairline); min-height: 380px; padding: 36px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: var(--elev-2); }
 @media (max-width: 1100px) { .mm-split-grid { grid-template-columns: 1fr; gap: 40px; } .mm-split-reverse .mm-split-grid > *:first-child, .mm-split-reverse .mm-split-grid > *:last-child { order: 0; } .mm-split-copy h2 { font-size: 38px; } .mm-split-visual { min-height: 0; padding: 24px; } }
 
+/* Integrations constellation — full-width, no frame */
+.mm-insight { overflow: visible; padding: 0; background: none; border: 0; box-shadow: none; min-height: 0; }
+.mm-insight-full { max-width: 1000px; margin: 0 auto; }
+.mm-insight-full .rd-int-diagram { width: 100%; }
+
 /* FLS visual */
 .mm-split-visual.mm-fls { background: radial-gradient(80% 100% at 50% 0%, rgba(82, 152, 191, 0.08), transparent 70%), var(--mm-blue-navy); flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 20px; }
 .mm-fls-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border-hairline); }
@@ -1890,4 +1895,63 @@ a:hover { color: var(--mm-blue-light); }
   .pa-stats { grid-template-columns: 1fr; }
   .pa-optimise { grid-template-columns: 1fr; gap: 16px; }
   .pa-hero-band { grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   Request-demo Integrations section (rd-int-*)
+   Left copy + right radial "constellation" diagram.
+   ============================================================ */
+.rd-int { padding: 64px 0 32px; }
+.rd-int-grid { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 48px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.rd-int-copy .eyebrow { display: block; margin-bottom: 16px; }
+.rd-int-copy h2 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 40px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--fg-1); margin: 0; max-width: 15ch; text-wrap: balance; }
+.rd-int-copy p { font-size: 16px; line-height: 1.6; color: var(--fg-3); margin: 20px 0 0; max-width: 44ch; }
+
+/* Diagram — fixed aspect ratio, everything positioned by % */
+.rd-int-diagram { position: relative; width: 100%; aspect-ratio: 1168 / 760; }
+.rd-int-lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }
+.rd-int-lines line { stroke: rgba(120, 165, 200, 0.32); stroke-width: 1; vector-effect: non-scaling-stroke; }
+
+/* Corner category labels */
+.rd-int-label { position: absolute; transform: translateY(-50%); z-index: 1; font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-4); white-space: nowrap; }
+
+/* Logo pills — centered on their coordinate */
+.rd-int-logo {
+  position: absolute; transform: translate(-50%, -50%); z-index: 2;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: content-box; padding: 12px 18px;
+  background: var(--bg-raised); border: 1px solid var(--border-hairline); border-radius: 12px;
+  box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.7);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.rd-int-logo:hover { border-color: rgba(82, 152, 191, 0.5); }
+.rd-int-logo img { width: 100%; height: auto; display: block; }
+
+/* Central hub */
+.rd-int-hub {
+  position: absolute; transform: translate(-50%, -50%); z-index: 3;
+  width: 108px; height: 108px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  background: radial-gradient(circle at 50% 38%, rgba(82, 152, 191, 0.30), var(--bg-raised) 68%);
+  border: 1px solid rgba(82, 152, 191, 0.5);
+  box-shadow: 0 0 0 10px rgba(82, 152, 191, 0.05), 0 0 0 1px rgba(82, 152, 191, 0.18), 0 24px 60px -20px rgba(82, 152, 191, 0.6);
+}
+.rd-int-hub-icon { color: var(--mm-blue-light); display: inline-flex; }
+.rd-int-hub-label { font-size: 10.5px; font-weight: 600; color: var(--fg-1); line-height: 1.2; max-width: 78px; }
+
+/* Mobile fallback list — hidden on desktop */
+.rd-int-mobile { display: none; }
+
+@media (max-width: 900px) {
+  .rd-int { padding: 48px 0 24px; }
+  .rd-int-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+  .rd-int-copy h2, .rd-int-copy p { max-width: none; }
+  .rd-int-diagram { display: none; }
+  .rd-int-mobile { display: block; }
+  .rd-int-mgroup { margin-bottom: 22px; }
+  .rd-int-mlabel { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-4); margin-bottom: 12px; }
+  .rd-int-mlogos { display: flex; flex-wrap: wrap; gap: 10px; }
+  .rd-int-mlogo { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; background: var(--bg-raised); border: 1px solid var(--border-hairline); border-radius: 12px; }
+  .rd-int-mlogo img { max-height: 20px; max-width: 120px; display: block; }
 }
