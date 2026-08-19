@@ -20,7 +20,7 @@ export default function HelpPage() {
           </Link>
           <nav className="lp-nav" aria-label="Primary">
             <Link href="/for-advisors">Financial Advisors</Link>
-            <Link href="/for-fund-providers">Fund Providers</Link>
+            <Link href="/for-fund-providers">Enterprise Firms</Link>
             <Link href="/#security">Security</Link>
             <Link href="/regulatory-alignment">Compliance</Link>
           </nav>

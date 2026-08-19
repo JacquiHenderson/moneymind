@@ -1925,7 +1925,7 @@ a:hover { color: var(--mm-blue-light); }
 .rd-int-lines line { stroke: rgba(120, 165, 200, 0.32); stroke-width: 1; vector-effect: non-scaling-stroke; }
 
 /* Corner category labels */
-.rd-int-label { position: absolute; transform: translateY(-50%); z-index: 1; font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-4); white-space: nowrap; }
+.rd-int-label { position: absolute; transform: translateY(-50%); z-index: 1; font-family: var(--font-body); font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-1); white-space: nowrap; }
 
 /* Logo pills — centered on their coordinate */
 .rd-int-logo {

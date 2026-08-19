@@ -30,7 +30,7 @@ export default function Header({ currentPage = 'home' }) {
           </Link>
           <nav className="mm-nav" aria-label="Primary">
             <Link href="/for-advisors" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
-            <Link href="/for-fund-providers" className={currentPage === 'fund-providers' ? 'is-current' : ''} aria-current={currentPage === 'fund-providers' ? 'page' : undefined}>Fund Providers</Link>
+            <Link href="/for-fund-providers" className={currentPage === 'fund-providers' ? 'is-current' : ''} aria-current={currentPage === 'fund-providers' ? 'page' : undefined}>Enterprise Firms</Link>
             <a href={homeAnchor('#security')}>Security</a>
             <Link href="/regulatory-alignment" className={currentPage === 'compliance' ? 'is-current' : ''} aria-current={currentPage === 'compliance' ? 'page' : undefined}>Compliance</Link>
           </nav>
@@ -52,7 +52,7 @@ export default function Header({ currentPage = 'home' }) {
       {menuOpen && <div className="mm-mobile-overlay" onClick={close} aria-hidden="true" />}
       <nav className={`mm-mobile-nav${menuOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
         <Link href="/for-advisors" onClick={close} className={currentPage === 'advisers' ? 'is-current' : ''}>Financial Advisors</Link>
-        <Link href="/for-fund-providers" onClick={close} className={currentPage === 'fund-providers' ? 'is-current' : ''}>Fund Providers</Link>
+        <Link href="/for-fund-providers" onClick={close} className={currentPage === 'fund-providers' ? 'is-current' : ''}>Enterprise Firms</Link>
         <a href={homeAnchor('#security')} onClick={close}>Security</a>
         <Link href="/regulatory-alignment" onClick={close} className={currentPage === 'compliance' ? 'is-current' : ''}>Compliance</Link>
         <div className="mm-mobile-nav-actions">

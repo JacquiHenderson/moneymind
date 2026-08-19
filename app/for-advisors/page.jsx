@@ -360,8 +360,8 @@ function AdvisersInsightFlow() {
       <div className="mm-container">
         <div className="mm-section-head center">
           <span className="eyebrow">Integrated insights</span>
-          <h2>Client insights flow into the AI tools you already use and into the plans you write.</h2>
-          <p className="lead">Tell us what you use — we&apos;ll handle the connection.</p>
+          <h2>Client insights flow into the AI tools you already use — and into the plans you write.</h2>
+          <p className="lead">Tell us what tools you use — we&apos;ll handle the connection.</p>
         </div>
         <div className="mm-insight mm-insight-full">
           <IntegrationDiagram />
@@ -399,12 +399,12 @@ export default function ForAdvisersPage() {
         }
       />
       <AdvisersInsightFlow />
+      <AdvisersResults />
       <AdvisersImpactTrio />
       <KahnemanQuote />
       <AdvisersSharedOutcomes />
       <AdvisersDecodePatterns />
       <AdvisersRisk />
-      <AdvisersResults />
       <AdvisersPricing />
       <Steps showCta={false} />
       <AdvisersCtaBand />
