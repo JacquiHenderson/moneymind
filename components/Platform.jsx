@@ -7,7 +7,7 @@ import MoneyQuiz from './MoneyQuiz';
 // Copy shown between the tabs and the screen, per active tab.
 const TAB_COPY = {
   pattern:
-    "The MoneyPattern™ dashboard turns 34 behavioural measures — plus risk tolerance and capacity — into five clear read-outs: how your clients save, spend, plan for retirement, invest, and how they'll react when markets fall. Each one shows their strength, their roadblocks, and exactly how to optimise them. Everything a fact find can't tell you.",
+    "The MoneyPattern™ dashboard turns 34 behavioural measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them. Everything a fact find can't tell you.",
 };
 
 export default function Platform({
