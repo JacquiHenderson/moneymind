@@ -5,7 +5,7 @@ const TEAM = [
   {
     name: 'Jacqui Henderson',
     role: 'CEO & Founder',
-    bio: 'CEO and thought leader in fintech, with 20+ years across tech and wealth management. Her passion for behavioral science initiated MoneyMind.',
+    bio: 'Second time fintech CEO and founder, with 20+ years across tech and wealth management. Her passion for AI, tech, and behavioral science initiated MoneyMind.',
     img: '/assets/opt/team/jacqui-henderson',
     imgExt: 'jpg',
     pos: '50% 18%',
@@ -18,7 +18,7 @@ const TEAM = [
   {
     name: 'Ash Crick',
     role: 'CTO',
-    bio: 'A highly regarded fractional tech leader with three decades in enterprise platforms, AI, and startups — from major banks to pioneering enterprise AI.',
+    bio: 'A highly regarded tech leader with three decades in enterprise platforms, AI, and startups — from major banks to pioneering enterprise AI.',
     img: '/assets/opt/team/ash-crick',
     imgExt: 'png',
     pos: '50% 25%',
