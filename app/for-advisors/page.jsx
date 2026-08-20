@@ -48,27 +48,24 @@ function AdvisersHero() {
 const IMPACT_CARDS = [
   {
     icon: <IconChart size={18} />,
-    stat: '87%',
-    statLabel: 'of what really drives client decisions, a risk score misses',
-    title: 'Accelerate trust & differentiate at scale',
-    body: 'Know how each client saves, spends, invests, and reacts. Advice tailored to what drives clients emotionally earns trust faster — so they commit sooner and stay longer.',
-    source: 'Journal of Behavioral & Experimental Finance, 2024',
+    stat: '9 out of 10',
+    statLabel: 'Advisors say prospects who complete a MoneyMind profile go on to become clients. Not one reported losing them.',
+    title: 'Accelerate trust & advice acceptance',
+    body: 'Advice tailored to what drives clients emotionally earns trust faster — so they commit sooner and stay longer.',
   },
   {
     icon: <IconLink size={18} />,
-    stat: '7%',
-    statLabel: "of an advisor's time goes to organically winning new clients",
-    title: 'Turn top-of-funnel prospects into committed clients',
-    body: 'Ignite organic growth and turn every touchpoint into an entry point. One embed link across your website, portal, and socials — invites warm, engaged leads.',
-    source: 'Cerulli U.S. RIA Marketplace, 2025',
+    stat: '83%',
+    statLabel: 'of advisors say MoneyMind helps them spot which prospects are a good fit — sooner. Saving hours on wrong fits.',
+    title: 'Qualify the right prospects earlier',
+    body: "Know how a prospect thinks before you invest hours into them, so your time goes to the clients you'll do your best work with.",
   },
   {
     icon: <IconBrain size={18} />,
-    stat: '27%',
-    statLabel: "of heirs keep their parents' advisor — the rest walk",
+    stat: '50%',
+    statLabel: 'of advisors use MoneyMind to open a conversation with the next generation. The other half plan to.',
     title: 'Keep clients across generations',
     body: "The $84 trillion wealth transfer is a retention cliff. Understand the whole family's dynamics, so the relationship transfers before the wealth does.",
-    source: 'Cerulli, 2025',
   },
 ];
 
@@ -79,7 +76,7 @@ function AdvisersImpactTrio() {
       <div className="mm-container">
         <div className="mm-section-head">
           <span className="eyebrow">The impact</span>
-          <h2>What changes when you use MoneyMind.</h2>
+          <h2>The edge advisors get with MoneyMind.</h2>
           <p className="lead">Financial decisions are shaped by how clients think, not just what they hold in a balance sheet.</p>
         </div>
         <div className="mm-steps mm-steps-eyebrowless">
