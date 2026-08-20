@@ -5,6 +5,7 @@ import Logos from '../../components/Logos';
 import Steps from '../../components/Steps';
 import DemoForm from '../../components/DemoForm';
 import DemoTestimonials from '../../components/DemoTestimonials';
+import ImpactTrio from '../../components/ImpactTrio';
 
 export const metadata = pageMeta({
   title: 'Request a demo — MoneyMind',
@@ -70,6 +71,8 @@ export default function RequestDemoPage() {
       </section>
 
       <Logos />
+
+      <ImpactTrio showLead={false} />
 
       {/* Testimonials */}
       <section className="rd-testimonials">

@@ -61,9 +61,28 @@ export default function Team() {
   return (
     <section className="mm-section mm-team" id="team" data-screen-label="Team">
       <div className="mm-container">
-        <div className="mm-section-head center">
-          <span className="eyebrow">Our team</span>
+        <div className="mm-section-head">
+          <span className="eyebrow">About</span>
           <h2>Passionate. Dedicated. Thought leaders.</h2>
+        </div>
+
+        <div className="mm-team-story">
+          <span className="eyebrow">Our story</span>
+          <p>
+            Financial advisory has spent decades getting better at the numbers and almost no time
+            on the person holding them. Behavioral finance has lived in journals, not in client
+            meetings. Risk questionnaires produce a score but miss 87% of what really drives client
+            decisions.
+          </p>
+          <p>
+            MoneyMind&apos;s mission is to create better financial mindsets, for every life.
+            Equipping advisors with a tool that decodes how people subconsciously make financial
+            decisions — and helps them make better ones.
+          </p>
+          <p>
+            When a generation understands its own money patterns, the next one will inherit
+            something different.
+          </p>
         </div>
 
         <div className="mm-team-grid">

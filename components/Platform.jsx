@@ -11,13 +11,13 @@ const TAB_COPY = {
   profile:
     "The MoneyPattern questionnaire takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
   'pre-meeting':
-    "MoneyMind insights flow straight into the AI tools you already use. The numbers, the meeting notes, and your client's financial psychology land in one brief — so your agenda is built on the full picture, not just what they own. The whole client story, before you walk in.",
+    "MoneyMind insights flow straight into the AI tools you already use. The numbers, the meeting notes, and your client's financial psychology land into one brief — so your agenda is built on the full picture, not just what they own. The whole client story, before you walk in.",
   'ai-plans':
     "MoneyMind insights also flow into your financial plans. The numbers, the strategies, and your client's behavioral patterns come together — so the plan is tailored to their psychology, not just what the projections assume. The human behind the plan.",
   personas:
     "MoneyMind maps every client to one of seven archetypes. Each cohort carries behavioral traits, how to optimise, the words that land, and how common it is. Segment your whole client base by how they think, not just what they're worth — then design your comms for each one.",
   embed:
-    "Embed MoneyMind anywhere — your website, your marketing, social, or the client portal. Run the full questionnaire or a single section. Every touchpoint becomes top of funnel, and every lead arrives warm, engaged, and already telling you how they think.",
+    "Embed MoneyMind anywhere — your website, your marketing, social, or your client portal. Run the full questionnaire or a single section. Every touchpoint becomes top of funnel, and every lead arrives warm, engaged, and already telling you how they think.",
 };
 
 export default function Platform({
