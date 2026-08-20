@@ -31,8 +31,9 @@ export default function Header({ currentPage = 'home' }) {
           <nav className="mm-nav" aria-label="Primary">
             <Link href="/for-advisors" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
             <Link href="/for-fund-providers" className={currentPage === 'fund-providers' ? 'is-current' : ''} aria-current={currentPage === 'fund-providers' ? 'page' : undefined}>Enterprise Firms</Link>
-            <a href={homeAnchor('#security')}>Security</a>
             <Link href="/regulatory-alignment" className={currentPage === 'compliance' ? 'is-current' : ''} aria-current={currentPage === 'compliance' ? 'page' : undefined}>Compliance</Link>
+            <a href={homeAnchor('#security')}>Security</a>
+            <a href={homeAnchor('#team')}>About</a>
           </nav>
           <div className="mm-nav-actions">
             <a href="https://auth.moneymindprofile.com/" className="mm-btn mm-btn-ghost">Log in</a>
@@ -53,8 +54,9 @@ export default function Header({ currentPage = 'home' }) {
       <nav className={`mm-mobile-nav${menuOpen ? ' is-open' : ''}`} aria-label="Mobile navigation">
         <Link href="/for-advisors" onClick={close} className={currentPage === 'advisers' ? 'is-current' : ''}>Financial Advisors</Link>
         <Link href="/for-fund-providers" onClick={close} className={currentPage === 'fund-providers' ? 'is-current' : ''}>Enterprise Firms</Link>
-        <a href={homeAnchor('#security')} onClick={close}>Security</a>
         <Link href="/regulatory-alignment" onClick={close} className={currentPage === 'compliance' ? 'is-current' : ''}>Compliance</Link>
+        <a href={homeAnchor('#security')} onClick={close}>Security</a>
+        <a href={homeAnchor('#team')} onClick={close}>About</a>
         <div className="mm-mobile-nav-actions">
           <a href="https://auth.moneymindprofile.com/" className="mm-btn mm-btn-ghost mm-btn-lg" onClick={close}>Log in</a>
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg" onClick={close}>Start 14-day trial</a>

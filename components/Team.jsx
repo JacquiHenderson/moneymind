@@ -70,14 +70,14 @@ export default function Team() {
           <span className="eyebrow">Our story</span>
           <p>
             Financial advisory has spent decades getting better at the numbers and almost no time
-            on the person holding them. Behavioral finance has lived in journals, rarely in client
-            meetings. Risk questionnaires produce a score but miss 87% of what really drives client
-            financial decisions.
+            on the mindset holding them. Behavioral finance has lived in journals, but rarely in
+            client meetings. Risk questionnaires produce a score but miss 87% of what really drives
+            client financial decisions.
           </p>
           <p>
             MoneyMind&apos;s mission is to create better financial mindsets, for every life.
-            Equipping advisors with a tool that decodes how people subconsciously make financial
-            decisions — and helps them make better ones.
+            Equipping advisors with a tool that decodes how people make financial decisions
+            subconsciously — so they can help them make better ones.
           </p>
           <p>
             When a generation understands its own money patterns, the next one will inherit

@@ -31,6 +31,7 @@ function AdvisersHero() {
         <p className="mm-sub-hero-lead">
           MoneyMind™ maps the financial behaviors behind — how your
           client&apos;s save, spend, plan for retirement, respond to markets, and invest.
+          Everything risk profile questionnaires miss.
         </p>
         <p className="mm-sub-hero-reveal">
           Your clients have always had a MoneyPattern.

@@ -86,8 +86,9 @@ export default function RegulatoryAlignmentPage() {
           <nav className="lp-nav" aria-label="Primary">
             <Link href="/for-advisors">Financial Advisors</Link>
             <Link href="/for-fund-providers">Enterprise Firms</Link>
-            <Link href="/#security">Security</Link>
             <Link href="/regulatory-alignment" aria-current="page">Compliance</Link>
+            <Link href="/#security">Security</Link>
+            <Link href="/#team">About</Link>
           </nav>
           <Link href="/request-demo" className="lp-cta">Request demo</Link>
         </div>

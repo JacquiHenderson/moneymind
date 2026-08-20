@@ -13,7 +13,7 @@ function FundProvidersHero() {
     <section className="mm-sub-hero" data-screen-label="Fund providers hero">
       <HeroCurves />
       <div className="mm-sub-hero-inner">
-        <span className="eyebrow mm-sub-hero-eyebrow">Built for fund providers</span>
+        <span className="eyebrow mm-sub-hero-eyebrow">Built for enterprise</span>
         <h1>
           The new standard of<br/>
           understanding <em>investors.</em>

@@ -139,7 +139,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -1090,7 +1090,7 @@ a:hover { color: var(--mm-blue-light); }
 /* ============================================================
    REGULATORY ALIGNMENT MATRIX  (/regulatory-alignment)
    ============================================================ */
-.ram-page { max-width: 1080px; margin: 0 auto; padding: 72px 32px 120px; }
+.ram-page { max-width: 1440px; margin: 0 auto; padding: 72px 80px 120px; }
 .ram-page .lp-breadcrumbs { margin-bottom: 28px; }
 
 /* Hero */
@@ -1099,15 +1099,6 @@ a:hover { color: var(--mm-blue-light); }
   padding: 40px 0 48px;
   margin-bottom: 8px;
   border-bottom: 1px solid var(--border-hairline);
-}
-.ram-hero::before {
-  content: "";
-  position: absolute;
-  inset: -120px -200px auto -200px;
-  height: 380px;
-  background: radial-gradient(60% 80% at 20% 0%, rgba(82, 152, 191, 0.16), transparent 70%);
-  pointer-events: none;
-  z-index: -1;
 }
 .ram-title {
   font-family: var(--font-display);
