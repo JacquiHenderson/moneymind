@@ -7,11 +7,11 @@ const FAQS = [
   },
   {
     q: 'What is behavioral finance profiling?',
-    a: 'Behavioral finance profiling maps the psychology and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
+    a: 'Behavioral finance profiling is a client behavioral assessment that maps the psychology and biases behind a person\'s financial decisions, rather than just their assets or stated risk score. MoneyMind\'s MoneyPattern™ captures this across five dimensions — saving, spending, retirement planning, market response, and investment.',
   },
   {
     q: 'How does MoneyMind work?',
-    a: 'A client completes a five-minute profile (Quiz). MoneyMind turns it into their MoneyPattern™ and persona archetype, surfacing their superpowers, roadblocks, and risk behaviors. Advisors and clients access the insights through a dashboard and report download.',
+    a: 'A client completes a five-minute behavioral assessment (Quiz). MoneyMind turns this into their MoneyPattern™ and persona archetype, surfacing their superpowers, roadblocks, and risk behaviors. Advisors and clients access the insights through a dashboard and report download.',
   },
   {
     q: 'How is MoneyMind different from a risk-profile questionnaire?',

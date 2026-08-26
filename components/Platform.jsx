@@ -9,7 +9,7 @@ const TAB_COPY = {
   pattern:
     "The MoneyPattern™ dashboard turns 34 behavioral measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them.",
   profile:
-    "The MoneyPattern profile takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
+    "The behavioral assessment takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
   'pre-meeting':
     "MoneyMind insights flow straight into the AI tools you already use. The numbers, the meeting notes, and your client's financial psychology land into one brief — so your agenda is built on the full picture, not just what they own. The whole client story, before you walk in.",
   'ai-plans':

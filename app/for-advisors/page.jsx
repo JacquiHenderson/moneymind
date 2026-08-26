@@ -25,7 +25,7 @@ function AdvisersHero() {
       <div className="mm-sub-hero-inner">
         <span className="eyebrow mm-sub-hero-eyebrow">Built for financial advisors</span>
         <h1>
-          The AI behavioral finance layer<br/>
+          The AI behavioral intelligence layer<br/>
           for <em>modern advice.</em>
         </h1>
         <p className="mm-sub-hero-lead">
