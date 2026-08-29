@@ -26,6 +26,14 @@ const IconArchetypes = () => (
     <path d="M16 5.2a3.2 3.2 0 0 1 0 5.8M17.5 20a5.5 5.5 0 0 0-3-4.9" />
   </svg>
 );
+const IconCouple = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="7" cy="8" r="2.6" />
+    <circle cx="17" cy="8" r="2.6" />
+    <path d="M2.5 20a4.5 4.5 0 0 1 9 0M12.5 20a4.5 4.5 0 0 1 9 0" />
+    <path d="M12 12.5v4" />
+  </svg>
+);
 
 const GUIDES = [
   {
@@ -45,6 +53,12 @@ const GUIDES = [
     title: 'Send Profile',
     desc: "Send and schedule a client's profile — choose which sections go out at each stage of your advice process.",
     icon: <IconSend />,
+  },
+  {
+    href: '/couple-dashboard',
+    title: 'Couple Dashboard',
+    desc: 'Profile each client separately, then join the two results into a side-by-side comparison — alignments and differences described neutrally, not judged, so couples get curious about each other and you walk in with the agenda already written.',
+    icon: <IconCouple />,
   },
   {
     href: '/embed-link',

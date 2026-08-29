@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { pageMeta } from '../../lib/seo';
-import DiscoveryWorkflow from '../../components/DiscoveryWorkflow';
 
 export const metadata = pageMeta({
   title: 'Send your first profile — MoneyMind',
@@ -46,25 +45,25 @@ export default function SendProfilePage() {
         <section className="sp-step">
           <span className="sp-step-label">Step 1</span>
           <p className="sp-step-copy">
-            Send the Profile to your client&apos;s email with one click. Or, under More
-            Actions, choose Copy Profile Link to add it to an email manually, or Schedule
-            Profile to send it at a later date.
+            Send a Profile to your client&apos;s email with one click. Or Copy Link to
+            grab the profile link and send it manually to your client.
           </p>
           <div className="sp-shot">
-            <div className="sp-shot-frame">
+            <div className="sp-shot-frame sp-shot-frame--wide">
               <picture>
-                <source srcSet="/assets/opt/product/send-profile-step1.avif" type="image/avif" />
-                <source srcSet="/assets/opt/product/send-profile-step1.webp" type="image/webp" />
+                <source srcSet="/assets/opt/product/send-profile-step1.avif?v=2" type="image/avif" />
+                <source srcSet="/assets/opt/product/send-profile-step1.webp?v=2" type="image/webp" />
                 <img
-                  src="/assets/opt/product/send-profile-step1.png"
-                  alt="MoneyMind client detail panel showing Send Profile and More Actions, with the Schedule Profile and Copy Profile Link options"
-                  width="900"
-                  height="1054"
+                  src="/assets/opt/product/send-profile-step1.png?v=2"
+                  alt="MoneyMind client detail panel with the Send Profile and Copy Link buttons"
+                  width="1600"
+                  height="860"
                   loading="lazy"
                   decoding="async"
                 />
               </picture>
-              <span className="sp-shot-hl" aria-hidden="true" />
+              <span className="sp-hl" style={{ left: '70%', top: '93.6%', width: '9%', height: '5.4%' }} aria-hidden="true" />
+              <span className="sp-hl" style={{ left: '79.2%', top: '93.6%', width: '8.7%', height: '5.4%' }} aria-hidden="true" />
             </div>
           </div>
         </section>
@@ -72,28 +71,70 @@ export default function SendProfilePage() {
         <section className="sp-step">
           <span className="sp-step-label">Step 2</span>
           <p className="sp-step-copy">
-            We&apos;ve built a best-practice workflow so you know which sections to send
-            when, what each one captures, and how long each takes your client to complete.
+            Select, order, and send profile sections. As the client completes a section,
+            they&apos;ll be asked to continue to the next, depending on how many sections
+            you&apos;ve chosen to send out.
           </p>
           <p className="sp-step-copy sp-step-copy--next">
-            Send different sections across your Pre-Discovery, Risk Profile, and Discovery
-            Meeting stages.
+            Now means the profile will be sent to the client&apos;s email immediately.
           </p>
-          <div className="sp-screen" role="img" aria-label="MoneyMind client dashboard with the Discovery Workflow scheduling popup open">
-          <picture className="sp-screen-bg">
-            <source srcSet="/assets/opt/product/send-profile-bg.avif" type="image/avif" />
-            <source srcSet="/assets/opt/product/send-profile-bg.webp" type="image/webp" />
-            <img
-              src="/assets/opt/product/send-profile-bg.png"
-              alt=""
-              width="1600"
-              height="806"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-          <div className="sp-screen-scrim" aria-hidden="true" />
-          <DiscoveryWorkflow />
+          <div className="sp-tip">
+            <span className="sp-tip-label">Best practice</span>
+            <ul>
+              <li>
+                Order and send the Financial Decision Making section first as a starting
+                point — it has 24 questions that give you a good picture of your client.
+              </li>
+              <li>
+                Order and send the Financial Foundations and Risk Tolerance &amp; Risk
+                Capacity sections next; align this to when you usually send a risk profile
+                questionnaire in your advice workflow.
+              </li>
+              <li>
+                Risk Capacity will automatically calculate if you have your client&apos;s
+                Employment, Education, and Financial Information in MoneyMind.
+              </li>
+            </ul>
+          </div>
+          <div className="sp-shot">
+            <div className="sp-shot-frame sp-shot-frame--med">
+              <picture>
+                <source srcSet="/assets/opt/product/send-profile-step2.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/send-profile-step2.webp" type="image/webp" />
+                <img
+                  src="/assets/opt/product/send-profile-step2.png"
+                  alt="MoneyMind Select & Order Sections dialog, with a Send field set to Now and each profile section toggled on with an estimated completion time"
+                  width="1200"
+                  height="1064"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section className="sp-step">
+          <span className="sp-step-label">Step 3</span>
+          <p className="sp-step-copy">
+            Schedule the profile sections to go out at a specific time — click the
+            calendar icon up top.
+          </p>
+          <div className="sp-shot">
+            <div className="sp-shot-frame sp-shot-frame--med">
+              <picture>
+                <source srcSet="/assets/opt/product/send-profile-step3.avif?v=2" type="image/avif" />
+                <source srcSet="/assets/opt/product/send-profile-step3.webp?v=2" type="image/webp" />
+                <img
+                  src="/assets/opt/product/send-profile-step3.png?v=2"
+                  alt="MoneyMind Select & Order Sections dialog with the date and time picker open, scheduling the send for a specific date and time"
+                  width="1200"
+                  height="1189"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           </div>
         </section>
       </main>
