@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { IconBrain, IconUsers, IconCompass, IconLink, IconSparkle, IconAudit } from './Icons';
+import { IconBrain, IconUsers, IconCompass, IconLink, IconSparkle, IconAudit, IconCouple } from './Icons';
 import Personas from './Personas';
 import MoneyQuiz from './MoneyQuiz';
 
@@ -8,6 +8,8 @@ import MoneyQuiz from './MoneyQuiz';
 const TAB_COPY = {
   pattern:
     "The MoneyPattern™ dashboard turns 34 behavioral measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them.",
+  couples:
+    "MoneyMind links couples into a single profile. Each partner is assessed separately, then the two results sit side by side. Alignments and differences are described neutrally, not judged — so couples get curious about each other, and the adviser walks in with the agenda already written.",
   profile:
     "The behavioral assessment takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
   'pre-meeting':
@@ -25,6 +27,7 @@ export default function Platform({
   heading = 'Everything you need to know about your client, in one place.',
   lead = 'Turn a five-minute profile into insights that will transform every client connection.',
   patternTab = null,
+  couplesTab = null,
   preMeetingTab = null,
   aiPlansTab = null,
 }) {
@@ -32,6 +35,7 @@ export default function Platform({
 
   const TABS = [
     { id: 'pattern',  label: 'MoneyPattern™', icon: <IconBrain size={16} /> },
+    ...(couplesTab ? [{ id: 'couples', label: 'Couples', icon: <IconCouple size={16} /> }] : []),
     { id: 'profile',  label: 'Profile',       icon: <IconUsers size={16} /> },
     ...(preMeetingTab ? [{ id: 'pre-meeting', label: 'AI Meeting Prep', icon: <IconAudit size={16} /> }] : []),
     ...(aiPlansTab ? [{ id: 'ai-plans', label: 'AI Plans', icon: <IconSparkle size={16} /> }] : []),
@@ -75,7 +79,9 @@ export default function Platform({
               <span className="mm-platform-dot"></span>
               <span className="mm-platform-dot"></span>
             </div>
-            {tab === 'personas' ? (
+            {tab === 'couples' ? (
+              couplesTab
+            ) : tab === 'personas' ? (
               <Personas />
             ) : tab === 'pre-meeting' ? (
               preMeetingTab

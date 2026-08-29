@@ -326,6 +326,21 @@ export default function ForAdvisersPage() {
         heading="MoneyPattern™ is your client's story, the person behind the plan."
         lead="Reveal the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
         patternTab={<ClientStory />}
+        couplesTab={
+          <picture className="mm-platform-pic">
+            <source srcSet="/assets/opt/product/platform-couples.avif" type="image/avif" />
+            <source srcSet="/assets/opt/product/platform-couples.webp" type="image/webp" />
+            <img
+              className="mm-platform-img"
+              src="/assets/opt/product/platform-couples.png"
+              alt="MoneyMind joint dashboard comparing two partners side by side — an alignment score, combined financial snapshot, and behavioral traits marked aligned or different"
+              width="1600"
+              height="854"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        }
         preMeetingTab={
           <div className="mm-aiplan">
             <img
