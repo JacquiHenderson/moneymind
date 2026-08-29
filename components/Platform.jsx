@@ -9,7 +9,7 @@ const TAB_COPY = {
   pattern:
     "The MoneyPattern™ dashboard turns 34 behavioral measures — plus risk tolerance and capacity — into five read-outs: how your clients save, spend, plan, invest, and react when markets fall. Each shows their strength, their roadblocks, and how to optimise them.",
   couples:
-    "MoneyMind links couples into a single profile. Each partner is assessed separately, then the two results sit side by side. Alignments and differences are described neutrally, not judged — so couples get curious about each other, and the adviser walks in with the agenda already written.",
+    "MoneyMind links couples into a single profile. The two results sit side by side for comparison. Alignments and differences are described neutrally, not judged — so couples get curious about each other, and the adviser walks in with the agenda already written.",
   profile:
     "The behavioral assessment takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
   'pre-meeting':
