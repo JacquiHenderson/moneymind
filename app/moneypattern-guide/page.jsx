@@ -36,7 +36,7 @@ export default function BehavioralDeskPage() {
         </Link>
         <section className="bd-hero">
           <span className="lp-eyebrow">Behavioral field guide</span>
-          <h1 className="bd-title">Be your own <span className="bd-accent">Chief Behavioral&nbsp;Officer</span>.</h1>
+          <h1 className="bd-title">Become your own <span className="bd-accent">Chief Behavioral&nbsp;Officer</span>.</h1>
           <p className="bd-standfirst">
             Learn every construct MoneyMind measures — the pattern, each domain, and their meaning.
           </p>
