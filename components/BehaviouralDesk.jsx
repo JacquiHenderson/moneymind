@@ -1,70 +1,96 @@
 'use client';
 import { useState, useMemo, useRef, useEffect } from 'react';
 
-// domain | name | source instrument | stops [left, mid, right] | type (dir/cal/pref) | target stop index (or null) | verbatim meaning
+// domain | name | source instrument | stops [left, mid, right] | type (dir/cal/pref) | target stop index (or null) | verbatim meaning | description
 const DATA = [
   // Saving
-  ['Saving', 'Discipline', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Ability to delay gratification for future benefit. Strong, consistent self-control sustains saving habits (Strong) vs frequent impulsive decisions undermine saving plans (Building).'],
-  ['Saving', 'Action Orientation', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Decisive, translates saving intentions into action without hesitation (Strong) vs delays or avoids saving decisions despite knowing what to do (Building).'],
-  ['Saving', 'Financial Acumen', 'Financial Foundations', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Strong across financial capability, confidence, knowledge, and experience (Strong) vs limited financial acumen across capability, confidence, knowledge, and experience (Building).'],
-  ['Saving', 'Time Orientation', 'Financial Decision Making', ['Present-Bias', 'Moderate', 'Future-Bias'], 'dir', 2,
-    'Naturally defers gratification for greater future saving reward (Future-Bias) vs immediate rewards consistently override future saving goals and under-saving (Present-Bias).'],
-  ['Saving', 'Abundance', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Approach money from sufficiency, which frees thinking for confident, proactive saving decisions (Strong) vs scarcity mindset narrows saving decisions and overlooks existing resources (Building).'],
+  ['Saving', 'Discipline', 'Financial Decision Making', ['Impulsive', 'Sometimes Disciplined', 'Disciplined'], 'dir', 2,
+    'Ability to delay gratification for future benefit. Strong, consistent self-control sustains saving habits (Disciplined) vs frequent impulsive decisions undermine saving plans (Impulsive).',
+    'The ability to resist impulses and consistently follow through on financial plans.'],
+  ['Saving', 'Action Orientation', 'Financial Decision Making', ['Deliberative', 'Balanced', 'Action-Oriented'], 'dir', 2,
+    'Decisive, translates saving intentions into action without hesitation (Action-Oriented) vs delays or avoids saving decisions despite knowing what to do (Deliberative).',
+    'The tendency to consider and delay financial decisions or move readily into action.'],
+  ['Saving', 'Financial Acumen', 'Financial Foundations', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'Strong across financial capability, confidence, knowledge, and experience (Strong) vs limited financial acumen across capability, confidence, knowledge, and experience (Building).',
+    'Overall financial preparedness across practical habits, confidence, knowledge and investment experience.'],
+  ['Saving', 'Time Orientation', 'Financial Decision Making', ['Present-Bias', 'Balanced', 'Future-Bias'], 'dir', 2,
+    'Naturally defers gratification for greater future saving reward (Future-Bias) vs immediate rewards consistently override future saving goals and under-saving (Present-Bias).',
+    'The balance between prioritising immediate rewards and future financial outcomes.'],
+  ['Saving', 'Abundance vs Scarcity', 'Financial Decision Making', ['Scarcity', 'Balanced', 'Abundance'], 'dir', 2,
+    'Approach money from sufficiency, which frees thinking for confident, proactive saving decisions (Abundance) vs scarcity mindset narrows saving decisions and overlooks existing resources (Scarcity).',
+    'The extent to which financial resources and opportunities feel constrained or available.'],
 
   // Spending
-  ['Spending', 'Impulse Control', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Strong self-control when spending opportunities arise, and social spending pressure has little effect (Strong) vs frequent reactive purchasing with saving plan abandonment (Building).'],
+  ['Spending', 'Impulse Control', 'Financial Decision Making', ['Impulsive', 'Sometimes Disciplined', 'Disciplined'], 'dir', 2,
+    'Strong self-control when spending opportunities arise, and social spending pressure has little effect (Disciplined) vs frequent reactive purchasing with saving plan abandonment (Impulsive).',
+    'The ability to resist impulses and consistently follow through on financial plans.'],
   ['Spending', 'Spending Attitude', 'Financial Decision Making', ['Underspend', 'Balanced', 'Overspend'], 'cal', 1,
-    'Holds back from spending, under-invests in life quality, including on purchases that would benefit them (Underspend) vs spends more than intended - compulsive-buying, lifestyle inflation absorbing income, debt accumulation (Overspend).'],
-  ['Spending', 'Emotional Spending', 'Financial Decision Making', ['Frequent', 'Balanced', 'Occasional'], 'dir', 2,
-    'Emotional state rarely drives unplanned expenditure, strong emotional regulation (Occasional) vs spending is a primary coping mechanism for emotional regulation (Frequent).'],
+    'Holds back from spending, under-invests in life quality, including on purchases that would benefit them (Underspend) vs spends more than intended - compulsive-buying, lifestyle inflation absorbing income, debt accumulation (Overspend).',
+    'The tendency to experience spending as uncomfortable or pleasurable, influencing how readily money is spent.'],
+  ['Spending', 'Emotional Spending', 'Financial Decision Making', ['Frequent', 'Occasional', 'Rare'], 'dir', 2,
+    'Emotional state rarely drives unplanned expenditure, strong emotional regulation (Rare) vs spending is a primary coping mechanism for emotional regulation (Frequent).',
+    'How often spending is used to manage stress, anxiety or low mood.'],
 
   // Retirement Planning
-  ['Retirement Planning', 'Future Self-Connection', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Strong, vivid connection to future-self, anchors retirement planning in concrete goals and vision (Strong) vs weak connection to future self makes retirement feel abstract and distant (Building).'],
-  ['Retirement Planning', 'Optimism', 'Financial Decision Making', ['Pessimistic', 'Optimistic', 'Realistic'], 'cal', 2,
-    'Well-calibrated optimism drives strong, sustained retirement planning (Realistic) vs an overly optimistic (too ambitious) or pessimistic (weak belief) negatively impacts retirement (Optimistic & Pessimistic).'],
-  ['Retirement Planning', 'Return Expectations', 'Financial Foundations', ['Unrealistic', 'Approximate', 'Realistic'], 'dir', 2,
-    'Realistic return expectations aligned with long-term averages support sound retirement projections (Realistic) vs unrealistic return expectations (below 2% or above 12%) distort retirement projections (Unrealistic).'],
-  ['Retirement Planning', 'Financial Acumen', 'Financial Foundations', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Strong financial capability, confidence, and knowledge support informed retirement decisions (Strong) vs limited financial acumen weakens confidence in retirement decisions (Building).'],
-  ['Retirement Planning', 'Certainty', 'Financial Decision Making', ['Certainty-Seeking', 'Growth-Seeking', 'Balanced'], 'pref', null,
-    'Strong preference for income certainty, knowing what arrives each month, matters more than potential upside (Certainty-Seeking) vs low preference for income certainty, comfortable with growth and market variability (Growth-Seeking).'],
-  ['Retirement Planning', 'Legacy Orientation', 'Financial Foundations', ['Present-Focused', '', 'Legacy-Focused'], 'pref', null,
-    'Strongly legacy-motivation in retirement. Leave a legacy pool (Legacy-Focused) vs present-focused motivation in retirement. Spending over leaving a legacy (Present-Focused).'],
+  ['Retirement Planning', 'Future Self-Connection', 'Financial Decision Making', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'Strong, vivid connection to future-self, anchors retirement planning in concrete goals and vision (Strong) vs weak connection to future self makes retirement feel abstract and distant (Building).',
+    'How strongly someone connects with their future self and considers their future needs in today’s decisions.'],
+  ['Retirement Planning', 'Optimism', 'Financial Decision Making', ['Pessimistic', 'Realistic', 'Optimistic'], 'cal', 1,
+    'Well-calibrated optimism drives strong, sustained retirement planning (Realistic) vs an overly optimistic (too ambitious) or pessimistic (weak belief) negatively impacts retirement (Optimistic).',
+    'The tendency to expect negative, realistic or positive future outcomes.'],
+  ['Retirement Planning', 'Return Expectations', 'Financial Decision Making', ['Unrealistic', 'Approximate', 'Realistic'], 'dir', 2,
+    'Realistic return expectations aligned with long-term averages support sound retirement projections (Realistic) vs unrealistic return expectations (below 2% or above 12%) distort retirement projections (Unrealistic).',
+    'How closely expected investment returns align with realistic long-term outcomes.'],
+  ['Retirement Planning', 'Financial Acumen', 'Financial Foundations', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'Strong financial capability, confidence, and knowledge support informed retirement decisions (Strong) vs limited financial acumen weakens confidence in retirement decisions (Building).',
+    'Understanding of core financial concepts such as compound interest, inflation and diversification.'],
+  ['Retirement Planning', 'Certainty', 'Financial Decision Making', ['Certainty-Seeking', 'Balanced', 'Growth-Seeking'], 'pref', null,
+    'Strong preference for income certainty, knowing what arrives each month, matters more than potential upside (Certainty-Seeking) vs low preference for income certainty, comfortable with growth and market variability (Growth-Seeking).',
+    'The preference for predictable financial outcomes versus accepting variability for potential growth.'],
+  ['Retirement Planning', 'Life vs Legacy', 'Financial Decision Making', ['Live Life', 'Balanced', 'Leave Legacy'], 'pref', null,
+    'Strongly legacy-motivation in retirement. Leave a legacy pool (Leave Legacy) vs present-focused motivation in retirement. Spending over leaving a legacy (Live Life).',
+    'The balance between using wealth to enjoy life and preserving it for future generations.'],
 
   // Market Response
-  ['Market Response', 'Discipline', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Strong discipline under market pressure prevents panic-driven decisions (Strong) vs limited self-control under market pressure increases risk of panic-driven selling (Building).'],
-  ['Market Response', 'Financial Anxiety', 'Financial Foundations', ['High-Anxiety', 'Moderate-Anxiety', 'Low-Anxiety'], 'dir', 2,
-    'low anxiety allows clear-headed decision-making without emotional interference (Low-Anxiety) vs high anxiety impairs sleep, mood, and financial decision-making capacity (High-Anxiety).'],
-  ['Market Response', 'Abundance', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Abundance mindset prevents market losses from feeling existentially threatening (Strong) vs scarcity mindset amplifies emotional weight of market losses and may trigger panic (Building).'],
-  ['Market Response', 'Resilience', 'Financial Foundations', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'High capacity with strong recovery confidence across financial challenges (Strong) vs setbacks severely impair financial functioning and recovery confidence is low (Building).'],
-  ['Market Response', 'Optimism', 'Financial Decision Making', ['Pessimistic', 'Optimistic', 'Realistic'], 'cal', 2,
-    'Well-calibrated optimism maintains rational market perspective (Realistic) vs an overly optimistic (ignoring red flags) or pessimistic (amplified threats) negatively impacts response (Optimistic & Pessimistic).'],
-  ['Market Response', 'Investment Experience', 'Financial Foundations', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Experience with market volatility provides tested emotional resilience (Strong) vs limited experience with market volatility means untested reactions to real losses (Building).'],
-  ['Market Response', 'Overconfidence', 'Financial Foundations', ['Sub-Optimal', 'Moderate', 'Optimal'], 'cal', 2,
-    'Reads market signals with well-calibrated confidence, responds to information without over-conviction or dismissing contrary evidence (Optimal) vs strong conviction about market direction causes dismissal of contrary signals and over-trading on noise (Sub-Optimal).'],
+  ['Market Response', 'Discipline', 'Financial Decision Making', ['Impulsive', 'Sometimes Disciplined', 'Disciplined'], 'dir', 2,
+    'Strong discipline under market pressure prevents panic-driven decisions (Disciplined) vs limited self-control under market pressure increases risk of panic-driven selling (Impulsive).',
+    'The ability to resist impulses and consistently follow through on financial plans.'],
+  ['Market Response', 'Financial Anxiety', 'Financial Decision Making', ['High-Anxiety', 'Moderate-Anxiety', 'Low-Anxiety'], 'dir', 2,
+    'low anxiety allows clear-headed decision-making without emotional interference (Low-Anxiety) vs high anxiety impairs sleep, mood, and financial decision-making capacity (High-Anxiety).',
+    'The degree to which financial worry affects wellbeing, attention and decision-making.'],
+  ['Market Response', 'Abundance vs Scarcity', 'Financial Decision Making', ['Scarcity', 'Balanced', 'Abundance'], 'dir', 2,
+    'Abundance mindset prevents market losses from feeling existentially threatening (Abundance) vs scarcity mindset amplifies emotional weight of market losses and may trigger panic (Scarcity).',
+    'The extent to which financial resources and opportunities feel constrained or available.'],
+  ['Market Response', 'Resilience', 'Financial Decision Making', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'High capacity with strong recovery confidence across financial challenges (Strong) vs setbacks severely impair financial functioning and recovery confidence is low (Building).',
+    'The ability to cope with financial stress, recover from setbacks and remain effective under pressure.'],
+  ['Market Response', 'Optimism', 'Financial Decision Making', ['Pessimistic', 'Realistic', 'Optimistic'], 'cal', 1,
+    'Well-calibrated optimism maintains rational market perspective (Realistic) vs an overly optimistic (ignoring red flags) or pessimistic (amplified threats) negatively impacts response (Optimistic).',
+    'The tendency to expect negative, realistic or positive future outcomes.'],
+  ['Market Response', 'Investment Experience', 'Financial Foundations', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'Experience with market volatility provides tested emotional resilience (Strong) vs limited experience with market volatility means untested reactions to real losses (Building).',
+    'Practical familiarity with investing, particularly experiencing market fluctuations and downturns.'],
+  ['Market Response', 'Overconfidence', 'Risk Profile', ['Elevated', 'Mostly Calibrated', 'Calibrated'], 'cal', 2,
+    'Reads market signals with well-calibrated confidence, responds to information without over-conviction or dismissing contrary evidence (Calibrated) vs strong conviction about market direction causes dismissal of contrary signals and over-trading on noise (Elevated).',
+    'How well confidence in financial judgement is matched to knowledge, evidence and uncertainty.'],
 
   // Investment
-  ['Investment', 'Financial Confidence', 'Financial Foundations', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Confident, capable, and actively engaged in investment decisions (Strong) vs low financial confidence leads to investment avoidance (Building).'],
+  ['Investment', 'Financial Confidence', 'Financial Foundations', ['Building', 'Intermediate', 'Strong'], 'dir', 2,
+    'Confident, capable, and actively engaged in investment decisions (Strong) vs low financial confidence leads to investment avoidance (Building).',
+    'Trust in one’s ability to understand, manage and make decisions about money.'],
   ['Investment', 'Adaptability', 'Financial Decision Making', ['Consistent', 'Balanced', 'Flexible'], 'dir', 2,
-    'Highly flexible and responsive to investment strategy changes (Flexible) vs rigid approach to investment strategy changes, risks staying in underperforming allocations too long (Consistent).'],
+    'Highly flexible and responsive to investment strategy changes (Flexible) vs rigid approach to investment strategy changes, risks staying in underperforming allocations too long (Consistent).',
+    'Willingness to adjust a financial approach as circumstances or evidence change.'],
   ['Investment', 'Motivation', 'Financial Decision Making', ['Security-Driven', 'Balanced', 'Growth-Driven'], 'pref', null,
-    'Reward and opportunity focused, pursues investment growth (Growth-Driven) vs prevention and security focused, prioritises protecting capital over growing it (Security-Driven).'],
+    'Reward and opportunity focused, pursues investment growth (Growth-Driven) vs prevention and security focused, prioritises protecting capital over growing it (Security-Driven).',
+    'The balance between protecting existing resources and pursuing growth or opportunity.'],
   ['Investment', 'Regret-Aversion', 'Risk Profile', ['Regret-Sensitive', 'Balanced', 'Regret-Tolerant'], 'dir', 2,
-    'Makes investment decisions without excessive fear of regret (Regret-Tolerant) vs fear of making wrong investment decisions causes paralysis (Regret-Sensitive).'],
-  ['Investment', 'Ownership (Locus of Control)', 'Financial Decision Making', ['Building', 'Steady', 'Strong'], 'dir', 2,
-    'Believe their own research and decisions drive investment outcomes (Strong) vs investment outcomes are determined by luck or market forces beyond their control (Building).'],
-].map(([domain, name, source, stops, type, target, meaning]) => ({ domain, name, source, stops, type, target, meaning }));
+    'Makes investment decisions without excessive fear of regret (Regret-Tolerant) vs fear of making wrong investment decisions causes paralysis (Regret-Sensitive).',
+    'How strongly anticipated regret influences financial choices and willingness to act.'],
+  ['Investment', 'Ownership (Locus of Control)', 'Financial Decision Making', ['Circumstance-Led', 'Balanced', 'Self-Directed'], 'dir', 2,
+    'Believe their own research and decisions drive investment outcomes (Self-Directed) vs investment outcomes are determined by luck or market forces beyond their control (Circumstance-Led).',
+    'The extent to which financial outcomes are attributed to external circumstances or personal decisions and actions.'],
+].map(([domain, name, source, stops, type, target, meaning, desc]) => ({ domain, name, source, stops, type, target, meaning, desc }));
 
 const DOMAINS = ['Saving', 'Spending', 'Retirement Planning', 'Market Response', 'Investment'];
 
@@ -100,6 +126,7 @@ function Construct({ c }) {
       <div className="bd-card-top">
         <div>
           <div className="bd-cname">{c.name}</div>
+          {c.desc && <p className="bd-cdesc">{c.desc}</p>}
           <div className="bd-tags">
             <span className="bd-tag">{c.domain}</span>
             <span className="bd-tag">Section Source: {c.source}</span>
@@ -150,7 +177,7 @@ export default function BehaviouralDesk() {
       domain: d,
       items: DATA.filter((c) => {
         if (c.domain !== d) return false;
-        if (q && !(`${c.name} ${c.meaning}`.toLowerCase().includes(q))) return false;
+        if (q && !(`${c.name} ${c.desc} ${c.meaning}`.toLowerCase().includes(q))) return false;
         return true;
       }),
     })).filter((g) => g.items.length);
