@@ -1059,6 +1059,11 @@ a:hover { color: var(--mm-blue-light); }
 .mm-dr-select-wrap { position: relative; }
 .mm-dr-select-wrap select { padding-right: 40px; cursor: pointer; }
 .mm-dr-chevron { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--fg-3); }
+.mm-dr-phone { display: flex; gap: 10px; align-items: stretch; }
+.mm-dr-phone .mm-dr-dial { flex: 0 0 172px; }
+.mm-dr-phone .mm-dr-dial select { width: 100%; }
+.mm-dr-phone > input { flex: 1 1 auto; min-width: 0; }
+@media (max-width: 420px) { .mm-dr-phone .mm-dr-dial { flex-basis: 132px; } }
 .mm-dr-api-error { padding: 14px 16px; background: rgba(216,85,63,0.12); border: 1px solid rgba(216,85,63,0.35); border-radius: var(--radius-sm); font-size: 14px; color: #f08070; }
 .mm-dr-api-error a { color: inherit; text-decoration: underline; }
 .mm-dr-submit { width: 100%; justify-content: center; }

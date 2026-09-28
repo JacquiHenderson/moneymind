@@ -23,6 +23,40 @@ const COUNTRIES = [
   { code: 'OTHER', label: 'Other' },
 ];
 
+// Dial-code options for the mobile field. The four markets most prospects come
+// from sit at the top; the rest follow alphabetically. Values are ISO codes so
+// US and CA (both +1) stay distinct. Keep in sync with components/DemoForm.jsx.
+const DIAL_TOP = [
+  { code: 'AU', label: 'Australia', dial: '+61' },
+  { code: 'US', label: 'United States', dial: '+1' },
+  { code: 'GB', label: 'United Kingdom', dial: '+44' },
+  { code: 'CA', label: 'Canada', dial: '+1' },
+];
+const DIAL_REST = [
+  { code: 'CN', label: 'China', dial: '+86' },
+  { code: 'DK', label: 'Denmark', dial: '+45' },
+  { code: 'FR', label: 'France', dial: '+33' },
+  { code: 'DE', label: 'Germany', dial: '+49' },
+  { code: 'HK', label: 'Hong Kong', dial: '+852' },
+  { code: 'IN', label: 'India', dial: '+91' },
+  { code: 'ID', label: 'Indonesia', dial: '+62' },
+  { code: 'IE', label: 'Ireland', dial: '+353' },
+  { code: 'IT', label: 'Italy', dial: '+39' },
+  { code: 'JP', label: 'Japan', dial: '+81' },
+  { code: 'MY', label: 'Malaysia', dial: '+60' },
+  { code: 'NL', label: 'Netherlands', dial: '+31' },
+  { code: 'NZ', label: 'New Zealand', dial: '+64' },
+  { code: 'NO', label: 'Norway', dial: '+47' },
+  { code: 'PH', label: 'Philippines', dial: '+63' },
+  { code: 'SG', label: 'Singapore', dial: '+65' },
+  { code: 'ZA', label: 'South Africa', dial: '+27' },
+  { code: 'ES', label: 'Spain', dial: '+34' },
+  { code: 'SE', label: 'Sweden', dial: '+46' },
+  { code: 'CH', label: 'Switzerland', dial: '+41' },
+  { code: 'AE', label: 'United Arab Emirates', dial: '+971' },
+];
+const DIAL_BY_CODE = Object.fromEntries([...DIAL_TOP, ...DIAL_REST].map((c) => [c.code, c.dial]));
+
 // Trial signup lives on the global-login page. We carry the demo form's details forward
 // in the hash (not the query string) so the email never reaches server access logs; the
 // signup page reads them and pre-fills, so the visitor doesn't have to re-type anything.
@@ -53,7 +87,7 @@ function CheckIcon() {
 }
 
 export default function DemoRequestPage() {
-  const [fields, setFields] = useState({ fullName: '', company: '', email: '', country: '', website: '' });
+  const [fields, setFields] = useState({ fullName: '', company: '', email: '', mobileCountry: 'AU', mobile: '', country: '', website: '' });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error | ratelimited
 
@@ -64,6 +98,8 @@ export default function DemoRequestPage() {
     if (!fields.fullName.trim()) e.fullName = 'Please enter your name.';
     if (!fields.email.trim()) e.email = 'Please enter your email.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) e.email = 'Please enter a valid email address.';
+    if (!fields.mobile.trim()) e.mobile = 'Please enter your mobile number.';
+    else if (fields.mobile.replace(/\D/g, '').length < 6) e.mobile = 'Please enter a valid mobile number.';
     if (!fields.country) e.country = 'Please select your country.';
     return e;
   };
@@ -83,6 +119,7 @@ export default function DemoRequestPage() {
           full_name:    fields.fullName.trim(),
           company_name: fields.company.trim(),
           email:        fields.email.trim(),
+          mobile_phone: `${DIAL_BY_CODE[fields.mobileCountry] || ''} ${fields.mobile.trim()}`.trim(),
           country:      fields.country,
           website:      fields.website, // honeypot — stays empty for humans
         }),
@@ -186,6 +223,43 @@ export default function DemoRequestPage() {
                   onChange={set('email')}
                 />
                 {errors.email && <span className="mm-dr-error">{errors.email}</span>}
+              </div>
+
+              <div className={`mm-dr-field${errors.mobile ? ' has-error' : ''}`}>
+                <label htmlFor="mobile">Mobile phone</label>
+                <div className="mm-dr-phone">
+                  <div className="mm-dr-select-wrap mm-dr-dial">
+                    <select
+                      id="mobileCountry"
+                      aria-label="Mobile phone country code"
+                      value={fields.mobileCountry}
+                      onChange={set('mobileCountry')}
+                    >
+                      {DIAL_TOP.map((c) => (
+                        <option key={c.code} value={c.code}>{c.label} ({c.dial})</option>
+                      ))}
+                      <option disabled>──────────</option>
+                      {DIAL_REST.map((c) => (
+                        <option key={c.code} value={c.code}>{c.label} ({c.dial})</option>
+                      ))}
+                    </select>
+                    <svg className="mm-dr-chevron" width="16" height="16" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                      strokeLinejoin="round" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                  </div>
+                  <input
+                    id="mobile"
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel-national"
+                    placeholder="412 345 678"
+                    value={fields.mobile}
+                    onChange={set('mobile')}
+                  />
+                </div>
+                {errors.mobile && <span className="mm-dr-error">{errors.mobile}</span>}
               </div>
 
               <div className={`mm-dr-field${errors.country ? ' has-error' : ''}`}>
