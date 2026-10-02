@@ -88,7 +88,7 @@ function CohortVisual() {
     { name: 'Cautious Investor',  pct: 22, color: 'var(--mm-blue-mid)' },
     { name: 'Considered Spender', pct: 18, color: 'var(--mm-blue-deep)' },
     { name: 'Retirement-Ready',   pct: 17, color: 'var(--mm-blue-100)' },
-    { name: 'Anxious Avoider',    pct: 9,  color: 'var(--mm-blue-200)' },
+    { name: 'Quiet Worrier',    pct: 9,  color: 'var(--mm-blue-200)' },
     { name: 'Other',              pct: 6,  color: 'var(--mm-blue-800)' },
   ];
   return (
@@ -150,8 +150,8 @@ function FundProvidersExpandData() {
 const PERSONA_TILES = [
   { name: 'Steady Saver',       investors: '16,240', ltv: 'High',     engagement: 0.78 },
   { name: 'Cautious Investor',  investors: '12,870', ltv: 'High',     engagement: 0.66 },
-  { name: 'Anxious Avoider',    investors: '5,260',  ltv: 'At risk',  engagement: 0.34 },
-  { name: 'Impulsive Optimist', investors: '8,140',  ltv: 'Variable', engagement: 0.52 },
+  { name: 'Quiet Worrier',    investors: '5,260',  ltv: 'At risk',  engagement: 0.34 },
+  { name: 'Avid Optimist', investors: '8,140',  ltv: 'Variable', engagement: 0.52 },
 ];
 
 function PersonaCohortsVisual() {
@@ -226,7 +226,7 @@ function ChurnVisual() {
         <header className="mm-churn-head">
           <div>
             <span className="mm-churn-eyebrow">Churn-risk signals</span>
-            <span className="mm-churn-cohort">&quot;Anxious Avoider&quot; cohort · 5,260 investors</span>
+            <span className="mm-churn-cohort">&quot;Quiet Worrier&quot; cohort · 5,260 investors</span>
           </div>
           <span className="mm-churn-pill">+12% WoW</span>
         </header>

@@ -91,7 +91,7 @@ const ARCHETYPES = [
   },
   {
     num: '03',
-    name: 'The Anxious Avoider',
+    name: 'The Quiet Worrier',
     genPop: '15–20%',
     advisory: '10–14%',
     pattern:
@@ -134,7 +134,7 @@ const ARCHETYPES = [
   },
   {
     num: '04',
-    name: 'The Impulsive Optimist',
+    name: 'The Avid Optimist',
     genPop: '9–13%',
     advisory: '10–14%',
     pattern:
@@ -215,7 +215,7 @@ const ARCHETYPES = [
   },
   {
     num: '06',
-    name: 'The Present-Focused Drifter',
+    name: 'The Present Explorer',
     genPop: '13–18%',
     advisory: '14–18%',
     pattern:
@@ -256,7 +256,7 @@ const ARCHETYPES = [
   },
   {
     num: '07',
-    name: 'The Pragmatic Moderate',
+    name: 'The Pragmatic Realist',
     genPop: '18–25%',
     advisory: '16–22%',
     pattern:
@@ -291,9 +291,9 @@ const ARCHETYPES = [
       { term: 'Mixed Locus of Control — Tier 2:', body: 'Rotter (1966). Mixed LOC (∼35–40% of population) is the modal outcome. Produces situationally variable engagement rather than consistent proactive or passive behavior.' },
     ],
     behavior: [
-      'The Pragmatic Moderate manages money adequately without being exceptional at it. Makes reasonable financial decisions at a moderate pace. Saves inconsistently. Has moderate retirement engagement — thinks about it but without urgency or specificity. Responds positively to professional advice when prompted but does not seek it proactively.',
+      'The Pragmatic Realist manages money adequately without being exceptional at it. Makes reasonable financial decisions at a moderate pace. Saves inconsistently. Has moderate retirement engagement — thinks about it but without urgency or specificity. Responds positively to professional advice when prompted but does not seek it proactively.',
       'The primary failure mode is chronic under-optimisation across all dimensions. No single catastrophic decision, but consistent small gaps in savings rates, insurance adequacy, retirement contributions, and investment diversification that compound over 30 years into a significant shortfall. Death by a thousand moderate choices.',
-      { note: true, body: 'Critical insight: This is the most malleable archetype. With no dominant psychological resistance, the Pragmatic Moderate responds well to all standard interventions. The gap between their current trajectory and an optimised trajectory is large — and the interventions to close it are straightforward. This is the highest advisor value-add opportunity in the entire archetype system.' },
+      { note: true, body: 'Critical insight: This is the most malleable archetype. With no dominant psychological resistance, the Pragmatic Realist responds well to all standard interventions. The gap between their current trajectory and an optimised trajectory is large — and the interventions to close it are straightforward. This is the highest advisor value-add opportunity in the entire archetype system.' },
     ],
     primaryRisk:
       'The compounding cost of "good enough" versus optimised over 30 years. No single dramatic failure mode. The greatest risk is that neither the client nor their advisor identifies this as urgent, because nothing is visibly wrong in the short term.',
@@ -303,21 +303,21 @@ const ARCHETYPES = [
 const PRIMARY_COMPARISON = [
   ['1. Security Seeker', 'High', 'Moderate', 'Balanced', 'Mixed', 'Under-investment in growth'],
   ['2. Confident Grower', 'Low', 'Disciplined', 'Future bias', 'Internal', 'Overconfidence, tail risk'],
-  ['3. Anxious Avoider', 'Very High', 'Low', 'Present bias', 'External', 'Avoidance loop'],
-  ['4. Impulsive Optimist', 'Low (volatile)', 'Impulsive', 'Present-leaning', 'Mixed', 'Excess trading, lifestyle inflation'],
+  ['3. Quiet Worrier', 'Very High', 'Low', 'Present bias', 'External', 'Avoidance loop'],
+  ['4. Avid Optimist', 'Low (volatile)', 'Impulsive', 'Present-leaning', 'Mixed', 'Excess trading, lifestyle inflation'],
   ['5. Informed Analyst', 'Moderate', 'Disciplined', 'Balanced', 'Internal', 'Under-implementation'],
-  ['6. Present-Focused Drifter', 'Moderate', 'Moderate', 'Present bias', 'Mixed', 'Retirement under-saving'],
-  ['7. Pragmatic Moderate', 'Moderate', 'Moderate', 'Balanced', 'Mixed', 'Chronic under-optimisation'],
+  ['6. Present Explorer', 'Moderate', 'Moderate', 'Present bias', 'Mixed', 'Retirement under-saving'],
+  ['7. Pragmatic Realist', 'Moderate', 'Moderate', 'Balanced', 'Mixed', 'Chronic under-optimisation'],
 ];
 
 const COMMS_APPROACH = [
   ['1. Security Seeker', 'Capital protection, security floor, recovery evidence', '"Growth opportunity," performance-first', 'Bucket strategy first; then modest growth within protection frame'],
   ['2. Confident Grower', 'Co-strategist framing, ambitious goals, optimisation', 'Oversimplification, lack of challenge', 'Peer-level discussion; structured challenge questions; full planning breadth'],
-  ['3. Anxious Avoider', 'One simple action, trust-building, automation', 'Complexity, lists, multiple decisions', 'One decision maximum; end with one specific next action only'],
-  ['4. Impulsive Optimist', 'Structure, pre-agreed criteria, channelling energy', 'Framing that validates reactive action', 'Establish pause protocol first; direct to high-impact activities'],
+  ['3. Quiet Worrier', 'One simple action, trust-building, automation', 'Complexity, lists, multiple decisions', 'One decision maximum; end with one specific next action only'],
+  ['4. Avid Optimist', 'Structure, pre-agreed criteria, channelling energy', 'Framing that validates reactive action', 'Establish pause protocol first; direct to high-impact activities'],
   ['5. Informed Analyst', 'Analytical depth, evidence, specific data', 'Oversimplification, "trust me" framing', 'Provide comprehensive analysis; set hard decision date before next meeting'],
-  ['6. Present-Focused Drifter', 'Future self vivid description, fresh-start date, automation', 'Abstract projections, complex multi-step plans', 'Visualisation exercise; set automation with fresh-start date on the day'],
-  ['7. Pragmatic Moderate', 'Concrete gap numbers, specific plan, dual framing', 'Vague encouragement, generic "save more" advice', 'Show the gap in dollars; set up automation; schedule structured reviews'],
+  ['6. Present Explorer', 'Future self vivid description, fresh-start date, automation', 'Abstract projections, complex multi-step plans', 'Visualisation exercise; set automation with fresh-start date on the day'],
+  ['7. Pragmatic Realist', 'Concrete gap numbers, specific plan, dual framing', 'Vague encouragement, generic "save more" advice', 'Show the gap in dollars; set up automation; schedule structured reviews'],
 ];
 
 // Map a role label to a colour tier by its leading keyword.

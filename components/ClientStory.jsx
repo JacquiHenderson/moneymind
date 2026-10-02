@@ -38,7 +38,7 @@ export default function ClientStory() {
 
         <div className="hiw-archetype">
           <span className="hiw-archetype-label">Archetype</span>
-          <span className="hiw-archetype-name">The Anxious Avoider</span>
+          <span className="hiw-archetype-name">The Quiet Worrier</span>
         </div>
 
         <div className="hiw-mp">
