@@ -14,7 +14,7 @@ const INTEGRATIONS = [
   { name: 'Wealthbox', img: 'wealthbox.png', x: 85, y: 18.5, w: 9.4 },
   { name: 'Salesforce', img: 'salesforce.png', x: 76, y: 31.5, w: 9.3 },
   { name: 'Claras', img: 'claras.png', x: 13, y: 65.5, w: 8.3 },
-  { name: 'Fabyl', img: 'fabyl.png', x: 31, y: 65.5, w: 6.2 },
+  { name: 'Faybl', img: 'fabyl.png', x: 31, y: 65.5, w: 6.2 },
   { name: 'Paradina', img: 'paradina.png', x: 22, y: 79, w: 12.5 },
   { name: 'Catchlight', img: 'catchlight.png', x: 67, y: 65.5, w: 9.0 },
   { name: 'HubSpot', img: 'hubspot.png', x: 85, y: 65.5, w: 7.7 },
@@ -29,7 +29,7 @@ const INT_LABELS = [
 const MOBILE_GROUPS = [
   { label: 'Planning software', names: ['Xplan', 'Conquest', 'intelliflo'] },
   { label: 'CRM', names: ['Advyzon', 'Wealthbox', 'Salesforce'] },
-  { label: 'AI tools', names: ['Claras', 'Fabyl', 'Paradina'] },
+  { label: 'AI tools', names: ['Claras', 'Faybl', 'Paradina'] },
   { label: 'Marketing & lead gen', names: ['Catchlight', 'HubSpot', 'Mailchimp'] },
 ];
 
