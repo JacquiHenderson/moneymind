@@ -88,9 +88,6 @@ function CohortVisual() {
     { name: 'The Confident Grower',  pct: 18, count: 512, color: '#3C7AA8' },
     { name: 'The Quiet Worrier',     pct: 17, count: 485, color: '#2B5F8A' },
     { name: 'The Avid Optimist',     pct: 15, count: 427, color: '#1D4A75' },
-    { name: 'The Informed Analyst',  pct: 11, count: 313, color: '#6B7FA0' },
-    { name: 'The Present Explorer',  pct: 9,  count: 256, color: '#8B8FAE' },
-    { name: 'The Pragmatic Realist', pct: 8,  count: 228, color: '#9AA0BD' },
   ];
   return (
     <div className="mm-split-visual mm-fv-archetype">
@@ -123,55 +120,17 @@ function CohortVisual() {
 
 function FundProvidersExpandData() {
   return (
-    <section className="mm-section mm-split" data-screen-label="Expand data">
+    <section className="mm-section" data-screen-label="Expand data">
       <div className="mm-container">
-        <div className="mm-split-grid">
-          <div className="mm-split-copy">
-            <span className="eyebrow">Behavioral intelligence</span>
-            <h2>Expand Your Data with Behavioral Intelligence.</h2>
-            <p>
-              Unlock a new dimension of investor data — go beyond demographics
-              and account balances — capture the psychological drivers behind
-              investor financial decisions.
-            </p>
-            <p>
-              Understand the behavioral biases that shape contribution rates,
-              investment choices, and engagement — so you can predict churn,
-              personalize experiences, and <em>protect AUM</em>.
-            </p>
-          </div>
-          <div className="mm-split-cell">
-            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
-              <picture>
-                <source srcSet="/assets/opt/product/persona-cohorts-dark.avif?v=2" type="image/avif" />
-                <source srcSet="/assets/opt/product/persona-cohorts-dark.webp?v=2" type="image/webp" />
-                <img
-                  className="mm-split-visual-img"
-                  src="/assets/opt/product/persona-cohorts-dark.png?v=2"
-                  alt="MoneyMind persona cohort detail — The Quiet Worrier archetype with population share, pattern, roadblocks, and how to optimise"
-                  width="1202"
-                  height="990"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-            </div>
-            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
-              <picture>
-                <source srcSet="/assets/opt/product/persona-cohorts-light.avif?v=2" type="image/avif" />
-                <source srcSet="/assets/opt/product/persona-cohorts-light.webp?v=2" type="image/webp" />
-                <img
-                  className="mm-split-visual-img"
-                  src="/assets/opt/product/persona-cohorts-light.png?v=2"
-                  alt="MoneyMind persona cohort detail — The Quiet Worrier archetype with population share, pattern, roadblocks, and how to optimise"
-                  width="1220"
-                  height="978"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-            </div>
-          </div>
+        <div className="mm-section-head center">
+          <span className="eyebrow">Behavioral intelligence</span>
+          <h2>Expand Your Data with Behavioral Intelligence.</h2>
+          <p className="lead">
+            Unlock a new dimension of investor data — go beyond demographics
+            and account balances — understand the behavioral biases that shape
+            contribution rates, investment choices, and engagement — so you can
+            predict churn, personalize experiences, and <em>protect AUM</em>.
+          </p>
         </div>
       </div>
     </section>
@@ -227,9 +186,8 @@ function FundProvidersPersonaCohorts() {
             <span className="eyebrow">Persona cohorts</span>
             <h2>Persona Cohorts that support Client Lifetime Value.</h2>
             <p>
-              Analyze behavioral characteristics across your investor base over
-              time and automatically build persona archetypes that represent
-              key investor segments.
+              Analyze behavioral characteristics across your investor base and
+              leverage persona archetypes that represent key investor segments.
             </p>
             <p>
               Investor cohorts enable you to personalize products, optimize
@@ -253,7 +211,7 @@ const RISK_SIGNAL_GROUPS = [
     { name: 'Low risk capacity',   desc: 'Capacity to absorb losses',             pct: 16, count: 456 },
     { name: 'Capacity for loss',   desc: 'Spending shortfall + portfolio drawdown', pct: 13, count: 370 },
     { name: 'Loss response',       desc: 'Sensitive to losses',                   pct: 20, count: 569 },
-    { name: 'Adviser blame risk',  desc: 'Blames adviser after loss',             pct: 9,  count: 256 },
+    { name: 'Advisor blame risk',  desc: 'Blames advisor after loss',             pct: 9,  count: 256 },
   ] },
 ];
 // Shared bar scale so a given length always maps to the same colour on the ramp.
@@ -297,8 +255,8 @@ function FundProvidersPredict() {
             <h2>Signals that predict investor decisions.</h2>
             <p>
               Anticipate how your investors will react, what actions they&apos;ll
-              take, and whether they&apos;ll abandon their investment plan — before
-              it impacts your fund.
+              take, and whether they&apos;ll abandon their investment plan, so you
+              can tailor your communications before panic sets in.
             </p>
             <p>
               Identify investor triggers that <em>protect your AUM</em> —

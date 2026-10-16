@@ -191,7 +191,7 @@ function AdvisersDecodePatterns() {
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">Decode hidden patterns</span>
-            <h2>The full picture of every client.</h2>
+            <h2>A full picture of every client.</h2>
             <p>Anticipate how your clients will react, what actions they&apos;ll take, and whether they&apos;ll panic or abandon their financial plan.</p>
             <p>Identify their Superpowers, Roadblocks, and how to Optimize your strategies. Identify all the emotions that override rational plans and protect your AUM.</p>
           </div>
