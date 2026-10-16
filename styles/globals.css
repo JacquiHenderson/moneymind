@@ -2024,11 +2024,11 @@ a:hover { color: var(--mm-blue-light); }
 
 /* Role badges */
 .pa-role { display: inline-block; font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 5px; white-space: nowrap; border: 1px solid transparent; }
-.pa-role--primary { background: rgba(82, 152, 191, 0.20); color: #cfe6f4; border-color: rgba(82, 152, 191, 0.5); }
-.pa-role--secondary { background: rgba(82, 152, 191, 0.10); color: #9fd0ea; border-color: rgba(82, 152, 191, 0.28); }
+.pa-role--primary { background: rgba(82, 152, 191, 0.20); color: light-dark(#1b4b74, #cfe6f4); border-color: rgba(82, 152, 191, 0.5); }
+.pa-role--secondary { background: rgba(82, 152, 191, 0.10); color: light-dark(#2a6287, #9fd0ea); border-color: rgba(82, 152, 191, 0.28); }
 .pa-role--confirmatory { background: rgba(141, 160, 188, 0.10); color: var(--fg-3); border-color: var(--border-hairline); }
 .pa-role--modifier { background: transparent; color: var(--fg-4); border-color: var(--border-hairline); }
-.pa-role--boundary { background: rgba(217, 164, 65, 0.12); color: #f0c878; border-color: rgba(217, 164, 65, 0.3); }
+.pa-role--boundary { background: rgba(217, 164, 65, 0.14); color: light-dark(#946515, #f0c878); border-color: rgba(217, 164, 65, 0.3); }
 
 /* Scientific foundation */
 .pa-science { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }

@@ -196,8 +196,22 @@ function AdvisersDecodePatterns() {
             <p>Identify their Superpowers, Roadblocks, and how to Optimize your strategies. Identify all the emotions that override rational plans and protect your AUM.</p>
           </div>
           <div className="mm-split-cell">
-            <div className="mm-shot is-dark"><PatternsVisual /></div>
-            <div className="mm-split-visual mm-shot is-light">
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
+              <picture>
+                <source srcSet="/assets/opt/product/dashboard-dark.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/dashboard-dark.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/dashboard-dark.png"
+                  alt="MoneyMind profile dashboard — a client's Money Profile, MoneyPattern across five dimensions, and communication style"
+                  width="1600"
+                  height="858"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
               <picture>
                 <source srcSet="/assets/opt/product/dashboard-light.avif" type="image/avif" />
                 <source srcSet="/assets/opt/product/dashboard-light.webp" type="image/webp" />
@@ -266,7 +280,22 @@ function AdvisersGoals() {
             <p>Advisors can choose to tailor portfolios to each goal&apos;s time horizon and outcome, helping reduce emotional, impulsive decision-making when markets fall.</p>
           </div>
           <div className="mm-split-cell">
-            <div className="mm-split-visual mm-split-visual--img">
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
+              <picture>
+                <source srcSet="/assets/opt/product/goals-planning-dark.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/goals-planning-dark.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/goals-planning-dark.png"
+                  alt="MoneyMind goals-based planning — a renovation cash goal and a retirement growth goal, each with a projection of where it lands and the chance of reaching it"
+                  width="1600"
+                  height="614"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
               <picture>
                 <source srcSet="/assets/opt/product/goals-planning.avif" type="image/avif" />
                 <source srcSet="/assets/opt/product/goals-planning.webp" type="image/webp" />
@@ -300,8 +329,22 @@ function AdvisersRisk() {
             <p>Know how your clients will <em>actually</em> behave under pressure — so portfolios match reality, not a score.</p>
           </div>
           <div className="mm-split-cell">
-            <div className="mm-shot is-dark"><RiskVisual /></div>
-            <div className="mm-split-visual mm-shot is-light">
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
+              <picture>
+                <source srcSet="/assets/opt/product/risk-dark.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/risk-dark.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/risk-dark.png"
+                  alt="MoneyMind risk profile — Moderate risk tolerance alongside a Very High capacity to take risk"
+                  width="1200"
+                  height="642"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
               <picture>
                 <source srcSet="/assets/opt/product/risk-light.avif?v=3" type="image/avif" />
                 <source srcSet="/assets/opt/product/risk-light.webp?v=3" type="image/webp" />
