@@ -795,11 +795,12 @@ a:hover { color: var(--mm-blue-light); }
 .mm-cohort-bar { display: flex; height: 22px; border-radius: var(--radius-pill); overflow: hidden; border: 1px solid var(--border-hairline); }
 .mm-cohort-seg { transition: filter var(--dur-fast) var(--ease-out); }
 .mm-cohort-seg:hover { filter: brightness(1.1); }
-.mm-cohort-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; }
-.mm-cohort-legend li { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--fg-2); }
+.mm-cohort-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 13px; }
+.mm-cohort-legend li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--fg-2); }
 .mm-cohort-swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 auto; }
 .mm-cohort-name { flex: 1; }
-.mm-cohort-pct { font-family: var(--font-mono); font-size: 14px; color: var(--fg-3); }
+.mm-cohort-pct { font-size: 14px; font-weight: 700; color: var(--fg-1); min-width: 40px; text-align: right; }
+.mm-cohort-num { font-family: var(--font-mono); font-size: 13.5px; color: var(--fg-3); min-width: 36px; text-align: right; }
 
 /* Churn */
 .mm-churn-card { width: 100%; display: flex; flex-direction: column; gap: 14px; }
@@ -883,6 +884,29 @@ a:hover { color: var(--mm-blue-light); }
 .mm-enterprise-right li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.88); }
 .mm-enterprise-right svg { color: var(--mm-blue-light); margin-top: 3px; flex: 0 0 auto; }
 @media (max-width: 1100px) { .mm-enterprise-card { grid-template-columns: 1fr; padding: 36px; gap: 32px; } .mm-enterprise-left h2 { font-size: 32px; } }
+
+/* Risk signals chart (fund providers · Predict section) — magnitude bars grouped
+   into investment/behavioural flags, with a shared-scale blue→warm severity ramp. */
+.mm-rsig { flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 26px 26px 22px; }
+.mm-rsig-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.mm-rsig-head h4 { font-family: var(--font-display); font-size: 19px; font-weight: 700; letter-spacing: -0.01em; color: var(--fg-1); margin: 0; }
+.mm-rsig-sub { font-size: 14px; color: var(--fg-3); }
+.mm-rsig-group { display: flex; flex-direction: column; }
+.mm-rsig-glabel { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mm-blue-light); margin: 16px 0 4px; }
+.mm-rsig-row { padding: 9px 0 10px; border-top: 1px solid var(--border-hairline); }
+.mm-rsig-glabel + .mm-rsig-row { border-top: none; }
+.mm-rsig-row-top { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+.mm-rsig-name { font-size: 14.5px; font-weight: 700; color: var(--fg-1); line-height: 1.3; }
+.mm-rsig-desc { font-weight: 400; color: var(--fg-3); }
+.mm-rsig-vals { display: inline-flex; align-items: baseline; gap: 14px; white-space: nowrap; flex: none; }
+.mm-rsig-vals b { font-size: 14.5px; font-weight: 700; color: var(--fg-1); }
+.mm-rsig-count { font-family: var(--font-mono); font-size: 13px; color: var(--fg-3); min-width: 32px; text-align: right; }
+.mm-rsig-track { height: 4px; border-radius: var(--radius-pill); background: light-dark(rgba(11, 11, 69, 0.08), rgba(255, 255, 255, 0.07)); overflow: hidden; }
+.mm-rsig-fill {
+  height: 100%; border-radius: var(--radius-pill);
+  background-image: linear-gradient(90deg, #3a6ea5 0%, #3f8fb0 22%, #3fb39c 44%, #7fc571 64%, #d6bd54 83%, #e39a4e 100%);
+  background-repeat: no-repeat; background-position: left center;
+}
 
 /* fv-archetype / fv-meeting visual backgrounds (used in fund providers) */
 .mm-fv-archetype { background: radial-gradient(80% 80% at 50% 40%, rgba(29, 74, 117, 0.6), var(--mm-blue-navy) 70%); padding: 28px; align-items: flex-start; }

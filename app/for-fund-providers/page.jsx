@@ -84,19 +84,21 @@ function FundProvidersImpactTrio() {
 // ---- Expand Data ----
 function CohortVisual() {
   const segments = [
-    { name: 'Steady Saver',       pct: 28, color: 'var(--mm-blue-light)' },
-    { name: 'Cautious Investor',  pct: 22, color: 'var(--mm-blue-mid)' },
-    { name: 'Considered Spender', pct: 18, color: 'var(--mm-blue-deep)' },
-    { name: 'Retirement-Ready',   pct: 17, color: 'var(--mm-blue-100)' },
-    { name: 'Quiet Worrier',    pct: 9,  color: 'var(--mm-blue-200)' },
+    { name: 'The Security Seeker',   pct: 22, count: 626, color: '#5298BF' },
+    { name: 'The Confident Grower',  pct: 18, count: 512, color: '#3C7AA8' },
+    { name: 'The Quiet Worrier',     pct: 17, count: 485, color: '#2B5F8A' },
+    { name: 'The Avid Optimist',     pct: 15, count: 427, color: '#1D4A75' },
+    { name: 'The Informed Analyst',  pct: 11, count: 313, color: '#6B7FA0' },
+    { name: 'The Present Explorer',  pct: 9,  count: 256, color: '#8B8FAE' },
+    { name: 'The Pragmatic Realist', pct: 8,  count: 228, color: '#9AA0BD' },
   ];
   return (
     <div className="mm-split-visual mm-fv-archetype">
       <div className="mm-cohort">
         <header className="mm-cohort-head">
           <div>
-            <span className="mm-cohort-sub">Investor cohorts</span>
-            <span className="mm-cohort-count">58,420 investors profiled</span>
+            <span className="mm-cohort-sub">Persona cohorts</span>
+            <span className="mm-cohort-count">2,847 investors profiled</span>
           </div>
         </header>
         <div className="mm-cohort-bar">
@@ -110,6 +112,7 @@ function CohortVisual() {
               <span className="mm-cohort-swatch" style={{ background: s.color }}></span>
               <span className="mm-cohort-name">{s.name}</span>
               <span className="mm-cohort-pct">{s.pct}%</span>
+              <span className="mm-cohort-num">{s.count}</span>
             </li>
           ))}
         </ul>
@@ -137,7 +140,38 @@ function FundProvidersExpandData() {
               personalize experiences, and <em>protect AUM</em>.
             </p>
           </div>
-          <CohortVisual />
+          <div className="mm-split-cell">
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
+              <picture>
+                <source srcSet="/assets/opt/product/persona-cohorts-dark.avif?v=2" type="image/avif" />
+                <source srcSet="/assets/opt/product/persona-cohorts-dark.webp?v=2" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/persona-cohorts-dark.png?v=2"
+                  alt="MoneyMind persona cohort detail — The Quiet Worrier archetype with population share, pattern, roadblocks, and how to optimise"
+                  width="1202"
+                  height="990"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
+              <picture>
+                <source srcSet="/assets/opt/product/persona-cohorts-light.avif?v=2" type="image/avif" />
+                <source srcSet="/assets/opt/product/persona-cohorts-light.webp?v=2" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/persona-cohorts-light.png?v=2"
+                  alt="MoneyMind persona cohort detail — The Quiet Worrier archetype with population share, pattern, roadblocks, and how to optimise"
+                  width="1220"
+                  height="978"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -191,19 +225,19 @@ function FundProvidersPersonaCohorts() {
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">Persona cohorts</span>
-            <h2>Build Persona Cohorts That Predict Client Lifetime Value.</h2>
+            <h2>Persona Cohorts that support Client Lifetime Value.</h2>
             <p>
               Analyze behavioral characteristics across your investor base over
               time and automatically build persona archetypes that represent
               key investor segments.
             </p>
             <p>
-              Reveal investor cohorts that enable you to personalize products,
-              optimize digital advice with higher acceptance, and craft nudge
+              Investor cohorts enable you to personalize products, optimize
+              digital advice with higher acceptance, and craft nudge
               communications that increase retention and engagement.
             </p>
           </div>
-          <PersonaCohortsVisual />
+          <CohortVisual />
         </div>
       </div>
     </section>
@@ -211,39 +245,44 @@ function FundProvidersPersonaCohorts() {
 }
 
 // ---- Predict ----
-function ChurnVisual() {
-  const signals = [
-    { name: 'Loss-response sensitivity', val: 78, level: 'High' },
-    { name: 'Plan abandonment intent',   val: 64, level: 'Elevated' },
-    { name: 'Advisor engagement decay',  val: 52, level: 'Watch' },
-    { name: 'Volatility communication',  val: 31, level: 'Normal' },
-  ];
+// ---- Risk signals chart (magnitude: % of clients carrying each flag) ----
+const RISK_SIGNAL_GROUPS = [
+  { label: 'Investment flags', rows: [
+    { name: 'Impulsive Responder', desc: 'Panic sells in falls',                  pct: 27, count: 769 },
+    { name: 'Overconfidence',      desc: 'Bullish, may overtrade',                pct: 7,  count: 199 },
+    { name: 'Low risk capacity',   desc: 'Capacity to absorb losses',             pct: 16, count: 456 },
+    { name: 'Capacity for loss',   desc: 'Spending shortfall + portfolio drawdown', pct: 13, count: 370 },
+    { name: 'Loss response',       desc: 'Sensitive to losses',                   pct: 20, count: 569 },
+    { name: 'Adviser blame risk',  desc: 'Blames adviser after loss',             pct: 9,  count: 256 },
+  ] },
+];
+// Shared bar scale so a given length always maps to the same colour on the ramp.
+const RISK_SIGNAL_MAX = 28;
+
+function RiskSignalsVisual() {
   return (
-    <div className="mm-split-visual mm-fv-meeting">
-      <div className="mm-churn-card">
-        <header className="mm-churn-head">
-          <div>
-            <span className="mm-churn-eyebrow">Churn-risk signals</span>
-            <span className="mm-churn-cohort">&quot;Quiet Worrier&quot; cohort · 5,260 investors</span>
-          </div>
-          <span className="mm-churn-pill">+12% WoW</span>
-        </header>
-        {signals.map((s) => (
-          <div key={s.name} className="mm-churn-row">
-            <div className="mm-churn-row-head">
-              <span className="mm-churn-name">{s.name}</span>
-              <span className={`mm-churn-level lv-${s.level.toLowerCase()}`}>{s.level}</span>
+    <div className="mm-split-visual mm-fv-meeting mm-rsig" role="img"
+      aria-label="Risk signals across 2,847 profiled clients — percentage carrying each investment and behavioural flag">
+      <header className="mm-rsig-head">
+        <h4>Risk signals</h4>
+        <span className="mm-rsig-sub">· 2,847 clients profiled</span>
+      </header>
+      {RISK_SIGNAL_GROUPS.map((g) => (
+        <div className="mm-rsig-group" key={g.label}>
+          <span className="mm-rsig-glabel">{g.label}</span>
+          {g.rows.map((r) => (
+            <div className="mm-rsig-row" key={r.name}>
+              <div className="mm-rsig-row-top">
+                <span className="mm-rsig-name">{r.name}<span className="mm-rsig-desc"> · {r.desc}</span></span>
+                <span className="mm-rsig-vals"><b>{r.pct}%</b><span className="mm-rsig-count">{r.count}</span></span>
+              </div>
+              <div className="mm-rsig-track">
+                <div className="mm-rsig-fill" style={{ width: `${(r.pct / RISK_SIGNAL_MAX) * 100}%`, backgroundSize: `${(RISK_SIGNAL_MAX / r.pct) * 100}% 100%` }}></div>
+              </div>
             </div>
-            <div className="mm-churn-track">
-              <div className="mm-churn-fill" style={{ width: `${s.val}%` }}></div>
-            </div>
-          </div>
-        ))}
-        <footer className="mm-churn-foot">
-          <span className="dot"></span>
-          <span><strong>Recommended intervention.</strong> Pre-volatility communication framed around protection, not growth.</span>
-        </footer>
-      </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
@@ -267,7 +306,7 @@ function FundProvidersPredict() {
               emotions that can override rational investing.
             </p>
           </div>
-          <ChurnVisual />
+          <RiskSignalsVisual />
         </div>
       </div>
     </section>
@@ -305,7 +344,6 @@ function OmniChannelVisual() {
             <span className="mm-omni-eyebrow">Active distribution channels</span>
             <span className="mm-omni-count">All synced to one investor profile</span>
           </div>
-          <span className="mm-omni-pill">6 live</span>
         </header>
         <div className="mm-omni-grid">
           {CHANNELS.map((c) => (
@@ -331,8 +369,8 @@ function FundProvidersOmni() {
             <span className="eyebrow">Distribution</span>
             <h2>Omni-channel onboarding.</h2>
             <p>
-              Deploy MoneyMind wherever your investors are — maximizing reach
-              and broadening behavioral data capture across your entire investor base.
+              Deploy MoneyMind wherever your investors are — behavioral data you
+              can capture across your investor base.
             </p>
             <p>
               Embed into your digital advice journeys, client portals, marketing,

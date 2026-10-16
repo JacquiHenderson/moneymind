@@ -106,12 +106,12 @@ export default function Platform({
               <MoneyQuiz />
             ) : tab === 'embed' ? (
               <picture className="mm-platform-pic">
-                <source srcSet="/assets/opt/product/embed-link.avif?v=2" type="image/avif" />
-                <source srcSet="/assets/opt/product/embed-link.webp?v=2" type="image/webp" />
+                <source srcSet="/assets/opt/product/embed-link.avif?v=3" type="image/avif" />
+                <source srcSet="/assets/opt/product/embed-link.webp?v=3" type="image/webp" />
                 <img
                   className="mm-platform-img"
-                  src="/assets/opt/product/embed-link.png?v=2"
-                  alt="MoneyMind embedded on an advisory firm's website with a Learn your MoneyMind profile call to action"
+                  src="/assets/opt/product/embed-link.png?v=3"
+                  alt="MoneyMind embedded on an advisory firm's website with a Discover your MoneyPattern call to action"
                   width="1600"
                   height="1213"
                   loading="lazy"

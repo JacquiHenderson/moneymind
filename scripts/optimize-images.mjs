@@ -31,6 +31,8 @@ const TARGETS = [
   { src: 'product/dashboard-dark.png',  width: 1600, fallback: 'png' },
   { src: 'product/goals-planning-dark.png', width: 1600, fallback: 'png' },
   { src: 'product/risk-dark.png',        width: 1200, fallback: 'png' },
+  { src: 'product/persona-cohorts-light.png', width: 1220, fallback: 'png' },
+  { src: 'product/persona-cohorts-dark.png',  width: 1304, fallback: 'png' },
   { src: 'product/risk-light.png',      width: 1100, fallback: 'png' },
   { src: 'product/goals-planning.png',  width: 1600, fallback: 'png' },
   { src: 'product/platform-couples.png', width: 1600, fallback: 'png' },
