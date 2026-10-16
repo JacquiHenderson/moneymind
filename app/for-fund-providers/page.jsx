@@ -98,7 +98,6 @@ function CohortVisual() {
             <span className="mm-cohort-sub">Investor cohorts</span>
             <span className="mm-cohort-count">58,420 investors profiled</span>
           </div>
-          <span className="mm-cohort-pill">Auto-updated</span>
         </header>
         <div className="mm-cohort-bar">
           {segments.map((s) => (
@@ -256,7 +255,7 @@ function FundProvidersPredict() {
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">Predict · prevent</span>
-            <h2>Predict Investor Decisions Before They Happen.</h2>
+            <h2>Signals that predict investor decisions.</h2>
             <p>
               Anticipate how your investors will react, what actions they&apos;ll
               take, and whether they&apos;ll abandon their investment plan — before
