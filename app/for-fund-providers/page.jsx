@@ -89,14 +89,13 @@ function CohortVisual() {
     { name: 'Considered Spender', pct: 18, color: 'var(--mm-blue-deep)' },
     { name: 'Retirement-Ready',   pct: 17, color: 'var(--mm-blue-100)' },
     { name: 'Quiet Worrier',    pct: 9,  color: 'var(--mm-blue-200)' },
-    { name: 'Other',              pct: 6,  color: 'var(--mm-blue-800)' },
   ];
   return (
     <div className="mm-split-visual mm-fv-archetype">
       <div className="mm-cohort">
         <header className="mm-cohort-head">
           <div>
-            <span className="mm-cohort-sub">Investor cohorts · this quarter</span>
+            <span className="mm-cohort-sub">Investor cohorts</span>
             <span className="mm-cohort-count">58,420 investors profiled</span>
           </div>
           <span className="mm-cohort-pill">Auto-updated</span>
@@ -331,7 +330,7 @@ function FundProvidersOmni() {
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">Distribution</span>
-            <h2>Omni-channel Distribution.</h2>
+            <h2>Omni-channel onboarding.</h2>
             <p>
               Deploy MoneyMind wherever your investors are — maximizing reach
               and broadening behavioral data capture across your entire investor base.

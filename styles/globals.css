@@ -786,20 +786,20 @@ a:hover { color: var(--mm-blue-light); }
 @media (max-width: 1100px) { .mm-pricing-card { grid-template-columns: 1fr; padding: 36px; gap: 32px; } .mm-pricing-amount .num { font-size: 72px; } .mm-pricing-bullets { grid-template-columns: 1fr; } }
 
 /* Cohort */
-.mm-cohort { width: 100%; display: flex; flex-direction: column; gap: 18px; }
-.mm-cohort-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 16px; border-bottom: 1px solid var(--border-hairline); }
-.mm-cohort-head > div { display: flex; flex-direction: column; gap: 6px; }
-.mm-cohort-sub { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
-.mm-cohort-count { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--fg-1); }
-.mm-cohort-pill { font-family: var(--font-mono); font-size: 11px; color: var(--mm-success); padding: 5px 10px; border-radius: var(--radius-pill); border: 1px solid currentColor; letter-spacing: 0.02em; }
-.mm-cohort-bar { display: flex; height: 14px; border-radius: var(--radius-pill); overflow: hidden; border: 1px solid var(--border-hairline); }
+.mm-cohort { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.mm-cohort-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 22px; border-bottom: 1px solid var(--border-hairline); }
+.mm-cohort-head > div { display: flex; flex-direction: column; gap: 8px; }
+.mm-cohort-sub { font-size: 13.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+.mm-cohort-count { font-family: var(--font-display); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; color: var(--fg-1); }
+.mm-cohort-pill { font-family: var(--font-mono); font-size: 12px; color: var(--mm-success); padding: 6px 12px; border-radius: var(--radius-pill); border: 1px solid currentColor; letter-spacing: 0.02em; }
+.mm-cohort-bar { display: flex; height: 22px; border-radius: var(--radius-pill); overflow: hidden; border: 1px solid var(--border-hairline); }
 .mm-cohort-seg { transition: filter var(--dur-fast) var(--ease-out); }
 .mm-cohort-seg:hover { filter: brightness(1.1); }
-.mm-cohort-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
-.mm-cohort-legend li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--fg-2); }
-.mm-cohort-swatch { width: 10px; height: 10px; border-radius: 2px; flex: 0 0 auto; }
+.mm-cohort-legend { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; }
+.mm-cohort-legend li { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--fg-2); }
+.mm-cohort-swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 auto; }
 .mm-cohort-name { flex: 1; }
-.mm-cohort-pct { font-family: var(--font-mono); font-size: 12px; color: var(--fg-3); }
+.mm-cohort-pct { font-family: var(--font-mono); font-size: 14px; color: var(--fg-3); }
 
 /* Churn */
 .mm-churn-card { width: 100%; display: flex; flex-direction: column; gap: 14px; }

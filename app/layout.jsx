@@ -84,11 +84,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
       <head>
         {/* No-flash theme init: apply the saved choice before first paint.
-            No saved choice → no attribute → CSS color-scheme follows the OS. */}
+            Default is light for first-time visitors; only a saved 'dark' opts out. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();",
+              "(function(){try{var t=localStorage.getItem('mm-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();",
           }}
         />
       </head>

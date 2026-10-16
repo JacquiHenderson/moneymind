@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 
 // Light/dark switch shared by both header systems (mm-header and lp-header).
-// Default (no stored choice) follows the OS via CSS `color-scheme: light dark`;
-// a click sets an explicit data-theme on <html> and remembers it in localStorage.
+// Default (no stored choice) is light; a click sets an explicit data-theme on
+// <html> and remembers it in localStorage (the no-flash init in layout matches).
 export default function ThemeToggle({ className = '' }) {
   const [theme, setTheme] = useState(null); // 'light' | 'dark' | null (= follow system)
   const [mounted, setMounted] = useState(false);
@@ -12,11 +12,8 @@ export default function ThemeToggle({ className = '' }) {
     setMounted(true);
     const stored =
       typeof localStorage !== 'undefined' ? localStorage.getItem('mm-theme') : null;
-    if (stored === 'light' || stored === 'dark') {
-      setTheme(stored);
-    } else if (typeof window !== 'undefined' && window.matchMedia) {
-      setTheme(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    }
+    // Default to light for first-time visitors; only a saved 'dark' opts out.
+    setTheme(stored === 'dark' ? 'dark' : 'light');
   }, []);
 
   const toggle = () => {
