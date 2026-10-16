@@ -11,7 +11,7 @@ const TAB_COPY = {
   couples:
     "MoneyMind links couples into a single profile. The two results sit side by side for comparison. Alignments and differences are described neutrally, not judged — so couples get curious about each other, and the adviser walks in with the agenda already written.",
   profile:
-    "The behavioral assessment takes only minutes to complete — and it doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
+    "The behavioral assessment takes only minutes to complete — onboarding doesn't feel like a form. Clients get something back straight away: a personal read on how they make financial decisions, what drives them, and what gets in their way.",
   'pre-meeting':
     "MoneyMind insights flow straight into the AI tools you already use. The numbers, the meeting notes, and your client's financial psychology land into one brief — so your agenda is built on the full picture, not just what they own. The whole client story, before you walk in.",
   'ai-plans':
@@ -82,7 +82,22 @@ export default function Platform({
             {tab === 'couples' ? (
               couplesTab
             ) : tab === 'personas' ? (
-              <Personas />
+              <>
+                <div className="mm-shot is-dark"><Personas /></div>
+                <picture className="mm-platform-pic mm-shot is-light">
+                  <source srcSet="/assets/opt/product/platform-personas-light.avif" type="image/avif" />
+                  <source srcSet="/assets/opt/product/platform-personas-light.webp" type="image/webp" />
+                  <img
+                    className="mm-platform-img"
+                    src="/assets/opt/product/platform-personas-light.png"
+                    alt="MoneyMind persona archetypes — the Security Seeker detail with population share, pattern, roadblocks, how to optimise, and communication keywords"
+                    width="1178"
+                    height="822"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </>
             ) : tab === 'pre-meeting' ? (
               preMeetingTab
             ) : tab === 'ai-plans' ? (
@@ -91,14 +106,14 @@ export default function Platform({
               <MoneyQuiz />
             ) : tab === 'embed' ? (
               <picture className="mm-platform-pic">
-                <source srcSet="/assets/opt/product/embed-link.avif" type="image/avif" />
-                <source srcSet="/assets/opt/product/embed-link.webp" type="image/webp" />
+                <source srcSet="/assets/opt/product/embed-link.avif?v=2" type="image/avif" />
+                <source srcSet="/assets/opt/product/embed-link.webp?v=2" type="image/webp" />
                 <img
                   className="mm-platform-img"
-                  src="/assets/opt/product/embed-link.png"
+                  src="/assets/opt/product/embed-link.png?v=2"
                   alt="MoneyMind embedded on an advisory firm's website with a Learn your MoneyMind profile call to action"
                   width="1600"
-                  height="1012"
+                  height="1213"
                   loading="lazy"
                   decoding="async"
                 />
@@ -106,19 +121,34 @@ export default function Platform({
             ) : patternTab ? (
               patternTab
             ) : (
-              <picture className="mm-platform-pic">
-                <source srcSet="/assets/opt/product/dashboard.avif" type="image/avif" />
-                <source srcSet="/assets/opt/product/dashboard.webp" type="image/webp" />
-                <img
-                  className="mm-platform-img"
-                  src="/assets/opt/product/dashboard.png"
-                  alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
-                  width="1600"
-                  height="1064"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
+              <>
+                <picture className="mm-platform-pic mm-shot is-dark">
+                  <source srcSet="/assets/opt/product/dashboard.avif" type="image/avif" />
+                  <source srcSet="/assets/opt/product/dashboard.webp" type="image/webp" />
+                  <img
+                    className="mm-platform-img"
+                    src="/assets/opt/product/dashboard.png"
+                    alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
+                    width="1600"
+                    height="1064"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <picture className="mm-platform-pic mm-shot is-light">
+                  <source srcSet="/assets/opt/product/dashboard-light.avif" type="image/avif" />
+                  <source srcSet="/assets/opt/product/dashboard-light.webp" type="image/webp" />
+                  <img
+                    className="mm-platform-img"
+                    src="/assets/opt/product/dashboard-light.png"
+                    alt="MoneyMind profile dashboard showing the MoneyPattern™ for a client"
+                    width="1600"
+                    height="865"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </>
             )}
           </div>
         </div>

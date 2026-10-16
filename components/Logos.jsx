@@ -170,8 +170,29 @@ const LogoLinea = () => (
   </Lockup>
 );
 
+const Logo5Financial = () => (
+  <Lockup width={224} label="5 Financial">
+    <text x="0" y="39" fill="currentColor"
+      fontFamily="Inter, sans-serif" fontWeight="400" fontSize="27" letterSpacing="-0.01em">5 Financial</text>
+    <g fill="currentColor">
+      {[0,1,2,3,4,5].map(i => {
+        const a = (i * Math.PI) / 3 - Math.PI / 2;
+        const R = 14;
+        const px = 200 + Math.cos(a) * R;
+        const py = 30 + Math.sin(a) * R;
+        const deg = (a * 180) / Math.PI + 90;
+        return (
+          <rect key={i} x={-7} y={-3.2} width={14} height={6.4} rx={3.2}
+            transform={`translate(${px} ${py}) rotate(${deg})`}
+            opacity={0.42 + i * 0.1} />
+        );
+      })}
+    </g>
+  </Lockup>
+);
+
 const LOGOS = [
-  LogoCaboodle, LogoGetwise, LogoWealthyer, LogoPlanningIQ, LogoTouchpoint,
+  LogoCaboodle, Logo5Financial, LogoGetwise, LogoWealthyer, LogoPlanningIQ, LogoTouchpoint,
   LogoTruwealth, LogoThrive, LogoEka, LogoEmu, LogoFuturum,
   LogoGuidedWealth, LogoLci, LogoLinea,
 ];

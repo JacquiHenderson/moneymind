@@ -72,15 +72,6 @@ export default function RequestDemoPage() {
 
       <Logos />
 
-      <ImpactTrio showLead={false} />
-
-      {/* Testimonials */}
-      <section className="rd-testimonials">
-        <div className="mm-container">
-          <DemoTestimonials />
-        </div>
-      </section>
-
       {/* Founder intro video */}
       <section className="rd-video">
         <div className="mm-container">
@@ -104,6 +95,15 @@ export default function RequestDemoPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <ImpactTrio showLead={false} />
+
+      {/* Testimonials */}
+      <section className="rd-testimonials">
+        <div className="mm-container">
+          <DemoTestimonials />
         </div>
       </section>
 

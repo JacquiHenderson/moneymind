@@ -31,7 +31,7 @@ function AdvisersHero() {
         <p className="mm-sub-hero-lead">
           MoneyMind™ maps the financial behaviors behind — how your
           client&apos;s save, spend, plan for retirement, respond to markets, and invest.
-          A behavioral assessment risk profile questionnaires miss.
+          A multi-factor behavioral assessment risk profile questionnaires miss.
         </p>
         <p className="mm-sub-hero-reveal">
           Your clients have always had a MoneyPattern.
@@ -78,16 +78,30 @@ function SharedOutcomesVisual() {
   );
 }
 
+function AdvisersHowItWorks() {
+  return (
+    <section className="mm-section" data-screen-label="How it works">
+      <div className="mm-container">
+        <div className="mm-section-head center">
+          <span className="eyebrow">How it works</span>
+          <h2>A new kind of wealth proposition, built around each client.</h2>
+          <p className="lead">MoneyMind works alongside the tools you already use — no new platform to learn.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AdvisersSharedOutcomes() {
   return (
     <section className="mm-section mm-split" data-screen-label="Shared outcomes">
       <div className="mm-container">
         <div className="mm-split-grid">
           <div className="mm-split-copy">
-            <span className="eyebrow">Shared outcomes</span>
-            <h2>Succeed through shared outcomes.</h2>
-            <p>Find the gap between where your clients are at vs. their ideal financial life. See which dominant area shapes their financial decisions.</p>
-            <p>Deliver your advice aligned with what matters most.</p>
+            <span className="eyebrow">Personal onboarding</span>
+            <h2>Onboarding that stands out.</h2>
+            <p>MoneyMind gives your clients an onboarding experience that is personal, engaging and grounded in how they actually think about money.</p>
+            <p>From the first meeting, you can tailor every conversation to who they really are, so they feel understood and confident to move forward with your advice.</p>
           </div>
           <SharedOutcomesVisual />
         </div>
@@ -97,6 +111,32 @@ function AdvisersSharedOutcomes() {
 }
 
 // ---- Kahneman Quote ----
+// ---- Trust banner (above "What is MoneyPattern?") ----
+function TrustBanner() {
+  return (
+    <section className="mm-trust-band" data-screen-label="Trust banner">
+      <div className="mm-container">
+        <h2 className="mm-trust-head">
+          Trust is built <em>emotionally</em>, not technically.
+        </h2>
+        <div className="mm-trust-grid">
+          <figure className="mm-trust-stat">
+            <span className="mm-trust-lead">Trust is the</span>
+            <span className="mm-trust-num" aria-hidden="true">#1</span>
+            <span className="mm-trust-desc">factor in choosing an advisor.</span>
+          </figure>
+          <figure className="mm-trust-stat">
+            <span className="mm-trust-lead">Broken trust is the</span>
+            <span className="mm-trust-num" aria-hidden="true">#1</span>
+            <span className="mm-trust-desc">reason clients leave.</span>
+          </figure>
+        </div>
+        <p className="mm-trust-source">Source: CapIntel 2025 Investor Engagement Survey</p>
+      </div>
+    </section>
+  );
+}
+
 function KahnemanQuote() {
   return (
     <section className="mm-pull-quote" data-screen-label="Kahneman quote">
@@ -151,11 +191,28 @@ function AdvisersDecodePatterns() {
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">Decode hidden patterns</span>
-            <h2>Decode hidden patterns behind client decisions.</h2>
-            <p>Anticipate how your clients will react, what actions they&apos;ll take, and whether they&apos;ll abandon their financial plan.</p>
+            <h2>The full picture of every client.</h2>
+            <p>Anticipate how your clients will react, what actions they&apos;ll take, and whether they&apos;ll panic or abandon their financial plan.</p>
             <p>Identify their Superpowers, Roadblocks, and how to Optimize your strategies. Identify all the emotions that override rational plans and protect your AUM.</p>
           </div>
-          <PatternsVisual />
+          <div className="mm-split-cell">
+            <div className="mm-shot is-dark"><PatternsVisual /></div>
+            <div className="mm-split-visual mm-shot is-light">
+              <picture>
+                <source srcSet="/assets/opt/product/dashboard-light.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/dashboard-light.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/dashboard-light.png"
+                  alt="MoneyMind profile dashboard — a client's Money Profile, MoneyPattern across five dimensions, and communication style"
+                  width="1600"
+                  height="865"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -197,18 +254,69 @@ function RiskVisual() {
   );
 }
 
+function AdvisersGoals() {
+  return (
+    <section className="mm-section mm-split" data-screen-label="Goals planning">
+      <div className="mm-container">
+        <div className="mm-split-grid">
+          <div className="mm-split-copy">
+            <span className="eyebrow">Goals-based planning</span>
+            <h2>Risk tailored to goals.</h2>
+            <p>Map each client&apos;s cash and investment goals to see the risk needed and the chance of success.</p>
+            <p>Advisors can choose to tailor portfolios to each goal&apos;s time horizon and outcome, helping reduce emotional, impulsive decision-making when markets fall.</p>
+          </div>
+          <div className="mm-split-cell">
+            <div className="mm-split-visual mm-split-visual--img">
+              <picture>
+                <source srcSet="/assets/opt/product/goals-planning.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/goals-planning.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/goals-planning.png"
+                  alt="MoneyMind goals-based planning — a renovation cash goal and a retirement growth goal, each with a projection of where it lands and the chance of reaching it"
+                  width="1600"
+                  height="602"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AdvisersRisk() {
   return (
-    <section className="mm-section mm-split" data-screen-label="Risk picture">
+    <section className="mm-section mm-split mm-split-reverse" data-screen-label="Risk picture">
       <div className="mm-container">
         <div className="mm-split-grid">
           <div className="mm-split-copy">
             <span className="eyebrow">A complete risk picture</span>
-            <h2>Map a complete risk picture.</h2>
-            <p>Capture all the dimensions of risk behavior: tolerance, capacity, loss response, anxiety, discipline, overconfidence, regret, adaptability, and more.</p>
+            <h2>Multi-factor risk.</h2>
+            <p>Capture all the dimensions of risk behavior: risk tolerance, risk capacity, risk needed for goals, discipline, overconfidence, regret, adaptability, and more.</p>
             <p>Know how your clients will <em>actually</em> behave under pressure — so portfolios match reality, not a score.</p>
           </div>
-          <RiskVisual />
+          <div className="mm-split-cell">
+            <div className="mm-shot is-dark"><RiskVisual /></div>
+            <div className="mm-split-visual mm-shot is-light">
+              <picture>
+                <source srcSet="/assets/opt/product/risk-light.avif?v=3" type="image/avif" />
+                <source srcSet="/assets/opt/product/risk-light.webp?v=3" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/risk-light.png?v=3"
+                  alt="MoneyMind risk profile — Moderate risk tolerance alongside a Very High capacity to take risk"
+                  width="1092"
+                  height="580"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -303,7 +411,7 @@ function AdvisersInsightFlow() {
       <div className="mm-container">
         <div className="mm-section-head center">
           <span className="eyebrow">Integrated insights</span>
-          <h2>MoneyMind insights flow into the AI tools you already use — and into the plans you write.</h2>
+          <h2>MoneyMind insights flow into the AI tools you already use — and into the meeting agendas and plans you write.</h2>
           <p className="lead">Tell us what tools you use — we&apos;ll handle the connection.</p>
         </div>
         <div className="mm-insight mm-insight-full">
@@ -321,25 +429,41 @@ export default function ForAdvisersPage() {
       <Header currentPage="advisers" />
       <AdvisersHero />
       <Logos />
+      <TrustBanner />
       <Platform
         eyebrow="What is MoneyPattern?"
         heading="MoneyPattern™ is your client's story, the person behind the plan."
-        lead="Reveal the patterns behind your client's financial decisions, so you advise the person, not just the portfolio. It works alongside the tools you already use — no new platform to learn."
+        lead="Advice is brilliant at the numbers — but almost never looks at the mindset driving them. It works alongside the tools you already use — no new platform to learn."
         patternTab={<ClientStory />}
         couplesTab={
-          <picture className="mm-platform-pic">
-            <source srcSet="/assets/opt/product/platform-couples.avif" type="image/avif" />
-            <source srcSet="/assets/opt/product/platform-couples.webp" type="image/webp" />
-            <img
-              className="mm-platform-img"
-              src="/assets/opt/product/platform-couples.png"
-              alt="MoneyMind joint dashboard comparing two partners side by side — an alignment score, combined financial snapshot, and behavioral traits marked aligned or different"
-              width="1600"
-              height="854"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <>
+            <picture className="mm-platform-pic mm-shot is-dark">
+              <source srcSet="/assets/opt/product/platform-couples.avif" type="image/avif" />
+              <source srcSet="/assets/opt/product/platform-couples.webp" type="image/webp" />
+              <img
+                className="mm-platform-img"
+                src="/assets/opt/product/platform-couples.png"
+                alt="MoneyMind joint dashboard comparing two partners side by side — an alignment score, combined financial snapshot, and behavioral traits marked aligned or different"
+                width="1600"
+                height="854"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <picture className="mm-platform-pic mm-shot is-light">
+              <source srcSet="/assets/opt/product/platform-couples-light.avif" type="image/avif" />
+              <source srcSet="/assets/opt/product/platform-couples-light.webp" type="image/webp" />
+              <img
+                className="mm-platform-img"
+                src="/assets/opt/product/platform-couples-light.png"
+                alt="MoneyMind joint dashboard comparing two partners side by side — an alignment score, combined financial snapshot, and behavioral traits marked aligned or different"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </>
         }
         preMeetingTab={
           <div className="mm-aiplan">
@@ -370,13 +494,15 @@ export default function ForAdvisersPage() {
           </div>
         }
       />
+      <AdvisersHowItWorks />
+      <AdvisersSharedOutcomes />
+      <AdvisersDecodePatterns />
+      <AdvisersGoals />
+      <AdvisersRisk />
       <AdvisersInsightFlow />
       <AdvisersResults />
       <ImpactTrio />
       <KahnemanQuote />
-      <AdvisersSharedOutcomes />
-      <AdvisersDecodePatterns />
-      <AdvisersRisk />
       <AdvisersPricing />
       <Team />
       <Security />

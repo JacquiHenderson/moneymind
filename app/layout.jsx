@@ -81,7 +81,17 @@ const productSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
+      <head>
+        {/* No-flash theme init: apply the saved choice before first paint.
+            No saved choice → no attribute → CSS color-scheme follows the OS. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body>
         {children}
         {/* JSON-LD as plain <script> so it is in the raw HTML for non-JS AI crawlers. */}

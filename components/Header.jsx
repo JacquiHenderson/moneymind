@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header({ currentPage = 'home' }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,8 @@ export default function Header({ currentPage = 'home' }) {
       <header className={`mm-header${scrolled ? ' scrolled' : ''}`}>
         <div className="mm-header-inner">
           <Link href="/" className="mm-logo" aria-label="MoneyMind home" onClick={close}>
-            <img src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
+            <img className="mm-shot is-dark" src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
+            <img className="mm-shot is-light" src="/assets/logos/moneymind-navy.svg?v=1" alt="MoneyMind" />
           </Link>
           <nav className="mm-nav" aria-label="Primary">
             <Link href="/for-advisors" className={currentPage === 'advisers' ? 'is-current' : ''} aria-current={currentPage === 'advisers' ? 'page' : undefined}>Financial Advisors</Link>
@@ -36,6 +38,7 @@ export default function Header({ currentPage = 'home' }) {
             <a href={homeAnchor('#team')}>About</a>
           </nav>
           <div className="mm-nav-actions">
+            <ThemeToggle />
             <a href="https://auth.moneymindprofile.com/" className="mm-btn mm-btn-ghost">Log in</a>
             <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary">Start 14-day trial</a>
           </div>
@@ -58,6 +61,10 @@ export default function Header({ currentPage = 'home' }) {
         <a href={homeAnchor('#security')} onClick={close}>Security</a>
         <a href={homeAnchor('#team')} onClick={close}>About</a>
         <div className="mm-mobile-nav-actions">
+          <div className="mm-mobile-theme-row">
+            <span>Appearance</span>
+            <ThemeToggle />
+          </div>
           <a href="https://auth.moneymindprofile.com/" className="mm-btn mm-btn-ghost mm-btn-lg" onClick={close}>Log in</a>
           <a href="https://auth.moneymindprofile.com/#signup" className="mm-btn mm-btn-primary mm-btn-lg" onClick={close}>Start 14-day trial</a>
         </div>

@@ -43,12 +43,19 @@ export default function ClientStory() {
 
         <div className="hiw-mp">
           <span className="hiw-mp-label">Five dimensions</span>
-          <picture>
+          <picture className="mm-shot is-dark">
             <source srcSet="/assets/opt/product/moneypattern-card.avif" type="image/avif" />
             <source srcSet="/assets/opt/product/moneypattern-card.webp" type="image/webp" />
             <img className="hiw-mp-img" src="/assets/opt/product/moneypattern-card.png"
               width="782" height="466" loading="lazy" decoding="async"
               alt="Sarah's MoneyPattern across five dimensions: saving (light saver), spending (impulsive spender), retirement planning (retirement-aware), market response (impulsive-responder), and investment (cautious investor)." />
+          </picture>
+          <picture className="mm-shot is-light">
+            <source srcSet="/assets/opt/product/moneypattern-card-light.avif" type="image/avif" />
+            <source srcSet="/assets/opt/product/moneypattern-card-light.webp" type="image/webp" />
+            <img className="hiw-mp-img" src="/assets/opt/product/moneypattern-card-light.png"
+              width="900" height="794" loading="lazy" decoding="async"
+              alt="Sarah's MoneyPattern across five dimensions: saving (steady saver), spending (impulsive spender), retirement planning (retirement-ready), market response (steady-responder), and investment (confident investor)." />
           </picture>
         </div>
       </div>

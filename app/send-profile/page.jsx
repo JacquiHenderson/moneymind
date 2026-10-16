@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThemeToggle from '../../components/ThemeToggle';
 import { pageMeta } from '../../lib/seo';
 
 export const metadata = pageMeta({
@@ -15,7 +16,8 @@ export default function SendProfilePage() {
       <header className="lp-header">
         <div className="lp-header-inner">
           <Link href="/" className="lp-logo" aria-label="MoneyMind home">
-            <img src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
+            <img className="mm-shot is-dark" src="/assets/logos/moneymind-white.svg?v=5" alt="MoneyMind" />
+            <img className="mm-shot is-light" src="/assets/logos/moneymind-navy.svg?v=1" alt="MoneyMind" />
           </Link>
           <nav className="lp-nav" aria-label="Primary">
             <Link href="/for-advisors">Financial Advisors</Link>
@@ -24,6 +26,7 @@ export default function SendProfilePage() {
             <Link href="/#security">Security</Link>
             <Link href="/#team">About</Link>
           </nav>
+          <ThemeToggle />
           <Link href="/request-demo" className="lp-cta">Request demo</Link>
         </div>
       </header>
