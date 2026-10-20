@@ -5,7 +5,7 @@ const SCENARIOS = [
   {
     tag: 'Briefed on the person',
     title: 'Before the first meeting',
-    body: "The conversation starts with the human, not a fact-find. Sarah's an emotional spender with a scarcity mindset, deliberates on financial decisions, and an impulsive-responder to markets.",
+    body: "The conversation starts with the human, not an intake form. Sarah's an emotional spender with a scarcity mindset, deliberates on financial decisions, and an impulsive-responder to markets.",
   },
   {
     tag: 'Trust in minutes',
@@ -61,6 +61,7 @@ export default function ClientStory() {
       </div>
 
       <div className="hiw-scenarios">
+        <h3 className="hiw-scenarios-title">Playbook</h3>
         <ol className="hiw-steps">
           {SCENARIOS.map((s, i) => (
             <li key={s.title} className="hiw-step">

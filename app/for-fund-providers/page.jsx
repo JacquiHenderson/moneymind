@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Header from '../../components/Header';
-import { HeroCurves } from '../../components/Hero';
 import Logos from '../../components/Logos';
 import Platform from '../../components/Platform';
 import Footer from '../../components/Footer';
@@ -10,24 +9,22 @@ import { IconBrain, IconChart, IconLink, Icon } from '../../components/Icons';
 // ---- Hero ----
 function FundProvidersHero() {
   return (
-    <section className="mm-sub-hero" data-screen-label="Fund providers hero">
-      <HeroCurves />
-      <div className="mm-sub-hero-inner">
-        <span className="eyebrow mm-sub-hero-eyebrow">Built for enterprise</span>
+    <section className="mm-banner-hero" data-screen-label="Fund providers hero">
+      <div className="mm-banner-hero-inner">
+        <span className="eyebrow mm-banner-hero-eyebrow">Built for enterprise</span>
         <h1>
-          The new standard of<br/>
-          understanding <em>investors.</em>
+          The new standard of understanding <em>investors.</em>
         </h1>
-        <p className="mm-sub-hero-lead">
+        <p className="mm-banner-hero-lead">
           MoneyMind™ maps the behavioral intelligence layer that drives investor
           decisions — across product, distribution, retention, and growth.
         </p>
-        <p className="mm-sub-hero-reveal">
+        <p className="mm-banner-hero-reveal">
           Investment decisions are influenced by emotion and behavioral bias —
           <em> not logic.</em>
         </p>
         <div className="mm-hero-actions">
-          <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
+          <a href="https://scheduler.zoom.us/jacqui-henderson-mm/moneymindmeeting" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
         </div>
       </div>
     </section>
@@ -209,9 +206,11 @@ const RISK_SIGNAL_GROUPS = [
     { name: 'Impulsive Responder', desc: 'Panic sells in falls',                  pct: 27, count: 769 },
     { name: 'Overconfidence',      desc: 'Bullish, may overtrade',                pct: 7,  count: 199 },
     { name: 'Low risk capacity',   desc: 'Capacity to absorb losses',             pct: 16, count: 456 },
-    { name: 'Capacity for loss',   desc: 'Spending shortfall + portfolio drawdown', pct: 13, count: 370 },
-    { name: 'Loss response',       desc: 'Sensitive to losses',                   pct: 20, count: 569 },
-    { name: 'Advisor blame risk',  desc: 'Blames advisor after loss',             pct: 9,  count: 256 },
+  ] },
+  { label: 'Behavioural flags', rows: [
+    { name: 'Action-Orientation', desc: 'Deliberates on decisions',            pct: 18, count: 512 },
+    { name: 'Adaptability',       desc: "Won't change course",                 pct: 12, count: 342 },
+    { name: "Advice won't stick", desc: 'Disengages, plan abandonment',        pct: 24, count: 683 },
   ] },
 ];
 // Shared bar scale so a given length always maps to the same colour on the ramp.
@@ -222,7 +221,7 @@ function RiskSignalsVisual() {
     <div className="mm-split-visual mm-fv-meeting mm-rsig" role="img"
       aria-label="Risk signals across 2,847 profiled clients — percentage carrying each investment and behavioural flag">
       <header className="mm-rsig-head">
-        <h4>Risk signals</h4>
+        <h4>Flags</h4>
         <span className="mm-rsig-sub">· 2,847 clients profiled</span>
       </header>
       {RISK_SIGNAL_GROUPS.map((g) => (
@@ -265,6 +264,56 @@ function FundProvidersPredict() {
             </p>
           </div>
           <RiskSignalsVisual />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---- Ramp up new advisors ----
+function FundProvidersRampUp() {
+  return (
+    <section className="mm-section mm-split mm-split-reverse" data-screen-label="Ramp up advisors">
+      <div className="mm-container">
+        <div className="mm-split-grid">
+          <div className="mm-split-copy">
+            <span className="eyebrow">New advisors</span>
+            <h2>Ramp up new advisors.</h2>
+            <p>Give new hires the insight that usually takes years of experience.</p>
+            <p>Our playbook shows new advisors what to say and when, so they have stronger conversations and build client trust from the first meeting.</p>
+          </div>
+          <div className="mm-split-cell">
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-dark">
+              <picture>
+                <source srcSet="/assets/opt/product/dashboard-dark.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/dashboard-dark.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/dashboard-dark.png"
+                  alt="MoneyMind profile dashboard — a client's Money Profile, MoneyPattern across five dimensions, and communication style"
+                  width="1600"
+                  height="858"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="mm-split-visual mm-split-visual--img mm-shot is-light">
+              <picture>
+                <source srcSet="/assets/opt/product/dashboard-light.avif" type="image/avif" />
+                <source srcSet="/assets/opt/product/dashboard-light.webp" type="image/webp" />
+                <img
+                  className="mm-split-visual-img"
+                  src="/assets/opt/product/dashboard-light.png"
+                  alt="MoneyMind profile dashboard — a client's Money Profile, MoneyPattern across five dimensions, and communication style"
+                  width="1600"
+                  height="865"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -320,7 +369,7 @@ function OmniChannelVisual() {
 
 function FundProvidersOmni() {
   return (
-    <section className="mm-section mm-split mm-split-reverse" data-screen-label="Omni-channel">
+    <section className="mm-section mm-split" data-screen-label="Omni-channel">
       <div className="mm-container">
         <div className="mm-split-grid">
           <div className="mm-split-copy">
@@ -359,7 +408,7 @@ function FundProvidersContact() {
               project delivery.
             </p>
             <div className="mm-enterprise-actions">
-              <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
+              <a href="https://scheduler.zoom.us/jacqui-henderson-mm/moneymindmeeting" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
               <a href="mailto:info@moneymindprofile.com" className="mm-btn mm-btn-ghost mm-btn-lg">info@moneymindprofile.com</a>
             </div>
           </div>
@@ -398,7 +447,7 @@ function FundProvidersCtaBand() {
             continuously refreshed, ready to action across product, retention, and comms.
           </p>
           <div className="mm-hero-actions">
-            <a href="https://wkf.ms/3PMywRu" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
+            <a href="https://scheduler.zoom.us/jacqui-henderson-mm/moneymindmeeting" target="_blank" rel="noopener" className="mm-btn mm-btn-primary mm-btn-lg">Book a discovery call</a>
           </div>
           <div className="mm-cta-trial">Decode insights. Predict decisions. Protect AUM.</div>
         </div>
@@ -417,6 +466,7 @@ export default function ForFundProvidersPage() {
       <FundProvidersExpandData />
       <FundProvidersPersonaCohorts />
       <FundProvidersPredict />
+      <FundProvidersRampUp />
       <FundProvidersOmni />
       <Platform
         heading="MoneyMind's unique features designed to elevate your investor experience."
