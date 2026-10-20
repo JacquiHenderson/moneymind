@@ -126,7 +126,13 @@ html, body { margin: 0; padding: 0; }
 /* Safety net: decorative glows use large negative insets that can bleed past
    the viewport on narrow screens. clip (not hidden) avoids a scroll container,
    so the sticky header keeps working. */
-html { overflow-x: clip; }
+html {
+  overflow-x: clip;
+  /* Stop iOS Safari/Chrome from auto-inflating text in wide blocks, which
+     otherwise enlarges copy on mobile and makes it overflow its container. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   background: var(--bg-page);
@@ -140,6 +146,7 @@ body {
   text-rendering: optimizeLegibility;
   min-height: 100vh;
   overflow-x: clip;
+  overflow-wrap: break-word;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
