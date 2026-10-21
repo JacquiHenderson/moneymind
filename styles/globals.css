@@ -699,6 +699,14 @@ a:hover { color: var(--mm-blue-light); }
   .mm-split-boxed { padding: 10px 0; }
   .mm-split-boxed .mm-split-grid { padding: 32px 26px; gap: 32px; }
 }
+/* Mobile hardening: a grid/flex child with wide content (or an intrinsically
+   wide image) must never force its track wider than the viewport. Without
+   min-width:0 the default min-width:auto lets content blow the column out,
+   which on mobile clips both the text and the screenshot past the edge. */
+.mm-fbox, .mm-fbox-copy, .mm-fbox-visual,
+.mm-split-grid > *, .hiw-grid > *, .hiw-card, .hiw-scenarios { min-width: 0; }
+img { max-width: 100%; }
+
 /* 2-up feature boxes (copy on top, visual below). */
 .mm-fbox-section { padding: 16px 0 72px; }
 .mm-fbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
