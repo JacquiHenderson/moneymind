@@ -2161,12 +2161,22 @@ img { max-width: 100%; }
 .pa-risk-label { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #f08a70; margin-bottom: 8px; }
 .pa-risk .pa-p { color: #f0b6a6; }
 
+/* MoneyPattern — five domains */
+.pa-mp { margin-top: 30px; }
+.pa-table--mp td { font-size: 12.5px; }
+.pa-table--mp .pa-td-dim { white-space: nowrap; }
+.pa-td-super { color: light-dark(#2a6287, #9fd0ea); }
+.pa-mp-headline { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; background: rgba(82, 152, 191, 0.08); border: 1px solid rgba(82, 152, 191, 0.28); border-radius: var(--radius-md); padding: 14px 18px; }
+.pa-mp-headline-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mm-blue-light); flex: none; }
+.pa-mp-headline-text { margin: 0; font-size: 14.5px; line-height: 1.55; font-weight: 600; color: var(--fg-1); min-width: 0; }
+
 /* Comparison tables */
 .pa-compare { padding-top: 20px; }
 .pa-compare-title { font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 32px); font-weight: 700; letter-spacing: -0.025em; color: var(--fg-1); margin: 24px 0 8px; }
 .pa-compare .pa-h { margin-top: 30px; }
 
 @media (max-width: 720px) {
+  .pa-mp-headline { flex-direction: column; gap: 8px; }
   .pa-stats { grid-template-columns: 1fr; }
   .pa-optimise { grid-template-columns: 1fr; gap: 16px; }
   .pa-hero-band { grid-template-columns: 1fr; }

@@ -42,11 +42,21 @@ const ARCHETYPES = [
       { term: 'Regret Aversion — Tier 3:', body: 'Kumar et al. (2024) meta-analysis, 31 studies, r=0.401. Drives disposition effect (holding losers too long, selling winners too early) and status quo bias.' },
       { term: 'Certainty Preference — Tier 4:', body: 'Duke et al. (2017); Lim et al. (2019); Donnelly et al. (2022). Stable preference for a certain outcome over a higher expected-value risky one. Primary driver of guaranteed income product preference.' },
     ],
-    behavior: [
-      'Security Seekers save consistently — motivation is fear of loss, not growth ambition. They systematically under-invest in equities, favouring cash, bonds, term deposits, and guaranteed income products. The disposition effect is active: holding losing positions too long while selling profitable ones prematurely. In market downturns, high risk of reactive selling that crystallises losses at the worst possible moment. The most significant long-term financial cost is insufficient equity participation — missing the primary driver of wealth accumulation over 20–30 year horizons.',
-    ],
     primaryRisk:
       'Under-investment in growth assets. The compounding cost of excessive conservatism over long horizons is often larger than the risk they are protecting against.',
+    moneyPattern: {
+      intro:
+        "Strongest in Saving and Spending, held back in Investment and Market Response — safety comes first, sometimes at the cost of growth.",
+      rows: [
+        ["Saving", "Saves consistently; builds large cash buffers", "Discipline — saving is a habit, not a struggle", "Holds more cash than the plan needs", "Set a target buffer (e.g. 6 months); sweep the excess to goals"],
+        ["Spending", "Careful, value-conscious, rarely overspends", "Lives within means without effort", "Under-spends on things that matter; guilt when spending", "Pre-approve a guilt-free spending allocation"],
+        ["Retirement Planning", "Plans early and values certainty", "Takes the future seriously", "Favours guaranteed outcomes over adequate ones", "Show the inflation gap in dollars at retirement age"],
+        ["Market Response", "Loss-sensitive; unsettled by drawdowns", "Won’t chase hype or bubbles", "Reactive selling in downturns crystallises losses", "Share recovery evidence before volatility, not during"],
+        ["Investment", "Favours cash, bonds and guaranteed products", "Protects capital", "Under-invests in growth assets; disposition effect (holds losers, sells winners early)", "Security foundation bucket first; frame growth as protection against inflation"],
+      ],
+      headline:
+        "Your safety net is a strength — the next step is letting part of it grow.",
+    },
   },
   {
     num: '02',
@@ -83,11 +93,21 @@ const ARCHETYPES = [
       { term: 'Future Self-Connection — Tier 3–4:', body: 'Hershfield et al. VR studies — direct causal effect on retirement contribution rates. Marques et al. (2018). Saving feels like investing in themselves, not sacrifice.' },
       { term: 'Internal Locus of Control — Tier 2:', body: 'Rotter (1966); 70+ years cross-cultural replication. Internal LOC drives proactive financial engagement, independent research, and consistent plan execution.' },
     ],
-    behavior: [
-      'The Confident Grower is the profile all four frameworks’ highest-evidence constructs describe when operating optimally together. Saves consistently, invests broadly, holds through market volatility, engages proactively with retirement planning, rarely makes emotionally-driven portfolio changes. The advisor’s role shifts from motivator to co-strategist.',
-    ],
     primaryRisk:
       'Overconfidence. High self-efficacy can shade into overestimation of financial skill (Bandura, 1986). Optimism bias produces return overestimation of 10–15%. Tail risks — insurance gaps, concentration risk, sequence-of-returns risk — systematically under-weighted.',
+    moneyPattern: {
+      intro:
+        "Strong across most domains — the gaps are tail risk and the less visible domains, like spending drift and retirement income.",
+      rows: [
+        ["Saving", "Saves steadily as part of a wider plan", "Treats saving as fuel for growth", "May run a thin emergency buffer because “the portfolio is liquid”", "Keep a dedicated cash buffer outside the portfolio"],
+        ["Spending", "Comfortable spending; lifestyle rises with success", "Enjoys money without anxiety", "Lifestyle creep goes unnoticed", "Review spending annually against long-term goals"],
+        ["Retirement Planning", "Engaged and ambitious about the future", "Thinks in decades", "Assumes optimistic returns; under-plans for sequence and longevity risk", "Stress-test the plan with evidence-based return assumptions"],
+        ["Market Response", "Holds through volatility", "Calm under pressure — doesn’t panic sell", "Overconfident in timing or recovery", "Pre-agree what would change the strategy"],
+        ["Investment", "Invests broadly across growth assets", "Long-term ownership mindset", "Concentration and under-weighted tail risks", "Co-strategist role; review concentration and downside scenarios"],
+      ],
+      headline:
+        "You build wealth with confidence — the next step is protecting it from the risks you don’t see.",
+    },
   },
   {
     num: '03',
@@ -125,12 +145,23 @@ const ARCHETYPES = [
       { term: 'Present Bias — Tier 1:', body: 'Imai et al. (2019) — 220 estimates from 28 articles. Amplified by anxiety into complete avoidance of future-oriented financial thinking.' },
       { term: 'External Locus of Control — Tier 2:', body: 'Rotter (1966). External LOC reinforces avoidance: "what’s the point of planning when I can’t control what happens anyway?"' },
     ],
-    behavior: [
-      'The self-reinforcing loop: financial anxiety triggers avoidance → avoidance prevents the actions that would reduce anxiety → anxiety increases. Scarcity mindset narrows cognitive bandwidth to immediate threats, making retirement planning and investment decisions cognitively inaccessible precisely when anxiety is highest. This client defers decisions, avoids financial conversations, accepts unsuitable defaults rather than choosing, and chronically under-saves — not from disinterest but from overwhelm.',
-      { note: true, body: 'Critical principle: This is a psychological state, not a financial one. A high-income, high-net-worth client can present with Archetype 3. Wealth and income do not determine this archetype. Anxiety and resilience level do.' },
-    ],
+    note:
+      'Critical principle: This is a psychological state, not a financial one. A high-income, high-net-worth client can present with Archetype 3. Wealth and income do not determine this archetype. Anxiety and resilience level do.',
     primaryRisk:
       'The self-reinforcing loop creates the financial shortfalls it fears. Avoidance produces genuine vulnerability, which amplifies anxiety. The loop must be broken with one small, visible win before any strategy conversation.',
+    moneyPattern: {
+      intro:
+        "A state, not a wealth level — anxiety and avoidance can show up in every domain, so progress starts with one small, visible win.",
+      rows: [
+        ["Saving", "Wants to save but avoids checking balances", "Cares deeply about getting it right", "Avoidance means no consistent system", "Automate one small transfer on payday"],
+        ["Spending", "Spending feels stressful; scarcity thinking even when comfortable", "Highly aware of money’s impact", "Stress spending or avoiding statements altogether", "One weekly 10-minute check-in, not a full budget"],
+        ["Retirement Planning", "The future feels overwhelming, so it’s put off", "Takes long-term security seriously", "Avoidance loop — the bigger it feels, the less it’s touched", "One decision per meeting; break the goal into a first step"],
+        ["Market Response", "News and drawdowns heighten worry", "Cautious — unlikely to take reckless risks", "May avoid looking, or act on fear", "Limit check frequency; agree a plan before markets move"],
+        ["Investment", "Hesitant to start; accepts unsuitable defaults rather than choosing", "Open to guidance when it feels safe", "Inaction — money sits idle", "Start with a simple default option and automate contributions"],
+      ],
+      headline:
+        "Your care about money is real — the next step is one small win that makes it feel lighter.",
+    },
   },
   {
     num: '04',
@@ -165,11 +196,21 @@ const ARCHETYPES = [
       { term: 'Optimism Bias — Tier 3:', body: 'Scheier & Carver dispositional optimism. Return overestimation of 10–15%. Harmful when combined with impulsive execution.' },
       { term: 'Lifestyle Inflation:', body: 'de Ridder et al. (2011); Baumeister; Mischel. Impulsiveness is a strong predictor of irregular saving and salary-matched lifestyle inflation.' },
     ],
-    behavior: [
-      'Highly financially engaged — monitors markets actively, acts on opportunities quickly. Overconfidence combined with action orientation produces excess trading that underperforms passive strategies (Barber & Odean). Low loss aversion reverses sharply when actual losses materialise — producing panic selling at market lows. FOMO-driven investment decisions and salary-matched lifestyle inflation are characteristic.',
-    ],
     primaryRisk:
       'Each reactive portfolio move — selling low, buying at peak enthusiasm — carries direct financial cost. Cumulative across a full market cycle, impact is substantial and hard to recover from.',
+    moneyPattern: {
+      intro:
+        "Energy and engagement are high in every domain — the work is putting a pause between impulse and action, especially in Spending and Market Response.",
+      rows: [
+        ["Saving", "Saves in bursts, then redirects to the next opportunity", "Motivated by goals and momentum", "Savings get raided for new ideas", "Automate saving before money reaches the spending account"],
+        ["Spending", "Quick decisions; enjoys experiences and new things", "Generous and decisive", "Impulse purchases and salary-matched lifestyle inflation", "A 48-hour pause rule for non-essential spends over a set amount"],
+        ["Retirement Planning", "Optimistic the future will work out", "Positive, future-ready mindset", "Assumes it will be fine without checking the numbers", "Show the gap in dollars; set auto-escalating contributions"],
+        ["Market Response", "Reacts fast to news and trends", "Stays engaged when others switch off", "Excess trading; panic selling at lows when real losses hit", "Mandatory pause protocol; pre-agreed change criteria"],
+        ["Investment", "Drawn to themes, tips and fast-moving assets", "Willing to back growth", "Concentration and chasing performance", "Core-satellite: automated core, small capped “explore” allocation"],
+      ],
+      headline:
+        "Your energy moves things forward — the next step is a pause that lets your best ideas win.",
+    },
   },
   {
     num: '05',
@@ -207,11 +248,21 @@ const ARCHETYPES = [
       { term: 'State Orientation — Tier 4:', body: 'Kuhl (1985) — state-oriented individuals excel at decision quality but are vulnerable to under-implementation.' },
       { term: 'Cognitive Reflection — Tier 4:', body: 'Frederick CRT (2005). Consistently engages System 2 (analytical) processing. Inverse relationship with impulsive risk-taking.' },
     ],
-    behavior: [
-      'The Informed Analyst brings genuine analytical depth. Researches thoroughly before committing, asks probing questions, scrutinises fees and product detail, rarely makes emotionally-driven portfolio changes. Internal LOC means they take personal responsibility for outcomes — producing both the strength (thorough preparation) and the vulnerability (analysis never feeling complete enough). Primary risk is under-implementation: time-sensitive decisions pass while information is still being gathered.',
-    ],
     primaryRisk:
       'Under-implementation. The cost of failing to act on sound strategies because the analysis never feels complete. On time-sensitive decisions, thoroughness works against them. The compounding cost of delayed decisions accumulates in ways that are hard to recover from.',
+    moneyPattern: {
+      intro:
+        "Knows the most and acts the least in some domains — the gap is between analysis and implementation, across all five.",
+      rows: [
+        ["Saving", "Knows the optimal savings rate; may not have set it up", "Clear on the numbers", "Optimising the plan delays starting it", "Pick a “good enough” rate now; refine later"],
+        ["Spending", "Tracks and analyses spending in detail", "Strong awareness of where money goes", "Tracking replaces changing", "Choose one category to act on this month"],
+        ["Retirement Planning", "Models scenarios thoroughly", "Internal locus of control — owns the outcome", "Endless modelling, no decision", "Hard decision dates for each milestone"],
+        ["Market Response", "Researches before reacting", "Rational, evidence-led under volatility", "Over-analysis can miss rebalancing windows", "Rules-based rebalancing set in advance"],
+        ["Investment", "Researches products and allocations deeply", "Makes informed choices", "Under-implementation — cash waits for the perfect option", "Quick-win actions; deep analytical content as support, not a gate"],
+      ],
+      headline:
+        "Your research is a strength — the next step is turning it into action on a date.",
+    },
   },
   {
     num: '06',
@@ -248,11 +299,21 @@ const ARCHETYPES = [
       { term: 'Fresh-Start Effect — Tier 4:', body: 'Beshears et al. (2021, N=6,082 field experiment) — linking financial commitments to a personally meaningful upcoming date significantly increases uptake. Highest-efficacy direct intervention for present bias.' },
       { term: 'Implementation Intentions — Tier 3:', body: 'Gollwitzer (400+ studies). Good intentions without specific when/where/how plans fail to convert to action.' },
     ],
-    behavior: [
-      'Most prevalent profile in the general population. Not distressed by money — simply not thinking about the financial future with sufficient vividness or urgency. When the future self does not feel real, saving for retirement is neurologically similar to giving money to a stranger (Hershfield et al.). Consistent lifestyle inflation, deferred retirement contributions, and good intentions that do not convert to action without structural support. Moderate present bias sustained over decades produces materially insufficient retirement savings.',
-    ],
     primaryRisk:
       'The compounding retirement gap. This client typically has adequate income — the gap is behavioral, not financial. Without automation that captures salary increases before they reach the spending account, wealth creation consistently lags income growth regardless of earnings.',
+    moneyPattern: {
+      intro:
+        "Comfortable with money today, loosely connected to the future — Retirement Planning and Saving carry the risk; Spending carries the joy.",
+      rows: [
+        ["Saving", "Saves what’s left over, if anything", "Relaxed, not anxious about money", "No system — saving is an afterthought", "Pay-yourself-first automation on payday"],
+        ["Spending", "Spends on experiences and the present", "Knows how to enjoy life", "Lifestyle inflation captures pay rises before they’re saved", "Keep a present-spending allocation so saving doesn’t feel like loss"],
+        ["Retirement Planning", "The future self feels distant", "Open and flexible about what’s ahead", "Compounding retirement gap", "Future-self visualisation; fresh-start framing (birthdays, new job, new year)"],
+        ["Market Response", "Largely unbothered by market moves", "Doesn’t panic", "Disengaged — may not notice when action is needed", "Annual review nudge tied to a fresh-start date"],
+        ["Investment", "Low engagement; defaults or nothing", "No emotional baggage about investing", "Starts late; misses compounding years", "Automated default allocation; show the cost of waiting one year"],
+      ],
+      headline:
+        "You know how to live well now — the next step is inviting your future self to the party.",
+    },
   },
   {
     num: '07',
@@ -290,13 +351,23 @@ const ARCHETYPES = [
       { term: 'Moderate Self-Control — Tier 2:', body: 'de Ridder et al. (2011, N=32,648) — self-control distributes approximately normally. The modal outcome is moderate self-control.' },
       { term: 'Mixed Locus of Control — Tier 2:', body: 'Rotter (1966). Mixed LOC (∼35–40% of population) is the modal outcome. Produces situationally variable engagement rather than consistent proactive or passive behavior.' },
     ],
-    behavior: [
-      'The Pragmatic Realist manages money adequately without being exceptional at it. Makes reasonable financial decisions at a moderate pace. Saves inconsistently. Has moderate retirement engagement — thinks about it but without urgency or specificity. Responds positively to professional advice when prompted but does not seek it proactively.',
-      'The primary failure mode is chronic under-optimisation across all dimensions. No single catastrophic decision, but consistent small gaps in savings rates, insurance adequacy, retirement contributions, and investment diversification that compound over 30 years into a significant shortfall. Death by a thousand moderate choices.',
-      { note: true, body: 'Critical insight: This is the most malleable archetype. With no dominant psychological resistance, the Pragmatic Realist responds well to all standard interventions. The gap between their current trajectory and an optimised trajectory is large — and the interventions to close it are straightforward. This is the highest advisor value-add opportunity in the entire archetype system.' },
-    ],
+    note:
+      'Critical insight: This is the most malleable archetype. With no dominant psychological resistance, the Pragmatic Realist responds well to all standard interventions. The gap between their current trajectory and an optimised trajectory is large — and the interventions to close it are straightforward. This is the highest advisor value-add opportunity in the entire archetype system.',
     primaryRisk:
       'The compounding cost of "good enough" versus optimised over 30 years. No single dramatic failure mode. The greatest risk is that neither the client nor their advisor identifies this as urgent, because nothing is visibly wrong in the short term.',
+    moneyPattern: {
+      intro:
+        "Adequate in every domain, outstanding in none — the opportunity is the quiet compounding cost of “good enough” across all five.",
+      rows: [
+        ["Saving", "Saves, but inconsistently", "Balanced and level-headed", "Irregular amounts; no clear target", "Automate emergency fund to target, then a fixed amount; name the goal it’s for"],
+        ["Spending", "Generally sensible; occasional drift", "No extreme habits to unwind", "Small leaks go unexamined", "One spending review per quarter, focused on the top 3 categories"],
+        ["Retirement Planning", "Has a rough idea, not a specific plan", "Realistic expectations", "Vague goals mean under-saving", "Goal specificity — a target amount and date"],
+        ["Market Response", "Steady; rarely reacts strongly", "Emotionally even under volatility", "May miss rebalancing or opportunities", "Calendar-based rebalancing"],
+        ["Investment", "Invested, but rarely reviewed", "Already in the market", "Fees, allocation and cash drag go unchecked", "Make the gap visible in dollars; dual framing (gain and avoided loss)"],
+      ],
+      headline:
+        "You’re doing fine — the next step is seeing what “fine” is costing you.",
+    },
   },
 ];
 
@@ -359,6 +430,7 @@ function Archetype({ a, refCb }) {
       <div className="pa-block">
         <h3 className="pa-h">Pattern</h3>
         <p className="pa-p">{a.pattern}</p>
+        {a.note ? <p className="pa-note">{a.note}</p> : null}
       </div>
 
       <div className="pa-block">
@@ -382,6 +454,35 @@ function Archetype({ a, refCb }) {
         <h3 className="pa-h">Communication keywords</h3>
         <div className="pa-keywords">
           {a.keywords.map((k) => <span className="pa-kw" key={k}>{k}</span>)}
+        </div>
+      </div>
+
+      <div className="pa-block pa-mp">
+        <h3 className="pa-h pa-h--accent">MoneyPattern — across the five domains</h3>
+        <p className="pa-p">{a.moneyPattern.intro}</p>
+        <div className="pa-table-wrap">
+          <table className="pa-table pa-table--mp">
+            <thead>
+              <tr>
+                <th>Domain</th><th>How it shows up</th><th>Superpower</th><th>Roadblock</th><th>Optimise</th>
+              </tr>
+            </thead>
+            <tbody>
+              {a.moneyPattern.rows.map(([domain, shows, superpower, roadblock, optimise]) => (
+                <tr key={domain}>
+                  <td className="pa-td-dim">{domain}</td>
+                  <td>{shows}</td>
+                  <td className="pa-td-super">{superpower}</td>
+                  <td>{roadblock}</td>
+                  <td>{optimise}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="pa-mp-headline">
+          <span className="pa-mp-headline-label">MoneyPattern headline</span>
+          <p className="pa-mp-headline-text">{a.moneyPattern.headline}</p>
         </div>
       </div>
 
@@ -414,19 +515,11 @@ function Archetype({ a, refCb }) {
         </ul>
       </div>
 
-      <div className="pa-block">
-        <h3 className="pa-h">Behavioral pattern</h3>
-        {a.behavior.map((b, i) =>
-          typeof b === 'string'
-            ? <p className="pa-p" key={i}>{b}</p>
-            : <p className="pa-note" key={i}>{b.body}</p>
-        )}
-      </div>
-
       <div className="pa-risk">
         <span className="pa-risk-label">Primary risk</span>
         <p className="pa-p">{a.primaryRisk}</p>
       </div>
+
     </section>
   );
 }
@@ -437,8 +530,10 @@ function haystack(a) {
     a.name, a.pattern, a.roadblocks, a.primaryRisk,
     a.keywords.join(' '),
     a.optimise.map((o) => `${o.h} ${o.body}`).join(' '),
-    a.behavior.map((b) => (typeof b === 'string' ? b : b.body)).join(' '),
+    a.note || '',
     a.signature.map((s) => s.join(' ')).join(' '),
+    a.moneyPattern.intro, a.moneyPattern.headline,
+    a.moneyPattern.rows.map((r) => r.join(' ')).join(' '),
   ].join(' ').toLowerCase();
 }
 
