@@ -35,6 +35,15 @@ const IconCouple = () => (
   </svg>
 );
 
+const IconAllocation = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 7h16M4 12h16M4 17h16" />
+    <circle cx="9" cy="7" r="2.1" />
+    <circle cx="14" cy="12" r="2.1" />
+    <circle cx="18" cy="17" r="2.1" />
+  </svg>
+);
+
 const GUIDES = [
   {
     href: '/moneypattern-guide',
@@ -47,6 +56,12 @@ const GUIDES = [
     title: 'Persona Archetypes',
     desc: 'The seven client archetypes — population coverage, behavioral pattern, how to optimise for each, and the dimensional signature behind the assignment.',
     icon: <IconArchetypes />,
+  },
+  {
+    href: '/risk-profile-mapping',
+    title: 'Risk Profile Asset Allocation Mapping',
+    desc: 'How MoneyMind’s five risk categories map to the Morningstar scale — growth/defensive splits, typical horizons, and where the two scales diverge.',
+    icon: <IconAllocation />,
   },
   {
     href: '/send-profile',

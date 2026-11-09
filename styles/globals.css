@@ -2170,6 +2170,19 @@ img { max-width: 100%; }
 .pa-mp-headline-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mm-blue-light); flex: none; }
 .pa-mp-headline-text { margin: 0; font-size: 14.5px; line-height: 1.55; font-weight: 600; color: var(--fg-1); min-width: 0; }
 
+/* Risk profile / Morningstar mapping table */
+.pa-table--rpm td { font-size: 12.5px; }
+.rpm-alloc { white-space: nowrap; }
+.rpm-align-note { display: block; margin-top: 7px; color: var(--fg-3); line-height: 1.5; }
+
+/* Labelled growth / defensive split inside a cell */
+.rpm-split { display: grid; gap: 4px; }
+.rpm-split-row { display: grid; grid-template-columns: 68px auto; align-items: baseline; gap: 8px; }
+.rpm-split-label { font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.rpm-split-label--growth { color: var(--mm-blue-light); }
+.rpm-split-label--defensive { color: var(--fg-4); }
+.rpm-split-val { font-size: 13px; font-weight: 600; color: var(--fg-1); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
 /* Comparison tables */
 .pa-compare { padding-top: 20px; }
 .pa-compare-title { font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 32px); font-weight: 700; letter-spacing: -0.025em; color: var(--fg-1); margin: 24px 0 8px; }
