@@ -11,7 +11,7 @@ export default function DataProcessingAgreementPage() {
   return (
     <LegalLayout
       title="Data Processing Agreement"
-      meta="<strong>Version 1.0</strong> · Effective Date: 20 January 2026 · Applies in Australia, the United Kingdom, the European Economic Area, and the United States"
+      meta="<strong>Version 1.0</strong> · Effective Date: 20 January 2026 · Applies in Australia, Canada, the United Kingdom, and the United States"
     >
       <nav className="lp-toc">
         <p className="lp-toc-title">Table of contents</p>
