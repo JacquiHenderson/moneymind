@@ -224,6 +224,8 @@ export default function DataProcessingAgreementPage() {
       <p>Customer acknowledges that the Services provide tools and analytics to assist Customer in making decisions, but the Services do not make automated decisions that produce legal effects or similarly significantly affect Data Subjects. Customer remains responsible for all decisions made regarding End Clients.</p>
 
       <h2 id="p-10">10. Data Breach Notification</h2>
+      <p>MoneyMind Profile&apos;s Security Incident process is: detect and verify; contain; assess impact; notify; and remediate. Sections 10.1 to 10.6 set out the obligations that apply at each stage.</p>
+
       <h3>10.1 Notification to Customer</h3>
       <p>MoneyMind Profile shall notify Customer of a Security Incident without undue delay and in any event within seventy-two (72) hours of becoming aware of it. This applies to all Customers, in every region, regardless of the jurisdiction in which the Customer is established.</p>
 
@@ -231,7 +233,7 @@ export default function DataProcessingAgreementPage() {
       <p>The notification shall include, to the extent available: description of the nature of the Security Incident including categories and approximate number of affected Data Subjects and Personal Data records; name and contact details of MoneyMind Profile&apos;s DPO or other contact point; description of the likely consequences of the Security Incident; description of measures taken or proposed to address the Security Incident; and timeline of events and discovery of the incident.</p>
 
       <h3>10.3 Notification Method</h3>
-      <p>Notification will be delivered via email to primary contact email address on file, in-Platform alert (if accessible), and phone call to primary contact (for critical incidents).</p>
+      <p>Notification will be delivered by email to the primary contact email address on file and, for critical incidents, by telephone to the primary contact. An in-Platform alert will also be issued where the Platform is accessible. Notification will not be delayed, and the time limit in Section 10.1 is not extended, by the unavailability of any one channel.</p>
 
       <h3>10.4 Investigation and Remediation</h3>
       <p>MoneyMind Profile shall promptly investigate the Security Incident, take reasonable steps to contain and remediate it, cooperate with Customer in investigating it, and implement measures to prevent similar Security Incidents in the future.</p>
@@ -241,7 +243,8 @@ export default function DataProcessingAgreementPage() {
       <p>Customer is responsible for determining whether the Security Incident requires notification to Data Subjects, supervisory authorities, or other parties under applicable Data Protection Laws and Regulations. MoneyMind Profile&apos;s notification to Customer does not constitute an acknowledgment of fault or liability. MoneyMind Profile will not notify Data Subjects, supervisory authorities, or third parties on Customer&apos;s behalf without Customer&apos;s prior written consent (except where required by law).</p>
 
       <h3>10.6 Exclusions</h3>
-      <p>The notification obligations do not apply to incidents that do not result in accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to Personal Data; are caused solely by Customer or Authorized Users; or consist of unsuccessful attempts that do not compromise Personal Data.</p>
+      <p>The notification obligations do not apply to incidents that do not result in accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to Personal Data; or consist of unsuccessful attempts that do not compromise Personal Data.</p>
+      <p>The notification obligations apply regardless of the cause of the Security Incident, including where it is caused wholly or partly by Customer or its Authorized Users. Responsibility for the cost and consequences of a Security Incident is governed by Section 17 and is not affected by MoneyMind Profile giving notification under this Section 10.</p>
 
       <h2 id="p-11">11. Data Protection Impact Assessments</h2>
       <h3>11.1 Assistance with DPIAs</h3>
