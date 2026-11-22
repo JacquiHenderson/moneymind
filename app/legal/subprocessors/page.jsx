@@ -33,7 +33,7 @@ export default function SubprocessorsPage() {
         <li>
           <h3>Amazon Web Services <span className="lp-subproc-year">(2024)</span></h3>
           <p>Is an &ldquo;Infrastructure-as-a-Service&rdquo; (IaaS) — one of the world&apos;s most comprehensive and broadly adopted cloud platforms, providing on-demand computing power, database storage, security, and AI services.</p>
-          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Separate deployments per region. Australian Customer Data is held in the Asia Pacific (Sydney) region, <code>ap-southeast-2</code>; United States, United Kingdom and Canadian Customer Data is held in AWS regions in those respective countries.</p>
+          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Separate deployments per region. Customer Data is held in the AWS region for the country where the customer is based &mdash; Australia, the United States, the United Kingdom or Canada.</p>
         </li>
         <li>
           <h3>GitHub <span className="lp-subproc-year">(2024)</span></h3>
