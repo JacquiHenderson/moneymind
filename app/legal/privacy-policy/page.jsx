@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
       <div className="lp-callout"><strong>No absolute security.</strong> Despite our efforts, no security measures are perfect. We cannot guarantee absolute security of Personal Information. Internet transmissions are never completely private or secure.</div>
 
       <h2 id="sec-13">13. Data Retention</h2>
-      <p>We retain Personal Information only as long as necessary. Active accounts are retained for the subscription duration plus up to 30 days after termination. Terminated accounts are deleted or anonymized within 30 days (backups retained for an additional 90 days). Financial and transaction records are retained for 7 years. Support tickets for 3 years. Server logs for 90 days. Analytics data (aggregated and anonymized) may be retained indefinitely. You may request deletion of your Personal Information at any time, subject to legal obligations.</p>
+      <p>We retain Personal Information only as long as necessary. Active accounts are retained for the subscription duration plus up to 30 days after termination. Terminated accounts are deleted or anonymized within 30 days, including backups. Financial and transaction records are retained for 7 years. Support tickets for 3 years. Server logs for 90 days. Analytics data (aggregated and anonymized) may be retained indefinitely. You may request deletion of your Personal Information at any time, subject to legal obligations.</p>
 
       <h2 id="sec-14">14. Your Privacy Rights</h2>
       <h3>14.1 Rights Under Australian Privacy Law</h3>
