@@ -116,7 +116,6 @@ export default function DataProcessingAgreementPage() {
 
       <h3>4.5 Data Hosting and Location</h3>
       <p>MoneyMind Profile hosts customer data in data centres located in the region where the Customer is based. Australia, the United States, the United Kingdom and Canada are each a separate hosting region. Data for US Customers is stored in the United States, for Australian Customers in Australia, for UK Customers in the United Kingdom, and for Canadian Customers in Canada. MoneyMind Profile does not move customer data out of its hosting region.</p>
-      <p>Regional hosting is a standard feature of the Services. It is provided at no additional charge and does not require a separate data residency addendum.</p>
 
       <h2 id="p-5">5. Customer Instructions</h2>
       <h3>5.1 Scope of Instructions</h3>
@@ -320,7 +319,7 @@ export default function DataProcessingAgreementPage() {
       <p>If a complaint is made to the OAIC regarding MoneyMind Profile&apos;s handling of Personal Information, MoneyMind Profile shall notify Customer promptly, cooperate with Customer and the OAIC in investigating the complaint, and provide information and assistance as reasonably requested.</p>
 
       <h3>15.5 Australian Data Hosting</h3>
-      <p>Personal Data of Australian Customers is hosted exclusively in Australian data centers (AWS ap-southeast-2 region) as a standard feature of the Services. This is provided at no additional charge and does not require an Order Form entry or a data residency addendum. MoneyMind Profile does not move Australian Customers&apos; Personal Data out of Australia. See Section 4.5 (Data Hosting and Location).</p>
+      <p>Personal Data of Australian Customers is hosted in Australian data centers (AWS ap-southeast-2 region). MoneyMind Profile does not move Australian Customers&apos; Personal Data out of Australia. See Section 4.5 (Data Hosting and Location).</p>
 
       <h2 id="p-16">16. Liability and Indemnification</h2>
       <h3>16.1 Liability</h3>
