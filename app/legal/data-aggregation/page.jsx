@@ -66,7 +66,7 @@ export default function DataAggregationPage() {
       <p>This Policy applies to all aggregated and de-identified data created from:</p>
       <ul>
         <li><strong>End-User Data</strong> — Personal information about clients of Subscribing Organizations (financial advisors&apos; clients) that is processed through our Services</li>
-        <li><strong>Customer Data</strong> — Information about our Subscribing Organizations and their authorized users</li>
+        <li><strong>Customer Account Data</strong> — Information about our Subscribing Organizations and their authorized users</li>
         <li><strong>Usage Data</strong> — Information about how the Services are used</li>
         <li><strong>Generated Data</strong> — Outputs, analyses, and insights created through our Services</li>
       </ul>

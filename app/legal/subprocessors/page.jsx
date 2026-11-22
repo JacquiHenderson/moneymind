@@ -20,7 +20,7 @@ export default function SubprocessorsPage() {
         <li>The name of each Sub-Processor;</li>
         <li>A description of the Processing activities performed by the Sub-Processor;</li>
         <li>The date the Sub-Processor was authorized;</li>
-        <li>The regions in which the Sub-Processor holds customer data.</li>
+        <li>The regions in which the Sub-Processor holds Customer Data.</li>
       </ol>
 
       <div className="lp-callout">
@@ -33,12 +33,12 @@ export default function SubprocessorsPage() {
         <li>
           <h3>Amazon Web Services <span className="lp-subproc-year">(2024)</span></h3>
           <p>Is an &ldquo;Infrastructure-as-a-Service&rdquo; (IaaS) — one of the world&apos;s most comprehensive and broadly adopted cloud platforms, providing on-demand computing power, database storage, security, and AI services.</p>
-          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Separate deployments per region. Australian customer data is held in the Asia Pacific (Sydney) region, <code>ap-southeast-2</code>; United States, United Kingdom and Canadian customer data is held in AWS regions in those respective countries.</p>
+          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Separate deployments per region. Australian Customer Data is held in the Asia Pacific (Sydney) region, <code>ap-southeast-2</code>; United States, United Kingdom and Canadian Customer Data is held in AWS regions in those respective countries.</p>
         </li>
         <li>
           <h3>GitHub <span className="lp-subproc-year">(2024)</span></h3>
           <p>Is a Git repository hosting service that enables developers to store, manage, and collaborate on software code.</p>
-          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Not applicable. GitHub holds application source code only; no customer data is stored in it.</p>
+          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Not applicable. GitHub holds application source code only; no Customer Data is stored in it.</p>
         </li>
         <li>
           <h3>Supabase <span className="lp-subproc-year">(2025)</span></h3>
