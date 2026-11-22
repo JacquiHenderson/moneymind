@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
       <h3>5.3 Information From Third Parties</h3>
       <p>We may receive Personal Information from service providers and integration partners, publicly available sources such as professional licensing databases and LinkedIn, and Subscribing Organizations who provide your information to set up your account.</p>
       <h3>5.4 Sensitive Personal Information</h3>
-      <div className="lp-callout"><strong>Important:</strong> Our Services are designed to minimize the collection of Sensitive Personal Information. Financial advisors using our Services may input Sensitive Personal Information about their clients. When Subscribing Organizations input such information, they remain the controller and are responsible for obtaining appropriate consents and complying with applicable laws.</div>
+      <div className="lp-callout"><strong>Important:</strong> Our Services are for Personal Information only. <strong>Sensitive Personal Information must not be entered into the Services.</strong> Financial advisors and Subscribing Organizations must not input Sensitive Personal Information about their clients, and we do not request it. A Subscribing Organization may authorise the entry of Personal Information about its clients; it cannot authorise the entry of Sensitive Personal Information. If Sensitive Personal Information is entered contrary to this restriction, the Subscribing Organization remains the controller of that information, must remove it promptly, and remains responsible for complying with applicable laws.</div>
 
       <h2 id="sec-6">6. How We Collect Personal Information</h2>
       <p>We collect Personal Information directly (when you provide it through registration, forms, surveys, or communications), automatically (through cookies, web server logs, and analytics tools), and from third-party sources (service providers, Subscribing Organizations, and publicly available sources).</p>
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
       <h3>14.2 Rights Under UK GDPR</h3>
       <p>If you are in the UK or EU, you have the right to access, rectification, erasure, restriction of processing, data portability, objection to processing, and to lodge a complaint with the Information Commissioner&apos;s Office (ICO).</p>
       <h3>14.3 Rights Under US Privacy Laws</h3>
-      <p>If you are in California, Virginia, Colorado, or another state with consumer privacy rights, you have the right to know what Personal Information we collect, request deletion, request correction, opt out of sale/sharing (note: we do not sell or share), limit use of Sensitive Personal Information, and non-discrimination.</p>
+      <p>If you are in California, Virginia, Colorado, or another state with consumer privacy rights, you have the right to know what Personal Information we collect, request deletion, request correction, opt out of sale/sharing (note: we do not sell or share), limit use of Sensitive Personal Information (we do not collect it), and non-discrimination.</p>
       <h3>14.4 How to Exercise Your Rights</h3>
       <p>To exercise any of these rights, please contact us at <a href="mailto:support@moneymindprofile.com">support@moneymindprofile.com</a>.</p>
 

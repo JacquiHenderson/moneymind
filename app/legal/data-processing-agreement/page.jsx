@@ -91,7 +91,7 @@ export default function DataProcessingAgreementPage() {
       <p>The Parties acknowledge and agree that: (a) Customer is the Controller (or Business under CCPA) which determines the purposes and means of Processing Personal Data; (b) MoneyMind Profile is the Processor (or Service Provider under CCPA) which Processes Personal Data on behalf of and upon the instructions of Customer; and (c) this DPA establishes the respective obligations of the Controller and the Processor.</p>
 
       <h3>3.2 Customer as Controller</h3>
-      <p>Customer, as Controller, shall: ensure that Customer&apos;s instructions comply with all applicable Data Protection Laws and Regulations; obtain and maintain all necessary consents, authorizations, and legal bases for the collection and Processing of Personal Data; ensure the accuracy, quality, and legality of Personal Data; remain solely responsible for responding to Data Subject Requests and handling complaints; implement and maintain appropriate technical and organizational measures to secure Personal Data; and not Process Sensitive Personal Data through the Services unless Customer has obtained appropriate consents under applicable law.</p>
+      <p>Customer, as Controller, shall: ensure that Customer&apos;s instructions comply with all applicable Data Protection Laws and Regulations; obtain and maintain all necessary consents, authorizations, and legal bases for the collection and Processing of Personal Data; ensure the accuracy, quality, and legality of Personal Data; remain solely responsible for responding to Data Subject Requests and handling complaints; implement and maintain appropriate technical and organizational measures to secure Personal Data; and not Process Sensitive Personal Data through the Services, which are not designed for and do not permit it.</p>
 
       <h3>3.3 MoneyMind Profile as Processor</h3>
       <p>MoneyMind Profile, as Processor, shall: Process Personal Data only in accordance with Customer&apos;s documented instructions; ensure that persons authorized to Process Personal Data have committed themselves to confidentiality; implement and maintain appropriate technical and organizational measures as described in Section 8 and Annex 3; respect the conditions for engaging Sub-Processors as described in Section 7; assist Customer in responding to Data Subject Requests as described in Section 9; assist Customer in ensuring compliance with security, breach notification, impact assessment, and prior consultation obligations; at Customer&apos;s election, delete or return all Personal Data after the end of the provision of Services; make available all information reasonably necessary to demonstrate compliance with this DPA; and immediately inform Customer if an instruction from Customer infringes applicable Data Protection Laws and Regulations.</p>
@@ -107,7 +107,7 @@ export default function DataProcessingAgreementPage() {
       <h3>4.3 Types of Personal Data</h3>
       <p><strong>End Client Personal Data:</strong> identity information (names, dates of birth, contact details), financial information (income, assets, liabilities, net worth, investment portfolio asset allocation), behavioral data (risk tolerance responses, financial goals, investment preferences), professional and demographic information (employment, occupation, family status, life stage), advisor and client reports (behavioral and risk profile analysis), and communication records (emails, notes, meeting summaries).</p>
       <p><strong>Authorized User Personal Data:</strong> identity information (names, contact details), professional information (job title, credentials, licenses), account and authentication information (usernames, login activity), and usage data (features accessed, documents created, activity logs).</p>
-      <p><strong>Sensitive Personal Data (if authorized by Customer):</strong> information revealing racial or ethnic origin, religious beliefs, or other special categories (only if provided by Customer).</p>
+      <p><strong>Sensitive Personal Data:</strong> none. The Services are for Personal Data only, and Customer must not input Sensitive Personal Data. Customer may authorise the Processing of Personal Data about its End Clients; it cannot authorise the Processing of Sensitive Personal Data. If Sensitive Personal Data is entered contrary to this restriction, Customer shall remove it promptly, and MoneyMind Profile shall Process it only as set out in Section 14.5.</p>
 
       <h3>4.4 Categories of Data Subjects</h3>
       <ul>
@@ -302,7 +302,7 @@ export default function DataProcessingAgreementPage() {
       <p>MoneyMind Profile shall provide reasonable assistance to Customer in responding to verified consumer requests under the CCPA, including requests to know what Personal Information is being collected, delete Personal Information, correct inaccurate Personal Information, opt-out of sale or sharing (not applicable as MoneyMind Profile does not sell or share), and limit use of Sensitive Personal Information (to the extent applicable).</p>
 
       <h3>14.5 Sensitive Personal Information</h3>
-      <p>To the extent MoneyMind Profile Processes Sensitive Personal Information (as defined under CCPA and other US state laws), MoneyMind Profile shall use and disclose such Sensitive Personal Information only to perform the Services, as necessary for security and integrity purposes, for short-term, transient use, and as permitted under CCPA Section 1798.121(a) and equivalent provisions in other US state laws.</p>
+      <p>MoneyMind Profile does not collect Sensitive Personal Information (as defined under the CCPA and other US state laws), and the Services are not to be used for it. To the extent any Sensitive Personal Information is nonetheless received, MoneyMind Profile shall use and disclose it only to perform the Services, as necessary for security and integrity purposes, for short-term, transient use, and as permitted under CCPA Section 1798.121(a) and equivalent provisions in other US state laws.</p>
 
       <h3>14.6 Other US State Privacy Laws</h3>
       <p>The obligations in this Section 14 apply mutatis mutandis to Customer&apos;s and MoneyMind Profile&apos;s respective obligations under Virginia VCDPA, Colorado CPA, Connecticut CTDPA, Utah UCPA, and other substantially similar US state privacy laws.</p>
@@ -445,7 +445,7 @@ export default function DataProcessingAgreementPage() {
       <ul>
         <li>Categories of data subjects: End Clients, Authorized Users (as described in Section 4.4 of DPA)</li>
         <li>Categories of personal data: As described in Section 4.3 of DPA</li>
-        <li>Sensitive data: As described in Section 4.3 of DPA (if applicable)</li>
+        <li>Sensitive data: None. The Services are not to be used for Sensitive Personal Data (see Section 4.3 of DPA)</li>
         <li>Frequency of transfer: Continuous during provision of Services</li>
         <li>Nature of processing: Hosting, storage, management as described in Section 4.2 of DPA</li>
         <li>Purpose of transfer: Provision of Services as described in Section 4.2 of DPA</li>
