@@ -196,7 +196,7 @@ export default function DataProcessingAgreementPage() {
       <p><strong>(g) Monitoring and Incident Response:</strong> Security information and event management (SIEM); 24/7 security monitoring; incident response plan and procedures; regular security drills and tabletop exercises.</p>
 
       <h3>8.3 Security Certifications and Audits</h3>
-      <p>MoneyMind Profile maintains or is working toward SOC 2 Type II (in progress) and ISO/IEC 27001:2013 (planned) certifications. Upon Customer&apos;s reasonable request (not more than annually), MoneyMind Profile will provide a summary of security measures and controls, copies of current security certifications, and summary of penetration test results (redacted for security).</p>
+      <p>MoneyMind Profile maintains or is working toward SOC 2 Type II (in progress) and ISO 27001 (planned) certifications. Upon Customer&apos;s reasonable request (not more than annually), MoneyMind Profile will provide a summary of security measures and controls, copies of current security certifications, and summary of penetration test results (redacted for security).</p>
 
       <h3>8.4 Updates to Security Measures</h3>
       <p>MoneyMind Profile may update or modify its security measures from time to time, provided that such updates and modifications do not result in the degradation of the overall security of the Services.</p>
