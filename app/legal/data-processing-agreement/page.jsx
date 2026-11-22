@@ -115,7 +115,7 @@ export default function DataProcessingAgreementPage() {
       </ul>
 
       <h3>4.5 Data Hosting and Location</h3>
-      <p>MoneyMind Profile hosts customer data in data centres located in the region where the Customer is based. Data for US Customers is stored in the United States, and data for Australian Customers is stored in Australia. MoneyMind Profile does not move customer data out of its hosting region.</p>
+      <p>MoneyMind Profile hosts customer data in data centres located in the region where the Customer is based. Australia, the United States, the United Kingdom and Canada are each a separate hosting region. Data for US Customers is stored in the United States, for Australian Customers in Australia, for UK Customers in the United Kingdom, and for Canadian Customers in Canada. MoneyMind Profile does not move customer data out of its hosting region.</p>
       <p>Regional hosting is a standard feature of the Services. It is provided at no additional charge and does not require a separate data residency addendum.</p>
 
       <h2 id="p-5">5. Customer Instructions</h2>
