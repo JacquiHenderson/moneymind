@@ -137,6 +137,8 @@ export default function PrivacyPolicyPage() {
 
       <h2 id="sec-18">18. Data Breach Notification</h2>
       <p>In the event of a data breach affecting Personal Information, we are committed to transparency and prompt action. Our incident response process covers detection and verification, containment and mitigation, assessment of affected individuals and compromised information, notification as required by law, and remediation to prevent recurrence.</p>
+      <p>Where the Personal Information affected is held on behalf of a Customer, we notify that Customer without undue delay and in any event within 72 hours of becoming aware, by email, with a phone call for critical incidents and an in-Platform alert where available. We keep the Customer informed as the investigation progresses. The Customer decides whether to notify the relevant regulator or affected individuals under applicable law, and we provide the information and assistance needed. This applies in every region in which we provide the Services.</p>
+
       <p>Notification timing: UK/EU GDPR — ICO within 72 hours; Australia — OAIC as soon as practicable and within 72 hours; United States — state attorneys general as required by state breach notification laws (typically 30–90 days). To report a security vulnerability, contact <a href="mailto:support@moneymindprofile.com">support@moneymindprofile.com</a> with subject &ldquo;Security Incident Report.&rdquo;</p>
 
       <h2 id="sec-19">19. Changes to This Privacy Policy</h2>

@@ -237,7 +237,7 @@ export default function DataProcessingAgreementPage() {
 
       <h3>10.4 Investigation and Remediation</h3>
       <p>MoneyMind Profile shall promptly investigate the Security Incident, take reasonable steps to contain and remediate it, cooperate with Customer in investigating it, and implement measures to prevent similar Security Incidents in the future.</p>
-      <p>MoneyMind Profile shall provide Customer with updates at least daily until the Security Incident is contained, promptly upon becoming aware of any material new information, and at least weekly thereafter until the Security Incident is resolved.</p>
+      <p>MoneyMind Profile shall keep Customer informed as the investigation progresses, providing updates at least daily until the Security Incident is contained, promptly upon becoming aware of any material new information, and at least weekly thereafter until the Security Incident is resolved.</p>
 
       <h3>10.5 Customer Obligations</h3>
       <p>Customer is responsible for determining whether the Security Incident requires notification to Data Subjects, supervisory authorities, or other parties under applicable Data Protection Laws and Regulations. MoneyMind Profile&apos;s notification to Customer does not constitute an acknowledgment of fault or liability. MoneyMind Profile will not notify Data Subjects, supervisory authorities, or third parties on Customer&apos;s behalf without Customer&apos;s prior written consent (except where required by law).</p>
