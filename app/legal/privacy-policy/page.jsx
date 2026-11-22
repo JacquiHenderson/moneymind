@@ -121,7 +121,13 @@ export default function PrivacyPolicyPage() {
       <p>To exercise any of these rights, please contact us at <a href="mailto:support@moneymindprofile.com">support@moneymindprofile.com</a>.</p>
 
       <h2 id="sec-15">15. Cookies and Tracking Technologies</h2>
-      <p>We use essential cookies (necessary for Services to function — cannot be disabled), performance and analytics cookies (Google Analytics, error tracking), functionality cookies (preferences, A/B testing), and marketing and advertising cookies (campaign tracking, retargeting). You can manage cookies through your browser settings or our Cookie Preference Center. Our Services do not currently respond to Do Not Track signals.</p>
+      <p>We use essential cookies (necessary for Services to function &mdash; cannot be disabled), performance and analytics cookies (Google Analytics, error tracking), functionality cookies (preferences, A/B testing), and marketing and advertising cookies (campaign tracking, retargeting). You can manage cookies through your browser settings or our Cookie Preference Center. Our Services do not currently respond to Do Not Track signals.</p>
+      <p>The third-party tracking technologies we load on our website are:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> (Google LLC) &mdash; measures website traffic and how visitors use our pages. Sets analytics cookies and collects IP address, device and browser information, and pages visited.</li>
+        <li><strong>Meta Pixel</strong> (Meta Platforms, Inc., also known as the Facebook pixel) &mdash; measures the performance of our advertising and allows us to show ads to people who have visited our website. It records page views and sends them to Meta, which may match them to a Facebook or Instagram account where the visitor has one. Where JavaScript is disabled, the same page view is recorded through a tracking pixel image.</li>
+      </ul>
+      <p>Both operate on our public website and marketing pages only. We do not load Google Analytics or the Meta Pixel inside the MoneyMind Profile application, and neither receives End-User profile data or any client information entered into the Services. To opt out, you can use your browser or cookie settings, Google&apos;s <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Analytics opt-out browser add-on</a>, and your Meta <a href="https://www.facebook.com/adpreferences/ad_settings" target="_blank" rel="noopener">ad preferences</a>.</p>
 
       <h2 id="sec-16">16. Third-Party Links and Services</h2>
       <p>Our Services may contain links to third-party websites not operated or controlled by MoneyMind Profile. We are not responsible for the privacy practices or content of external sites. When you click on a third-party link, their privacy policy applies. We encourage you to read their privacy policy before providing Personal Information.</p>

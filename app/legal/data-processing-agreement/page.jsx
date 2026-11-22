@@ -31,9 +31,10 @@ export default function DataProcessingAgreementPage() {
           <li><a href="#p-13">Deletion and Return of Data</a></li>
           <li><a href="#p-14">CCPA and US State Privacy Laws</a></li>
           <li><a href="#p-15">Australian Privacy Principles</a></li>
-          <li><a href="#p-16">Liability and Indemnification</a></li>
-          <li><a href="#p-17">Term and Termination</a></li>
-          <li><a href="#p-18">General Provisions</a></li>
+          <li><a href="#p-16">Canadian Privacy Laws</a></li>
+          <li><a href="#p-17">Liability and Indemnification</a></li>
+          <li><a href="#p-18">Term and Termination</a></li>
+          <li><a href="#p-19">General Provisions</a></li>
           <li><a href="#p-annex1">Annex 1 — EU Standard Contractual Clauses (2021/914)</a></li>
           <li><a href="#p-annex1a">Annex 1-A — List of Parties and Description of Transfer</a></li>
           <li><a href="#p-annex2">Annex 2 — Sub-Processors List</a></li>
@@ -218,7 +219,7 @@ export default function DataProcessingAgreementPage() {
 
       <h2 id="p-10">10. Data Breach Notification</h2>
       <h3>10.1 Notification to Customer</h3>
-      <p>MoneyMind Profile shall notify Customer without undue delay after becoming aware of a Security Incident: within seventy-two (72) hours for UK/EU/EEA customers (to meet GDPR requirements); within seventy-two (72) hours for Australian customers (to meet Privacy Act requirements); and within the timeframes required by applicable US state law (24&ndash;72 hours) for US customers.</p>
+      <p>MoneyMind Profile shall notify Customer without undue delay after becoming aware of a Security Incident: within seventy-two (72) hours for UK/EU/EEA customers (to meet GDPR requirements); within seventy-two (72) hours for Australian customers (to meet Privacy Act requirements); as soon as feasible for Canadian customers (to meet the reporting requirements under PIPEDA and the Breach of Security Safeguards Regulations); and within the timeframes required by applicable US state law (24&ndash;72 hours) for US customers.</p>
 
       <h3>10.2 Notification Content</h3>
       <p>The notification shall include, to the extent available: description of the nature of the Security Incident including categories and approximate number of affected Data Subjects and Personal Data records; name and contact details of MoneyMind Profile&apos;s DPO or other contact point; description of the likely consequences of the Security Incident; description of measures taken or proposed to address the Security Incident; and timeline of events and discovery of the incident.</p>
@@ -321,59 +322,79 @@ export default function DataProcessingAgreementPage() {
       <h3>15.5 Australian Data Hosting</h3>
       <p>Personal Data of Australian Customers is hosted in Australian data centers (AWS ap-southeast-2 region). MoneyMind Profile does not move Australian Customers&apos; Personal Data out of Australia. See Section 4.5 (Data Hosting and Location).</p>
 
-      <h2 id="p-16">16. Liability and Indemnification</h2>
-      <h3>16.1 Liability</h3>
+      <h2 id="p-16">16. Canadian Privacy Laws</h2>
+
+      <h3>16.1 Application</h3>
+      <p>This Section 16 applies to the extent that MoneyMind Profile Processes Personal Information (as defined under the Personal Information Protection and Electronic Documents Act (Canada), &ldquo;PIPEDA&rdquo;) on behalf of Customer, and Customer is subject to PIPEDA or to substantially similar provincial privacy legislation.</p>
+
+      <h3>16.2 Compliance with PIPEDA</h3>
+      <p>MoneyMind Profile agrees to comply with PIPEDA to the extent applicable to MoneyMind Profile as a Processor, including Principle 4.1.3 (Accountability &mdash; where Personal Information is transferred to a third party for processing, using contractual means to provide a comparable level of protection while the information is being processed), Principle 4.5 (Limiting Use, Disclosure and Retention &mdash; using Personal Information only for the purposes for which it was collected), and Principle 4.7 (Safeguards &mdash; protecting Personal Information with security safeguards appropriate to its sensitivity).</p>
+
+      <h3>16.3 Breach of Security Safeguards</h3>
+      <p>In the event of a breach of security safeguards (as defined under PIPEDA) involving Personal Information Processed on Customer&apos;s behalf, MoneyMind Profile shall notify Customer as soon as feasible; provide Customer with sufficient information to enable Customer to assess whether the breach creates a real risk of significant harm to an affected individual, and whether a report to the Office of the Privacy Commissioner of Canada (&ldquo;OPC&rdquo;) and notification to affected individuals are required; and cooperate with Customer in Customer&apos;s assessment, reporting and notification obligations. MoneyMind Profile shall maintain a record of every breach of security safeguards involving Personal Information for twenty-four (24) months, as required under the Breach of Security Safeguards Regulations.</p>
+
+      <h3>16.4 OPC Complaints and Investigations</h3>
+      <p>If a complaint is made to the OPC, or to a provincial privacy commissioner, regarding MoneyMind Profile&apos;s handling of Personal Information, MoneyMind Profile shall notify Customer promptly, cooperate with Customer and the relevant commissioner in investigating the complaint, and provide information and assistance as reasonably requested.</p>
+
+      <h3>16.5 Provincial Privacy Laws</h3>
+      <p>Where Customer is subject to provincial privacy legislation, MoneyMind Profile shall comply with that legislation to the extent applicable to it as a Processor, including the Act respecting the protection of personal information in the private sector (Quebec), as amended by Law 25; the Personal Information Protection Act (Alberta); and the Personal Information Protection Act (British Columbia). Where Customer is required to conduct a privacy impact assessment before communicating Personal Information outside Quebec, MoneyMind Profile shall provide the information reasonably required for that assessment.</p>
+
+      <h3>16.6 Canadian Data Hosting</h3>
+      <p>Personal Information of Canadian Customers is hosted in Canadian data centers. MoneyMind Profile does not move Canadian Customers&apos; Personal Information out of Canada. See Section 4.5 (Data Hosting and Location).</p>
+
+      <h2 id="p-17">17. Liability and Indemnification</h2>
+      <h3>17.1 Liability</h3>
       <p>Each Party&apos;s liability under this DPA is subject to the limitation of liability provisions in the Agreement. Notwithstanding the limitation of liability, neither Party limits or excludes its liability for gross negligence or willful misconduct in the Processing of Personal Data; breach of confidentiality obligations regarding Personal Data; fraud or fraudulent misrepresentation; or liabilities that cannot be limited or excluded under applicable Data Protection Laws and Regulations.</p>
 
-      <h3>16.2 Indemnification by Customer</h3>
+      <h3>17.2 Indemnification by Customer</h3>
       <p>Customer shall indemnify, defend, and hold harmless MoneyMind Profile from and against any claims, losses, liabilities, damages, costs, and expenses (including reasonable attorneys&apos; fees) arising from or relating to Customer&apos;s violation of applicable Data Protection Laws and Regulations; Customer&apos;s failure to obtain necessary consents or provide required notices to Data Subjects; Customer&apos;s Processing of Personal Data in violation of this DPA or applicable law; and inaccurate, unlawful, or fraudulent information provided by Customer or Authorized Users.</p>
 
-      <h3>16.3 Indemnification by MoneyMind Profile</h3>
+      <h3>17.3 Indemnification by MoneyMind Profile</h3>
       <p>MoneyMind Profile shall indemnify, defend, and hold harmless Customer from and against any claims, losses, liabilities, damages, costs, and expenses (including reasonable attorneys&apos; fees) arising from or relating to MoneyMind Profile&apos;s material breach of its obligations under this DPA; MoneyMind Profile&apos;s gross negligence or willful misconduct in the Processing of Personal Data; and MoneyMind Profile&apos;s violation of applicable Data Protection Laws and Regulations in the performance of its obligations as Processor (excluding violations caused by Customer&apos;s instructions).</p>
 
-      <h3>16.4 Allocation of Responsibility</h3>
+      <h3>17.4 Allocation of Responsibility</h3>
       <p>Customer (as Controller) is solely responsible for: determining the lawfulness of Processing; obtaining consents and providing notices to Data Subjects; determining retention periods; responding to Data Subject Requests (except to the extent MoneyMind Profile must assist); notifying supervisory authorities and Data Subjects of data breaches; conducting Data Protection Impact Assessments; and ensuring accuracy and lawfulness of Personal Data provided to MoneyMind Profile.</p>
       <p>MoneyMind Profile (as Processor) is solely responsible for: Processing Personal Data only on instructions; implementing appropriate security measures; engaging Sub-Processors in accordance with this DPA; assisting Customer with Data Subject Requests, security obligations, and DPIAs; notifying Customer of Security Incidents; and deleting or returning Personal Data.</p>
 
-      <h2 id="p-17">17. Term and Termination</h2>
-      <h3>17.1 Term</h3>
+      <h2 id="p-18">18. Term and Termination</h2>
+      <h3>18.1 Term</h3>
       <p>This DPA shall become effective on the Effective Date and shall remain in effect for so long as MoneyMind Profile Processes Personal Data on behalf of Customer, including during the term of the Agreement and for such additional period as is necessary for MoneyMind Profile to delete or return Personal Data in accordance with Section 13.</p>
 
-      <h3>17.2 Termination</h3>
+      <h3>18.2 Termination</h3>
       <p>This DPA shall automatically terminate upon the earlier of: termination or expiration of the Agreement, or completion of MoneyMind Profile&apos;s deletion or return of all Personal Data in accordance with Section 13.</p>
 
-      <h3>17.3 Survival</h3>
-      <p>The following provisions shall survive termination of this DPA: Section 8 (Security Measures) with respect to any Personal Data retained pursuant to Section 13.4; Section 10 (Data Breach Notification) with respect to any Security Incidents occurring before termination; Section 13 (Deletion and Return of Data); Section 16 (Liability and Indemnification); and Section 18 (General Provisions).</p>
+      <h3>18.3 Survival</h3>
+      <p>The following provisions shall survive termination of this DPA: Section 8 (Security Measures) with respect to any Personal Data retained pursuant to Section 13.4; Section 10 (Data Breach Notification) with respect to any Security Incidents occurring before termination; Section 13 (Deletion and Return of Data); Section 17 (Liability and Indemnification); and Section 19 (General Provisions).</p>
 
-      <h2 id="p-18">18. General Provisions</h2>
-      <h3>18.1 Governing Law and Jurisdiction</h3>
+      <h2 id="p-19">19. General Provisions</h2>
+      <h3>19.1 Governing Law and Jurisdiction</h3>
       <p>This DPA shall be governed by and construed in accordance with the laws specified in the Agreement for Customer&apos;s jurisdiction: New South Wales, Australia (for Australian customers); England and Wales (for UK customers); or State of New York, United States (for US customers). Disputes arising from this DPA shall be resolved in accordance with the dispute resolution provisions in the Agreement.</p>
 
-      <h3>18.2 Order of Precedence</h3>
+      <h3>19.2 Order of Precedence</h3>
       <p>In the event of any conflict or inconsistency between the documents forming the relationship between the Parties, the following order of precedence applies (highest to lowest): this Data Processing Agreement (for data protection matters only), EU Standard Contractual Clauses (Annex 1), the Master Services Agreement or other Agreement, and Order Forms and Statements of Work. In the event of any conflict between the main body of this DPA and the Annexes, the Annexes shall prevail with respect to the specific matters they govern.</p>
 
-      <h3>18.3 Entire Agreement</h3>
+      <h3>19.3 Entire Agreement</h3>
       <p>This DPA, together with the Agreement, constitutes the entire agreement between the Parties with respect to the Processing of Personal Data and supersedes all prior agreements, understandings, and representations (whether written or oral) relating to such Processing.</p>
 
-      <h3>18.4 Amendments</h3>
+      <h3>19.4 Amendments</h3>
       <p>This DPA may only be amended or modified by mutual written agreement of the Parties, or by MoneyMind Profile where required to comply with changes in Data Protection Laws and Regulations, provided that MoneyMind Profile provides Customer with at least ninety (90) days&apos; advance written notice of the amendment, the amendment does not materially reduce Customer&apos;s rights or increase Customer&apos;s obligations, and if Customer objects on reasonable data protection grounds, Customer may terminate the Agreement.</p>
 
-      <h3>18.5 Severability</h3>
+      <h3>19.5 Severability</h3>
       <p>If any provision of this DPA is held to be invalid, illegal, or unenforceable, the validity, legality, and enforceability of the remaining provisions shall not be affected or impaired. The Parties shall negotiate in good faith to replace the invalid provision with a valid provision that achieves the same or similar objective.</p>
 
-      <h3>18.6 Waiver</h3>
+      <h3>19.6 Waiver</h3>
       <p>No failure or delay by either Party in exercising any right under this DPA shall operate as a waiver, nor shall any single or partial exercise of any right preclude any other or further exercise of that or any other right.</p>
 
-      <h3>18.7 Assignment</h3>
+      <h3>19.7 Assignment</h3>
       <p>Neither Party may assign or transfer this DPA without the prior written consent of the other Party, except that MoneyMind Profile may assign this DPA in connection with a merger, acquisition, or sale of all or substantially all of its assets, provided that the assignee agrees in writing to be bound by the terms of this DPA.</p>
 
-      <h3>18.8 Third-Party Beneficiaries</h3>
+      <h3>19.8 Third-Party Beneficiaries</h3>
       <p>Except as expressly provided in the EU Standard Contractual Clauses (Annex 1), this DPA does not confer any rights upon any person or entity other than the Parties.</p>
 
-      <h3>18.9 Notices</h3>
+      <h3>19.9 Notices</h3>
       <p>All notices under this DPA shall be provided in accordance with the notice provisions in the Agreement. For DPA-specific notices, contact: <strong>MoneyMind Profile — Email: <a href="mailto:info@moneymindprofile.com">info@moneymindprofile.com</a>, Attn: Data Protection Officer, Legal Department, or Privacy Officer.</strong></p>
 
-      <h3>18.10 General Interpretation</h3>
+      <h3>19.10 General Interpretation</h3>
       <p>This DPA is executed in English. If translated into any other language, the English version shall prevail in the event of any conflict or inconsistency. This DPA may be executed in counterparts with electronic signatures having the same legal effect as original signatures. To the extent that the EU Standard Contractual Clauses conflict with any provision of this DPA, the SCCs or UK IDTA (as applicable) shall prevail with respect to transfers of Personal Data to which they apply. In the event of any ambiguity or uncertainty, the interpretation most favorable to the protection of Personal Data and the rights of Data Subjects shall apply. Neither Party shall be liable for any failure or delay in performance due to causes beyond its reasonable control, except this provision does not excuse Customer&apos;s payment obligations, MoneyMind Profile&apos;s security obligations under Section 8, or MoneyMind Profile&apos;s data breach notification obligations under Section 10.</p>
 
       <div className="lp-callout"><strong>Note:</strong> This DPA may be executed by Customer by: accepting electronically through the MoneyMind Profile Platform during account setup; OR executing the Master Services Agreement, which incorporates this DPA by reference.</div>
