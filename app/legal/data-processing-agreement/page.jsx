@@ -233,7 +233,7 @@ export default function DataProcessingAgreementPage() {
       <p>The notification shall include, to the extent available: description of the nature of the Security Incident including categories and approximate number of affected Data Subjects and Personal Data records; name and contact details of MoneyMind Profile&apos;s DPO or other contact point; description of the likely consequences of the Security Incident; description of measures taken or proposed to address the Security Incident; and timeline of events and discovery of the incident.</p>
 
       <h3>10.3 Notification Method</h3>
-      <p>Notification will be delivered by email to the primary contact email address on file and, for critical incidents, by telephone to the primary contact. An in-Platform alert will also be issued where the Platform is accessible. Notification will not be delayed, and the time limit in Section 10.1 is not extended, by the unavailability of any one channel.</p>
+      <p>Notification will be delivered by email to the primary contact email address on file and, for critical incidents, by telephone to the primary contact. An in-Platform alert will also be issued where the Platform is accessible.</p>
 
       <h3>10.4 Investigation and Remediation</h3>
       <p>MoneyMind Profile shall promptly investigate the Security Incident, take reasonable steps to contain and remediate it, cooperate with Customer in investigating it, and implement measures to prevent similar Security Incidents in the future.</p>
