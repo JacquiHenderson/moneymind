@@ -24,7 +24,7 @@ export default function SubprocessorsPage() {
       </ol>
 
       <div className="lp-callout">
-        <strong>Sub-processors are engaged by region.</strong> Amazon Web Services, Supabase and Vercel are each deployed separately in every region we operate in &mdash; Australia, the United States, the United Kingdom and Canada. Customer data is held in the deployment for the region where the customer is based, and is not moved between regions. See Section 4.5 of the <Link href="/legal/data-processing-agreement">Data Processing Agreement</Link>.
+        <strong>Sub-processors are engaged by region.</strong> Amazon Web Services, Supabase and Vercel are each deployed separately in every region we operate in &mdash; Australia, the United States, the United Kingdom and Canada. Customer Data is held in the deployment for the region where the customer is based, and is not moved between regions. See Section 4.5 of the <Link href="/legal/data-processing-agreement">Data Processing Agreement</Link>.
       </div>
 
       <h2>MoneyMind Profile&apos;s Sub-Processors</h2>
@@ -43,12 +43,12 @@ export default function SubprocessorsPage() {
         <li>
           <h3>Supabase <span className="lp-subproc-year">(2025)</span></h3>
           <p>&ldquo;Backend-as-a-Service&rdquo; (BaaS) platform built on top of the PostgreSQL database. It provides developers with instant APIs, authentication, real-time subscriptions, file storage, and edge functions, enabling rapid application development.</p>
-          <p className="lp-subproc-region"><strong>Regional deployment:</strong> A separate Supabase project per region, each provisioned in that region. Customer data stays in the project for the customer&apos;s region.</p>
+          <p className="lp-subproc-region"><strong>Regional deployment:</strong> A separate Supabase project per region, each provisioned in that region. Customer Data stays in the project for the customer&apos;s region.</p>
         </li>
         <li>
           <h3>Vercel <span className="lp-subproc-year">(2025)</span></h3>
           <p>Is a cloud platform focused on frontend development, providing infrastructure and tools to build, preview, and ship web applications with high performance.</p>
-          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Deployed per region, with the serverless functions for each region executing in that region. Customer data is not routed outside its hosting region.</p>
+          <p className="lp-subproc-region"><strong>Regional deployment:</strong> Deployed per region, with the serverless functions for each region executing in that region. Customer Data is not routed outside its hosting region.</p>
         </li>
       </ul>
 

@@ -321,7 +321,7 @@ export default function DataProcessingAgreementPage() {
       <p>If a complaint is made to the OAIC regarding MoneyMind Profile&apos;s handling of Personal Information, MoneyMind Profile shall notify Customer promptly, cooperate with Customer and the OAIC in investigating the complaint, and provide information and assistance as reasonably requested.</p>
 
       <h3>15.5 Australian Data Hosting</h3>
-      <p>Personal Data of Australian Customers is hosted in Australian data centers (AWS ap-southeast-2 region). MoneyMind Profile does not move Australian Customers&apos; Personal Data out of Australia. See Section 4.5 (Data Hosting and Location).</p>
+      <p>Personal Data of Australian Customers is held in Australia. MoneyMind Profile does not move Australian Customers&apos; Personal Data out of Australia. See Section 4.5 (Data Hosting and Location).</p>
 
       <h2 id="p-16">16. Canadian Privacy Laws</h2>
 
