@@ -160,6 +160,11 @@ export default function DataProcessingAgreementPage() {
       <h3>6.9 Data Protection Officer</h3>
       <p>MoneyMind Profile has designated a Data Protection Officer (&ldquo;DPO&rdquo;) who may be contacted at <a href="mailto:dpo@moneymindprofile.com">dpo@moneymindprofile.com</a> for matters related to the Processing of Personal Data under this DPA.</p>
 
+      <h3>6.10 Government and Law Enforcement Requests</h3>
+      <p>This Section 6.10 applies in every region in which MoneyMind Profile provides the Services, and applies whether or not the EU Standard Contractual Clauses in Annex 1 apply.</p>
+      <p>If MoneyMind Profile receives a legally binding request from a public authority, court, regulator, or law enforcement agency for the disclosure of Personal Data Processed on Customer&apos;s behalf, or becomes aware of any direct access to such Personal Data by a public authority, MoneyMind Profile shall: (a) notify Customer promptly and, where the request relates to an identified Data Subject and notification is permitted, notify the Data Subject, in each case before disclosure unless prohibited by law &mdash; and where prohibited, as soon as it is permitted to do so; (b) use lawful means to challenge the request where it concludes there are reasonable grounds to consider the request unlawful, overbroad, or not made in accordance with applicable law, including seeking interim measures to suspend disclosure pending the outcome; (c) disclose only the minimum Personal Data necessary to comply, assessed on a case-by-case basis; and (d) record each request received and the response made, and make that record available to Customer on request.</p>
+      <p>Nothing in this Section 6.10 requires MoneyMind Profile to act unlawfully. This Section does not permit the transfer or hosting of Customer Data outside its hosting region, which remains governed by Section 4.5; it governs only disclosure compelled by law.</p>
+
       <h2 id="p-7">7. Sub-Processors</h2>
       <h3>7.1 Authorization to Use Sub-Processors</h3>
       <p>Customer provides general authorization for MoneyMind Profile to engage Sub-Processors to Process Personal Data on Customer&apos;s behalf, subject to the conditions in this Section 7.</p>
