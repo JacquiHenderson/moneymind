@@ -71,8 +71,8 @@ export default function TermsOfUsePage() {
       <p>In this Agreement, unless the context otherwise requires, capitalized terms have the meanings set out below:</p>
       <ul>
         <li><strong>Aggregated Data</strong> — data that has been de-identified and aggregated in accordance with clause 12.</li>
-        <li><strong>Applicable Data Protection Laws</strong> — (i) in Australia, the Privacy Act 1988 (Cth) and the Australian Privacy Principles; (ii) in the United Kingdom, the UK GDPR and the Data Protection Act 2018; (iii) in the United States, applicable federal and state privacy laws including the California Consumer Privacy Act (as amended by the CPRA); (iv) any other applicable data protection or privacy laws.</li>
-        <li><strong>Business Day</strong> — a day that is not a Saturday, Sunday or public holiday in: (i) Australia (for Australian users); (ii) England (for UK users); or (iii) United States (for US users).</li>
+        <li><strong>Applicable Data Protection Laws</strong> — (i) in Australia, the Privacy Act 1988 (Cth) and the Australian Privacy Principles; (ii) in the United Kingdom, the UK GDPR and the Data Protection Act 2018; (iii) in the United States, applicable federal and state privacy laws including the California Consumer Privacy Act (as amended by the CPRA); (iv) in Canada, the Personal Information Protection and Electronic Documents Act and applicable provincial privacy laws; (v) any other applicable data protection or privacy laws.</li>
+        <li><strong>Business Day</strong> — a day that is not a Saturday, Sunday or public holiday in: (i) Australia (for Australian users); (ii) England (for UK users); (iii) United States (for US users); or (iv) Canada (for Canadian users).</li>
         <li><strong>CCPA</strong> — the California Consumer Privacy Act of 2018, as amended by the California Privacy Rights Act of 2020.</li>
         <li><strong>Commencement Date</strong> — the date you complete the Sign-up Registration.</li>
         <li><strong>Confidential Information</strong> — has the meaning given in clause 16.1.</li>
@@ -89,7 +89,7 @@ export default function TermsOfUsePage() {
         <li><strong>Repeat Infringer</strong> — a user who has been notified of infringing activity more than twice.</li>
         <li><strong>Software</strong> — the MoneyMind Profile software platform.</li>
         <li><strong>Subscription Plan</strong> — the plan selected by you from the Manage Account portal or formal Master Services Agreement.</li>
-        <li><strong>Your Jurisdiction</strong> — (i) Australia, if your billing address is in Australia; (ii) the United Kingdom, if your billing address is in the United Kingdom; (iii) the United States, if your billing address is in the United States or any US territory.</li>
+        <li><strong>Your Jurisdiction</strong> — (i) Australia, if your billing address is in Australia; (ii) the United Kingdom, if your billing address is in the United Kingdom; (iii) the United States, if your billing address is in the United States or any US territory; (iv) Canada, if your billing address is in Canada.</li>
       </ul>
 
       <h2 id="t-2">2. Trial Period</h2>
@@ -115,7 +115,7 @@ export default function TermsOfUsePage() {
       <div className="lp-callout"><strong>Automatic renewal notice.</strong> Your subscription will automatically renew for successive monthly periods unless you cancel your subscription. You may cancel at any time via your login: <code>Manage Account &gt; Billing &gt; Cancel Plan</code>.</div>
 
       <h2 id="t-7">7. Fees and Payment</h2>
-      <p>From the Commencement Date (or expiry of the Trial Period, if applicable), you must pay us the Fees. The Fees are charged in the currency applicable to Your Jurisdiction (AUD for Australia, GBP for the United Kingdom, USD for the United States) unless otherwise agreed.</p>
+      <p>From the Commencement Date (or expiry of the Trial Period, if applicable), you must pay us the Fees. The Fees are charged in the currency applicable to Your Jurisdiction (AUD for Australia, GBP for the United Kingdom, USD for the United States and Canada) unless otherwise agreed.</p>
       <p>The Fees are direct debited monthly in advance from your nominated payment method. You may increase or decrease the number of user licenses or change your Subscription Plan via the Manage Account portal; new Fees will apply from the following month with a pro-rata adjustment where necessary.</p>
       <p>If any payment is not successfully processed, we may in our sole discretion apply 14-day payment terms to rectify the payment. If any payment remains outstanding beyond the payment due date, you will be in breach of this Agreement. On 14 days&apos; written notice we may suspend access, charge interest (7.5% per annum for Australian users; 4% above the Bank of England base rate for UK users; the lesser of 1.5% per month or the maximum rate permitted by applicable law for US users), refer outstanding amounts to a debt collection agency, and/or terminate this Agreement.</p>
       <p>All Fees are subject to annual adjustment on the anniversary of the Commencement Date. We will provide at least 30 days&apos; notice of any fee increase.</p>
@@ -222,7 +222,7 @@ export default function TermsOfUsePage() {
       <p>Beta Features are confidential and you must not disclose any information about Beta Features to third parties without our prior written consent. By providing feedback regarding Beta Features, you grant us a perpetual, worldwide, royalty-free, non-exclusive, irrevocable license to use such feedback for any purpose.</p>
 
       <h2 id="t-29">29. General</h2>
-      <p><strong>Governing Law.</strong> This Agreement is governed by: the laws of New South Wales, Australia (for Australian users); the laws of England and Wales (for UK users); the laws of the State of New York, United States (for US users, except that the Federal Arbitration Act governs the interpretation and enforcement of clause 24).</p>
+      <p><strong>Governing Law.</strong> This Agreement is governed by: the laws of New South Wales, Australia (for Australian users); the laws of England and Wales (for UK users); the laws of the State of New York, United States (for US users, except that the Federal Arbitration Act governs the interpretation and enforcement of clause 24); and the laws of the Province of Ontario, Canada (for Canadian users).</p>
       <p><strong>Other Provisions.</strong> You must not assign this Agreement without our prior written consent. We may assign this Agreement to an affiliate or successor upon written notice. Nothing in this Agreement creates a partnership, joint venture, agency, or employment relationship. This Agreement constitutes the entire agreement between the parties. No waiver is effective unless in writing. If any provision is found unenforceable, it will be modified to the minimum extent necessary or severed. Notices must be in writing and sent to the address or email on file. Except as provided in clause 25, any variation must be in writing and signed by both parties.</p>
 
       <h2>Schedule 1 — Jurisdiction-Specific Terms</h2>
