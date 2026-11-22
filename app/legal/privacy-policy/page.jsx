@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <li><a href="#sec-7">How We Use Personal Information</a></li>
           <li><a href="#sec-8">Legal Bases for Processing</a></li>
           <li><a href="#sec-9">How We Share and Disclose</a></li>
-          <li><a href="#sec-10">International Data Transfers</a></li>
+          <li><a href="#sec-10">Data Hosting and International Transfers</a></li>
           <li><a href="#sec-11">Aggregated and De-Identified Data</a></li>
           <li><a href="#sec-12">Data Security</a></li>
           <li><a href="#sec-13">Data Retention</a></li>
@@ -96,8 +96,9 @@ export default function PrivacyPolicyPage() {
       <h2 id="sec-9">9. How We Share and Disclose Personal Information</h2>
       <p><strong>We do not sell, rent, or lease Personal Information to third parties.</strong> We share Personal Information with service providers and subprocessors bound by contractual obligations (for infrastructure, payment processing, analytics, security, and marketing); within the MoneyMind Profile organization for administration and business operations; in connection with business transfers (merger, acquisition, asset sale) with prior notice; and as required by law or to defend legal claims. We may share aggregated, anonymized, or de-identified information that cannot identify individuals.</p>
 
-      <h2 id="sec-10">10. International Data Transfers</h2>
-      <p>MoneyMind Profile may transfer Personal Information to Australia (primary operations), the United States (cloud hosting infrastructure), the United Kingdom (offices), and other countries where our service providers operate. When transferring to countries not recognized as providing adequate protection, we implement Standard Contractual Clauses (SCCs), the UK International Data Transfer Agreement (IDTA), and supplementary measures including encryption in transit and at rest, strict access controls, and data minimization.</p>
+      <h2 id="sec-10">10. Data Hosting and International Transfers</h2>
+      <p><strong>Data hosting and location.</strong> We host customer data in data centres located in the region where the customer is based. Data for US customers is stored in the United States, and for Australian customers is stored in Australia. We do not move customer data out of its hosting region.</p>
+      <p>Personal Information that is not customer data &mdash; for example, information collected through our website, and our marketing and business contact records &mdash; may be processed in Australia (primary operations), the United Kingdom (offices), and other countries where our service providers operate. To the extent our personnel or subprocessors access Personal Information from outside the region in which it is hosted, and that access involves a country not recognized as providing adequate protection, we implement Standard Contractual Clauses (SCCs), the UK International Data Transfer Agreement (IDTA), and supplementary measures including encryption in transit and at rest, strict access controls, and data minimization.</p>
 
       <h2 id="sec-11">11. Aggregated and De-Identified Data</h2>
       <p>We create aggregated, anonymized, and de-identified data to improve Services, conduct research, and generate industry benchmarks. We remove all direct identifiers, apply statistical techniques to prevent re-identification, and ensure the data cannot reasonably be linked back to individuals. We apply our <Link href="/legal/data-aggregation">Data Aggregation and De-Identification Policy</Link>.</p>

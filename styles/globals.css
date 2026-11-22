@@ -1225,6 +1225,9 @@ img { max-width: 100%; }
 .lp-subproc-list h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.015em; color: var(--fg-1); margin: 0 0 8px; }
 .lp-subproc-year { font-size: 13px; font-weight: 500; color: var(--mm-blue-light); letter-spacing: 0; margin-left: 6px; }
 .lp-subproc-list p { font-size: 15px; line-height: 1.55; color: var(--fg-3); margin: 0; }
+.lp-subproc-region { margin-top: 10px !important; font-size: 14px !important; color: var(--fg-4) !important; }
+.lp-subproc-region strong { color: var(--mm-blue-light); font-weight: 600; }
+.lp-subproc-region code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; padding: 1px 5px; border-radius: 4px; background: rgba(82, 152, 191, 0.12); color: var(--mm-blue-light); }
 @media (max-width: 768px) { .lp-header-inner { padding: 16px 24px; } .lp-nav { display: none; } .lp-page { padding: 48px 20px 80px; } .lp-title { font-size: 40px; } .lp-toc ol { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
   .lp-header-inner { padding: 12px 20px; }
