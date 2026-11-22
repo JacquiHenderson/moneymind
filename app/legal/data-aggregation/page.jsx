@@ -11,7 +11,7 @@ export default function DataAggregationPage() {
   return (
     <LegalLayout
       title="Data Aggregation &amp; De-Identification Policy"
-      meta="<strong>Document version 1.0</strong> · Effective Date: 30 January 2026 · Applies in Australia, the United Kingdom, and the United States"
+      meta="<strong>Document version 1.0</strong> · Effective Date: 30 January 2026 · Applies in Australia, Canada, the United Kingdom, and the United States"
     >
       <nav className="lp-toc">
         <p className="lp-toc-title">Table of contents</p>
@@ -96,6 +96,7 @@ export default function DataAggregationPage() {
         <li><strong>Australia</strong> — Complies with the Privacy Act 1988 (Cth) and Australian Privacy Principles</li>
         <li><strong>United Kingdom</strong> — Complies with UK GDPR and Data Protection Act 2018</li>
         <li><strong>United States</strong> — Complies with CCPA/CPRA and applicable state privacy laws</li>
+        <li><strong>Canada</strong> — Complies with PIPEDA and applicable provincial privacy laws</li>
       </ul>
 
       <h2 id="d-3">3. Definitions</h2>

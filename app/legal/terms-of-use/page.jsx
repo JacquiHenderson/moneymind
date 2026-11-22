@@ -11,7 +11,7 @@ export default function TermsOfUsePage() {
   return (
     <LegalLayout
       title="Terms of Use"
-      meta="<strong>Document version 2.0 (Global)</strong> · Effective Date: 20 January 2026 · Applies in Australia, the United Kingdom, and the United States"
+      meta="<strong>Document version 2.0 (Global)</strong> · Effective Date: 20 January 2026 · Applies in Australia, Canada, the United Kingdom, and the United States"
     >
       <div className="lp-callout">
         <strong>Important notice — please read carefully.</strong> This Agreement contains important provisions regarding your rights and obligations. In particular: for United States users, this Agreement contains an arbitration provision (clause 24) requiring binding individual arbitration of disputes — by agreeing to these Terms you waive the right to participate in class actions and a jury trial. This Agreement contains limitations on our liability (clause 20) and an indemnity from you (clause 21). The Software is a tool to assist financial advisors and is not a substitute for the provision of professional financial advice (clause 9.4). You are responsible for backing up your data (clause 4.4).
