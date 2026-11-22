@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage() {
       <p>To exercise any of these rights, please contact us at <a href="mailto:support@moneymindprofile.com">support@moneymindprofile.com</a>.</p>
 
       <h2 id="sec-15">15. Cookies and Tracking Technologies</h2>
-      <p>We use essential cookies (necessary for Services to function &mdash; cannot be disabled), performance and analytics cookies (Google Analytics, error tracking), functionality cookies (preferences, A/B testing), and marketing and advertising cookies (campaign tracking, retargeting). You can manage cookies through your browser settings or our Cookie Preference Center. Our Services do not currently respond to Do Not Track signals.</p>
+      <p>We use essential cookies (necessary for Services to function &mdash; cannot be disabled), performance and analytics cookies (Google Analytics, error tracking), functionality cookies (preferences, A/B testing), and marketing and advertising cookies (Meta Pixel, campaign tracking, retargeting). You can manage cookies through your browser settings or our Cookie Preference Center. Our Services do not currently respond to Do Not Track signals.</p>
       <p>The third-party tracking technologies we load on our website are:</p>
       <ul>
         <li><strong>Google Analytics</strong> (Google LLC) &mdash; measures website traffic and how visitors use our pages. Sets analytics cookies and collects IP address, device and browser information, and pages visited.</li>
