@@ -403,7 +403,8 @@ export default function DataProcessingAgreementPage() {
 
       <h2 id="p-annex1">Annex 1 — EU Standard Contractual Clauses (2021/914)</h2>
       <h3>Application</h3>
-      <p>This Annex 1 applies to transfers of Personal Data from the European Economic Area (EEA) to countries not recognized by the European Commission as providing an adequate level of data protection.</p>
+      <p>This Annex 1 applies only if and to the extent that Personal Data is transferred from the European Economic Area (EEA) to a country not recognized by the European Commission as providing an adequate level of data protection.</p>
+      <p>The EEA is not one of the jurisdictions in which this DPA applies, as stated at the head of this document. This Annex is retained so that any such transfer that does arise &mdash; for example, where Customer is established in a jurisdiction listed above but Processes Personal Data originating in the EEA &mdash; is covered by the Standard Contractual Clauses. Where no transfer of Personal Data from the EEA arises, this Annex has no application, and references to the Standard Contractual Clauses elsewhere in this DPA are to be read accordingly.</p>
 
       <h3>Section I — Purpose and Scope</h3>
       <p><strong>Clause 1 — Purpose.</strong> The purpose of these standard contractual clauses is to ensure compliance with the requirements of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation) for the transfer of personal data to a third country.</p>
