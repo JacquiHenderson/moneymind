@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <li><a href="#sec-7">How We Use Personal Information</a></li>
           <li><a href="#sec-8">Legal Bases for Processing</a></li>
           <li><a href="#sec-9">How We Share and Disclose</a></li>
-          <li><a href="#sec-10">Data Hosting and International Transfers</a></li>
+          <li><a href="#sec-10">Data Hosting and Location</a></li>
           <li><a href="#sec-11">Aggregated and De-Identified Data</a></li>
           <li><a href="#sec-12">Data Security</a></li>
           <li><a href="#sec-13">Data Retention</a></li>
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
         <li>Your rights regarding your Personal Information</li>
         <li>How to contact us with privacy questions or concerns</li>
       </ul>
-      <p>We operate globally, serving customers in Australia, the United Kingdom, and the United States. This Privacy Policy is designed to comply with applicable data protection laws in all jurisdictions where we operate, including:</p>
+      <p>We operate globally, serving customers in Australia, Canada, the United Kingdom, and the United States. This Privacy Policy is designed to comply with applicable data protection laws in all jurisdictions where we operate, including:</p>
       <ul>
         <li><strong>Australia:</strong> Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs)</li>
         <li><strong>United Kingdom:</strong> UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018</li>
@@ -96,9 +96,9 @@ export default function PrivacyPolicyPage() {
       <h2 id="sec-9">9. How We Share and Disclose Personal Information</h2>
       <p><strong>We do not sell, rent, or lease Personal Information to third parties.</strong> We share Personal Information with service providers and subprocessors bound by contractual obligations (for infrastructure, payment processing, analytics, security, and marketing); within the MoneyMind Profile organization for administration and business operations; in connection with business transfers (merger, acquisition, asset sale) with prior notice; and as required by law or to defend legal claims. We may share aggregated, anonymized, or de-identified information that cannot identify individuals.</p>
 
-      <h2 id="sec-10">10. Data Hosting and International Transfers</h2>
-      <p><strong>Data hosting and location.</strong> We host Customer Data in data centres located in the region where the customer is based. Australia, the United States, the United Kingdom and Canada are each a separate hosting region. Data for US customers is stored in the United States, for Australian customers in Australia, for UK customers in the United Kingdom, and for Canadian customers in Canada. We do not move Customer Data out of its hosting region.</p>
-      <p>Personal Information that is not Customer Data &mdash; for example, information collected through our website, and our marketing and business contact records &mdash; may be processed in Australia (primary operations), the United Kingdom (offices), and other countries where our service providers operate. To the extent our personnel or subprocessors access Personal Information from outside the region in which it is hosted, and that access involves a country not recognized as providing adequate protection, we implement Standard Contractual Clauses (SCCs), the UK International Data Transfer Agreement (IDTA), and supplementary measures including encryption in transit and at rest, strict access controls, and data minimization.</p>
+      <h2 id="sec-10">10. Data Hosting and Location</h2>
+      <p>We host Customer Data in data centres located in the region where the customer is based. Australia, the United States, the United Kingdom and Canada are each a separate hosting region. Data for US customers is stored in the United States, for Australian customers in Australia, for UK customers in the United Kingdom, and for Canadian customers in Canada. We do not move Customer Data out of its hosting region.</p>
+      <p>We do not rely on cross-border transfer mechanisms for Customer Data. Our sub-processors are engaged separately in each region, so Customer Data is processed only within the region in which it is hosted. See our <Link href="/legal/subprocessors">Sub-Processors List</Link>.</p>
 
       <h2 id="sec-11">11. Aggregated and De-Identified Data</h2>
       <p>We create aggregated, anonymized, and de-identified data to improve Services, conduct research, and generate industry benchmarks. We remove all direct identifiers, apply statistical techniques to prevent re-identification, and ensure the data cannot reasonably be linked back to individuals. We apply our <Link href="/legal/data-aggregation">Data Aggregation and De-Identification Policy</Link>.</p>
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
       <h3>20.1 Australia</h3>
       <p>Our data practices comply with the Privacy Act 1988 (Cth) and the Australian Privacy Principles. The Australian Privacy Commissioner is the Office of the Australian Information Commissioner (OAIC) — <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>. We comply with the Notifiable Data Breaches (NDB) scheme.</p>
       <h3>20.2 United Kingdom</h3>
-      <p>Our data practices comply with the UK GDPR and the EU GDPR. The supervisory authority is the Information Commissioner&apos;s Office (ICO) — <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>. When transferring Personal Data outside the UK/EEA, we use Standard Contractual Clauses (SCCs) and supplementary measures.</p>
+      <p>Our data practices comply with the UK GDPR and the EU GDPR. The supervisory authority is the Information Commissioner&apos;s Office (ICO) — <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>. Personal Data of UK customers is hosted in the United Kingdom and is not transferred outside it.</p>
       <h3>20.3 United States</h3>
       <p>We comply with the CCPA (as amended by the CPRA), Virginia CDPA, Colorado Privacy Act, and other applicable state privacy laws. We do not sell or share Personal Information as defined by the CCPA/CPRA. You may designate an authorized agent and appeal our decisions by contacting <a href="mailto:privacy@moneymindprofile.com">privacy@moneymindprofile.com</a>.</p>
       <h3>20.4 Other Jurisdictions</h3>
